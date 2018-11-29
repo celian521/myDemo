@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "DEMO",
+  "usingComponents": {
+    "van-button": "/vant-weapp/button/index"
+  }
+}

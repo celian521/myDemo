@@ -1,0 +1,6 @@
+/* pages/vantDemo/vantDemo.wxss */
+
+.a { font-size: 50rpx; color: red; line-height: 3 }
+
+.box1 { width: 750rpx; height: 750rpx; background: #F0F0F0; display: block; float:left;}
+.box2 { width: 375rpx; height: 357rpx; background: red; display: block; float:left;}

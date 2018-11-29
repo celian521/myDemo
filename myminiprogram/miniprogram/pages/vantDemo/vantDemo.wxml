@@ -1,0 +1,16 @@
+<!--pages/vantDemo/vantDemo.wxml-->
+<view class='box1'>01</view>
+<view class='box2'>01</view>
+
+<text class="a">kkkkk000000 5555</text>
+<view>
+    {{msg}}
+    {{obj.name}}
+</view>
+<icon type="success" size="50"/>
+
+<van-button type="default" data-tid="kkkkkkkkkkkkk" bindtap='dofun'>默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<van-button type="danger">危险按钮</van-button>
+

@@ -6,6 +6,9 @@ import axios from 'axios'
 import 'amfe-flexible'
 import '@/assets/style/entry.scss'
 
+import Vant from 'vant';
+Vue.use(Vant);
+
 // VConsole 开发环境开启
 if (process.env.NODE_ENV === 'development') {
   const VConsole = require('vconsole');

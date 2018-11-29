@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/vantDemo/vantDemo"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ea6f5a",
+    "navigationBarTitleText": "STEDEMO",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#f60",
+    "backgroundColor": "#eee",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/home1.png",
+        "selectedIconPath": "static/images/home2.png"
+      },
+      {
+        "pagePath": "pages/chooseLib/chooseLib",
+        "text": "新闻",
+        "iconPath": "static/images/news1.png",
+        "selectedIconPath": "static/images/news2.png"
+      }
+    ]
+  }
+}

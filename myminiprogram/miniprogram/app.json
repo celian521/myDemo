@@ -1,25 +1,27 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/vantDemo/vantDemo"
+    "pages/vantDemo/vantDemo",
+    "pages/mpDemo/mpDemo"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ea6f5a",
-    "navigationBarTitleText": "STEDEMO",
-    "navigationBarTextStyle": "light"
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "MYDEMO",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-nav-bar": "/vant-weapp/nav-bar/index",
+    "van-dialog": "/vant-weapp/dialog/index",
+    "van-cell": "/vant-weapp/cell/index",
+    "van-cell-group": "/vant-weapp/cell-group/index",
+    "van-swipe-cell": "/vant-weapp/swipe-cell/index"
   },
   "tabBar": {
     "color": "#666",
     "selectedColor": "#f60",
-    "backgroundColor": "#eee",
+    "backgroundColor": "#fff",
     "borderStyle": "white",
     "position": "bottom",
     "list": [
@@ -30,8 +32,8 @@
         "selectedIconPath": "static/images/home2.png"
       },
       {
-        "pagePath": "pages/chooseLib/chooseLib",
-        "text": "新闻",
+        "pagePath": "pages/mpDemo/mpDemo",
+        "text": "mp",
         "iconPath": "static/images/news1.png",
         "selectedIconPath": "static/images/news2.png"
       }

@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import {observable, action} from 'mobx';
-import {PropTypes} from "prop-types";
+// import {PropTypes} from "prop-types";
 import {observer, PropTypes as ObservablePropTypes } from 'mobx-react'
+
+import './assets/style/index.scss';
 
 class Store {
    @observable cache = {queue:[]};
    @action add () {
      this.cache.queue.push(1);
+     console.log(this.cache);
+
    }
    @action del () {
     this.cache.queue.shift(1);
+    console.log(this.cache);
   }
 }
 
@@ -25,7 +30,10 @@ class Bar extends Component {
     const queue = this.props.queue;
     return (
     <div>
-      == {queue.length} ==
+    <span className='a'>
+      == {queue.length} ==</span>
+      {console.log(queue)}
+      <span className='b'>less</span>
     </div> )
   }
 }
@@ -40,7 +48,7 @@ class Foo extends Component {
     return (
       <div>
          <button onClick = {()=> this.props.add() }>加一</button>
-         <button onClick = {()=> this.props.del() }>讲一</button>
+         <button onClick = {()=> this.props.del() }>减一</button>
           <Bar queue = {cache.queue} />
       </div>
     )

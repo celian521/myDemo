@@ -1,25 +1,56 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {observable, action} from 'mobx';
+import {PropTypes} from "prop-types";
+import {observer, PropTypes as ObservablePropTypes } from 'mobx-react'
 
+class Store {
+   @observable cache = {queue:[]};
+   @action add () {
+     this.cache.queue.push(1);
+   }
+   @action del () {
+    this.cache.queue.shift(1);
+  }
+}
+
+const store = new Store();
+
+@observer
+class Bar extends Component {
+  static propTypes = {
+    // queue: PropTypes.array
+    queue: ObservablePropTypes.observableArray
+  };
+  render () {
+    const queue = this.props.queue;
+    return (
+    <div>
+      == {queue.length} ==
+    </div> )
+  }
+}
+
+class Foo extends Component {
+  static propTypes = {
+    // cache: PropTypes.object
+    cache: ObservablePropTypes.observableObject
+  }
+  render () {
+    const cache = this.props.cache;
+    return (
+      <div>
+         <button onClick = {()=> this.props.add() }>加一</button>
+         <button onClick = {()=> this.props.del() }>讲一</button>
+          <Bar queue = {cache.queue} />
+      </div>
+    )
+  }
+}
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Foo cache = {store.cache} add = {store.add} del = {store.del}></Foo>
       </div>
     );
   }

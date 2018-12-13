@@ -6,8 +6,12 @@ import axios from 'axios'
 import 'amfe-flexible'
 import '@/assets/style/entry.scss'
 
+import utils from '@/libs/utils.js'
+
 import Vant from 'vant';
 Vue.use(Vant);
+
+Vue.use(utils); // 全局工具
 
 // VConsole 开发环境开启
 if (process.env.NODE_ENV === 'development') {

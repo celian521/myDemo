@@ -6,6 +6,7 @@
     "@babel/core": "7.1.0",
     "@babel/plugin-proposal-decorators": "^7.2.0",
     "@svgr/webpack": "2.4.1",
+    "antd": "^3.11.0",
     "autoprefixer": "^9.4.2",
     "axios": "^0.18.0",
     "babel-core": "7.0.0-bridge.0",
@@ -113,6 +114,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.11.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "node-sass": "^4.10.0",

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {observable, action} from 'mobx';
 // import {PropTypes} from "prop-types";
 import {observer, PropTypes as ObservablePropTypes } from 'mobx-react'
-
+import { Button, Alert  } from 'antd';
 import './assets/style/index.scss';
 
 class Store {
@@ -47,13 +47,18 @@ class Foo extends Component {
     const cache = this.props.cache;
     return (
       <div>
-         <button onClick = {()=> this.props.add() }>加一</button>
-         <button onClick = {()=> this.props.del() }>减一</button>
+        <Alert message="Success Text" type="success" />
+        <Alert message="Success Text" type="info" />
+        <Alert message="Success Text" type="warning" />
+        <Alert message="Success Text" type="error" />
+         <Button type="primary" onClick = {()=> this.props.add() }>加一</Button>
+         <Button type="danger" onClick = {()=> this.props.del() }>减一</Button>
           <Bar queue = {cache.queue} />
       </div>
     )
   }
 }
+
 class App extends Component {
   render() {
     return (

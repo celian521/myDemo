@@ -1,7 +1,12 @@
 import { observable, action } from 'mobx'
 
 class HomeStore {
-  @observable number = 0
+  @observable number = 100
+  @observable kk = {a:"ste"}
+
+  @action ackk = (key,v) => {
+    this.kk[key] = v
+  }
 
   @action increase = () => {
     this.number += 1

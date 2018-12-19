@@ -8,7 +8,7 @@
 // import News from '../components/News';
 
 // import Layout from './pages'
-import Home from '../pages/home';
+import Home from '../pages/home/index2.js';
 import Detail from '../pages/detail';
 import MobxDemo from '../pages/mobxDemo';
 import FormDemo from '../pages/detail/form';
@@ -46,10 +46,10 @@ let routes = [
     //     }
     //   ]
     // },
-    {
-      path: "/mobx",
-      component: MobxDemo
-    },
+    // {
+    //   path: "/mobx",
+    //   component: MobxDemo
+    // },
     {
       path: "/form",
       component: FormDemo

@@ -6,15 +6,15 @@ import {
 
 
 const initUser = {
-    name: 'un'
+    name: 'unono'
 }
 
 // 产生聊天状态的reducer
 function user(state = initUser, action) {
     switch (action.type) {
         case TESTTYPE:
-        console.log(action)
-            return { ...initUser, name: action.data };
+            console.log(state)
+            return { ...state, name: action.data };
         default:
             return state
     }

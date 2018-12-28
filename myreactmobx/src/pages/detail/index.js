@@ -34,7 +34,7 @@ class Detail extends Component {
             </li>
         );
         const temperature = this.state.temperature;
-        const a = {a:100}
+        // const a = {a:100}
         return (
             <Fragment>
                 <Navbar></Navbar>

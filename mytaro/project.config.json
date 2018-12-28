@@ -1,0 +1,18 @@
+{
+  "miniprogramRoot": "./dist",
+  "projectname": "mytaro",
+  "description": "",
+	"appid": "wx4f8f787626d16b46",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"uglifyFileName": true,
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+  "libVersion": "2.4.3",
+  "condition": {}
+}

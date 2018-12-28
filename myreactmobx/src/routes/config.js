@@ -13,6 +13,7 @@ import Detail from '../pages/detail';
 import MobxDemo from '../pages/mobxDemo';
 import FormDemo from '../pages/detail/form';
 import Higher from '../pages/higherOrderComponent';
+import tplDemo from '../pages/detail/tplDemo';
 
 let routes = [
     {
@@ -23,6 +24,10 @@ let routes = [
     {
       path: "/detail",
       component: Detail
+    },
+    {
+      path: "/tplDemo",
+      component: tplDemo
     },
     {
       path: "/higher",

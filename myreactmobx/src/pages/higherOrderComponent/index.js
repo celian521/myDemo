@@ -6,18 +6,22 @@
   */
 
 import React, { Component } from 'react';
+import A from './A'
+import B from './B'
+import E from './E'
 
-import d from './D'
-
-@d
-class De extends Component {
+class Indexheig extends Component {
     render() {
         return (
             <div>
-                thisis index.js
+                ==
+                <A name="stephen" age={16} />
+                <B user='jim' set='myot' />
+                <E />
+                ==
             </div>
         );
     }
 }
 
-export default De;
+export default Indexheig;

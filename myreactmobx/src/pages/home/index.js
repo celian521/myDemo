@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../../components/navBar';
 
-import { Icon } from 'antd';
+import { Icon, Button } from 'antd';
 import { inject, observer } from 'mobx-react';
 
 // const like = require('./like.svg');
@@ -52,7 +52,7 @@ class Home extends Component {
                 <br />
                 <div onClick={this.props.del}>del</div>
                 <div onClick={this.ackk("a")}>ackk</div>
-
+                <Button type="primary">Primary</Button>
             </div>
         );
     }

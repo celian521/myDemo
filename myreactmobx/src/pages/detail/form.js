@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 class FormDemo extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
     handleSubmit = event => {
         console.log(event, this.input.value);
         console.log(this.kk);

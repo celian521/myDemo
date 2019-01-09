@@ -3,9 +3,9 @@ import counterStore from './counter'
 import userStore from './userStore'
 
 const store = {
-  nodeStore,
-  counterStore,
-  userStore
+  // nodeStore,
+  // counterStore,
+  // userStore
 }
 
 export default store

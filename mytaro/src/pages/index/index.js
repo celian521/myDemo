@@ -1,7 +1,8 @@
-import { View } from '@tarojs/components';
+import { View, Text } from '@tarojs/components';
 import { inject, observer } from '@tarojs/mobx';
 import Taro, { Component } from '@tarojs/taro';
 import { AtList, AtListItem, AtTabBar, AtSwipeAction  } from 'taro-ui';
+
 
 import './index.scss'
 
@@ -29,7 +30,7 @@ class Index extends Component {
   handleClick = path => {
     // console.log(v)
     // 跳转到目的页面，在当前页面打开
-    Taro.redirectTo({
+    Taro.navigateTo({
       url: path
     })
   }
@@ -49,8 +50,14 @@ class Index extends Component {
   render () {
     return (
       <View>
+
+        <Text>text</Text>
+
         <AtList>
           <AtListItem title='DEMO' onClick={this.handleClick.bind(this, '/pages/demo/index?id=2&type=test')} />
+
+          <AtListItem title='EMIT' onClick={this.handleClick.bind(this, '/pages/emit/index')} />
+
           <AtListItem title='标题文字' arrow='right' />
           <AtListItem title='标题文字' extraText='详细信息' />
           <AtListItem title='禁用状态' disabled extraText='详细信息' />
@@ -63,7 +70,7 @@ class Index extends Component {
         </AtList>
         <View data-id={52} onClick={this.gotoPanel}> gotoPanel  </View>
 
-         {/* <AtSwipeAction options={[
+         <AtSwipeAction options={[
             {
               text: '取消',
               style: {
@@ -79,8 +86,8 @@ class Index extends Component {
           ]}
          >
           <View className='normal'>AtSwipeAction 一般使用场景</View>
-        </AtSwipeAction> */}
-       {/* <AtSwipeAction options={[
+        </AtSwipeAction>
+       <AtSwipeAction options={[
             {
               text: '取消',
               style: {
@@ -96,7 +103,7 @@ class Index extends Component {
           ]}
        >
           <View className='normal'>AtSwipeAction 一般使用场景</View>
-        </AtSwipeAction> */}
+        </AtSwipeAction>
 
         <AtTabBar
           fixed

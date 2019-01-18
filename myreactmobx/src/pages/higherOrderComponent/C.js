@@ -1,7 +1,7 @@
 /***
  * 继承方式的高价组件
  */
-import React, { Component } from 'react';
+import React from 'react';
 
 const modifyPorpsHOC = (WrapedComponent) => class NewComponent extends WrapedComponent {
     static displayName = `NewComponent(${getDisplayName(WrapedComponent)})`

@@ -1,5 +1,6 @@
 const home = () => import('@/pages/home');
 const list = () => import('@/pages/list');
+const event = () => import('@/pages/event');
 
 const routers = [
   // 首页 HOME
@@ -19,6 +20,15 @@ const routers = [
       title: '列表'
     },
     component: list
+  },
+  // event
+  {
+    name: 'event',
+    path: '/event',
+    meta: {
+      title: 'event'
+    },
+    component: event
   },
   // 404
   {

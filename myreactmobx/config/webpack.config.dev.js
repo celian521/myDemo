@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -314,7 +314,7 @@ module.exports = {
             ),
           },
 
-          // less => by stephan add
+          // less => by stephen add
           {
             test: /\.less$/,
             use: [
@@ -323,7 +323,7 @@ module.exports = {
               {
                 loader: require.resolve('less-loader'),
                 options: {
-                  modifyVars: { '@primary-color': '#1890ff' },
+                  modifyVars: { '@primary-color': '#189000' },
                   javascriptEnabled: true,
                 },
               },

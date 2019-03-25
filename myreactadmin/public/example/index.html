@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>微应用案例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="webosSDK.js"></script>
+</head>
+
+<body>
+    <div id='demo'>
+        微应用案例 getToken
+    </div>
+    <div id='demo2'>
+        微应用案例 getAccount
+    </div>
+    <div id='demo3'>
+        微应用案例 getMessage
+    </div>
+    <pre id='content'></pre>
+</body>
+<script>
+    let webosSDK = new Msg()
+    webosSDK.listenMsg("apidemo", (e) => {
+        console.log('接收OS发送过来的API:', e)
+    })
+
+    webosSDK.get('token', {api:5}).then(e=>{
+        console.log('-->', e);
+        document.getElementById("content").innerHTML = e
+    })
+
+    document.getElementById("demo").addEventListener('click', function () {
+        webosSDK.get('token').then(e=>{
+            console.log('-->', e);
+            document.getElementById("content").innerHTML = e
+        })
+    });
+
+    document.getElementById("demo2").addEventListener('click', function () {
+        webosSDK.get('account').then(e=>{
+            console.log('-->', e);
+            document.getElementById("content").innerHTML = JSON.stringify(e)
+        })
+    });
+
+    document.getElementById("demo3").addEventListener('click', function () {
+        webosSDK.get('message', {id:0}).then(e=>{
+            console.log('-->', e);
+            document.getElementById("content").innerHTML = JSON.stringify(e)
+        })
+    });
+</script>
+
+</html>

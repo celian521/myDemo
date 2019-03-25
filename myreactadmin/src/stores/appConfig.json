@@ -1,0 +1,43 @@
+[
+    {
+        "id": "1d",
+        "title": "公众号管理系统",
+        "url": "http://127.0.0.1:8083",
+        "icon": "link",
+        "iconBg": "#f56a00",
+        "collect": true
+    },
+    {
+        "id": "a2",
+        "title": "公众号2",
+        "url": "http://baidu.com",
+        "icon": "edit",
+        "iconBg": "#7265e6",
+        "collect": true
+    },
+    {
+        "id": "b3",
+        "title": "微应用案例",
+        "url": "http://localhost:11000/",
+        "icon": "area-chart",
+        "iconBg": "#ffbf00",
+        "collect": true
+    },
+    {
+        "id": "b4",
+        "title": "案例12000",
+        "url": "http://localhost:12000/index.html",
+        "icon": "area-chart",
+        "iconBg": "#f56a00",
+        "collect": true
+    },
+    {
+        "id": "b5",
+        "title": "开发者中心",
+        "url": "http://localhost:8085",
+        "iconType": "image",
+        "icon": "https://gw.alipayobjects.com/zos/rmsportal/siCrBXXhmvTQGWPNLBow.png",
+        "collect": true
+    }
+
+]

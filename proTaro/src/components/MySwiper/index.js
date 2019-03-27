@@ -18,16 +18,16 @@ export default class MySwiper extends Component {
     const { banner, home } = this.props;
     return (
       <Swiper
-        className={!home ? 'swiper-container' : 'swiper'}
+        className='swiper'
         circular
         indicatorDots
-        indicatorColor='#999'
-        indicatorActiveColor='#bf708f'
+        indicatorColor='#ccc'
+        indicatorActiveColor='#000'
         autoplay
       >
         { banner.map((item, index) => (
           <SwiperItem key={index}>
-            <Image mode='widthFix' src={`${item.image_src}!w750`}></Image>
+            <Image  style='width: 100%; height: auto' src={item.image_src} />
           </SwiperItem>
         ))}
       </Swiper>

@@ -28,7 +28,7 @@ class App extends Component {
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: '旗袍协会',
       navigationBarTextStyle: 'black'
     },
     tabBar: {
@@ -53,8 +53,8 @@ class App extends Component {
         iconPath: "./assets/images/user.png",
         selectedIconPath: "./assets/images/user-active.png"
       }],
-      color: '#333',
-      selectedColor: '#333',
+      color: '#666',
+      selectedColor: '#000',
       backgroundColor: '#fff',
       borderStyle: 'black'
     }

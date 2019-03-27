@@ -1,0 +1,5 @@
+// 自定义主题
+$color-brand: #855498;
+$color-brand-light: #a47fb2;
+$color-brand-dark: #6a437a;
+@import "~taro-ui/dist/style/index.scss"; // 引入taro UI组件样式，仅需引入一次即可

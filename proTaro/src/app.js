@@ -8,9 +8,9 @@ import './app.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
-// if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
-//   require('nerv-devtools')
-// }
+if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
+  require('nerv-devtools')
+}
 
 const store = {
   counterStore
@@ -20,13 +20,43 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/home/index',
+      'pages/uikit/index',
+      'pages/user/index',
+      'pages/demo/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      list: [{
+        pagePath: "pages/home/index",
+        text: "首页",
+        iconPath: "./assets/images/home.png",
+        selectedIconPath: "./assets/images/home-active.png"
+      },{
+        pagePath: "pages/uikit/index",
+        text: "企业家俱乐部",
+        iconPath: "./assets/images/cart.png",
+        selectedIconPath: "./assets/images/cart-active.png"
+      },{
+        pagePath: "pages/demo/index",
+        text: "活动策划",
+        iconPath: "./assets/images/cart.png",
+        selectedIconPath: "./assets/images/cart-active.png"
+      },{
+        pagePath: "pages/user/index",
+        text: "会员中心",
+        iconPath: "./assets/images/user.png",
+        selectedIconPath: "./assets/images/user-active.png"
+      }],
+      color: '#333',
+      selectedColor: '#333',
+      backgroundColor: '#fff',
+      borderStyle: 'black'
     }
   }
 

@@ -9,6 +9,7 @@ const UserList = asyncComponent(() => import("../pages/user/UserList"));
 const UserEdit = asyncComponent(() => import("../pages/user/UserEdit"));
 const UserAdd = asyncComponent(() => import("../pages/user/UserAdd"));
 const Settings = asyncComponent(() => import("../pages/settings"));
+const test = asyncComponent(() => import("../pages/test"));
 
 let routes = [
     {
@@ -36,6 +37,10 @@ let routes = [
         {
           path: "/home/settings",
           component: Settings
+        },
+        {
+          path: "/home/test",
+          component: test
         },
         {
           path: "/home/user",

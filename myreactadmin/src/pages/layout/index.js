@@ -27,9 +27,11 @@ const { Content, Sider } = Layout;
 
 @observer
 class LayoutPage extends Component {
+    Breakpoint = (broken) => {
+      if(broken!==this.props.hasCloseSider)this.props.toggleSider()
+    }
     render() {
       console.log('==>', this.props.history);
-
       if(!this.props.loginFlag){
         return <Redirect to='/login' />;
       }
@@ -41,6 +43,8 @@ class LayoutPage extends Component {
               trigger={null}
               collapsible
               collapsed={this.props.hasCloseSider}
+              breakpoint='md'
+              onBreakpoint={this.Breakpoint}
             >
               <Link to='/'>
                 <div id="logo">

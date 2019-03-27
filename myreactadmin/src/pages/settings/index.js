@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Card, Icon, Row, Col, Breadcrumb  } from 'antd';
+import Draggable, {DraggableCore} from 'react-draggable';
 const { Meta } = Card;
 
 @inject(({appStore})=>({
@@ -18,6 +19,9 @@ class Settings extends Component {
         this.props.history.push('/home/app')
         this.props.openAPP(id)
     }
+    handleStart = e => {
+        console.log(e);
+    }
     render() {
         let product = this.props.appConfig
         return (
@@ -28,11 +32,19 @@ class Settings extends Component {
                         <Breadcrumb.Item>列表</Breadcrumb.Item>
                     </Breadcrumb>
                 </Card>
+
                 <Row gutter={24}>
+
+
+
+
                     {
                         product.map((item, index)=>{
                             return (
-                                <Col span={8} key={index}>
+                            <Draggable onStop={this.handleStart}>
+
+                                <Col  key={index} span={8}>
+
                                     <Card
                                         actions={
                                             [
@@ -47,11 +59,15 @@ class Settings extends Component {
                                             description={item.url}
                                         />
                                     </Card>
+
                                 </Col>
+                                 </Draggable>
                             )
                         })
                     }
+
                 </Row>
+
             </div>
         );
     }

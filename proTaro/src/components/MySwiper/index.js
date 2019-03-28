@@ -27,7 +27,7 @@ export default class MySwiper extends Component {
       >
         { banner.map((item, index) => (
           <SwiperItem key={index}>
-            <Image  style='width: 100%; height: auto' src={item.image_src} />
+            <Image src={item.image_src} />
           </SwiperItem>
         ))}
       </Swiper>

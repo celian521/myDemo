@@ -2,12 +2,14 @@
   "miniprogramRoot": "./dist",
   "projectname": "proTaro",
   "description": "taro pro",
-  "appid": "wx4f8f787626d16b46",
+  "appid": "wx50dabf026d6be6de",
   "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "postcss": false,
-    "minified": false
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": false,
+    "newFeature": true,
+    "autoAudits": false
   },
   "compileType": "miniprogram"
 }

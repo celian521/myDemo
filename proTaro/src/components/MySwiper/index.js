@@ -22,7 +22,7 @@ export default class MySwiper extends Component {
         circular
         indicatorDots
         indicatorColor='#ccc'
-        indicatorActiveColor='#000'
+        indicatorActiveColor='#855498'
         autoplay
       >
         { banner.map((item, index) => (

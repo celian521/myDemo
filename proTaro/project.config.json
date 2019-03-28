@@ -11,5 +11,6 @@
     "newFeature": true,
     "autoAudits": false
   },
-  "compileType": "miniprogram"
+  "compileType": "miniprogram",
+  "libVersion": "2.6.4"
 }

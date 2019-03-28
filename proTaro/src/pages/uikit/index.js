@@ -39,7 +39,7 @@ class Index extends Component {
           />
           {
             this.state.current === 0
-            ? <View className='tab-content'>标签1的内容</View>
+            ? <View className='tab-content'>标签91的内容</View>
             : null
           }
           {

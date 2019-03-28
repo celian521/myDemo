@@ -1,11 +1,34 @@
 import Taro, { Component } from '@tarojs/taro'
-import { AtDivider } from 'taro-ui'
+import { View, Image, Text } from '@tarojs/components';
+import { AtButton  } from 'taro-ui'
+
+import "taro-ui/dist/style/components/flex.scss";
+
+
 import './index.scss';
 
 export default class MyList extends Component {
+  handerLink = id => {
+    const url = '/pages/details/index?id=3'
+    Taro.navigateTo({url})
+  }
   render() {
     return (
-      <AtDivider lineColor='#855498' fontColor="#666666" content='分割线' />
+      <View onClick={this.handerLink.bind('1')} className='myList at-row at-row__align--center'>
+        <View className='ml-left at-col at-col-3'>
+          <Image src='https://jdc.jd.com/img/150' />
+        </View>
+        <View className='ml-right at-col at-col-9 at-col--wrap'>
+
+          <View className='title'>
+          主轴方向的排列方式
+          </View>
+          <View className='info'>
+          主轴方向的排列方式主轴方向的排列方式主轴方向的排列方式主轴方向的排列方式
+          </View>
+          <View className='info'>[查看详情]</View>
+        </View>
+      </View>
     )
   }
 }

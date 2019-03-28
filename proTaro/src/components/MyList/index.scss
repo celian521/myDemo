@@ -1,0 +1,13 @@
+// @import "~taro-ui/dist/style/components/flex.scss";
+
+.myList { 
+    border-bottom: 1PX solid #eee;
+    padding: 20px 0;
+    .ml-left { 
+        image, img { width: 150px; height: 150px; border-radius: 50%; }
+    }
+    .ml-right { 
+        .title { font-size: 30px; margin-bottom: 12px; }
+        .info { font-size: 26px; color: #666; line-height: 1.5; }
+    }
+}

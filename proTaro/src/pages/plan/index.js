@@ -30,7 +30,7 @@ class Index extends Component {
           活动策划
           </View>
           <View className='at-article__info'>
-            2017-05-07&nbsp;&nbsp;&nbsp;这是作者
+            2017-05-07 这是作者
           </View>
           <AtDivider lineColor='#855498' fontColor='#666666' content='分割线' />
           <View className='at-article__content'>

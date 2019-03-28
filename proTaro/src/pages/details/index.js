@@ -5,21 +5,42 @@
   *  @Des     描述
   *  @Time    2019
   */
-import Taro, { Component } from '@tarojs/taro'
-import { View, Image } from '@tarojs/components'
+import Taro, { Component, chooseInvoiceTitle } from '@tarojs/taro'
+import { View, RichText } from '@tarojs/components'
 import { AtDivider } from 'taro-ui'
+import { observer, inject } from '@tarojs/mobx'
 
 import './index.scss'
 
-class Index extends Component {
 
+@inject('apisStore')
+
+@observer
+class Index extends Component {
+  constructor() {
+    super(...arguments);
+    this.state = {
+      title: '###',
+      content: '###'
+    };
+  }
   config = {
-    navigationBarTitleText: 'DETAILS'
+    navigationBarTitleText: 'loading...'
   }
 
-  componentWillMount() {}
-
-  componentWillReact() {}
+  componentWillMount() {
+    console.log(this.$router.params)
+    const { id } = this.$router.params
+    const { apisStore } = this.props
+    const data = apisStore.getDetails(id)
+    Taro.setNavigationBarTitle({
+      title: data.title
+    })
+    this.setState({
+      title: data.title,
+      content:data.content
+    })
+  }
 
   componentDidMount() {}
 
@@ -31,34 +52,22 @@ class Index extends Component {
 
   render () {
     const { } = this.props
+    const { title, content } = this.state
     return (
 
-        <View className='at-article'>
-          <View className='at-article__h1'>
-            这是一级标题这是一级标题
-          </View>
-          <View className='at-article__info'>
-            2017-05-07&nbsp;&nbsp;&nbsp;这是作者
-          </View>
-          <AtDivider lineColor='#855498' fontColor='#666666' content='分割线' />
-          <View className='at-article__content'>
-            <View className='at-article__section'>
-              <View className='at-article__h2'>这是二级标题</View>
-              <View className='at-article__h3'>这是三级标题</View>
-              <View className='at-article__p'>
-                这是文本段落。这是文本段落。这是文本段落。这是文本段落。这是文本段落。这是文本段落。这是文本段落。这是文本落。这是文本段落。1234567890123456789012345678901234567890 ABCDEFGHIJKLMNOPQRSTUVWXYZ
-              </View>
-              <View className='at-article__p'>
-                这是文本段落。这是文本段落。
-              </View>
-              <Image
-                className='at-article__img'
-                src='https://dummyimage.com/750x400/ccc/f0f'
-                mode='widthFix'
-              />
-            </View>
+      <View className='at-article'>
+      
+        <View className='at-article__h1'>
+          {title}
+        </View>
+    
+        <View className='at-article__content'>
+          <View className='at-article__section'>
+            <RichText nodes={content} />
           </View>
         </View>
+
+      </View>
     )
   }
 }

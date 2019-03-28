@@ -7,7 +7,7 @@ import './index.scss'
 class Index extends Component {
 
   config = {
-    navigationBarTitleText: '会员中心'
+    navigationBarTitleText: '活动策划'
   }
 
   componentWillMount() {}
@@ -27,7 +27,7 @@ class Index extends Component {
     return (
         <View className='at-article'>
           <View className='at-article__h1'>
-          会员中心
+          活动策划
           </View>
           <View className='at-article__info'>
             2017-05-07&nbsp;&nbsp;&nbsp;这是作者

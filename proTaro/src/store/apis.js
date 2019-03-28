@@ -8,14 +8,11 @@ import { observable } from 'mobx'
 import http from '../utils/http'
 import mock from '../mock'
 
-// console.log("mock", http);
-
 const apisStore = observable({
   banner: [],
   grid: mock.grid || [],
-  list: 0,
+  tabList: mock.tabList || [],
   updateHome() {
-    console.log('aaaaaa');
     this.banner = mock.banner
   },
 })

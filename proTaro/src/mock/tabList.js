@@ -1,1 +1,1 @@
-export default [{ title: '标签页1' }, { title: '标签页2' }, { title: '标签页3' }]
+export default [{ title: '活动集锦' }, { title: '学堂撷英' }, { title: '旗袍时尚' }]

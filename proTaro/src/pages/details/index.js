@@ -1,3 +1,10 @@
+
+ /**
+  *  @Title   details
+  *  @Auther  Stephen WU
+  *  @Des     描述
+  *  @Time    2019
+  */
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import { AtDivider } from 'taro-ui'
@@ -7,7 +14,7 @@ import './index.scss'
 class Index extends Component {
 
   config = {
-    navigationBarTitleText: '会员中心'
+    navigationBarTitleText: 'DETAILS'
   }
 
   componentWillMount() {}
@@ -25,9 +32,10 @@ class Index extends Component {
   render () {
     const { } = this.props
     return (
+
         <View className='at-article'>
           <View className='at-article__h1'>
-          会员中心
+            这是一级标题这是一级标题
           </View>
           <View className='at-article__info'>
             2017-05-07&nbsp;&nbsp;&nbsp;这是作者

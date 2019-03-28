@@ -15,8 +15,11 @@ class App extends Component {
   config = {
     pages: [
       'pages/home/index',
-      'pages/uikit/index',
+      'pages/club/index',
+      'pages/plan/index',
       'pages/user/index',
+      'pages/details/index',
+      'pages/uikit/index',
       'pages/demo/index'
     ],
     window: {
@@ -32,12 +35,12 @@ class App extends Component {
         iconPath: "./assets/images/home.png",
         selectedIconPath: "./assets/images/home-active.png"
       },{
-        pagePath: "pages/uikit/index",
+        pagePath: "pages/club/index",
         text: "企业家俱乐部",
         iconPath: "./assets/images/cart.png",
         selectedIconPath: "./assets/images/cart-active.png"
       },{
-        pagePath: "pages/demo/index",
+        pagePath: "pages/plan/index",
         text: "活动策划",
         iconPath: "./assets/images/cart.png",
         selectedIconPath: "./assets/images/cart-active.png"

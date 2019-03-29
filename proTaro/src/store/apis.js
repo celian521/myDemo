@@ -12,9 +12,9 @@ const apisStore = observable({
   banner: [],
   grid: mock.grid || [],
   tabList: mock.tabList || [],
-  details: mock.details ||[],
+  details: mock.details || [],
   getDetails(id) {
-    return this.details.find( item => item.id == id )
+    return this.details.find(item => item.id == id)
   },
   updateHome() {
     this.banner = mock.banner

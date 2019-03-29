@@ -4,12 +4,14 @@
   "description": "taro pro",
   "appid": "wx50dabf026d6be6de",
   "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "postcss": true,
-    "minified": false,
-    "newFeature": true,
-    "autoAudits": false
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"nodeModules": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.6.4"

@@ -3,7 +3,7 @@ import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
 import MySwiper from '../../components/MySwiper'
-import MyList from '../../components/MyList'
+import NewsList from '../../components/MyList/newsList'
 import './index.scss'
 
 @inject('apisStore')
@@ -34,7 +34,7 @@ class Index extends Component {
          <MySwiper banner={banner} />
         {
           banner.map((item, index)=>(
-            <MyList key={index} />
+            <NewsList key={index} />
           ))
         }
       </View>

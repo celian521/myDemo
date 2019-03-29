@@ -15,20 +15,22 @@ export default class List extends Component {
   render() {
     const data = [1,2,3,4,5, 6,7]
     return (
+      <View className='images-block-wrap'>
       <View className='images-block at-row at-row--wrap '>
-      { data.map((item, index)=>(
-          <View key={index} className='images-item at-col at-col-6 at-col--wrap'>
-            <View class='images-inner'>
-              <View className='images-img'>
-                <Image src='https://jdc.jd.com/img/350' />
+        { data.map((item, index)=>(
+            <View key={index} className='images-item at-col at-col-6 at-col--wrap'>
+              <View className='images-inner'>
+                <View className='images-img'>
+                  <Image src='https://jdc.jd.com/img/350' />
+                </View>
+                <View className='images-title'>
+                主轴+方向的排列方式主列方式主轴
+                </View>
+                <View className='images-info'>[查看详情]</View>
               </View>
-              <View className='images-title'>
-              主轴+方向的排列方式主列方式主轴
-              </View>
-              <View className='images-info'>[查看详情]</View>
             </View>
-          </View>
-      ))}
+        ))}
+      </View>
       </View>
     )
   }

@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
-import Index from './pages/index'
+import Index from './pages/home/index'
 import store from './store'
 import './app.scss'
 
@@ -19,8 +19,10 @@ class App extends Component {
       'pages/plan/index',
       'pages/user/index',
       'pages/details/index',
-      'pages/uikit/index',
-      'pages/demo/index'
+      'pages/organ/index',
+      'pages/training/index',
+      'pages/media/index',
+      'pages/dangjian/index'
     ],
     window: {
       backgroundTextStyle: 'light',

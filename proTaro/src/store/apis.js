@@ -9,7 +9,7 @@ import http from '../utils/http'
 import mock from '../mock'
 
 const apisStore = observable({
-  banner: [],
+  banner: mock.banner || [],
   grid: mock.grid || [],
   tabList: mock.tabList || [],
   details: mock.details || [],

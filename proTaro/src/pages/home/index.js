@@ -67,38 +67,30 @@ class Home extends Component {
     return (
       <View className='wrap'>
 
-        <MySwiper banner={ banner } />
+        <MySwiper banner={banner} />
 
 
-        <AtGrid hasBorder={ false } data={ grid } onClick={ this.handleGrid } />
+        <AtGrid hasBorder={false} data={grid} onClick={this.handleGrid} />
 
-        <AtDivider className='myDivider' lineColor='#855498' fontColor='#666666' content='活动预告' />
+        <AtDivider content='活动预告' className='myDivider' lineColor='#855498' fontColor='#666666'  />
 
-        <MySwiper banner={ banner } />
+        <MySwiper banner={banner} />
 
-        <AtDivider className='myDivider' lineColor='#855498' fontColor='#666666' content='智慧学堂' />
+        <AtDivider content='智慧学堂' className='myDivider' lineColor='#855498' fontColor='#666666'  />
 
-        <MySwiper banner={ banner } />
+        <MySwiper banner={banner} />
 
         <View className='u-title'>新闻资讯</View>
 
-        <AtTabs current={ this.state.current } tabList={ tabList } onClick={ this.handleClick.bind(this) }>
-          <AtTabsPane current={ this.state.current } index={ 0 }>
-            {
-              banner.map((item, index) => (
-              <NewsList key={ index } />
-            ))
-            }
+        <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
+          <AtTabsPane className='wrap-top' current={this.state.current} index={0}>
+            <NewsList />
           </AtTabsPane>
-          <AtTabsPane current={ this.state.current } index={ 1 }>
+          <AtTabsPane className='wrap-top' current={this.state.current} index={1}>
             <ImagesList />
           </AtTabsPane>
-          <AtTabsPane current={ this.state.current } index={ 2 }>
-            {
-              banner.map((item, index) => (
-                <NewsList key={ index } />
-              ))
-            }
+          <AtTabsPane className='wrap-top' current={this.state.current} index={2}>
+            <NewsList />
           </AtTabsPane>
         </AtTabs>
       </View>

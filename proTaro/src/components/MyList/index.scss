@@ -4,25 +4,23 @@ $name: news;
 
 .#{$name}-block {
   border-bottom: 1PX solid #eee;
-  padding: 20px 0;
-
-  .#{$name}-item {}
-
-  .#{$name}-inner {}
+  padding-top: 20px;
 
   .#{$name}-img {
-
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     image,
     img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 
   .#{$name}-title {
     font-size: 28px;
     margin-bottom: 12px;
+    line-height: 1.5;
   }
 
   .#{$name}-info {
@@ -33,11 +31,42 @@ $name: news;
 
 }
 
+$name: news2;
+
+.#{$name}-block {
+  border-bottom: 1PX solid #eee;
+  padding-top: 20px;
+
+  .#{$name}-img {
+    width: 280px;
+    height: 180px;
+    image,
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .#{$name}-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .at-col--wrap { position: relative; }
+  .#{$name}-info {
+    position: absolute;
+    bottom: 18px;
+    font-size: 28px;
+    color: #999;
+    line-height: 1.5;
+  }
+
+}
+
 
 // .images-item
 
 $name: images;
-
+.#{$name}-block-wrap { margin: 0 -8px; }
 .#{$name}-block {
   .#{$name}-item {
     padding: 8px;
@@ -45,7 +74,7 @@ $name: images;
 
   .#{$name}-inner {
     border: 1PX solid #eee;
-    padding: 4px;
+    padding: 3PX;
     border-radius: 8px;
   }
 
@@ -73,135 +102,6 @@ $name: images;
 
 }
 
+// .card-pic {}
 
-
-// .van-card {
-//   position: relative;
-//   color: #323233;
-//   font-size: 12px;
-//   padding: 5px 15px;
-//   box-sizing: border-box;
-//   background-color: #fafafa;
-// }
-// .van-card:not(:first-child) {
-//   margin-top: 10px;
-// }
-// .van-card__header {
-//   display: -webkit-box;
-//   display: -webkit-flex;
-//   display: flex;
-// }
-// .van-card__thumb {
-//   position: relative;
-//   width: 90px;
-//   height: 90px;
-//   margin-right: 10px;
-//   -webkit-box-flex: 0;
-//   -webkit-flex: none;
-//           flex: none;
-//   -webkit-box-align: center;
-//   -webkit-align-items: center;
-//           align-items: center;
-//   -webkit-box-pack: center;
-//   -webkit-justify-content: center;
-//           justify-content: center;
-// }
-// .van-card__thumb img {
-//   border: none;
-//   max-width: 100%;
-//   max-height: 100%;
-// }
-// .van-card__content {
-//   position: relative;
-//   display: -webkit-box;
-//   display: -webkit-flex;
-//   display: flex;
-//   -webkit-box-flex: 1;
-//   -webkit-flex: 1;
-//           flex: 1;
-//   height: 90px;
-//   -webkit-box-orient: vertical;
-//   -webkit-box-direction: normal;
-//   -webkit-flex-direction: column;
-//           flex-direction: column;
-//   min-width: 0;
-//   /* hack for flex box ellipsis */
-// }
-// .van-card__content--centered {
-//   -webkit-box-pack: center;
-//   -webkit-justify-content: center;
-//           justify-content: center;
-// }
-// .van-card__title,
-// .van-card__desc {
-//   word-break: break-all;
-// }
-// .van-card__title {
-//   line-height: 16px;
-//   max-height: 32px;
-//   font-weight: bold;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-//   display: -webkit-box;
-//   -webkit-line-clamp: 2;
-//   /* autoprefixer: ignore next */
-//   -webkit-box-orient: vertical;
-// }
-// .van-card__desc {
-//   color: #7d7e80;
-//   max-height: 20px;
-//   line-height: 20px;
-// }
-// .van-card__bottom {
-//   line-height: 20px;
-// }
-// .van-card__price {
-//   display: inline-block;
-//   color: #f44;
-//   font-weight: bold;
-// }
-// .van-card__origin-price {
-//   display: inline-block;
-//   margin-left: 5px;
-//   font-size: 10px;
-//   color: #7d7e80;
-//   text-decoration: line-through;
-// }
-// .van-card__num {
-//   float: right;
-// }
-// .van-card__tag {
-//   position: absolute;
-//   top: 2px;
-//   left: 0;
-// }
-// .van-card__footer {
-//   text-align: right;
-//   -webkit-box-flex: 0;
-//   -webkit-flex: none;
-//           flex: none;
-// }
-// .van-card__footer .van-button {
-//   margin-left: 5px;
-// }
-
-
-// <View className="van-card">
-//     <View className="van-card__header">
-//         <View className="van-card__thumb">
-//             <Image src="//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg"
-//                 className="van-card__img" />
-//             <View className="van-card__tag">tag</View>
-//         </View>
-//         <View className="van-card__content">
-//             <View className="van-card__title">2018秋冬新款男士休闲时尚军绿飞行夹克秋冬新款男</View>
-//             <View className="van-card__desc van-ellipsis">描述信息</View>
-
-//             <View className="van-card__bottom">
-//                 <View className="van-card__price">¥ 2.00</View>
-//                 <View className="van-card__origin-price">¥ 10.00</View>
-//                 <View className="van-card__num">x 2</View>
-//             </View>
-//         </View>
-//     </View>
-// </View>
+// .card-news {}

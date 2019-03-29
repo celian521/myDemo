@@ -16,15 +16,15 @@ export default class List extends Component {
     return (
       <View>
       { data.map((item, index)=>(
-      <View key={index} onClick={this.handerLink.bind('1')} className='news-block at-row at-row__align--center'>
-        <View className='at-col at-col-3'>
-          <Image className='news-img' src='https://jdc.jd.com/img/150' />
+      <View key={index} onClick={this.handerLink.bind('1')} className='news2-block at-row at-row__align--top'>
+        <View className='at-col at-col-5'>
+          <Image className='news2-img' src='https://jdc.jd.com/img/280x180' />
         </View>
-        <View className='at-col at-col-9 at-col--wrap'>
-          <View className='news-title'>
-          主轴+方向的排列方式主轴方向的排列方式主轴方向的排列方式主轴
+        <View className='at-col at-col-7 at-col--wrap'>
+          <View className='news2-title'>
+          主轴+方向的
           </View>
-          <View className='news-info'>[查看详情]</View>
+          <View className='news2-info'>2009-04-12 12:00</View>
         </View>
       </View>
       ))}

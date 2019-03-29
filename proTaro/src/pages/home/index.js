@@ -83,7 +83,7 @@ class Home extends Component {
         <View className='u-title'>新闻资讯</View>
 
         <AtTabs current={ this.state.current } tabList={ tabList } onClick={ this.handleClick.bind(this) }>
-          <AtTabsPane current={ this.state.current } index={ 0 }
+          <AtTabsPane current={ this.state.current } index={ 0 }>
             {
               banner.map((item, index) => (
               <NewsList key={ index } />

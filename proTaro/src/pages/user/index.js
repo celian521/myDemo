@@ -1,11 +1,30 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Image } from '@tarojs/components'
-import { AtDivider } from 'taro-ui'
-
+import { observer, inject } from '@tarojs/mobx'
+import { View } from '@tarojs/components'
+import { AtTabs, AtTabsPane } from 'taro-ui'
+import MySwiper from '../../components/MySwiper'
+import MyList from '../../components/MyList'
 import './index.scss'
 
+@inject('apisStore')
+@observer
 class Index extends Component {
-
+  constructor() {
+    super(...arguments);
+    this.state = {
+      current: 0,
+      tabList: [{
+          title: '关于我们'
+        }, {
+          title: '加入我们'
+        }, {
+          title: '会员服务'
+        },{
+          title: '旗袍时尚'
+        }
+      ]
+    }
+  }
   config = {
     navigationBarTitleText: '会员中心'
   }
@@ -21,36 +40,58 @@ class Index extends Component {
   componentDidShow() {}
 
   componentDidHide() {}
-
+  handleClick = value => {
+    this.setState({
+      current: value
+    })
+  }
   render () {
-    const { } = this.props
+    const { apisStore: { banner } } = this.props
+    const { tabList } = this.state
+
     return (
-        <View className='at-article'>
-          <View className='at-article__h1'>
-          会员中心
-          </View>
-          <View className='at-article__info'>
-            2017-05-07&nbsp;&nbsp;&nbsp;这是作者
-          </View>
-          <AtDivider lineColor='#855498' fontColor='#666666' content='分割线' />
-          <View className='at-article__content'>
-            <View className='at-article__section'>
-              <View className='at-article__h2'>这是二级标题</View>
-              <View className='at-article__h3'>这是三级标题</View>
-              <View className='at-article__p'>
-                这是文本段落。这是文本段落。这是文本段落。这是文本段落。这是文本段落。这是文本段落。这是文本段落。这是文本落。这是文本段落。1234567890123456789012345678901234567890 ABCDEFGHIJKLMNOPQRSTUVWXYZ
-              </View>
-              <View className='at-article__p'>
-                这是文本段落。这是文本段落。
-              </View>
-              <Image
-                className='at-article__img'
-                src='https://dummyimage.com/750x400/ccc/f0f'
-                mode='widthFix'
-              />
-            </View>
-          </View>
-        </View>
+      <View className='wrap'>
+        <MySwiper banner={banner} />
+
+
+        <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
+          <AtTabsPane current={this.state.current} index={0} >
+
+<View>
+  no more
+</View>
+
+
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={1}>
+
+
+<View>
+  no more
+</View>
+
+
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={2}>
+{
+  banner.map((item, index)=>(
+    <MyList key={index} />
+  ))
+}
+
+
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={3}>
+
+<View>
+  no more
+</View>
+
+          </AtTabsPane>
+        </AtTabs>
+
+
+      </View>
     )
   }
 }

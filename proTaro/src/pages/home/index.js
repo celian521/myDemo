@@ -12,11 +12,18 @@ class Home extends Component {
   constructor() {
     super(...arguments);
     this.state = {
-      current: 0
-    };
+      current: 0,
+      tabList: [{
+        title: '活动集锦'
+      }, {
+        title: '学堂撷英'
+      }, {
+        title: '旗袍时尚'
+      }]
+    }
   }
   config = {
-    navigationBarTitleText: '旗袍协会'
+    navigationBarTitleText: '旗袍文化促进会'
   }
 
   componentWillMount() {
@@ -32,7 +39,7 @@ class Home extends Component {
   handleGrid = (item, index) => {
     console.log(item.url,index );
     const url = item.url
-    if(index == 0 ){
+    if(index == 0 || index == 2){
       Taro.switchTab({url})
     } else {
       Taro.navigateTo({url})
@@ -54,11 +61,14 @@ class Home extends Component {
   }
 
   render () {
-    const { apisStore: { banner, grid, tabList } } = this.props
+    const { apisStore: { banner, grid } } = this.props
+    const { tabList } = this.state
     return (
-      <View>
+      <View className='wrap'>
 
-        <MySwiper banner={banner} />
+          <MySwiper banner={banner} />
+
+
 
         <AtGrid hasBorder={false} data={grid} onClick={this.handleGrid} />
 
@@ -71,36 +81,37 @@ class Home extends Component {
         <MySwiper banner={banner} />
 
         <View>新闻资讯</View>
+
         <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane current={this.state.current} index={0} >
-<View className='wrap'>
+
 {
-  banner.map((item)=>(
-    <MyList />
+  banner.map((item, index)=>(
+    <MyList key={index} />
   ))
 }
-</View>
-          
+
+
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={1}>
 
-<View className='wrap'>
+
 {
-  banner.map((item)=>(
-    <MyList />
+  banner.map((item, index)=>(
+    <MyList key={index} />
   ))
 }
-</View>
+
 
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={2}>
-<View className='wrap'>
+
 {
-  banner.map((item)=>(
-    <MyList />
+  banner.map((item, index)=>(
+    <MyList key={index} />
   ))
 }
-</View> 
+
           </AtTabsPane>
         </AtTabs>
 

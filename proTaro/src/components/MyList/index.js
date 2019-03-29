@@ -1,11 +1,11 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components';
 import { AtButton  } from 'taro-ui'
-
-import "taro-ui/dist/style/components/flex.scss";
-
-
 import './index.scss';
+
+if (process.env.TARO_ENV === "weapp"){
+  require("taro-ui/dist/style/components/flex.scss");
+}
 
 export default class MyList extends Component {
   handerLink = id => {
@@ -21,11 +21,11 @@ export default class MyList extends Component {
         <View className='ml-right at-col at-col-9 at-col--wrap'>
 
           <View className='title'>
-          主轴方向的排列方式
+          主轴方向的排列方式主轴方向的排列方式主轴方向的排列方式主轴
           </View>
-          <View className='info'>
+          {/* <View className='info'>
           主轴方向的排列方式主轴方向的排列方式主轴方向的排列方式主轴方向的排列方式
-          </View>
+          </View> */}
           <View className='info'>[查看详情]</View>
         </View>
       </View>

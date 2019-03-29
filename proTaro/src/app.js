@@ -37,21 +37,21 @@ class App extends Component {
       },{
         pagePath: "pages/club/index",
         text: "企业家俱乐部",
-        iconPath: "./assets/images/cart.png",
-        selectedIconPath: "./assets/images/cart-active.png"
+        iconPath: "./assets/images/club.png",
+        selectedIconPath: "./assets/images/club-active.png"
       },{
         pagePath: "pages/plan/index",
         text: "活动策划",
-        iconPath: "./assets/images/cart.png",
-        selectedIconPath: "./assets/images/cart-active.png"
+        iconPath: "./assets/images/plan.png",
+        selectedIconPath: "./assets/images/plan-active.png"
       },{
         pagePath: "pages/user/index",
         text: "会员中心",
         iconPath: "./assets/images/user.png",
         selectedIconPath: "./assets/images/user-active.png"
       }],
-      color: '#666',
-      selectedColor: '#000',
+      color: '#a6a6a6',
+      selectedColor: '#855498',
       backgroundColor: '#fff',
       borderStyle: 'black'
     }

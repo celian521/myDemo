@@ -23,7 +23,6 @@ export default class MySwiper extends Component {
         indicatorDots
         indicatorColor='#ccc'
         indicatorActiveColor='#855498'
-        autoplay
       >
         { banner.map((item, index) => (
           <SwiperItem key={index}>

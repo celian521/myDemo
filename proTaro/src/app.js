@@ -22,7 +22,8 @@ class App extends Component {
       'pages/organ/index',
       'pages/training/index',
       'pages/media/index',
-      'pages/dangjian/index'
+      'pages/dangjian/index',
+      'pages/demo/index'
     ],
     window: {
       backgroundTextStyle: 'light',

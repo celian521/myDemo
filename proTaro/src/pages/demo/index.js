@@ -1,68 +1,58 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Button, Text } from '@tarojs/components'
-import { observer, inject } from '@tarojs/mobx'
+import { AtForm, AtInput, AtButton } from 'taro-ui'
 
 import './index.scss'
 
 
-@inject('counterStore')
-@observer
+
 class Index extends Component {
-
+  constructor () {
+    super(...arguments)
+    this.state = {
+      value: '',
+      value2: ''
+    }
+  }
   config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: 'DEMO'
   }
 
-  componentWillMount() {
-    console.log('1componentWillReact')
-  }
 
-  componentWillReact() {
-    console.log('2componentWillReact')
+  handleChange = (value) => {
+    this.setState({
+      value
+    })
   }
-
-  componentDidMount() {
-    console.log('3componentWillReact')
-  }
-
-  componentWillUnmount() {
-    console.log('4componentWillReact')
-  }
-
-  componentDidShow() {
-    console.log('5componentWillReact')
-  }
-
-  componentDidHide() {
-    console.log('6componentWillReact')
-  }
-
-  increment = () => {
-    const { counterStore } = this.props
-    counterStore.increment()
-  }
-
-  decrement = () => {
-    const { counterStore } = this.props
-    counterStore.decrement()
-  }
-
-  incrementAsync = () => {
-    const { counterStore } = this.props
-    counterStore.incrementAsync()
+  onSubmit = (event) => {
+    console.log(event)
   }
 
   render () {
-    const { counterStore: { counter } } = this.props
     return (
-      <View className='index'>
-        <Button onClick={this.increment}>+</Button>
-        <Button onClick={this.decrement}>-</Button>
-        <Button onClick={this.incrementAsync}>Add Async</Button>
-        <Text>{counter}</Text>
-      </View>
+      <AtForm
+        onSubmit={this.onSubmit.bind(this)}
+      >
+        <AtInput
+          name='value'
+          title='文本'
+          type='text'
+          placeholder='单行文本'
+          value={this.state.value}
+          onChange={this.handleChange.bind(this)}
+        />
+        <AtInput
+          name='value2'
+          title='文本'
+          type='text'
+          placeholder='单行文本'
+          value={this.state.value2}
+          onChange={this.handleChange.bind(this)}
+        />
+        <AtButton formType='submit'>提交</AtButton>
+      </AtForm>
     )
   }
 }
 
 export default Index
+

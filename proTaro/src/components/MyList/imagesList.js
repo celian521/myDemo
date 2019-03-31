@@ -9,7 +9,7 @@ if (process.env.TARO_ENV === "weapp"){
 
 export default class List extends Component {
   handerLink = id => {
-    const url = '/pages/details/index?id=3'
+    const url = '/pages/details/index?id=1'
     Taro.navigateTo({url})
   }
   render() {
@@ -18,7 +18,7 @@ export default class List extends Component {
       <View className='images-block-wrap'>
       <View className='images-block at-row at-row--wrap '>
         { data.map((item, index)=>(
-            <View key={index} className='images-item at-col at-col-6 at-col--wrap'>
+            <View key={index} onClick={this.handerLink.bind('1')} className='images-item at-col at-col-6 at-col--wrap'>
               <View className='images-inner'>
                 <View className='images-img'>
                   <Image src='https://jdc.jd.com/img/350' lazyLoad mode='widthFix' />

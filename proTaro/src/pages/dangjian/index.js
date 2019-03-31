@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import NewsList2 from '../../components/MyList/newsList2'
+import { NewsList, ImagesList, NewsList2, MySwiper} from '@components'
 import './index.scss'
 
 @inject('apisStore')

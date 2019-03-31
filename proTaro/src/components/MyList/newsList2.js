@@ -8,7 +8,7 @@ if (process.env.TARO_ENV === "weapp"){
 
 export default class List extends Component {
   handerLink = id => {
-    const url = '/pages/details/index?id=3'
+    const url = '/pages/details/index?id=4'
     Taro.navigateTo({url})
   }
   render() {

@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add ~taro-ui/dist/style/components/flex.scss --silent --no-progress
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @/components/MyList/newsList --silent --no-progress
 
 PATH: 
   C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;D:\code\myDemo\proTaro\node_modules\.bin;C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;D:\code\myDemo\proTaro\node_modules\.bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\stephen\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Microsoft VS Code\bin;C:\Users\stephen\AppData\Roaming\npm;C:\Users\stephen\AppData\Local\Yarn\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/~taro-ui%2fdist/style/components/flex.scss: not_found
+  Error: https://registry.npm.taobao.org/@%2fcomponents/MyList/newsList: not_found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65167:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:129541:22)
       at Request.emit (events.js:189:13)

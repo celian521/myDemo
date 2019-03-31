@@ -18,9 +18,9 @@ const apisStore = observable({
   },
   updateHome() {
     console.log('a+');
-    http.post('/wx/newsList', {session_id:2}).then((e)=>{
-      console.log('a', e);
-    })
+    // http.post('/wx/newsList', {session_id:2}).then((e)=>{
+    //   console.log('a', e);
+    // })
     this.banner = mock.banner
   },
 })

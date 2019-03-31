@@ -1,3 +1,18 @@
+const path = require('path')
+// NOTE 在 sass 中通过别名（@ 或 ~）引用需要指定路径
+const sassImporter = function(url) {
+  if (url[0] === '~' && url[1] !== '/') {
+    return {
+      file: path.resolve(__dirname, '..', 'node_modules', url.substr(1))
+    }
+  }
+
+  const reg = /^@styles\/(.*)/
+  return {
+    file: reg.test(url) ? path.resolve(__dirname, '..', 'src/styles', url.match(reg)[1]) : url
+  }
+}
+
 const config = {
   projectName: 'proTaro',
   date: '2019-3-26',
@@ -22,9 +37,18 @@ const config = {
         'transform-class-properties',
         'transform-object-rest-spread'
       ]
+    },
+    sass: {
+      importer: sassImporter
     }
   },
   defineConstants: {
+  },
+  alias: {
+    '@assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@styles': path.resolve(__dirname, '..', 'src/assets/styles'),
+    '@components': path.resolve(__dirname, '..', 'src/components'),
+    '@utils': path.resolve(__dirname, '..', 'src/utils')
   },
   copy: {
     patterns: [

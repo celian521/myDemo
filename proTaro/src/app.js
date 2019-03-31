@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
-import Index from './pages/home/index'
+import Index from './pages/index'
 import store from './store'
 import './app.scss'
 
@@ -34,23 +34,23 @@ class App extends Component {
       list: [{
         pagePath: "pages/home/index",
         text: "首页",
-        iconPath: "./assets/images/home.png",
-        selectedIconPath: "./assets/images/home-active.png"
+        iconPath: "./assets/images/tab-bar/home.png",
+        selectedIconPath: "./assets/images/tab-bar/home-active.png"
       },{
         pagePath: "pages/club/index",
         text: "企业家俱乐部",
-        iconPath: "./assets/images/club.png",
-        selectedIconPath: "./assets/images/club-active.png"
+        iconPath: "./assets/images/tab-bar/club.png",
+        selectedIconPath: "./assets/images/tab-bar/club-active.png"
       },{
         pagePath: "pages/plan/index",
         text: "活动策划",
-        iconPath: "./assets/images/plan.png",
-        selectedIconPath: "./assets/images/plan-active.png"
+        iconPath: "./assets/images/tab-bar/plan.png",
+        selectedIconPath: "./assets/images/tab-bar/plan-active.png"
       },{
         pagePath: "pages/user/index",
         text: "会员中心",
-        iconPath: "./assets/images/user.png",
-        selectedIconPath: "./assets/images/user-active.png"
+        iconPath: "./assets/images/tab-bar/user.png",
+        selectedIconPath: "./assets/images/tab-bar/user-active.png"
       }],
       color: '#a6a6a6',
       selectedColor: '#855498',

@@ -2,7 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtCalendar   } from 'taro-ui'
-import MySwiper from '../../components/MySwiper'
+import { NewsList, ImagesList, NewsList2, MySwiper} from '@components'
 
 import './index.scss'
 

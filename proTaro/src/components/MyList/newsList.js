@@ -22,7 +22,7 @@ export default class List extends Component {
         </View>
         <View className='at-col at-col-9 at-col--wrap'>
           <View className='news-title'>
-          主轴+方向的排列方式主轴方向的排列方式主轴方向的排列方式主轴
+            旗袍时尚-东方女性旗袍时尚-东方女性
           </View>
           <View className='news-info'>[查看详情]</View>
         </View>

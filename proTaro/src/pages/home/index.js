@@ -82,7 +82,7 @@ class Home extends Component {
 
         <View className='u-title'>新闻资讯</View>
 
-        <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
+        <AtTabs current={this.state.current} swipeable={false} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane className='wrap-top' current={this.state.current} index={0}>
             <NewsList />
           </AtTabsPane>

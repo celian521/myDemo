@@ -21,10 +21,10 @@ export default class List extends Component {
             <View key={index} className='images-item at-col at-col-6 at-col--wrap'>
               <View className='images-inner'>
                 <View className='images-img'>
-                  <Image src='https://jdc.jd.com/img/350' />
+                  <Image src='https://jdc.jd.com/img/350' lazyLoad mode='widthFix' />
                 </View>
                 <View className='images-title'>
-                主轴+方向的排列方式主列方式主轴
+                  活动集锦品味华服经典
                 </View>
                 <View className='images-info'>[查看详情]</View>
               </View>

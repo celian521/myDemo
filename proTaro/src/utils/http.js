@@ -6,8 +6,10 @@
   */
 import Taro from '@tarojs/taro'
 
-const baseUrl = 'http://10.0.3.120:20291'
-const successCode = 0
+const baseUrl = 'http://yx.usetool.cc'
+const successCode = 1
+
+const service_id = 2
 
 const promiseFun = (method, url, params) => {
   return new Promise((resolve, reject) => {

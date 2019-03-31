@@ -48,7 +48,7 @@ class Index extends Component {
         <MySwiper banner={banner} />
 
 
-        <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
+        <AtTabs current={this.state.current} swipeable={false} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane className='wrap-top' current={this.state.current} index={0} >
             <NewsList2 />
           </AtTabsPane>

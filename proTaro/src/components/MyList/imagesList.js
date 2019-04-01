@@ -1,23 +1,23 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components';
-import { AtButton  } from 'taro-ui'
+import { AtButton } from 'taro-ui'
 import './index.scss';
 
-if (process.env.TARO_ENV === "weapp"){
+if (process.env.TARO_ENV === "weapp") {
   require("taro-ui/dist/style/components/flex.scss");
 }
 
 export default class List extends Component {
   handerLink = id => {
     const url = '/pages/details/index?id=1'
-    Taro.navigateTo({url})
+    Taro.navigateTo({ url })
   }
   render() {
-    const data = [1,2,3,4,5, 6,7]
+    const data = [1, 2, 3, 4, 5, 6, 7]
     return (
       <View className='images-block-wrap'>
-      <View className='images-block at-row at-row--wrap '>
-        { data.map((item, index)=>(
+        <View className='images-block at-row at-row--wrap '>
+          { data.map((item, index) => (
             <View key={index} onClick={this.handerLink.bind('1')} className='images-item at-col at-col-6 at-col--wrap'>
               <View className='images-inner'>
                 <View className='images-img'>
@@ -29,8 +29,8 @@ export default class List extends Component {
                 <View className='images-info'>[查看详情]</View>
               </View>
             </View>
-        ))}
-      </View>
+          )) }
+        </View>
       </View>
     )
   }

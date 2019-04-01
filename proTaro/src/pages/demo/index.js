@@ -6,7 +6,7 @@ import './index.scss'
 
 
 class Index extends Component {
-  constructor () {
+  constructor() {
     super(...arguments)
     this.state = {
       value: '',
@@ -27,7 +27,7 @@ class Index extends Component {
     console.log(event)
   }
 
-  render () {
+  render() {
     return (
       <AtForm
         onSubmit={this.onSubmit.bind(this)}

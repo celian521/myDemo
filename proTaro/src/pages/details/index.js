@@ -1,10 +1,10 @@
 
- /**
-  *  @Title   details
-  *  @Auther  Stephen WU
-  *  @Des     描述
-  *  @Time    2019
-  */
+/**
+ *  @Title   details
+ *  @Auther  Stephen WU
+ *  @Des     描述
+ *  @Time    2019
+ */
 import Taro, { Component, chooseInvoiceTitle } from '@tarojs/taro'
 import { View, RichText } from '@tarojs/components'
 import { AtDivider } from 'taro-ui'
@@ -25,7 +25,7 @@ class Index extends Component {
     };
   }
   config = {
-    navigationBarTitleText: 'loading...'
+    navigationBarTitleText: '...'
   }
 
   componentWillMount() {
@@ -38,35 +38,31 @@ class Index extends Component {
     })
     this.setState({
       title: data.title,
-      content:data.content
+      content: data.content
     })
   }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  componentWillUnmount() {}
+  componentWillUnmount() { }
 
-  componentDidShow() {}
+  componentDidShow() { }
 
-  componentDidHide() {}
+  componentDidHide() { }
 
-  render () {
+  render() {
     const { } = this.props
     const { title, content } = this.state
     return (
-
-      <View className='at-article'>
-      
+      <View className='at-article wrap'>
         <View className='at-article__h1'>
-          {title}
+          { title }
         </View>
-    
         <View className='at-article__content'>
           <View className='at-article__section'>
             <RichText nodes={content} />
           </View>
         </View>
-
       </View>
     )
   }

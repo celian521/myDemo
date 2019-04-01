@@ -1,29 +1,29 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { AtCalendar } from 'taro-ui'
-import { MySwiper } from '@components'
+import { } from 'taro-ui'
 
 import './index.scss'
 
 @inject('apisStore')
-
 @observer
 class Index extends Component {
   constructor() {
     super(...arguments);
+    this.state = {
 
+    };
   }
   config = {
-    navigationBarTitleText: '活动策划'
+    navigationBarTitleText: 'UIKIT'
   }
 
+
   render() {
-    const { apisStore: { banner } } = this.props
+
     return (
-      <View className='wrap'>
-        <MySwiper banner={banner} />
-        <AtCalendar key='att' />
+      <View>
+
       </View>
     )
   }

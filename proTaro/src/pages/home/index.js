@@ -2,7 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane, AtGrid, AtDivider } from 'taro-ui'
-import { NewsList, ImagesList, NewsList2, MySwiper} from '@components'
+import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
 
 import './index.scss'
 
@@ -70,11 +70,11 @@ class Home extends Component {
 
         <AtGrid hasBorder={false} data={grid} onClick={this.handleGrid} />
 
-        <AtDivider content='活动预告' className='myDivider' lineColor='#855498' fontColor='#666666'  />
+        <AtDivider content='活动预告' className='myDivider' lineColor='#855498' fontColor='#666666' />
 
         <MySwiper banner={banner} />
 
-        <AtDivider content='智慧学堂' className='myDivider' lineColor='#855498' fontColor='#666666'  />
+        <AtDivider content='智慧学堂' className='myDivider' lineColor='#855498' fontColor='#666666' />
 
         <MySwiper banner={banner} />
 

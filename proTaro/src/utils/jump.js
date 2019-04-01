@@ -28,11 +28,11 @@ export default function jump(options) {
   }
 }
 
-function urlStringify(url, payload, encode = true) {
-  const arr = Object.keys(payload).map(key =>
-    `${key}=${encode ? encodeURIComponent(payload[key]) : payload[key]}`
-  )
+// function urlStringify(url, payload, encode = true) {
+//   const arr = Object.keys(payload).map(key =>
+//     `${key}=${encode ? encodeURIComponent(payload[key]) : payload[key]}`
+//   )
 
-  // NOTE 注意支付宝小程序跳转链接如果没有参数，就不要带上 ?，否则可能无法跳转
-  return arr.length ? `${url}?${arr.join('&')}` : url
-}
+//   // NOTE 注意支付宝小程序跳转链接如果没有参数，就不要带上 ?，否则可能无法跳转
+//   return arr.length ? `${url}?${arr.join('&')}` : url
+// }

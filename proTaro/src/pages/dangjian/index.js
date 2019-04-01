@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { NewsList, ImagesList, NewsList2, MySwiper} from '@components'
+import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
 import './index.scss'
 
 @inject('apisStore')
@@ -17,8 +17,7 @@ class Index extends Component {
     navigationBarTitleText: '党建公益'
   }
 
-
-  render () {
+  render() {
 
     return (
       <View className='wrap'>

@@ -2,7 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
-import { NewsList, ImagesList, NewsList2, MySwiper} from '@components'
+import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
 import './index.scss'
 
 @inject('apisStore')
@@ -13,14 +13,14 @@ class Index extends Component {
     this.state = {
       current: 0,
       tabList: [{
-          title: '关于我们'
-        }, {
-          title: '加入我们'
-        }, {
-          title: '会员服务'
-        },{
-          title: '旗袍时尚'
-        }
+        title: '关于我们'
+      }, {
+        title: '加入我们'
+      }, {
+        title: '会员服务'
+      }, {
+        title: '旗袍时尚'
+      }
       ]
     }
   }
@@ -28,7 +28,7 @@ class Index extends Component {
     navigationBarTitleText: '会员中心'
   }
 
-  componentWillMount() {}
+  componentWillMount() { }
 
 
   handleClick = value => {
@@ -36,15 +36,13 @@ class Index extends Component {
       current: value
     })
   }
-  render () {
+  render() {
     const { apisStore: { banner } } = this.props
     const { tabList } = this.state
 
     return (
       <View className='wrap'>
         <MySwiper banner={banner} />
-
-
         <AtTabs current={this.state.current} swipeable={false} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane className='wrap-top' current={this.state.current} index={0} >
             <NewsList2 />
@@ -61,8 +59,6 @@ class Index extends Component {
             </View>
           </AtTabsPane>
         </AtTabs>
-
-
       </View>
     )
   }

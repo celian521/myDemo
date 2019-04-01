@@ -28,7 +28,7 @@ export default class MySwiper extends Component {
           <SwiperItem key={index}>
             <Image src={item.image_src} lazyLoad />
           </SwiperItem>
-        ))}
+        )) }
       </Swiper>
     )
   }

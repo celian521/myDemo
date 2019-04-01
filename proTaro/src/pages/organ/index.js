@@ -2,7 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
-import { NewsList, ImagesList, NewsList2, MySwiper} from '@components'
+import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
 
 import './index.scss'
 
@@ -14,10 +14,10 @@ class Index extends Component {
     this.state = {
       current: 0,
       tabList: [{
-          title: '分支机构简介'
-        }, {
-          title: '分会风采'
-        }
+        title: '分支机构简介'
+      }, {
+        title: '分会风采'
+      }
       ]
     }
   }
@@ -30,7 +30,7 @@ class Index extends Component {
     })
   }
 
-  render () {
+  render() {
     const { apisStore: { banner } } = this.props
     const { tabList } = this.state
 

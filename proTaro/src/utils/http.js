@@ -1,28 +1,38 @@
- /**
-  *  @Title   Taro.request 网络请求
-  *  @Auther  Stephen WU
-  *  @Des     描述
-  *  @Time    2019
-  */
+/**
+ *  @Title   Taro.request 网络请求
+ *  @Auther  Stephen WU
+ *  @Des     描述
+ *  @Time    2019
+ */
+
 import Taro from '@tarojs/taro'
+import apis from '../store/apis'
 
-const baseUrl = 'http://yx.usetool.cc'
-const successCode = 1
+const baseUrl = 'https://sem.gznewbp.com'
+const successCode = '1'
+const API_USER = ''
+// 默认参数
+const defaultParams = {
+  company_id: 3,
+  version: '1.0.0',
+  service_id: 2
+}
 
-const service_id = 2
+let session_id = null;
 
 const promiseFun = (method, url, params) => {
+
   return new Promise((resolve, reject) => {
     Taro.request({
-      header: {'content-type': 'application/json'},
+      header: { 'content-type': 'application/json' },
       method: method,
       url: baseUrl + url,
-      data: params,
+      data: { ...defaultParams, ...params, session_id },
     }).then(({ data }) => {
       if (data.status === successCode) {
-        resolve( data )
+        resolve(data)
       } else {
-        console.error('error', data)
+        console.error('error=>', data)
         Taro.showToast({ title: data.msg, icon: 'none' })
         // reject({ err: data.retMsg, code: data.retCode })
       }

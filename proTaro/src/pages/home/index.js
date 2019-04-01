@@ -26,7 +26,7 @@ class Home extends Component {
     navigationBarTitleText: '旗袍文化促进会'
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { apisStore } = this.props
     apisStore.updateHome()
   }
@@ -37,6 +37,12 @@ class Home extends Component {
     })
   }
   handleGrid = (item, index) => {
+
+    // const { apisStore } = this.props
+    // console.log('=%%%=',apisStore.sessionid);
+
+    // apisStore.updateHome()
+
     console.log(item.url, index);
     const url = item.url
     if (index == 0 || index == 2) {

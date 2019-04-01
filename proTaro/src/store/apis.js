@@ -6,7 +6,7 @@
   */
 import Taro from '@tarojs/taro'
 import { observable } from 'mobx'
-import http from '@utils/http'
+import http from '@utils/https'
 import mock from '../mock'
 
 const apisStore = observable({
@@ -34,9 +34,9 @@ const apisStore = observable({
   init() {
     console.log('init');
 
-    http.post('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res=>{
-      console.log('http:=>', res);
-    })
+    // http('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res=>{
+    //   console.log('http:==>', res);
+    // })
 
   },
   getDetails(id) {
@@ -44,13 +44,24 @@ const apisStore = observable({
   },
   updateHome() {
     console.log('updatahome');
-    // http.get('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res => {
-    //     console.log(res);
+    http('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res => {
+        console.log(res);
+    })
+    // http().then((e)=>{
+    //   console.log(e);
     // })
-    // this.banner = mock.banner
+
   },
+
+  // async fetch() {
+  //   return new Promise((resolve, reject) => {
+  //     resolve('session')
+
+  //   })
+  // }
+
 })
 
-apisStore.init()
+// apisStore.updateHome()
 
 export default apisStore

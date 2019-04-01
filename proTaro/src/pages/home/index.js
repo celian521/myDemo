@@ -28,7 +28,7 @@ class Home extends Component {
 
   componentDidMount() {
     const { apisStore } = this.props
-    apisStore.updateHome()
+   apisStore.updateHome()
   }
 
   handleClick = value => {

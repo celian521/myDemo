@@ -48,7 +48,7 @@ class Index extends Component {
           value={this.state.value2}
           onChange={this.handleChange.bind(this)}
         />
-        <AtButton formType='submit'>提交</AtButton>
+        <AtButton formType='submit' type='primary'>提交</AtButton>
       </AtForm>
     )
   }

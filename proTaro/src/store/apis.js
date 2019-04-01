@@ -5,7 +5,7 @@
   *  @Time    2019
   */
 import { observable } from 'mobx'
-import http from '../utils/http'
+import http from '@utils/http'
 import mock from '../mock'
 
 const apisStore = observable({
@@ -17,7 +17,7 @@ const apisStore = observable({
     return this.details.find(item => item.id == id)
   },
   updateHome() {
-    console.log('a+');
+    // console.log('a+');
     // http.post('/wx/newsList', {session_id:2}).then((e)=>{
     //   console.log('a', e);
     // })

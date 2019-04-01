@@ -1,7 +1,9 @@
-// 自定义主题
-$color-brand: #855498;
-$color-brand-light: #a47fb2;
-$color-brand-dark: #6a437a;
+@import "@styles/theme.scss";
+@import "@styles/reset.scss";
+// taro-ui 自定义主题
+$color-brand: $primary-color;
+$color-brand-light: lighten($color-brand, 2%); // #a47fb2;
+$color-brand-dark: darken($color-brand, 2%); // #6a437a;
 @import "~taro-ui/dist/style/index.scss"; // 引入taro UI组件样式，仅需引入一次即可
 
 // 重写taro样式
@@ -42,6 +44,6 @@ $color-brand-dark: #6a437a;
     height: 6px;
     margin-top: 8px;
     border-radius: 24px;
-    background-color: $color-brand;
+    background-color: $primary-color;
   }
 }

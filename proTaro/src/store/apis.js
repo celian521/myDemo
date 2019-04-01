@@ -15,53 +15,16 @@ const apisStore = observable({
   grid: mock.grid || [],
   tabList: mock.tabList || [],
   details: mock.details || [],
-  // init() {
-  //   console.log('init');
-  //   let self = this
-  //   Taro.login({
-  //     success(res) {
-  //       if (res.code) {
-  //         // 用户登录获取session信息接口
-  //         http.post('/weixin/getUserInfo', { code: res.code, company_id: 1 }).then(ress => {
-  //           self.session_id = ress.data.session_id
-  //         })
-  //       } else {
-  //         console.log('登录失败！' + res.errMsg)
-  //       }
-  //     }
-  //   })
-  // },
-  init() {
-    console.log('init');
-
-    // http('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res=>{
-    //   console.log('http:==>', res);
-    // })
-
-  },
   getDetails(id) {
     return this.details.find(item => item.id == id)
   },
   updateHome() {
-    console.log('updatahome');
+
     http('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res => {
         console.log(res);
     })
-    // http().then((e)=>{
-    //   console.log(e);
-    // })
 
   },
-
-  // async fetch() {
-  //   return new Promise((resolve, reject) => {
-  //     resolve('session')
-
-  //   })
-  // }
-
 })
-
-// apisStore.updateHome()
 
 export default apisStore

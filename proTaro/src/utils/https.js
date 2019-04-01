@@ -7,7 +7,6 @@
 
 import Taro from '@tarojs/taro'
 
-
 const baseUrl = 'https://sem.gznewbp.com'
 const successCode = '1'
 
@@ -20,85 +19,10 @@ const defaultParams = {
 
 let session_id = null
 
-// const request = options => {
-//   const { url, method = 'POST', params } = options
-//   return new Promise((resolve, reject) => {
-//     Taro.request({
-//       header: { 'content-type': 'application/json' },
-//       method: method,
-//       url: baseUrl + url,
-//       data: params,
-//     }).then(({ data }) => {
-//       if (data.status === successCode) {
-//         resolve(data)
-//       } else {
-//         console.error('error=>', data)
-//         Taro.showToast({ title: data.msg, icon: 'none' })
-//         // reject({ err: data.retMsg, code: data.retCode })
-//       }
-//     }).catch((err) => {
-//       const errorMsg = JSON.stringify(err)
-//       Taro.showToast({ title: errorMsg, icon: 'none' })
-//       reject({ err: errorMsg })
-//     })
-//   })
-// }
-
-// const request = options => {
-//   const { url, method = 'POST', params } = options
-//   return new Promise((resolve, reject) => {
-
-//     Taro.request({
-//       header: { 'content-type': 'application/json' },
-//       method: method,
-//       url: baseUrl + url,
-//       data: params,
-//     }).then(({ data }) => {
-//       if (data.status === successCode) {
-//         resolve(data)
-//       } else {
-//         console.error('error=>', data)
-//         Taro.showToast({ title: data.msg, icon: 'none' })
-//         // reject({ err: data.retMsg, code: data.retCode })
-//       }
-//     }).catch((err) => {
-//       const errorMsg = JSON.stringify(err)
-//       Taro.showToast({ title: errorMsg, icon: 'none' })
-//       reject({ err: errorMsg })
-//     })
-
-//   })
-
-// const promiseFun = (method, url, params) => {
-
-//   return new Promise((resolve, reject) => {
-
-//     Taro.request({
-//       header: { 'content-type': 'application/json' },
-//       method: method,
-//       url: baseUrl + url,
-//       data: { ...defaultParams, ...params, session_id },
-//     }).then(({ data }) => {
-//       if (data.status === successCode) {
-//         resolve(data)
-//       } else {
-//         console.error('error=>', data)
-//         Taro.showToast({ title: data.msg, icon: 'none' })
-//         // reject({ err: data.retMsg, code: data.retCode })
-//       }
-//     }).catch((err) => {
-//       const errorMsg = JSON.stringify(err)
-//       Taro.showToast({ title: errorMsg, icon: 'none' })
-//       reject({ err: errorMsg })
-//     })
-//   })
-// }
-
-
 export default function fetch(url, params = {}) {
   return new Promise((resolve, reject) => {
   const method = 'POST'
-  if (session_id) {
+  const funRequest = () =>{
     // #####
     Taro.request({
       header: { 'content-type': 'application/json' },
@@ -119,6 +43,10 @@ export default function fetch(url, params = {}) {
       reject({ err: errorMsg })
     })
     // #####
+  }
+  // // END
+  if (session_id) {
+    return funRequest()
   } else {
     // ===
     Taro.login({
@@ -137,40 +65,13 @@ export default function fetch(url, params = {}) {
             },
           }).then(({data}) => {
             session_id = data.data.session_id
-            // #####
-            Taro.request({
-              header: { 'content-type': 'application/json' },
-              method: method,
-              url: baseUrl + url,
-              data: { ...defaultParams, ...params, session_id },
-            }).then(({ data }) => {
-              if (data.status === successCode) {
-                resolve(data)
-              } else {
-                console.error('error=>', data)
-                Taro.showToast({ title: data.msg, icon: 'none' })
-                // reject({ err: data.retMsg, code: data.retCode })
-              }
-            }).catch((err) => {
-              const errorMsg = JSON.stringify(err)
-              Taro.showToast({ title: errorMsg, icon: 'none' })
-              reject({ err: errorMsg })
-            })
-            // #####
-            //######
+            return funRequest()
           })
           //  END
         }
       }
     })
     // /====
-
   }
   }) //END Promise
 }
-
-// export default async function fetch(options) {
-//   return new Promise((resolve, reject) => {
-//     resolve('newpromise')
-//   })
-// }

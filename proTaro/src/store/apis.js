@@ -24,6 +24,15 @@ const apisStore = observable({
         console.log(res);
     })
 
+    http('/wx/newsList', { news_type:2, page:1, pageSize:10 }).then(res => {
+      console.log(res);
+  })
+
+    http('/wx/index', { page_path: '/pages/index/index' }).then(res => {
+      console.log(res);
+    })
+
+
   },
 })
 

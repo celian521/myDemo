@@ -16,7 +16,7 @@ class Home extends Component {
     this.state = {
       current: 0,
       tabList: [{
-        title: '活动集锦0'
+        title: '活动集锦'
       }, {
         title: '学堂撷英'
       }, {
@@ -38,7 +38,7 @@ class Home extends Component {
 
     //
 
-    http.post('/wx/newsList', { news_type: 1, page: 1, pageSize: 10 }).then(res => {
+    http.post('/wx/newsList', { news_type: 2, page: 1, pageSize: 10 }).then(res => {
       if (res.data) {
         this.setState({
           dataNewsList: res.data
@@ -46,7 +46,7 @@ class Home extends Component {
       }
     }).then(()=>{
 
-          http.post('/wx/index', { page_path: '/pages/home/index' }).then(res => {
+          http.post('/wx/index', { page_path: '/pages/index/index' }).then(res => {
             console.log('==>',res);
           })
 
@@ -122,7 +122,7 @@ class Home extends Component {
             <ImagesList dataList={dataNewsList} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.current} index={2}>
-            <NewsList dataList={dataNewsList} />
+            <NewsList2 dataList={dataNewsList} />
           </AtTabsPane>
         </AtTabs>
 

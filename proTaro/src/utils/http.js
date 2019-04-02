@@ -23,7 +23,7 @@ const promiseFun = (method, url, params) => {
   return new Promise((resolve, reject) => {
 
     if (!session_id && url != API_lOGIN) {
-      resolve({ data: {} })
+      resolve({})
       Taro.redirectTo({
         url: '/pages/login/index'
       })

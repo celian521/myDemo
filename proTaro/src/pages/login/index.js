@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
+import { AtActivityIndicator } from 'taro-ui'
 
 import './index.scss'
 
@@ -11,7 +12,7 @@ class Login extends Component {
     super(...arguments);
   }
   config = {
-    navigationBarTitleText: 'loading...'
+    navigationBarTitleText: '旗袍文化促进会'
   }
   componentDidMount() {
     const { apisStore } = this.props
@@ -23,9 +24,7 @@ class Login extends Component {
   }
   render() {
     return (
-      <View className='wrap'>
-        loading...
-      </View>
+      <AtActivityIndicator mode='center' content='加载中...'></AtActivityIndicator>
     )
   }
 }

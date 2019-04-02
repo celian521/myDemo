@@ -31,9 +31,9 @@ const apisStore = observable({
     // setTimeout(() => {
 
 
-          // http.post('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res => {
-          //     console.log(res);
-          // })
+          http.post('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res => {
+              console.log(res);
+          })
 
           // http.post('/wx/newsList', { news_type:2, page:1, pageSize:10 }).then(res => {
           //   console.log(res);

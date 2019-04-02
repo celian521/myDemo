@@ -33,7 +33,7 @@ export default function fetch(url, params = {}) {
       if (data.status === successCode) {
         resolve(data)
       } else {
-        console.error('error=>', data)
+        console.wran('error=>', data)
         Taro.showToast({ title: data.msg, icon: 'none' })
         // reject({ err: data.retMsg, code: data.retCode })
       }

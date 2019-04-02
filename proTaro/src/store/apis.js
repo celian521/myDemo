@@ -19,19 +19,22 @@ const apisStore = observable({
     return this.details.find(item => item.id == id)
   },
   updateHome() {
+    // setTimeout(() => {
 
-    http('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res => {
-        console.log(res);
-    })
 
-    http('/wx/newsList', { news_type:2, page:1, pageSize:10 }).then(res => {
-      console.log(res);
-  })
+          http('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res => {
+              console.log(res);
+          })
 
-    http('/wx/index', { page_path: '/pages/index/index' }).then(res => {
-      console.log(res);
-    })
+          http('/wx/newsList', { news_type:2, page:1, pageSize:10 }).then(res => {
+            console.log(res);
+          })
 
+          http('/wx/index', { page_path: '/pages/index/index' }).then(res => {
+            console.log(res);
+          })
+
+    // }, 500);
 
   },
 })

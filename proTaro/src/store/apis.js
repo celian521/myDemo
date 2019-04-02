@@ -15,6 +15,7 @@ const apisStore = observable({
   grid: mock.grid || [],
   tabList: mock.tabList || [],
   details: mock.details || [],
+  dataNewsList: [],
   login(code) {
     http.post('/weixin/getUserInfo', { company_id: 1, code }).then(res => {
       this.sessionId = res.data.session_id
@@ -28,24 +29,21 @@ const apisStore = observable({
     return this.details.find(item => item.id == id)
   },
   updateHome() {
-    // setTimeout(() => {
 
+    // http.post('/wx/newsList', { news_type: 1, page: 1, pageSize: 10 }).then(res => {
+    //   console.log('=>>', res)
+    //   if(res.data) {
+    //     this.dataNewsList = [{title:"ste"}, {title:"852"}]
+    //     console.log('>>>',res.data, this.dataNewsList[0].title);
+    //   }
+    //   // console.log('=>', this.dataNewsList)
+    // })
 
-          http.post('/wx/newsList', { news_type:1, page:1, pageSize:10 }).then(res => {
-              console.log(res);
-          })
+    // http.post('/wx/index', { page_path: '/pages/index/index' }).then(res => {
+    //   console.log('==>',res);
+    // })
 
-          // http.post('/wx/newsList', { news_type:2, page:1, pageSize:10 }).then(res => {
-          //   console.log(res);
-          // })
-
-          http.post('/wx/index', { page_path: '/pages/index/index' }).then(res => {
-            console.log(res);
-          })
-
-    // }, 500);
-
-  },
+  }
 })
 
 export default apisStore

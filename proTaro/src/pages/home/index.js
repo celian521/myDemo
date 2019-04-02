@@ -1,12 +1,14 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
-import { View } from '@tarojs/components'
+import { View, ScrollView } from '@tarojs/components'
 import { AtTabs, AtTabsPane, AtGrid, AtDivider } from 'taro-ui'
 import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
+import http from '@utils/http'
 
 import './index.scss'
 
 @inject('apisStore')
+
 @observer
 class Home extends Component {
   constructor() {
@@ -14,12 +16,13 @@ class Home extends Component {
     this.state = {
       current: 0,
       tabList: [{
-        title: '活动集锦'
+        title: '活动集锦0'
       }, {
         title: '学堂撷英'
       }, {
         title: '旗袍时尚'
-      }]
+      }],
+      dataNewsList: []
     }
   }
   config = {
@@ -27,10 +30,29 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    console.log('home');
 
-    const { apisStore } = this.props
-    apisStore.updateHome()
+    // Taro.startPullDownRefresh({}).then(()=>{
+    //   console.log('startPullDownRefresh');
+    //   Taro.stopPullDownRefresh()
+    // })
+
+    //
+
+    http.post('/wx/newsList', { news_type: 1, page: 1, pageSize: 10 }).then(res => {
+      if (res.data) {
+        this.setState({
+          dataNewsList: res.data
+        })
+      }
+    }).then(()=>{
+
+          http.post('/wx/index', { page_path: '/pages/home/index' }).then(res => {
+            console.log('==>',res);
+          })
+
+    })
+
+
   }
 
   handleClick = value => {
@@ -41,7 +63,7 @@ class Home extends Component {
   handleGrid = (item, index) => {
 
     const { apisStore } = this.props
-    console.log('=%%%=',apisStore.sessionid);
+    console.log('=%%%=', apisStore.sessionid);
 
     apisStore.updateHome()
 
@@ -68,11 +90,15 @@ class Home extends Component {
 
   }
 
+
+
   render() {
     const { apisStore: { banner, grid } } = this.props
-    const { tabList } = this.state
+    const { tabList, dataNewsList } = this.state
     return (
-      <View className='wrap '>
+      <View className='wrap'>
+
+
 
         <MySwiper banner={banner} />
 
@@ -90,13 +116,13 @@ class Home extends Component {
 
         <AtTabs current={this.state.current} swipeable={false} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane className='wrap-top' current={this.state.current} index={0}>
-            <NewsList />
+            <NewsList dataList={dataNewsList} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.current} index={1}>
-            <ImagesList />
+            <ImagesList dataList={dataNewsList} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.current} index={2}>
-            <NewsList />
+            <NewsList dataList={dataNewsList} />
           </AtTabsPane>
         </AtTabs>
 

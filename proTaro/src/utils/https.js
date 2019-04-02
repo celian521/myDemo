@@ -20,6 +20,8 @@ const defaultParams = {
 let session_id = null
 
 export default function fetch(url, params = {}) {
+
+
   return new Promise((resolve, reject) => {
   const method = 'POST'
   const funRequest = () =>{
@@ -48,29 +50,33 @@ export default function fetch(url, params = {}) {
   if (session_id) {
     return funRequest()
   } else {
-    // ===
-    Taro.login({
-      success(res) {
-        if (res.code) {
-          Taro.request({
-            header: {
-              'content-type': 'application/json'
-            },
-            method: 'POST',
-            url: baseUrl + '/weixin/getUserInfo',
-            data: {
-              ...defaultParams,
-              code: res.code,
-              company_id: 1
-            },
-          }).then(({data}) => {
-            session_id = data.data.session_id
-            return funRequest()
-          })
-          //  END
-        }
-      }
+    session_id = 'data.data.session_id'
+    Taro.redirectTo({
+      url: '/pages/login/index'
     })
+    // ===
+    // Taro.login({
+    //   success(res) {
+    //     if (res.code) {
+    //       Taro.request({
+    //         header: {
+    //           'content-type': 'application/json'
+    //         },
+    //         method: 'POST',
+    //         url: baseUrl + '/weixin/getUserInfo',
+    //         data: {
+    //           ...defaultParams,
+    //           code: res.code,
+    //           company_id: 1
+    //         },
+    //       }).then(({data}) => {
+    //         session_id = data.data.session_id
+    //         return funRequest()
+    //       })
+    //       //  END
+    //     }
+    //   }
+    // })
     // /====
   }
   }) //END Promise

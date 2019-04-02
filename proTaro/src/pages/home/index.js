@@ -27,8 +27,10 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    console.log('home');
+
     const { apisStore } = this.props
-   apisStore.updateHome()
+    apisStore.updateHome()
   }
 
   handleClick = value => {
@@ -38,10 +40,10 @@ class Home extends Component {
   }
   handleGrid = (item, index) => {
 
-    // const { apisStore } = this.props
-    // console.log('=%%%=',apisStore.sessionid);
+    const { apisStore } = this.props
+    console.log('=%%%=',apisStore.sessionid);
 
-    // apisStore.updateHome()
+    apisStore.updateHome()
 
     console.log(item.url, index);
     const url = item.url

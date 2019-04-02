@@ -3,8 +3,6 @@ import { AtForm, AtInput, AtButton } from 'taro-ui'
 
 import './index.scss'
 
-
-
 class Index extends Component {
   constructor() {
     super(...arguments)

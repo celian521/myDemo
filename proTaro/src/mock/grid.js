@@ -1,12 +1,12 @@
 export default [{
     image: require('../assets/images/grid-01.png'),
     value: '会员中心',
-    url: '/pages/user/index'
+    url: '/pages/member/index'
   },
   {
     image: require('../assets/images/grid-02.png'),
     value: '党建公益',
-    url: '/pages/dangjian/index'
+    url: '/pages/demo/index'
   },
   {
     image: require('../assets/images/grid-03.png'),

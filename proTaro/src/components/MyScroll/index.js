@@ -7,19 +7,19 @@ import './index.scss'
 
 @inject('apisStore')
 @observer
-class Index extends Component {
+class MyScroll extends Component {
   constructor() {
     super(...arguments);
     this.state = {
       dargStyle: {//下拉框的样式
-        top: 20 + 'px'
+        top: 0 + 'px'
       },
       downDragStyle: {//下拉图标的样式
-        height: 20 + 'px'
+        height: 0 + 'px'
       },
       downText: '下拉刷新',
       upDragStyle: {//上拉图标样式
-        height: 20 + 'px'
+        height: 0 + 'px'
       },
       pullText: '上拉加载更多',
       start_p: {},
@@ -127,26 +127,22 @@ class Index extends Component {
     }
   }
   pull() {//上拉
-
-
     console.log('上拉')
-    // this.props.onPull()
+    this.props.onPull()
   }
   down() {//下拉
     console.log('下拉')
-    Taro.startPullDownRefresh({}).then((e)=>{
-      console.log('startPullDownRefresh', e)
-    })
-    // this.props.onDown()
+    this.props.onDown()
   }
   ScrollToUpper() { //滚动到顶部事件
     console.log('滚动到顶部事件')
-    // this.props.Upper()
+    this.props.onUpper()
   }
   ScrollToLower() { //滚动到底部事件
     console.log('滚动到底部事件')
-    // this.props.Lower()
+    this.props.onLower()
   }
+
   touchEnd(e) {
     if (this.state.dargState === 1) {
       this.down()
@@ -161,36 +157,31 @@ class Index extends Component {
     let downDragStyle = this.state.downDragStyle;
     let upDragStyle = this.state.upDragStyle;
     return (
-      <View>
-        {/* <View style='width:100%;height:20vh;background:#993;' >aaaaaaaa</View> */}
-        <View className='dragUpdataPage'>
-          <View className='downDragBox' style={downDragStyle}>
-            <AtActivityIndicator />
-            <Text className='downText'>{ this.state.downText }</Text>
-          </View>
-          <ScrollView
-            style={dargStyle}
-            onTouchMove={this.touchmove}
-            onTouchEnd={this.touchEnd}
-            onTouchStart={this.touchStart}
-            onScrollToUpper={this.ScrollToUpper}
-            onScrollToLower={this.ScrollToLower}
-            className='dragUpdata'
-            scrollY={this.state.scrollY}
-            scrollWithAnimation
-          >
-
-            <View style='width:100%;height:2000px;background:#aaa;'>5555555</View>
-
-          </ScrollView>
-          <View className='upDragBox' style={upDragStyle}>
-            <AtActivityIndicator />
-            <Text className='downText'>{ this.state.pullText }</Text>
-          </View>
+      <View className='dragUpdataPage'>
+        <View className='downDragBox' style={downDragStyle}>
+          <AtActivityIndicator />
+          <Text className='downText'>{ this.state.downText }</Text>
+        </View>
+        <ScrollView
+          style={dargStyle}
+          onTouchMove={this.touchmove}
+          onTouchEnd={this.touchEnd}
+          onTouchStart={this.touchStart}
+          onScrollToUpper={this.ScrollToUpper}
+          onScrollToLower={this.ScrollToLower}
+          className='dragUpdata'
+          scrollY={this.state.scrollY}
+          scrollWithAnimation
+        >
+          {this.props.children}
+        </ScrollView>
+        <View className='upDragBox' style={upDragStyle}>
+          <AtActivityIndicator />
+          <Text className='downText'>{ this.state.pullText }</Text>
         </View>
       </View>
     )
   }
 }
 
-export default Index
+export default MyScroll

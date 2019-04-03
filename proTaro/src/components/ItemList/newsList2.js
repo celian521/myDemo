@@ -17,7 +17,7 @@ export default class List extends Component {
   };
 
   handerLink = id => {
-    const url = '/pages/details/index?id=4'
+    const url = `/pages/details/index?id=${id}`
     Taro.navigateTo({ url })
   }
   render() {
@@ -25,9 +25,9 @@ export default class List extends Component {
     return (
       <View>
         { dataList.map((item, index) => (
-          <View key={index} onClick={this.handerLink.bind('1')} className='news2-block at-row at-row__align--top'>
+          <View key={index} onClick={this.handerLink.bind(this, item.id)} className='news2-block at-row at-row__align--top'>
             <View className='at-col at-col-5'>
-              <Image className='news2-img' src='https://jdc.jd.com/img/280x180' />
+              <Image className='news2-img' src={item.img_url} />
             </View>
             <View className='at-col at-col-7 at-col--wrap'>
               <View className='news2-title'>

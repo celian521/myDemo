@@ -20,7 +20,7 @@ class List extends Component {
   };
 
   handerLink = id => {
-    const url = '/pages/details/index?id=3'
+    const url = `/pages/details/index?id=${id}`
     Taro.navigateTo({ url })
   }
   render() {
@@ -29,13 +29,13 @@ class List extends Component {
     return (
       <View>
         { dataList.map((item, index) => (
-          <View key={index} onClick={this.handerLink.bind('1')} className='news-block at-row at-row__align--center'>
+          <View key={index} onClick={this.handerLink.bind(this, item.id)} className='news-block at-row at-row__align--center'>
             <View className='at-col at-col-3'>
-              <Image className='news-img' src='https://jdc.jd.com/img/150' />
+              <Image className='news-img' src={item.img_url}  />
             </View>
             <View className='at-col at-col-9 at-col--wrap'>
               <View className='news-title'>
-                {item.title}+旗袍时尚-东方女性000
+                {item.title}
           </View>
               <View className='news-info'>[查看详情]</View>
             </View>

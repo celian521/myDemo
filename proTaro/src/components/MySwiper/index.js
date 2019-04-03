@@ -1,21 +1,19 @@
 import Taro, { Component } from '@tarojs/taro';
-import { Swiper, SwiperItem, Image } from '@tarojs/components';
+import { View, Swiper, SwiperItem, Image } from '@tarojs/components';
 import PropTypes from 'prop-types';
 import './index.scss';
 
 export default class MySwiper extends Component {
   static propTypes = {
-    banner: PropTypes.array,
-    home: PropTypes.bool,
+    banner: PropTypes.array
   };
 
   static defaultProps = {
-    banner: [],
-    home: false
+    banner: []
   };
 
   render() {
-    const { banner, home } = this.props;
+    const { banner } = this.props;
     return (
       <Swiper
         className='swiper'
@@ -25,8 +23,9 @@ export default class MySwiper extends Component {
         indicatorActiveColor='#855498'
       >
         { banner.map((item, index) => (
-          <SwiperItem key={index}>
-            <Image src={item.image_src} lazyLoad />
+          <SwiperItem className='swiperItem' key={index}>
+            <Image src={item.img_path} lazyLoad />
+            {item.title&&<View className='swiperName'>{item.title}</View>}
           </SwiperItem>
         )) }
       </Swiper>

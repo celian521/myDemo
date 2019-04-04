@@ -2,7 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { AtForm, AtInput, AtButton  } from 'taro-ui'
 import { View } from '@tarojs/components'
 import { MyScroll, ImagesList } from '@components'
-import http from '@utils/http'
+import apis from '@apis'
 import './index.scss'
 
 class Index extends Component {
@@ -21,7 +21,7 @@ class Index extends Component {
     this.load()
   }
   load = () => {
-      http.post('/wx/newsList', { news_type: 2, page: 1, pageSize: 10 }).then(res => {
+      apis.getList({ news_type: 2, page: 1, pageSize: 10 }).then(res => {
         if (res.data) {
           const { dataNewsList } = this.state
           this.setState({

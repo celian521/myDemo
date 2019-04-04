@@ -6,7 +6,7 @@ import { MySwiper } from '@components'
 
 import './index.scss'
 
-@inject('apisStore')
+@inject('globalStore')
 
 @observer
 class Index extends Component {
@@ -19,7 +19,7 @@ class Index extends Component {
   }
 
   render() {
-    const { apisStore: { banner } } = this.props
+    const { globalStore: { banner } } = this.props
     return (
       <View className='wrap'>
         <MySwiper banner={banner} />

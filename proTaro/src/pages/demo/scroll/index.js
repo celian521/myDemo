@@ -5,7 +5,7 @@ import { AtActivityIndicator } from 'taro-ui'
 
 import './index.scss'
 
-@inject('apisStore')
+@inject('globalStore')
 @observer
 class Index extends Component {
   constructor() {

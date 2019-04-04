@@ -3,11 +3,12 @@ import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane, AtGrid, AtDivider, AtLoadMore  } from 'taro-ui'
 import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
-import http from '@utils/http'
+
+import apis from '@apis'
 
 import './index.scss'
 
-@inject('apisStore')
+@inject('globalStore')
 
 @observer
 class Home extends Component {
@@ -62,7 +63,7 @@ class Home extends Component {
    * 获取数据
    */
   fetchData = () => {
-    http.post('/wx/index', { page_path: '/pages/index/index' }).then(({data}) => {
+    apis.getPage({ page_path: '/pages/index/index' }).then(({data}) => {
       this.setState({
         dataBanner: data
       })
@@ -75,7 +76,7 @@ class Home extends Component {
     if(!key) key = `type_${tabCurrent}`
     const status = tabList[tabCurrent].status
     if(status==='loading'){
-      http.post('/wx/newsList', { news_type, page, pageSize: 10 }).then(({data}) => {
+      apis.getList({ news_type, page, pageSize: 10 }).then(({data}) => {
         const oldData = this.state.dataList[key] || []
         this.setState({
           dataList: { [key]: [ ...oldData, ...data ]}
@@ -92,7 +93,6 @@ class Home extends Component {
 
   componentDidMount() {
     this.fetchData()
-    this.fetchList()
   }
 
   handleTabs = value => {
@@ -114,7 +114,7 @@ class Home extends Component {
   }
 
   render() {
-    const { apisStore: { banner, grid } } = this.props
+    const { globalStore: { banner, grid } } = this.props
     const { tabList, dataList, dataBanner } = this.state
     return (
       <View className='wrap'>
@@ -139,11 +139,11 @@ class Home extends Component {
             <AtLoadMore status={tabList[0].status} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={1}>
-            <ImagesList dataList={dataList.type_1} />
+            <NewsList dataList={dataList.type_1} />
             <AtLoadMore  status={tabList[1].status} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={2}>
-            <NewsList2 dataList={dataList.type_2} />
+            <NewsList dataList={dataList.type_2} />
             <AtLoadMore status={tabList[2].status} />
           </AtTabsPane>
         </AtTabs>

@@ -1,7 +1,7 @@
-import apisStore from './apis'
+import globalStore from './global'
 
 const store = {
-  apisStore,
+  globalStore,
 }
 
 export default store

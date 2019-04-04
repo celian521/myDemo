@@ -1,5 +1,5 @@
 /**
- *  @Title   Taro.request 网络请求
+ *  @Title   Taro.request 网络请求 interceptor
  *  @Auther  Stephen WU
  *  @Des     描述
  *  @Time    2019
@@ -8,9 +8,9 @@
 import Taro from '@tarojs/taro'
 import store from '../store'
 
-const baseUrl = 'https://sem.gznewbp.com'
+// const baseUrl = 'https://sem.gznewbp.com'
 const successCode = '1'
-const API_lOGIN = '/weixin/getUserInfo'
+// const API_lOGIN = 'https://sem.gznewbp.com/weixin/getUserInfo'
 // 默认参数
 const defaultParams = {
   company_id: 3,
@@ -19,10 +19,10 @@ const defaultParams = {
 }
 
 const promiseFun = (method, url, params) => {
-  const session_id = store.apisStore.sessionId || null
+  const session_id = store.globalStore.sessionId || null
   return new Promise((resolve, reject) => {
 
-    if (!session_id && url != API_lOGIN) {
+    if (!session_id && !params.company_id) {
       resolve({})
       Taro.redirectTo({
         url: '/pages/login/index'
@@ -31,7 +31,7 @@ const promiseFun = (method, url, params) => {
       Taro.request({
         header: { 'content-type': 'application/json' },
         method: method,
-        url: baseUrl + url,
+        url: url,
         data: { ...defaultParams, ...params, session_id },
       }).then(({ data }) => {
         if (data.status === successCode) {

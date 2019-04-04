@@ -9,10 +9,10 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, RichText, Image } from '@tarojs/components'
 import { observer, inject } from '@tarojs/mobx'
 import { Base64 } from 'js-base64';
-import http from '@utils/http'
+import apis from '@apis'
 import './index.scss'
 
-@inject('apisStore')
+@inject('globalStore')
 
 @observer
 class Index extends Component {
@@ -31,7 +31,7 @@ class Index extends Component {
 
   componentWillMount() {
     const { id } = this.$router.params
-    http.post('/wx/news', { id }).then(({data}) => {
+    apis.details({ id }).then(({data}) => {
         Taro.setNavigationBarTitle({
           title: data.title
         })

@@ -6,7 +6,7 @@ import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
 
 import './index.scss'
 
-@inject('apisStore')
+@inject('globalStore')
 @observer
 class Index extends Component {
   constructor() {
@@ -31,7 +31,7 @@ class Index extends Component {
   }
 
   render() {
-    const { apisStore: { banner } } = this.props
+    const { globalStore: { banner } } = this.props
     const { tabList } = this.state
 
     return (

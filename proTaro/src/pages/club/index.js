@@ -4,7 +4,7 @@ import { View } from '@tarojs/components'
 import { NewsList, ImagesList, NewsList2, MySwiper} from '@components'
 import './index.scss'
 
-@inject('apisStore')
+@inject('globalStore')
 @observer
 
 class Index extends Component {
@@ -16,7 +16,7 @@ class Index extends Component {
   componentWillMount() {}
 
   render () {
-    const { apisStore: { banner } } = this.props
+    const { globalStore: { banner } } = this.props
     return (
       <View className='wrap'>
         <View className='u-title'>企业家风采</View>

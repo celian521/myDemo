@@ -5,7 +5,7 @@ import { AtSegmentedControl } from 'taro-ui'
 import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
 import './index.scss'
 
-@inject('apisStore')
+@inject('globalStore')
 @observer
 class Index extends Component {
   constructor() {
@@ -25,7 +25,7 @@ class Index extends Component {
   }
 
   render() {
-    // const { apisStore: { } } = this.props
+    // const { globalStore: { } } = this.props
     return (
       <View className='wrap'>
         <View className='header-nav'>

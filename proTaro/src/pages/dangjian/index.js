@@ -4,7 +4,7 @@ import { View } from '@tarojs/components'
 import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
 import './index.scss'
 
-@inject('apisStore')
+@inject('globalStore')
 @observer
 class Index extends Component {
   constructor() {

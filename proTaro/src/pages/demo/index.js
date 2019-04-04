@@ -25,7 +25,7 @@ class Index extends Component {
         if (res.data) {
           const { dataNewsList } = this.state
           this.setState({
-            dataNewsList: [ ...dataNewsList, ...res.data ]
+            dataNewsList: [ ...dataNewsList, ...res.data.list ]
           })
         }
       })

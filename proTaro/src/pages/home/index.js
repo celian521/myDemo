@@ -26,7 +26,8 @@ class Home extends Component {
       dataBanner: {
         type_1: [],
         type_2: [],
-        type_3: []
+        type_3: [],
+        type_4: []
       }
     }
   }
@@ -47,13 +48,14 @@ class Home extends Component {
   /**
    * 获取数据
    */
-  fetchData = () => {
+  fetchBanner = () => {
     apis.getPage({ page_path: '/pages/index/index' }).then(({data}) => {
       this.setState( preState => {
         preState.dataBanner = {
           type_1: data[1] || [],
           type_2: data[2] || [],
-          type_3: data[3] || []
+          type_3: data[3] || [],
+          type_4: data[4] || []
         }
       }, () => {
         console.log('dataBanner', this.state.dataBanner)
@@ -63,7 +65,7 @@ class Home extends Component {
 
 
   componentDidMount() {
-    this.fetchData()
+    this.fetchBanner()
   }
 
   handleTabs = value => {
@@ -96,6 +98,9 @@ class Home extends Component {
         <AtDivider content='智慧学堂' className='myDivider' lineColor='#855498' fontColor='#666666' />
         <MySwiper banner={dataBanner.type_3} />
 
+        <AtDivider content='企业家风采' className='myDivider' lineColor='#855498' fontColor='#666666' />
+        <MySwiper banner={dataBanner.type_4} />
+
         <View className='u-title'>新闻资讯</View>
         <AtTabs
           className='tabList'
@@ -108,7 +113,7 @@ class Home extends Component {
             <TabList newsType={1} hasFetch />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={1}>
-            <TabList newsType={2} hasFetch />
+            <TabList newsType={24} hasFetch />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={2}>
             <TabList newsType={3} hasFetch />

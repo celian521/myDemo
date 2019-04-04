@@ -2,7 +2,13 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
-import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
+import { MySwiper } from '@components'
+
+import Aboutus from './aboutus'
+import Joinus from './joinus'
+import Serve from './serve'
+import List from './list'
+
 import './index.scss'
 
 @inject('globalStore')
@@ -30,7 +36,6 @@ class Index extends Component {
 
   componentWillMount() { }
 
-
   handleClick = value => {
     this.setState({
       current: value
@@ -39,24 +44,21 @@ class Index extends Component {
   render() {
     const { globalStore: { banner } } = this.props
     const { tabList } = this.state
-
     return (
       <View className='wrap'>
         <MySwiper banner={banner} />
         <AtTabs current={this.state.current} swipeable={false} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane className='wrap-top' current={this.state.current} index={0} >
-            <NewsList2 />
+            <Aboutus />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.current} index={1}>
-            <NewsList />
+            <Joinus />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.current} index={2}>
-            <ImagesList />
+            <Serve />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.current} index={3}>
-            <View>
-              no more
-            </View>
+            <List />
           </AtTabsPane>
         </AtTabs>
       </View>

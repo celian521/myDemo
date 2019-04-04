@@ -31,7 +31,7 @@ class Index extends Component {
 
   componentWillMount() {
     const { id } = this.$router.params
-    apis.details({ id }).then(({data}) => {
+    apis.getDetails({ id }).then(({data}) => {
         Taro.setNavigationBarTitle({
           title: data.title
         })
@@ -41,7 +41,6 @@ class Index extends Component {
           note: data.note,
           img_url: data.img_url
         })
-
     })
   }
 

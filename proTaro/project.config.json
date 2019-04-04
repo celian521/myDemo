@@ -4,7 +4,7 @@
   "description": "taro pro",
   "appid": "wx50dabf026d6be6de",
   "setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,

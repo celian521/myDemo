@@ -3,7 +3,6 @@ import http from './http'
 import baseUrl from './baseUrl.js'
 
 export default {
-  baseUrl: baseUrl,
   // 用户登录获取session信息接口
   getSession(params) {
     return http.post(baseUrl+'/weixin/getUserInfo', { company_id: 1, ...params })

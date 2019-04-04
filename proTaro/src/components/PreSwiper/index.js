@@ -3,7 +3,7 @@ import { View, Swiper, SwiperItem, Image } from '@tarojs/components';
 import PropTypes from 'prop-types';
 import './index.scss';
 
-export default class MySwiper extends Component {
+export default class PreSwiper extends Component {
   static propTypes = {
     banner: PropTypes.array
   };

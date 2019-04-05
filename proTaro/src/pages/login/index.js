@@ -1,8 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
-import { View } from '@tarojs/components'
+// import { View } from '@tarojs/components'
 import { AtActivityIndicator } from 'taro-ui'
-
 import apis from '@apis'
 
 import './index.scss'
@@ -30,7 +29,7 @@ class Login extends Component {
   }
   render() {
     return (
-      <AtActivityIndicator mode='center' content='加载中...'></AtActivityIndicator>
+      <AtActivityIndicator mode='center' content='加载中...' />
     )
   }
 }

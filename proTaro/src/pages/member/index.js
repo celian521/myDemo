@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
-import { View } from '@tarojs/components'
+import { View, RichText } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
 import { MySwiper } from '@components'
 
@@ -34,33 +34,29 @@ class Index extends Component {
     navigationBarTitleText: '会员中心'
   }
 
-  componentWillMount() { }
-
-  handleClick = value => {
+  tabClick = value => {
     this.setState({
       current: value
     })
   }
   render() {
     const { globalStore: { banner } } = this.props
-    const { tabList } = this.state
+    const { tabList, current } = this.state
     return (
       <View className='wrap'>
         <MySwiper banner={banner} />
-        <AtTabs current={this.state.current} swipeable={false} tabList={tabList} onClick={this.handleClick.bind(this)}>
-          <AtTabsPane className='wrap-top' current={this.state.current} index={0} >
-            <Aboutus />
-          </AtTabsPane>
-          <AtTabsPane className='wrap-top' current={this.state.current} index={1}>
-            <Joinus />
-          </AtTabsPane>
-          <AtTabsPane className='wrap-top' current={this.state.current} index={2}>
-            <Serve />
-          </AtTabsPane>
-          <AtTabsPane className='wrap-top' current={this.state.current} index={3}>
-            <List />
-          </AtTabsPane>
-        </AtTabs>
+        <AtTabs
+          current={this.state.current}
+          swipeable={false}
+          tabList={tabList}
+          onClick={this.tabClick.bind(this)}
+        ></AtTabs>
+        <View className='wrap-top'>
+          { current === 0 ? <Aboutus /> : null }
+          { current === 1 ? <Joinus /> : null }
+          { current === 2 ? <Serve /> : null }
+          { current === 3 ? <List /> : null }
+        </View>
       </View>
     )
   }

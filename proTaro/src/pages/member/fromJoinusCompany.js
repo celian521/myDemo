@@ -8,6 +8,7 @@ export default class FromJoinusCompany extends Component {
   constructor () {
     super(...arguments)
     this.state = {
+      falg:  false,
       fromData: {
         company_name: '',
         company_code: '',
@@ -71,7 +72,13 @@ export default class FromJoinusCompany extends Component {
 
   onSubmit = () => {
     if(!this.validator()) return
+    this.setState({
+      falg: true
+    })
     apis.postJoinusCompany(this.state.fromData).then((res)=>{
+      this.setState({
+        falg: false
+      })
       Taro.showModal({
         title: '提交成功',
         content: '审核结果很快通知你，请稍候',
@@ -80,7 +87,7 @@ export default class FromJoinusCompany extends Component {
   }
 
   render() {
-    const { fromData, select  } = this.state
+    const { fromData, falg } = this.state
     return (
       <View>
         <AtForm
@@ -122,7 +129,7 @@ export default class FromJoinusCompany extends Component {
               onChange={this.emailChange.bind(this)}
             />
 
-            <AtButton formType='submit' type='primary'>提交</AtButton>
+            <AtButton disabled={falg} loading={falg} formType='submit' type='primary'>提交</AtButton>
 
           </AtForm>
       </View>

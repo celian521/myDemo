@@ -1,11 +1,10 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { AtTabs, AtTabsPane, AtGrid, AtDivider, AtLoadMore  } from 'taro-ui'
-import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
+import { AtTabs, AtTabsPane, AtGrid, AtDivider  } from 'taro-ui'
+import { MySwiper } from '@components'
 import TabList from './tabList'
 import apis from '@apis'
-
 import './index.scss'
 
 @inject('globalStore')
@@ -88,7 +87,6 @@ class Home extends Component {
     const { tabList, dataBanner } = this.state
     return (
       <View className='wrap'>
-
         <MySwiper banner={dataBanner.type_1} />
         <AtGrid hasBorder={false} data={grid} onClick={this.handleGrid} />
 

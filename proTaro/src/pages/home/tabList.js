@@ -2,7 +2,7 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
 import { AtLoadMore  } from 'taro-ui'
-import { NewsList } from '@components'
+import { ItemList } from '@components'
 import PropTypes from 'prop-types';
 import apis from '@apis'
 import './index.scss';
@@ -46,7 +46,7 @@ export default class TabList extends Component {
     const { status, dataList } = this.state
     return (
       <View>
-        <NewsList dataList={dataList} />
+        <ItemList data={dataList} type='news' />
         <AtLoadMore status={status?'loading':'noMore'} />
       </View>
     )

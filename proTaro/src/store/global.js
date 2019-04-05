@@ -14,7 +14,7 @@ const globalStore = observable({
   grid: mock.grid || [],
   tabList: mock.tabList || [],
   details: mock.details || [],
-  dataNewsList: [],
+
 
   login(code) {
     this.sessionId = code

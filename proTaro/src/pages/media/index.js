@@ -2,7 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtSegmentedControl } from 'taro-ui'
-import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
+import { ItemList, MySwiper } from '@components'
 import './index.scss'
 
 @inject('globalStore')
@@ -39,22 +39,22 @@ class Index extends Component {
         <View className='top-blank'></View>
         {
           this.state.current === 0
-            ? <ImagesList />
+            ? <ItemList type='news2' />
             : null
         }
         {
           this.state.current === 1
-            ? <NewsList />
+            ? <ItemList type='card2' />
             : null
         }
         {
           this.state.current === 2
-            ? <ImagesList />
+            ? <ItemList  type='card2' />
             : null
         }
         {
           this.state.current === 3
-            ? <NewsList2 />
+            ? <ItemList  type='news3' />
             : null
         }
       </View>

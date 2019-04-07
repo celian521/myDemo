@@ -2,6 +2,12 @@ import Taro from '@tarojs/taro'
 
 const PAGE_WEBVIEW = '/pages/webview/webview'
 
+// 'pages/home/index',
+// 'pages/club/index',
+// 'pages/plan/index',
+// 'pages/member/index',
+
+
 /**
  * // NOTE 后端返回的 url 可能是网页链接，需要在 webview 中打开
  * 也可能是小程序自身的链接，只能用 navigate/redirect 之类的打开

@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { AtForm, AtInput, AtButton  } from 'taro-ui'
 import { View } from '@tarojs/components'
-import { MyScroll, ImagesList } from '@components'
+import { MyScroll, ItemList } from '@components'
 import apis from '@apis'
 import './index.scss'
 
@@ -9,8 +9,6 @@ class Index extends Component {
   constructor() {
     super(...arguments)
     this.state = {
-      value: '',
-      value2: '',
       dataNewsList: []
     }
   }
@@ -31,14 +29,6 @@ class Index extends Component {
       })
   }
 
-  handleChange = (value) => {
-    this.setState({
-      value
-    })
-  }
-  onSubmit = (event) => {
-    console.log(event)
-  }
 
   onPull() {//上拉
     console.log('上拉=')
@@ -63,34 +53,14 @@ class Index extends Component {
     const { dataNewsList } = this.state
     return (
       <View className='wrap'>
-        {/* <AtForm
-          onSubmit={this.onSubmit.bind(this)}
-        >
-            <AtInput
-              name='value'
-              title='文本'
-              type='text'
-              placeholder='单行文本'
-              value={this.state.value}
-              onChange={this.handleChange.bind(this)}
-            />
-            <AtInput
-              name='value2'
-              title='文本'
-              type='text'
-              placeholder='单行文本'
-              value={this.state.value2}
-              onChange={this.handleChange.bind(this)}
-            />
-            <AtButton formType='submit' type='primary'>提交</AtButton>
-          </AtForm> */}
+
         <MyScroll
           onUpper={this.onUpper}
           onLower={this.onLower}
           onDown={this.onDown}
           onPull={this.onPull}
         >
-          <ImagesList dataList={dataNewsList} />
+          <ItemList data={dataNewsList} />
         </MyScroll>
       </View>
     )

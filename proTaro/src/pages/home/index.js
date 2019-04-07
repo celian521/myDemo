@@ -5,6 +5,7 @@ import { AtTabs, AtTabsPane, AtGrid, AtDivider  } from 'taro-ui'
 import { MySwiper } from '@components'
 import TabList from './tabList'
 import apis from '@apis'
+import linkTo from '@utils/linkTo'
 import './index.scss'
 
 @inject('globalStore')
@@ -75,11 +76,7 @@ class Home extends Component {
 
   handleGrid = (item, index) => {
     const url = item.url
-    if (index == 0 || index == 2) {
-      Taro.switchTab({ url })
-    } else {
-      Taro.navigateTo({ url })
-    }
+    linkTo({url})
   }
 
   render() {

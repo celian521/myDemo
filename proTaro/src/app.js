@@ -16,15 +16,19 @@ class App extends Component {
   config = {
     pages: [
       'pages/login/index',
+
       'pages/home/index',
       'pages/club/index',
-      'pages/plan/index',
+      'pages/activity/index',
       'pages/member/index',
-      'pages/details/index',
+
+      'pages/news/index',
+
       'pages/organ/index',
-      'pages/training/index',
+      'pages/train/index',
       'pages/media/index',
       'pages/dangjian/index',
+
       'pages/demo/index'
     ],
     window: {
@@ -45,7 +49,7 @@ class App extends Component {
         iconPath: "./assets/images/tab-bar/club.png",
         selectedIconPath: "./assets/images/tab-bar/club-active.png"
       },{
-        pagePath: "pages/plan/index",
+        pagePath: "pages/activity/index",
         text: "活动策划",
         iconPath: "./assets/images/tab-bar/plan.png",
         selectedIconPath: "./assets/images/tab-bar/plan-active.png"

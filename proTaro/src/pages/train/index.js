@@ -26,7 +26,7 @@ class Index extends Component {
         <View className='u-title'>名师风采</View>
         <MySwiper banner={banner} />
         <View className='u-title'>教育培训</View>
-        <ItemList data={[]} type='card2' />
+        <ItemList type='news2' />
       </View>
     )
   }

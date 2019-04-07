@@ -1,13 +1,13 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components';
-import './index.scss';
+import linkTo from '@utils/linkTo'
 import mock from '../../mock'
 import PropTypes from 'prop-types';
+import './index.scss';
 
 if (process.env.TARO_ENV === "weapp") {
   require("taro-ui/dist/style/components/flex.scss");
 }
-
 
 export default class List extends Component {
   static propTypes = {
@@ -21,8 +21,8 @@ export default class List extends Component {
   };
 
   handerLink = id => {
-    const url = `/pages/details/index?id=${id}`
-    Taro.navigateTo({ url })
+    const url = `/pages/news/index?id=${id}`
+    linkTo({ url })
   }
 
   render() {

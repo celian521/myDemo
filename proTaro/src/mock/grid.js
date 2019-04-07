@@ -6,12 +6,12 @@ export default [{
   {
     image: require('../assets/images/grid-02.png'),
     value: '党建公益',
-    url: '/pages/demo/index'
+    url: '/pages/dangjian/index'
   },
   {
     image: require('../assets/images/grid-03.png'),
     value: '活动策划',
-    url: '/pages/plan/index'
+    url: '/pages/activity/index'
   },
   {
     image: require('../assets/images/grid-04.png'),
@@ -21,7 +21,7 @@ export default [{
   {
     image: require('../assets/images/grid-05.png'),
     value: '教育培训',
-    url: '/pages/training/index'
+    url: '/pages/train/index'
   },
   {
     image: require('../assets/images/grid-06.png'),

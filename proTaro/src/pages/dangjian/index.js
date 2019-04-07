@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { NewsList, ImagesList, NewsList2, MySwiper } from '@components'
+import { ItemList } from '@components'
 import './index.scss'
 
 @inject('globalStore')
@@ -10,7 +10,6 @@ class Index extends Component {
   constructor() {
     super(...arguments);
     this.state = {
-
     };
   }
   config = {
@@ -22,9 +21,9 @@ class Index extends Component {
     return (
       <View className='wrap'>
         <View className='u-title'>党建</View>
-        <NewsList2 />
+        <ItemList />
         <View className='u-title'>慈善公益</View>
-        <NewsList2 />
+        <ItemList />
       </View>
     )
   }

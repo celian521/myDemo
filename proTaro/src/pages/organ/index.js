@@ -2,7 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
-import { ItemList, MySwiper } from '@components'
+import { ScrollList, MySwiper } from '@components'
 
 import './index.scss'
 
@@ -24,6 +24,16 @@ class Index extends Component {
   config = {
     navigationBarTitleText: '分支机构'
   }
+  onReachBottom() {
+    switch (this.state.current) {
+      case 0: this.ScrollList0.load()
+        break;
+      case 1: this.ScrollList1.load()
+        break;
+      default:
+        break;
+    }
+  }
   handleClick = value => {
     this.setState({
       current: value
@@ -39,10 +49,10 @@ class Index extends Component {
         <MySwiper banner={banner} />
         <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane className='wrap-top' current={this.state.current} index={0} >
-            <ItemList type='news2' />
+            <ScrollList type='news2' newsType={1} ref={node => this.ScrollList0 = node} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.current} index={1}>
-            <ItemList type='card2' />
+            <ScrollList type='news2' newsType={1} ref={node => this.ScrollList1 = node} />
           </AtTabsPane>
         </AtTabs>
       </View>

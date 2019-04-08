@@ -17,6 +17,10 @@ export default class PreSwiper extends Component {
     if(url) linkTo({url})
   }
 
+  miao = () => {
+    console.log('miao, miao, miao~')
+  }
+
   render() {
     const { banner } = this.props;
     return (

@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { ItemList } from '@components'
+import { ScrollList } from '@components'
 import './index.scss'
 
 @inject('globalStore')
@@ -21,9 +21,9 @@ class Index extends Component {
     return (
       <View className='wrap'>
         <View className='u-title'>党建</View>
-        <ItemList />
+        <ScrollList type='news' newsType={1} loadMore={false} ref={node => this.ScrollList0 = node} />
         <View className='u-title'>慈善公益</View>
-        <ItemList />
+        <ScrollList type='news' newsType={1} loadMore={false} ref={node => this.ScrollList1 = node} />
       </View>
     )
   }

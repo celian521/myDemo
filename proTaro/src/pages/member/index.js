@@ -2,12 +2,11 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View, RichText } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
-import { MySwiper } from '@components'
+import { MySwiper, ScrollList } from '@components'
 import apis from '@apis'
 import Aboutus from './aboutus'
 import Joinus from './joinus'
 import Serve from './serve'
-import List from './list'
 
 import './index.scss'
 
@@ -34,6 +33,11 @@ class Index extends Component {
   config = {
     navigationBarTitleText: '会员中心'
   }
+
+  onReachBottom() {
+    if(this.state.current===3) this.ScrollList.load()
+  }
+
   componentDidMount() {
     this.fetchBanner()
   }
@@ -54,7 +58,6 @@ class Index extends Component {
     })
   }
   render() {
-    // const { globalStore: { banner } } = this.props
     const { tabList, current, dataBanner } = this.state
     return (
       <View className='wrap'>
@@ -69,7 +72,7 @@ class Index extends Component {
           { current === 0 ? <Aboutus /> : null }
           { current === 1 ? <Joinus /> : null }
           { current === 2 ? <Serve /> : null }
-          { current === 3 ? <List /> : null }
+          { current === 3 ? <ScrollList type='card' newsType={20} ref={node => this.ScrollList = node} /> : null }
         </View>
       </View>
     )

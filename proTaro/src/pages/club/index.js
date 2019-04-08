@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { ItemList, MySwiper} from '@components'
+import { ScrollList, MySwiper} from '@components'
 import './index.scss'
 
 @inject('globalStore')
@@ -22,11 +22,11 @@ class Index extends Component {
         <View className='u-title'>企业家风采</View>
         <MySwiper banner={banner} />
         <View className='u-title'>产品展示</View>
-        <ItemList type='card2' />
+        <ScrollList type='card2' newsType={1} loadMore={false} />
         <View className='u-title'>企业互动</View>
-        <ItemList type='news2' />
+        <ScrollList type='news2' newsType={1} loadMore={false} />
         <View className='u-title'>私董会</View>
-        <ItemList type='news3' />
+        <ScrollList type='news3' newsType={1} loadMore={false} />
       </View>
     )
   }

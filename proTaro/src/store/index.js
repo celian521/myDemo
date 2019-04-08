@@ -1,7 +1,7 @@
 import globalStore from './global'
 
 const store = {
-  globalStore,
+  globalStore
 }
 
 export default store

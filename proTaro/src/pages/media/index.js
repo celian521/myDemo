@@ -2,22 +2,37 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtSegmentedControl } from 'taro-ui'
-import { ItemList, MySwiper } from '@components'
+import { ScrollList, MySwiper } from '@components'
 import './index.scss'
 
 @inject('globalStore')
 @observer
-class Index extends Component {
+class Media extends Component {
   constructor() {
     super(...arguments);
     this.state = {
       current: 0
     };
   }
+
   config = {
     navigationBarTitleText: '媒体事业'
   }
 
+  onReachBottom() {
+    switch (this.state.current) {
+      case 0: this.ScrollList0.load()
+        break;
+      case 1: this.ScrollList1.load()
+        break;
+      case 2: this.ScrollList2.load()
+        break;
+      case 3: this.ScrollList3.load()
+        break;
+      default:
+        break;
+    }
+  }
   handleClick = value => {
     this.setState({
       current: value
@@ -25,7 +40,6 @@ class Index extends Component {
   }
 
   render() {
-    // const { globalStore: { } } = this.props
     return (
       <View className='wrap'>
         <View className='header-nav'>
@@ -39,22 +53,22 @@ class Index extends Component {
         <View className='top-blank'></View>
         {
           this.state.current === 0
-            ? <ItemList type='news2' />
+            ? <ScrollList type='news2' newsType={25} ref={node => this.ScrollList0 = node} />
             : null
         }
         {
           this.state.current === 1
-            ? <ItemList type='card2' />
+            ? <ScrollList type='card2' newsType={26} ref={node => this.ScrollList1 = node} />
             : null
         }
         {
           this.state.current === 2
-            ? <ItemList  type='card2' />
+            ? <ScrollList type='card2' newsType={23} ref={node => this.ScrollList2 = node} />
             : null
         }
         {
           this.state.current === 3
-            ? <ItemList  type='news3' />
+            ? <ScrollList type='news3' newsType={26} ref={node => this.ScrollList3 = node} />
             : null
         }
       </View>
@@ -62,4 +76,4 @@ class Index extends Component {
   }
 }
 
-export default Index
+export default Media

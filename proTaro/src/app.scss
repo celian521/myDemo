@@ -12,9 +12,13 @@ $color-brand-dark: darken($color-brand, 2%); // #6a437a;
   height: 100%;
 }
 
+.at-tabs__item {
+  font-weight: 700;
+}
 .at-tabs__item-underline {
   height: 2PX;
 }
+
 
 .at-divider__line {
   height: 2PX;

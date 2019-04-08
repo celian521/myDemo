@@ -12,6 +12,7 @@ import { Base64 } from 'js-base64';
 import apis from '@apis'
 import './index.scss'
 
+
 @inject('globalStore')
 
 @observer
@@ -30,6 +31,7 @@ class Index extends Component {
   }
 
   componentWillMount() {
+    console.log(this.$router)
     const { id } = this.$router.params
     apis.getDetails({ id }).then(({data}) => {
         Taro.setNavigationBarTitle({

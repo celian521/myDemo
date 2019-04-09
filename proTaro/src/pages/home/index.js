@@ -69,7 +69,7 @@ class Home extends Component {
           type_4: data[4] || []
         }
       }, () => {
-        console.log('dataBanner', this.state.dataBanner)
+        // console.log('dataBanner', this.state.dataBanner)
       })
     })
   }

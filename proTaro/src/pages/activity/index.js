@@ -1,74 +1,119 @@
 import Taro, { Component } from '@tarojs/taro'
-import { observer, inject } from '@tarojs/mobx'
-import { View } from '@tarojs/components'
+// import { observer, inject } from '@tarojs/mobx'
+import { View, Text } from '@tarojs/components'
 import { AtCalendar } from 'taro-ui'
 import { MySwiper } from '@components'
 import apis from '@apis'
+import linkTo from '@utils/linkTo'
 import './index.scss'
 
-@inject('globalStore')
-
-@observer
 class Index extends Component {
   constructor() {
     super(...arguments);
     this.state = {
       dataBanner: [],
-      value:''
+      marksDate: [],
+      dataList: [],
+      onTime: '',
+      falg: false
     }
   }
   config = {
     navigationBarTitleText: '活动策划'
   }
+
   componentDidMount() {
+    const date = new Date()
+    const y = date.getFullYear(),
+      m = date.getMonth() + 1,
+      d = date.getDate()
+    const time = `${y}-${m}-${d}`
+    this.setState({
+      onTime: time
+    }, () => { this.fetchData() })
     this.fetchBanner()
-    this.fetchData()
   }
   /**
    * 获取数据
    */
   fetchBanner = () => {
-    apis.getPage({ page_path: this.$router.path }).then(({data}) => {
+    apis.getPage({ page_path: this.$router.path }).then(({ data }) => {
       this.setState({
-          dataBanner: data[1]
+        dataBanner: data[1]
       })
     })
   }
+  // 返回时间段
+  fmtDate = strDate => {
+    const date = new Date(strDate)
+    let y = date.getFullYear(),
+      m = date.getMonth() + 1,
+      yy = y,
+      mm = m + 1
+    if (mm > 12) {
+      mm = 1
+      yy = yy + 1
+    }
+    const start_day = `${y}-${m}-1`
+    const end_day = `${yy}-${mm}-1`
+    return { start_day, end_day }
+  }
+
   fetchData = () => {
-    apis.getList({ news_type: 9, page:1, pageSize:1000 }).then(({ data }) => {
-      console.log(data);
-
-      // start_day
+    const { onTime } = this.state
+    console.log('onTime:',onTime)
+    apis.getList({ news_type: 9, page: 1, ...this.fmtDate(onTime), pageSize: 1000 }).then(({ data }) => {
+      let temp = []
+      for (let item of data.list) {
+        temp.push({ value: item.start_day })
+      }
+      this.setState({
+          dataList: data.list,
+          marksDate: temp,
+          falg: true
+      })
     })
   }
 
-  onDayClick = ({value}) => {
-    console.log('data', value)
+  onDayClick = ({ value }) => {
     this.setState({
-      value
+      onTime: value
     })
   }
+
   onMonthChange = value => {
-    console.log('mon', value)
+    console.log(value)
     this.setState({
-      value
-    })
+      onTime: value
+    }, () => { this.fetchData() })
+  }
+
+  handerLink = id => {
+    const url = `/pages/news/index`
+    let params = { id } //文章ID
+    linkTo({ url, params })
   }
 
   render() {
-    const { dataBanner, value } = this.state
+    let { dataBanner, marksDate, dataList, onTime, falg } = this.state
     return (
       <View className='wrap'>
         <MySwiper banner={dataBanner} />
-        <AtCalendar
-          key='att'
-          minDate='2019/4/1'
+        { falg && <AtCalendar
+          key='calendar'
+          currentDate={onTime}
           onDayClick={this.onDayClick.bind(this)}
           onMonthChange={this.onMonthChange.bind(this)}
-          marks={[ { value: '2019/3/11' }, { value: '2019/4/11' },{ value: '2019/4/10' },{ value: '2019/4/12' } ]}
-        />
-        <View>
-          {value}
+          marks={marksDate}
+        /> }
+        <View className='onTimeNews'>
+          { dataList.map(item => (
+            onTime === item.start_day &&
+            <View key={item.id} className='newsLi' onClick={this.handerLink.bind(this, item.id)}>
+              <Text>{ item.title }</Text>
+              <Text className='more'>[查看更多]</Text>
+            </View>
+          )) }
         </View>
       </View>
     )

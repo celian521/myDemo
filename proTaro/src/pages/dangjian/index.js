@@ -17,7 +17,6 @@ class Index extends Component {
   }
 
   render() {
-
     return (
       <View className='wrap'>
         <View className='u-title'>党建</View>

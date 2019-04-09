@@ -3,7 +3,7 @@ import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
 import { ScrollList, MySwiper } from '@components'
-
+import apis from '@apis'
 import './index.scss'
 
 @inject('globalStore')
@@ -13,6 +13,7 @@ class Index extends Component {
     super(...arguments);
     this.state = {
       current: 0,
+      dataBanner: [],
       tabList: [{
         title: '分支机构简介'
       }, {
@@ -23,6 +24,19 @@ class Index extends Component {
   }
   config = {
     navigationBarTitleText: '分支机构'
+  }
+  componentWillMount() {
+    this.fetchBanner()
+  }
+  /**
+   * 获取数据
+   */
+  fetchBanner = () => {
+    apis.getPage({ page_path: this.$router.path }).then(({ data }) => {
+      this.setState({
+        dataBanner: data[1]
+      })
+    })
   }
   onReachBottom() {
     switch (this.state.current) {
@@ -41,12 +55,10 @@ class Index extends Component {
   }
 
   render() {
-    const { globalStore: { banner } } = this.props
-    const { tabList } = this.state
-
+    const { tabList, dataBanner } = this.state
     return (
       <View className='wrap'>
-        <MySwiper banner={banner} />
+        <MySwiper banner={dataBanner} />
         <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane className='wrap-top' current={this.state.current} index={0} >
             <ScrollList type='news2' newsType={1} ref={node => this.ScrollList0 = node} />

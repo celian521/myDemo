@@ -21,22 +21,23 @@ export default class List extends Component {
   };
 
   handerLink = id => {
-    const url = `/pages/news/index?id=${id}`
-    linkTo({ url })
+    const url = `/pages/news/index`
+    let params = { id } //文章ID
+    linkTo({ url, params })
   }
 
   render() {
     const { type, data } = this.props
 
     // type:news  ###############################
-    const newsTpl =  data.map((item, index) => (
+    const newsTpl = data.map((item, index) => (
       <View key={index} onClick={this.handerLink.bind(this, item.id)} className='news-block at-row at-row__align--center'>
         <View className='at-col at-col-3'>
-          <Image className='news-img' src={item.img_url}  />
+          <Image className='news-img' src={item.img_url} />
         </View>
         <View className='at-col at-col-9 at-col--wrap'>
           <View className='news-title'>
-            {item.title}
+            { item.title }
           </View>
           <View className='news-info'>[查看详情]</View>
         </View>
@@ -44,26 +45,26 @@ export default class List extends Component {
     ))
 
     // type:news2  ###############################
-    const news2Tpl =  data.map((item, index) => (
+    const news2Tpl = data.map((item, index) => (
       <View key={index} onClick={this.handerLink.bind(this, item.id)} className='news2-block at-row at-row__align--top'>
         <View className='at-col at-col-5'>
           <Image className='news2-img' src={item.img_url} />
         </View>
         <View className='at-col at-col-7 at-col--wrap'>
           <View className='news2-title'>
-          {item.title}
-        </View>
+            { item.title }
+          </View>
           <View className='news2-info'>2009-04-12 12:00</View>
         </View>
       </View>
     ))
 
     // type:news3  ###############################
-    const news3Tpl =  data.map((item, index) => (
+    const news3Tpl = data.map((item, index) => (
       <View key={index} onClick={this.handerLink.bind(this, item.id)} className='news2-block at-row at-row__align--top'>
         <View className='at-col at-col-7 at-col--wrap'>
           <View className='news2-title'>
-          {item.title}
+            { item.title }
           </View>
           <View className='news2-info'>2009-04-12 12:00</View>
         </View>
@@ -74,14 +75,14 @@ export default class List extends Component {
     ))
 
     // type:card  ###############################
-    const cardList =  data.map((item, index) => (
+    const cardList = data.map((item, index) => (
       <View key={index} onClick={this.handerLink.bind(this, item.id)} className='images-item at-col at-col-6 at-col--wrap'>
         <View className='images-inner'>
           <View className='images-img'>
             <Image src={item.img_url} lazyLoad mode='widthFix' />
           </View>
           <View className='images-title'>
-            {item.title}
+            { item.title }
           </View>
           <View className='images-info'>[查看详情]</View>
         </View>
@@ -90,13 +91,13 @@ export default class List extends Component {
     const cardTpl = (
       <View className='images-block-wrap'>
         <View className='images-block at-row at-row--wrap '>
-        {cardList}
+          { cardList }
         </View>
       </View>
     )
 
     // type:card2  ###############################
-    const card2Tpl =  data.map((item, index) => (
+    const card2Tpl = data.map((item, index) => (
       <View
         key={index}
         onClick={this.handerLink.bind(this, item.id)}
@@ -107,7 +108,7 @@ export default class List extends Component {
             <Image src={item.img_url} lazyLoad />
           </View>
           <View className='card-title'>
-            {item.title}
+            { item.title }
           </View>
         </View>
       </View>

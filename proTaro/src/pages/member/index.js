@@ -46,7 +46,6 @@ class Index extends Component {
    */
   fetchBanner = () => {
     apis.getPage({ page_path: this.$router.path}).then(({data}) => {
-      console.log("menber", data)
       this.setState({
           dataBanner: data[1]
       })

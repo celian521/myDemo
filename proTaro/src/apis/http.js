@@ -35,7 +35,7 @@ const Ajax = (method, url, params) => {
         data: { ...defaultParams, ...params, session_id },
       }).then((res) => {
         // console.log('request:=>',res)
-        if(res.statusCode === 200){
+        if (res.statusCode === 200) {
           const { data } = res
           if (data.status === successCode) {
             resolve(data)
@@ -51,7 +51,7 @@ const Ajax = (method, url, params) => {
           Toast('服务器错误')
         } else if (res.statusCode == 0) {
           Toast('网络连接超时')
-        } else if (res.statusCode == 501){
+        } else if (res.statusCode == 501) {
           // Toast('请进行登录')
         }
       }).catch((err) => {
@@ -68,7 +68,7 @@ let Toast = (msg) => {
     title: msg,
     duration: 3000,
     icon: 'none',
-    mask:true
+    mask: true
   })
 }
 

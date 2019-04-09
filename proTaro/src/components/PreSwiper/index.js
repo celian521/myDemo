@@ -14,7 +14,9 @@ export default class PreSwiper extends Component {
   };
   handleClick = item => {
     const url = item.url_path
-    if(url) linkTo({url})
+    let params = {} //文章ID
+    if( item.url_param ) params.id = item.url_param
+    if (url) linkTo({ url, params })
   }
 
   miao = () => {
@@ -34,7 +36,7 @@ export default class PreSwiper extends Component {
         { banner.map((item, index) => (
           <SwiperItem className='swiperItem' key={index} onClick={this.handleClick.bind(this, item)}>
             <Image src={item.img_path} lazyLoad />
-            {item.title&&<View className='swiperName'>{item.title}</View>}
+            { item.title && <View className='swiperName'>{ item.title }</View> }
           </SwiperItem>
         )) }
       </Swiper>

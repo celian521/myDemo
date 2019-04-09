@@ -7,10 +7,8 @@
  */
 import Taro, { Component } from '@tarojs/taro'
 import { View, RichText, Image } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
 import { observer, inject } from '@tarojs/mobx'
 import { Base64 } from 'js-base64';
-import linkTo from '@utils/linkTo'
 import apis from '@apis'
 import './index.scss'
 
@@ -27,7 +25,6 @@ class Index extends Component {
       content: '',
       img_url: '',
       note: '',  // 文章简介
-      newType: ''
     };
   }
   config = {
@@ -35,7 +32,6 @@ class Index extends Component {
   }
 
   componentWillMount() {
-    console.log(this.$router)
     const { id } = this.$router.params
     apis.getDetails({ id }).then(({ data }) => {
       Taro.setNavigationBarTitle({
@@ -46,20 +42,14 @@ class Index extends Component {
         title: data.title,
         content: Base64.decode(data.context),
         note: data.note,
-        img_url: data.img_url,
-        newType: data.new_type
+        img_url: data.img_url
       })
     })
   }
 
-  toBook = () => {
-    const { id, title } = this.state
-    const url = `/pages/train/fromBook?news_id=${id}&news_title=${title}`
-    linkTo({ url })
-  }
 
   render() {
-    const { title, content, note, img_url, newType } = this.state
+    const { title, content, note, img_url } = this.state
     return (
       <View className='at-article'>
         <View className='at-article__h1'>{ title }</View>
@@ -71,13 +61,7 @@ class Index extends Component {
             <View className='at-article__p'>
               <RichText nodes={content} />
             </View>
-            {
-              // "14"|--教育培训
-              newType == '14' &&
-              <View className='at-article__p' onClick={this.toBook}>
-                <AtButton type='primary'>马山报名</AtButton>
-              </View>
-            }
+
           </View>
         </View>
       </View>

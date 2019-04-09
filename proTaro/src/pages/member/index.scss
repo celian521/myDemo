@@ -4,3 +4,26 @@
   font-size: 28px;
   line-height: 1.5;
 }
+
+
+.picker {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  border-bottom: 1PX solid #eee;
+  padding: 24px 0;
+  .label {
+    width: 200px;
+    font-size: 32px;
+    padding-left: 32px;
+    line-height: 1.5;
+    margin-right: 16px;
+    box-sizing: border-box;
+  }
+  .value {
+    text-align: left;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  .placeholder { color:gray; }
+}

@@ -17,10 +17,12 @@ export default class FromJoinusUser extends Component {
         sex: '',
         name: '',
         phone: '',
-        email: '',
-        company_name: ''
+        email: ''
       }
     }
+  }
+  config = {
+    navigationBarTitleText: '马山报名'
   }
 
   sexChange = e => {
@@ -48,12 +50,6 @@ export default class FromJoinusUser extends Component {
     })
   }
 
-  companyNameChange = value => {
-    this.setState((preState) => {
-      preState.fromData.company_name = value
-    })
-  }
-
   // 验证
   validator = () => {
     let Toast = (msg) => {
@@ -77,9 +73,6 @@ export default class FromJoinusUser extends Component {
     } else if (!(regex_email.test(fromData.email))) {
       Toast('邮件地址有误')
       return false
-    } else if (!fromData.company_name) {
-      Toast('单位名称不能为空')
-      return false
     } else {
       return true
     }
@@ -90,13 +83,14 @@ export default class FromJoinusUser extends Component {
     this.setState({
       falg: true
     })
-    apis.postJoinusUser(this.state.fromData).then((res) => {
+    const { news_id, news_title } = this.$router.params
+    apis.postBook({ ...this.state.fromData, news_id, news_title }).then((res) => {
       this.setState({
         falg: false
       })
       Taro.showModal({
-        title: '提交成功',
-        content: '审核结果很快通知你，请稍候',
+        title: '报名成功',
+        content: '请留意具体开课时间',
       }).then(res => console.log(res.confirm, res.cancel))
     })
   }
@@ -104,7 +98,7 @@ export default class FromJoinusUser extends Component {
   render() {
     const { fromData, select, falg } = this.state
     return (
-      <View>
+      <View className='wrap'>
         <AtForm
           onSubmit={this.onSubmit.bind(this)}
         >
@@ -140,15 +134,6 @@ export default class FromJoinusUser extends Component {
             placeholder='请输入'
             value={fromData.email}
             onChange={this.emailChange.bind(this)}
-          />
-
-          <AtInput
-            name='company_name'
-            title='单位名称'
-            type='text'
-            placeholder='请输入'
-            value={fromData.company_name}
-            onChange={this.companyNameChange.bind(this)}
           />
 
           <AtButton disabled={falg} loading={falg} formType='submit' type='primary'>提交</AtButton>

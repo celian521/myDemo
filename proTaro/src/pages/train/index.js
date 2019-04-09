@@ -20,7 +20,7 @@ class Train extends Component {
   config = {
     navigationBarTitleText: '教育培训',
     "enablePullDownRefresh": true,
-    onReachBottomDistance:50
+    onReachBottomDistance: 50
   }
 
   componentDidMount() {
@@ -40,16 +40,15 @@ class Train extends Component {
    * 获取数据
    */
   fetchBanner = () => {
-    apis.getPage({ page_path: this.$router.path }).then(({data}) => {
+    apis.getPage({ page_path: this.$router.path }).then(({ data }) => {
       console.log("menberdd", data)
       this.setState({
-          dataBanner: data[1]
+        dataBanner: data[1]
       })
     })
   }
 
-
-  render () {
+  render() {
     const { dataBanner } = this.state
     return (
       <View className='wrap'>

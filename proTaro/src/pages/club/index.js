@@ -1,26 +1,44 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { ScrollList, MySwiper} from '@components'
+import { ScrollList, MySwiper } from '@components'
+import apis from '@apis'
 import './index.scss'
 
 @inject('globalStore')
+
 @observer
-
 class Index extends Component {
+  constructor() {
+    super(...arguments);
+    this.state = {
+      dataBanner: []
 
+    }
+  }
   config = {
     navigationBarTitleText: '企业家俱乐部'
   }
 
-  componentWillMount() {}
-
-  render () {
-    const { globalStore: { banner } } = this.props
+  componentWillMount() {
+    this.fetchBanner()
+  }
+  /**
+   * 获取数据
+   */
+  fetchBanner = () => {
+    apis.getPage({ page_path: this.$router.path }).then(({ data }) => {
+      this.setState({
+        dataBanner: data[1]
+      })
+    })
+  }
+  render() {
+    const { dataBanner } = this.state
     return (
       <View className='wrap'>
         <View className='u-title'>企业家风采</View>
-        <MySwiper banner={banner} />
+        <MySwiper banner={dataBanner} />
         <View className='u-title'>产品展示</View>
         <ScrollList type='card2' newsType={1} loadMore={false} />
         <View className='u-title'>企业互动</View>

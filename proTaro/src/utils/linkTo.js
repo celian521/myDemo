@@ -8,7 +8,7 @@ const tabBarPath = [
 ]
 
 export default function linkTo(options) {
-  const {
+  let {
     url,
     title = '',
     params = {},
@@ -17,5 +17,8 @@ export default function linkTo(options) {
   let type = method
   const hasTabBar = tabBarPath.find(path => url === path)
   if(!!hasTabBar) type = 'switchTab'
+  if(params.id && !hasTabBar) {
+    url = `${url}?id=${params.id}`
+  }
   Taro[type]({ url })
 }

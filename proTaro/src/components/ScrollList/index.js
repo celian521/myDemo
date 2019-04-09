@@ -20,7 +20,7 @@
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
-import { AtLoadMore  } from 'taro-ui'
+import { AtLoadMore } from 'taro-ui'
 import { ItemList } from '@components'
 import PropTypes from 'prop-types';
 import apis from '@apis'
@@ -45,7 +45,7 @@ export default class TabList extends Component {
     super(...arguments);
     this.state = {
       page: 1,
-      total:0,
+      total: 0,
       list: [],
       status: false
     }
@@ -60,7 +60,7 @@ export default class TabList extends Component {
       total: 0,
       list: [],
       status: true
-    }, ()=>{
+    }, () => {
       this.load()
     });
   }
@@ -68,21 +68,21 @@ export default class TabList extends Component {
     const { list, page, status } = this.state
     const { pageSize, newsType } = this.props
     console.log('loadlist', newsType);
-    if( !status ) return
-    apis.getList({ news_type: newsType, page, pageSize }).then(({data}) => {
-        this.setState({
-          page: page+1,
-          total: data.total,
-          list: [ ...list, ...data.list ]
-        }, () => {
-          const allList = this.state.list
-          if(this.state.total <= allList.length){
-            this.setState({
-              status: false
-            })
-          }
-        })
-        //  end
+    if (!status) return
+    apis.getList({ news_type: newsType, page, pageSize }).then(({ data }) => {
+      this.setState({
+        page: page + 1,
+        total: data.total,
+        list: [...list, ...data.list]
+      }, () => {
+        const allList = this.state.list
+        if (this.state.total <= allList.length) {
+          this.setState({
+            status: false
+          })
+        }
+      })
+      //  end
     }).catch(err => {
       this.setState({
         status: false
@@ -95,8 +95,8 @@ export default class TabList extends Component {
     const { type, loadMore } = this.props
     return (
       <View>
-          <ItemList data={list} type={type} />
-          {loadMore && <AtLoadMore status={status?'loading':'noMore'} />}
+        <ItemList data={list} type={type} />
+        { loadMore && <AtLoadMore status={status ? 'loading' : 'noMore'} /> }
       </View>
     )
   }

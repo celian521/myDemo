@@ -26,6 +26,7 @@ class App extends Component {
 
       'pages/organ/index',
       'pages/train/index',
+      'pages/train/fromBook',
       'pages/media/index',
       'pages/dangjian/index',
 

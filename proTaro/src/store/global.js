@@ -1,9 +1,9 @@
- /**
-  *  @Title
-  *  @Auther  Stephen WU
-  *  @Des     描述
-  *  @Time    2019
-  */
+/**
+ *  @Title
+ *  @Auther  Stephen WU
+ *  @Des     描述
+ *  @Time    2019
+ */
 import Taro from '@tarojs/taro'
 import { observable } from 'mobx'
 import mock from '../mock'
@@ -12,8 +12,8 @@ const globalStore = observable({
   sessionId: '',
   banner: mock.banner || [],
   grid: mock.grid || [],
-  tabList: mock.tabList || [],
-  details: mock.details || [],
+  // tabList: mock.tabList || [],
+  // details: mock.details || [],
 
 
   login(code) {
@@ -23,12 +23,10 @@ const globalStore = observable({
     })
   },
 
-  getDetails(id) {
-    return this.details.find(item => item.id == id)
-  },
+  // getDetails(id) {
+  //   return this.details.find(item => item.id == id)
+  // },
 
-  updateHome() {
-  }
 
 })
 

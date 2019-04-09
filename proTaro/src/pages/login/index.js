@@ -20,7 +20,7 @@ class Login extends Component {
     Taro.login({
       success(res) {
         if (res.code) {
-          apis.getSession({code: res.code}).then(({data})=>{
+          apis.getSession({ code: res.code }).then(({ data }) => {
             globalStore.login(data.session_id)
           })
         }

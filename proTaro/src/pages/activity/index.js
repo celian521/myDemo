@@ -22,18 +22,26 @@ class Index extends Component {
   }
   componentDidMount() {
     this.fetchBanner()
+    this.fetchData()
   }
   /**
    * 获取数据
    */
   fetchBanner = () => {
     apis.getPage({ page_path: this.$router.path }).then(({data}) => {
-      console.log("activey", data)
       this.setState({
           dataBanner: data[1]
       })
     })
   }
+  fetchData = () => {
+    apis.getList({ news_type: 9, page:1, pageSize:1000 }).then(({ data }) => {
+      console.log(data);
+
+      // start_day
+    })
+  }
+
   onDayClick = ({value}) => {
     console.log('data', value)
     this.setState({
@@ -48,7 +56,6 @@ class Index extends Component {
   }
 
   render() {
-    // const { globalStore: { banner } } = this.props
     const { dataBanner, value } = this.state
     return (
       <View className='wrap'>

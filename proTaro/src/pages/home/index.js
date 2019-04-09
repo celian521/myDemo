@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { AtTabs, AtTabsPane, AtGrid, AtDivider  } from 'taro-ui'
+import { AtTabs, AtTabsPane, AtGrid, AtDivider } from 'taro-ui'
 import { MySwiper, ScrollList } from '@components'
 import TabList from './tabList'
 import apis from '@apis'
@@ -34,7 +34,7 @@ class Home extends Component {
   config = {
     navigationBarTitleText: '旗袍文化促进会',
     // "enablePullDownRefresh": true,
-    onReachBottomDistance:50
+    onReachBottomDistance: 50
   }
 
 
@@ -60,8 +60,8 @@ class Home extends Component {
    * 获取数据
    */
   fetchBanner = () => {
-    apis.getPage({ page_path: this.$router.path }).then(({data}) => {
-      this.setState( preState => {
+    apis.getPage({ page_path: this.$router.path }).then(({ data }) => {
+      this.setState(preState => {
         preState.dataBanner = {
           type_1: data[1] || [],
           type_2: data[2] || [],
@@ -87,7 +87,7 @@ class Home extends Component {
 
   handleGrid = (item, index) => {
     const url = item.url
-    linkTo({url})
+    linkTo({ url })
   }
 
   render() {
@@ -116,15 +116,15 @@ class Home extends Component {
           onClick={this.handleTabs.bind(this)}
         >
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={0}>
-            {/* <TabList newsType={9} hasFetch /> */}
+            {/* <TabList newsType={9} hasFetch /> */ }
             <ScrollList type='news' newsType={9} ref={node => this.ScrollList0 = node} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={1}>
-            {/* <TabList newsType={24} hasFetch /> */}
+            {/* <TabList newsType={24} hasFetch /> */ }
             <ScrollList type='news' newsType={24} ref={node => this.ScrollList1 = node} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={2}>
-            {/* <TabList newsType={20} hasFetch /> */}
+            {/* <TabList newsType={20} hasFetch /> */ }
             <ScrollList type='news' newsType={20} ref={node => this.ScrollList2 = node} />
           </AtTabsPane>
         </AtTabs>

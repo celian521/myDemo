@@ -44,7 +44,7 @@ class Index extends Component {
         <View className='u-title'>企业互动</View>
         <ScrollList type='news2' newsType={1} loadMore={false} />
         <View className='u-title'>私董会</View>
-        <ScrollList type='news3' newsType={1} loadMore={false} />
+        <ScrollList type='news3' newsType={34} loadMore={false} />
       </View>
     )
   }

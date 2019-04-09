@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-// import { observer, inject } from '@tarojs/mobx'
+import { observer, inject } from '@tarojs/mobx'
 import { View, Text } from '@tarojs/components'
 import { AtCalendar } from 'taro-ui'
 import { MySwiper } from '@components'
@@ -7,14 +7,21 @@ import apis from '@apis'
 import linkTo from '@utils/linkTo'
 import './index.scss'
 
+@inject('globalStore')
+@observer
 class Index extends Component {
   constructor() {
     super(...arguments);
+    const date = new Date()
+    const y = date.getFullYear(),
+      m = date.getMonth() + 1,
+      d = date.getDate()
+    const time = `${y}-${m}-${d}`
     this.state = {
       dataBanner: [],
-      marksDate: [],
+      marksDate: [{value:'2019-4-9'},{value:'2019-4-10'}],
       dataList: [],
-      onTime: '',
+      onTime: time,
       falg: false
     }
   }
@@ -22,17 +29,18 @@ class Index extends Component {
     navigationBarTitleText: '活动策划'
   }
 
-  componentDidMount() {
-    const date = new Date()
-    const y = date.getFullYear(),
-      m = date.getMonth() + 1,
-      d = date.getDate()
-    const time = `${y}-${m}-${d}`
-    this.setState({
-      onTime: time
-    }, () => { this.fetchData() })
+  componentWillMount() {
     this.fetchBanner()
+    this.fetchData()
+    this.setState({
+      marksDate: [{value:'2019-4-2'},{value:'2019-4-19'}]
+  })
   }
+
+  // componentDidShow() {
+  //   this.fetchData()
+  // }
+
   /**
    * 获取数据
    */
@@ -69,9 +77,14 @@ class Index extends Component {
       }
       this.setState({
           dataList: data.list,
-          marksDate: temp,
-          falg: true
+          // marksDate: temp
       })
+      setTimeout(() => {
+        this.setState({
+          falg: true
+        })
+      }, 200);
+      console.log('==>',data)
     })
   }
 
@@ -96,16 +109,22 @@ class Index extends Component {
 
   render() {
     let { dataBanner, marksDate, dataList, onTime, falg } = this.state
+    console.log('ontttt')
     return (
       <View className='wrap'>
         <MySwiper banner={dataBanner} />
-        { falg && <AtCalendar
-          key='calendar'
-          currentDate={onTime}
-          onDayClick={this.onDayClick.bind(this)}
-          onMonthChange={this.onMonthChange.bind(this)}
-          marks={marksDate}
-        /> }
+        { falg ?
+          <AtCalendar
+            key='calendar'
+            currentDate={onTime}
+            onDayClick={this.onDayClick.bind(this)}
+            onMonthChange={this.onMonthChange.bind(this)}
+            marks={marksDate}
+          />
+          : null
+        }
+        {onTime}
+        {marksDate}
         <View className='onTimeNews'>
           { dataList.map(item => (
             onTime === item.start_day &&

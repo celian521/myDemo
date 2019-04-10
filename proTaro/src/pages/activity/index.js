@@ -16,13 +16,11 @@ class Index extends Component {
     const y = date.getFullYear(),
       m = date.getMonth() + 1,
       d = date.getDate()
-    const time = `${y}-${m}-${d}`
     this.state = {
       dataBanner: [],
-      marksDate: [{value:'2019-4-9'},{value:'2019-4-10'}],
+      marksDate: [],
       dataList: [],
-      onTime: time,
-      falg: false
+      onTime: `${y}-${m}-${d}`
     }
   }
   config = {
@@ -31,16 +29,8 @@ class Index extends Component {
 
   componentWillMount() {
     this.fetchBanner()
-    this.fetchData()
-    this.setState({
-      marksDate: [{value:'2019-4-2'},{value:'2019-4-19'}]
-  })
+    this.fetchData(true)
   }
-
-  // componentDidShow() {
-  //   this.fetchData()
-  // }
-
   /**
    * 获取数据
    */
@@ -52,8 +42,8 @@ class Index extends Component {
     })
   }
   // 返回时间段
-  fmtDate = strDate => {
-    const date = new Date(strDate)
+  fmtDate = (strDate, falg) => {
+    let date = falg ? new Date() : new Date(strDate)
     let y = date.getFullYear(),
       m = date.getMonth() + 1,
       yy = y,
@@ -67,24 +57,18 @@ class Index extends Component {
     return { start_day, end_day }
   }
 
-  fetchData = () => {
+  fetchData = (falg) => {
     const { onTime } = this.state
-    console.log('onTime:',onTime)
-    apis.getList({ news_type: 9, page: 1, ...this.fmtDate(onTime), pageSize: 1000 }).then(({ data }) => {
+    let params = { news_type: 9, page: 1, ...this.fmtDate(onTime, falg), pageSize: 1000 }
+    apis.getList(params).then(({ data }) => {
       let temp = []
       for (let item of data.list) {
         temp.push({ value: item.start_day })
       }
       this.setState({
-          dataList: data.list,
-          // marksDate: temp
+        dataList: data.list,
+        marksDate: temp
       })
-      setTimeout(() => {
-        this.setState({
-          falg: true
-        })
-      }, 200);
-      console.log('==>',data)
     })
   }
 
@@ -108,23 +92,17 @@ class Index extends Component {
   }
 
   render() {
-    let { dataBanner, marksDate, dataList, onTime, falg } = this.state
-    console.log('ontttt')
+    let { dataBanner, marksDate, dataList, onTime } = this.state
     return (
       <View className='wrap'>
         <MySwiper banner={dataBanner} />
-        { falg ?
-          <AtCalendar
-            key='calendar'
-            currentDate={onTime}
-            onDayClick={this.onDayClick.bind(this)}
-            onMonthChange={this.onMonthChange.bind(this)}
-            marks={marksDate}
-          />
-          : null
-        }
-        {onTime}
-        {marksDate}
+        <AtCalendar
+          key='calendar'
+          currentDate={onTime}
+          onDayClick={this.onDayClick.bind(this)}
+          onMonthChange={this.onMonthChange.bind(this)}
+          marks={marksDate}
+        />
         <View className='onTimeNews'>
           { dataList.map(item => (
             onTime === item.start_day &&

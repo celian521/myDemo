@@ -3,9 +3,9 @@ import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane, AtGrid, AtDivider } from 'taro-ui'
 import { MySwiper, ScrollList } from '@components'
-import TabList from './tabList'
 import apis from '@apis'
 import linkTo from '@utils/linkTo'
+import mock from '../../mock'
 import './index.scss'
 
 @inject('globalStore')
@@ -16,6 +16,7 @@ class Home extends Component {
     super(...arguments);
     this.state = {
       tabCurrent: 0,
+      navGrid: mock.grid || [],
       tabList: [{
         title: '活动集锦',
       }, {
@@ -36,7 +37,6 @@ class Home extends Component {
     // "enablePullDownRefresh": true,
     onReachBottomDistance: 50
   }
-
 
   // onPullDownRefresh() {
   //   this.ScrollList.init()
@@ -68,8 +68,6 @@ class Home extends Component {
           type_3: data[3] || [],
           type_4: data[4] || []
         }
-      }, () => {
-        // console.log('dataBanner', this.state.dataBanner)
       })
     })
   }
@@ -91,12 +89,11 @@ class Home extends Component {
   }
 
   render() {
-    const { globalStore: { grid } } = this.props
-    const { tabList, dataBanner } = this.state
+    const { tabList, dataBanner, navGrid } = this.state
     return (
       <View className='wrap'>
         <MySwiper banner={dataBanner.type_1} />
-        <AtGrid hasBorder={false} data={grid} onClick={this.handleGrid} />
+        <AtGrid hasBorder={false} data={navGrid} onClick={this.handleGrid} />
 
         <AtDivider content='活动预告' className='myDivider' lineColor='#855498' fontColor='#666666' />
         <MySwiper banner={dataBanner.type_2} />
@@ -116,15 +113,12 @@ class Home extends Component {
           onClick={this.handleTabs.bind(this)}
         >
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={0}>
-            {/* <TabList newsType={9} hasFetch /> */ }
             <ScrollList type='news' newsType={9} ref={node => this.ScrollList0 = node} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={1}>
-            {/* <TabList newsType={24} hasFetch /> */ }
             <ScrollList type='news' newsType={24} ref={node => this.ScrollList1 = node} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.tabCurrent} index={2}>
-            {/* <TabList newsType={20} hasFetch /> */ }
             <ScrollList type='news' newsType={20} ref={node => this.ScrollList2 = node} />
           </AtTabsPane>
         </AtTabs>

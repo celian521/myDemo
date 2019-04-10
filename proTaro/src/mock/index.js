@@ -1,7 +1,7 @@
-import banner from './banner'
+// import banner from './banner'
 import grid from './grid'
-import tabList from './tabList'
+// import tabList from './tabList'
 // import details from './details'
 // import newsList from './newsList'
 
-export default { banner, grid, tabList }
+export default { grid }

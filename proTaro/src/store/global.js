@@ -6,28 +6,15 @@
  */
 import Taro from '@tarojs/taro'
 import { observable } from 'mobx'
-import mock from '../mock'
 
 const globalStore = observable({
   sessionId: '',
-  banner: mock.banner || [],
-  grid: mock.grid || [],
-  // tabList: mock.tabList || [],
-  // details: mock.details || [],
-
-
   login(code) {
     this.sessionId = code
     Taro.switchTab({
       url: '/pages/home/index'
     })
-  },
-
-  // getDetails(id) {
-  //   return this.details.find(item => item.id == id)
-  // },
-
-
+  }
 })
 
 export default globalStore

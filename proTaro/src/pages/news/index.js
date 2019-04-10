@@ -75,7 +75,7 @@ class Index extends Component {
               // "14"|--教育培训
               newType == '14' &&
               <View className='at-article__p' onClick={this.toBook}>
-                <AtButton type='primary'>马山报名</AtButton>
+                <AtButton type='primary'>马上报名</AtButton>
               </View>
             }
           </View>

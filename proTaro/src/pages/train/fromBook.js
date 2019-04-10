@@ -22,7 +22,7 @@ export default class FromJoinusUser extends Component {
     }
   }
   config = {
-    navigationBarTitleText: '马山报名'
+    navigationBarTitleText: '马上报名'
   }
 
   sexChange = e => {

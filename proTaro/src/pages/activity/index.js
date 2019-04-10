@@ -98,7 +98,7 @@ class Index extends Component {
   render() {
     let { dataBanner, marksDate, dataList, onTime } = this.state
     return (
-      <View className='wrap'>
+      <View className='wrap wrap-bottom'>
         <MySwiper banner={dataBanner} />
         <AtCalendar
           key='calendar'

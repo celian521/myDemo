@@ -68,7 +68,7 @@ class Media extends Component {
         }
         {
           this.state.current === 3
-            ? <ScrollList type='news3' newsType={26} ref={node => this.ScrollList3 = node} />
+            ? <ScrollList type='news3' newsType={35} ref={node => this.ScrollList3 = node} />
             : null
         }
       </View>

@@ -61,10 +61,10 @@ class Index extends Component {
         <MySwiper banner={dataBanner} />
         <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane className='wrap-top' current={this.state.current} index={0} >
-            <ScrollList type='news2' newsType={1} ref={node => this.ScrollList0 = node} />
+            <ScrollList type='news2' newsType={40} ref={node => this.ScrollList0 = node} />
           </AtTabsPane>
           <AtTabsPane className='wrap-top' current={this.state.current} index={1}>
-            <ScrollList type='news2' newsType={1} ref={node => this.ScrollList1 = node} />
+            <ScrollList type='news2' newsType={39} ref={node => this.ScrollList1 = node} />
           </AtTabsPane>
         </AtTabs>
       </View>

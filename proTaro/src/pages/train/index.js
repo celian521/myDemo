@@ -41,7 +41,6 @@ class Train extends Component {
    */
   fetchBanner = () => {
     apis.getPage({ page_path: this.$router.path }).then(({ data }) => {
-      console.log("menberdd", data)
       this.setState({
         dataBanner: data[1]
       })

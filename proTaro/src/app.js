@@ -16,21 +16,16 @@ class App extends Component {
   config = {
     pages: [
       'pages/login/index',
-
       'pages/home/index',
       'pages/club/index',
       'pages/activity/index',
       'pages/member/index',
-
       'pages/news/index',
-
       'pages/organ/index',
       'pages/train/index',
       'pages/train/fromBook',
       'pages/media/index',
-      'pages/dangjian/index',
-
-      'pages/demo/index'
+      'pages/dangjian/index'
     ],
     window: {
       backgroundTextStyle: 'light',

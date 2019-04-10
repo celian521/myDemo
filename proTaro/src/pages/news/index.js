@@ -61,7 +61,7 @@ class Index extends Component {
   render() {
     const { title, content, note, img_url, newType } = this.state
     return (
-      <View className='at-article'>
+      <View className='at-article wrap-bottom'>
         <View className='at-article__h1'>{ title }</View>
         <View className='at-article__content'>
           <View className='at-article__section'>

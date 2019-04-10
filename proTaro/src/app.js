@@ -21,6 +21,7 @@ class App extends Component {
       'pages/activity/index',
       'pages/member/index',
       'pages/news/index',
+      'pages/newsList/index',
       'pages/organ/index',
       'pages/train/index',
       'pages/train/fromBook',

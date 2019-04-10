@@ -12,10 +12,12 @@ import './index.scss'
 class Index extends Component {
   constructor() {
     super(...arguments);
-    const date = new Date()
-    const y = date.getFullYear(),
+    let date = new Date()
+    let y = date.getFullYear(),
       m = date.getMonth() + 1,
       d = date.getDate()
+    if(m<10) m = `0${m}`
+    if(d<10) d = `0${d}`
     this.state = {
       dataBanner: [],
       marksDate: [],
@@ -29,7 +31,7 @@ class Index extends Component {
 
   componentWillMount() {
     this.fetchBanner()
-    this.fetchData(true)
+    this.fetchData()
   }
   /**
    * 获取数据
@@ -42,8 +44,8 @@ class Index extends Component {
     })
   }
   // 返回时间段
-  fmtDate = (strDate, falg) => {
-    let date = falg ? new Date() : new Date(strDate)
+  fmtDate = (strDate) => {
+    let date = new Date(strDate)
     let y = date.getFullYear(),
       m = date.getMonth() + 1,
       yy = y,
@@ -52,14 +54,16 @@ class Index extends Component {
       mm = 1
       yy = yy + 1
     }
-    const start_day = `${y}-${m}-1`
-    const end_day = `${yy}-${mm}-1`
+    if(m<10) m = `0${m}`
+    if(mm<10) mm = `0${mm}`
+    const start_day = `${y}-${m}-01`
+    const end_day = `${yy}-${mm}-01`
     return { start_day, end_day }
   }
 
-  fetchData = (falg) => {
+  fetchData = () => {
     const { onTime } = this.state
-    let params = { news_type: 9, page: 1, ...this.fmtDate(onTime, falg), pageSize: 1000 }
+    let params = { news_type: 9, page: 1, ...this.fmtDate(onTime), pageSize: 1000 }
     apis.getList(params).then(({ data }) => {
       let temp = []
       for (let item of data.list) {

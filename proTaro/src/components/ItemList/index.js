@@ -33,7 +33,9 @@ export default class List extends Component {
     const newsTpl = data.map((item, index) => (
       <View key={index} onClick={this.handerLink.bind(this, item.id)} className='news-block at-row at-row__align--center'>
         <View className='at-col at-col-3'>
-          <Image className='news-img' src={item.img_url} />
+          <View className='news-img'>
+            <Image src={item.img_url} />
+          </View>
         </View>
         <View className='at-col at-col-9 at-col--wrap'>
           <View className='news-title'>
@@ -76,21 +78,21 @@ export default class List extends Component {
 
     // type:card  ###############################
     const cardList = data.map((item, index) => (
-      <View key={index} onClick={this.handerLink.bind(this, item.id)} className='images-item at-col at-col-6 at-col--wrap'>
-        <View className='images-inner'>
-          <View className='images-img'>
+      <View key={index} onClick={this.handerLink.bind(this, item.id)} className='card-item at-col at-col-6 at-col--wrap'>
+        <View className='card-inner'>
+          <View className='card-img'>
             <Image src={item.img_url} lazyLoad mode='widthFix' />
           </View>
-          <View className='images-title'>
+          <View className='card-title'>
             { item.title }
           </View>
-          <View className='images-info'>[查看详情]</View>
+          <View className='card-info'>[查看详情]</View>
         </View>
       </View>
     ))
     const cardTpl = (
-      <View className='images-block-wrap'>
-        <View className='images-block at-row at-row--wrap '>
+      <View className='card-block-wrap'>
+        <View className='card-block at-row at-row--wrap '>
           { cardList }
         </View>
       </View>
@@ -101,13 +103,13 @@ export default class List extends Component {
       <View
         key={index}
         onClick={this.handerLink.bind(this, item.id)}
-        className='card-item'
+        className='card2-item'
       >
-        <View className='card-inner'>
-          <View className='card-img'>
+        <View className='card2-inner'>
+          <View className='card2-img'>
             <Image src={item.img_url} lazyLoad />
           </View>
-          <View className='card-title'>
+          <View className='card2-title'>
             { item.title }
           </View>
         </View>

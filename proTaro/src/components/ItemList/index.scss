@@ -1,5 +1,7 @@
 // .news-block
 // thumb tag card content
+@import "@styles/theme.scss";
+$scale: 350/180;
 $name: news;
 
 .#{$name}-block {
@@ -11,11 +13,11 @@ $name: news;
     height: 150px;
     border-radius: 50%;
     background-color: #f0f0f0;
-
+    overflow: hidden;
     image,
     img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -23,6 +25,7 @@ $name: news;
     font-size: 28px;
     margin-bottom: 12px;
     line-height: 1.5;
+    @include lamp-clamp(2);
   }
 
   .#{$name}-info {
@@ -42,6 +45,7 @@ $name: news2;
   .#{$name}-img {
     width: 280px;
     height: 180px;
+    background-color: #f0f0f0;
 
     image,
     img {
@@ -53,6 +57,8 @@ $name: news2;
   .#{$name}-title {
     font-size: 32px;
     margin-bottom: 12px;
+    @include lamp-clamp(2);
+
   }
 
   .at-col--wrap {
@@ -70,9 +76,9 @@ $name: news2;
 }
 
 
-// .images-item
+// .card-item
 
-$name: images;
+$name: card;
 
 .#{$name}-block-wrap {
   margin: 0 -8px;
@@ -92,20 +98,24 @@ $name: images;
   .#{$name}-img {
     width: 100%;
     height: 300px;
+    background-color: #f0f0f0;
 
     image,
     img {
       max-width: 100%;
-      max-height: 100%;
+      min-height: 300px;
     }
   }
 
   .#{$name}-title {
+    padding-top: 8px;
     font-size: 28px;
     margin-bottom: 12px;
+    @include text-ellipsis;
   }
 
   .#{$name}-info {
+    margin-bottom: 8px;
     font-size: 26px;
     color: #999;
     line-height: 1.5;
@@ -113,9 +123,8 @@ $name: images;
 
 }
 
-//
 
-$name: card;
+$name: card2;
 
 .#{$name}-item {
   margin-bottom: 20px;
@@ -127,11 +136,12 @@ $name: card;
   .#{$name}-img {
     width: 100%;
     height: 300px;
+    background-color: #f0f0f0;
 
     image,
     img {
       width: 100%;
-      max-height: 100%;
+      min-height: 300px;
     }
   }
 
@@ -147,7 +157,3 @@ $name: card;
   }
 
 }
-
-// .card-pic {}
-
-// .card-news {}

@@ -1,12 +1,11 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
-import { View, RichText } from '@tarojs/components'
-import { AtTabs, AtTabsPane } from 'taro-ui'
+import { View } from '@tarojs/components'
+import { AtTabs } from 'taro-ui'
 import { MySwiper, ScrollList } from '@components'
 import apis from '@apis'
 import Aboutus from './aboutus'
 import Joinus from './joinus'
-import Serve from './serve'
 
 import './index.scss'
 
@@ -35,7 +34,7 @@ class Index extends Component {
   }
 
   onReachBottom() {
-    if(this.state.current===3) this.ScrollList.load()
+    if (this.state.current === 3) this.ScrollList.load()
   }
 
   componentDidMount() {
@@ -45,9 +44,9 @@ class Index extends Component {
    * 获取数据
    */
   fetchBanner = () => {
-    apis.getPage({ page_path: this.$router.path}).then(({data}) => {
+    apis.getPage({ page_path: this.$router.path }).then(({ data }) => {
       this.setState({
-          dataBanner: data[1]
+        dataBanner: data[1]
       })
     })
   }
@@ -67,10 +66,10 @@ class Index extends Component {
           tabList={tabList}
           onClick={this.tabClick.bind(this)}
         ></AtTabs>
-        <View className='wrap-top' style={{marginBottom: '10vh'}}>
-          { current === 0 ? <Aboutus /> : null }
+        <View className='wrap-top wrap-bottom'>
+          { current === 0 ? <Aboutus newsId='60' /> : null }
           { current === 1 ? <Joinus /> : null }
-          { current === 2 ? <Serve /> : null }
+          { current === 2 ? <Aboutus newsId='61' /> : null }
           { current === 3 ? <ScrollList type='card' newsType={20} ref={node => this.ScrollList = node} /> : null }
         </View>
       </View>

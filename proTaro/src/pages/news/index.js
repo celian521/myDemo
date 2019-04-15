@@ -23,7 +23,7 @@ class Index extends Component {
     super(...arguments);
     this.state = {
       id: '',
-      title: 'loading...',
+      title: '...',
       content: '',
       img_url: '',
       note: '',  // 文章简介

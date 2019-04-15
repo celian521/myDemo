@@ -95,13 +95,13 @@ class Home extends Component {
         <MySwiper banner={dataBanner.type_1} />
         <AtGrid hasBorder={false} data={navGrid} onClick={this.handleGrid} />
 
-        <AtDivider content='活动预告' className='myDivider' lineColor='#855498' fontColor='#666666' />
+        <AtDivider content='活动预告' className='myDivider' lineColor='#855498' fontColor='#000000' />
         <MySwiper banner={dataBanner.type_2} />
 
-        <AtDivider content='智慧学堂' className='myDivider' lineColor='#855498' fontColor='#666666' />
+        <AtDivider content='智慧学堂' className='myDivider' lineColor='#855498' fontColor='#000000' />
         <MySwiper banner={dataBanner.type_3} />
 
-        <AtDivider content='企业家风采' className='myDivider' lineColor='#855498' fontColor='#666666' />
+        <AtDivider content='企业家风采' className='myDivider' lineColor='#855498' fontColor='#000000' />
         <MySwiper banner={dataBanner.type_4} />
 
         <View className='u-title'>新闻资讯</View>

@@ -56,7 +56,7 @@ export default class List extends Component {
           <View className='news2-title'>
             { item.title }
           </View>
-          <View className='news2-info'>2009-04-12 12:00</View>
+          <View className='news2-info'>{item.start_day}</View>
         </View>
       </View>
     ))
@@ -68,7 +68,7 @@ export default class List extends Component {
           <View className='news2-title'>
             { item.title }
           </View>
-          <View className='news2-info'>2009-04-12 12:00</View>
+          <View className='news2-info'>{item.start_day}</View>
         </View>
         <View className='at-col at-col-5'>
           <Image className='news2-img' src={item.img_url} />

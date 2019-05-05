@@ -67,7 +67,7 @@ export default class TabList extends Component {
   load = () => {
     const { list, page, status } = this.state
     const { pageSize, newsType } = this.props
-    console.log('loadlist', newsType);
+    // console.log('loadlist', newsType);
     if (!status) return
     apis.getList({ news_type: newsType, page, pageSize }).then(({ data }) => {
       this.setState({

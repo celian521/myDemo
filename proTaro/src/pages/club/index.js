@@ -42,11 +42,11 @@ class Index extends Component {
         <View className='u-title'>企业家风采</View>
         <MySwiper banner={dataBanner} />
         <View className='u-title'>企业产品展示</View>
-        <ScrollList type='card2' newsType={37} loadMore={false} />
+        <ScrollList type='card2' newsType={37} pageSize={6} loadMore={false} />
         <View className='u-title'>企业互动</View>
-        <ScrollList type='news2' newsType={38} loadMore={false} />
+        <ScrollList type='news2' newsType={38} pageSize={6} loadMore={false} />
         <View className='u-title'>私董会</View>
-        <ScrollList type='news3' newsType={34} loadMore={false} />
+        <ScrollList type='news3' newsType={34} pageSize={6} loadMore={false} />
       </View>
     )
   }

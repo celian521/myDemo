@@ -21,7 +21,6 @@ const defaultParams = {
 const Ajax = (method, url, params) => {
   const session_id = store.globalStore.sessionId || null
   return new Promise((resolve, reject) => {
-
     if (!session_id && !params.company_id) {
       resolve({})
       Taro.redirectTo({

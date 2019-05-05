@@ -20,6 +20,8 @@ class Index extends Component {
     navigationBarTitleText: '企业家俱乐部'
   }
 
+  onShareAppMessage(res) {}
+
   componentWillMount() {
     this.fetchBanner()
   }

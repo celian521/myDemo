@@ -34,9 +34,15 @@ class Home extends Component {
   }
   config = {
     navigationBarTitleText: '旗袍文化促进会',
-    // "enablePullDownRefresh": true,
+    enablePullDownRefresh: true,
     onReachBottomDistance: 50
   }
+
+  onPullDownRefresh() {
+    Taro.stopPullDownRefresh()
+  }
+
+  onShareAppMessage(res) {}
 
   // onPullDownRefresh() {
   //   this.ScrollList.init()

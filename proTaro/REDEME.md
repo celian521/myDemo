@@ -1,5 +1,9 @@
 # 旗袍协会
 
+taro update self
+yarn global add @tarojs/cli@latest
+npm i -g @tarojs/cli@latest
+
 
 会员中心
 党建公益

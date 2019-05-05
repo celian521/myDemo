@@ -18,7 +18,7 @@ class Media extends Component {
   config = {
     navigationBarTitleText: '媒体事业'
   }
-
+  onShareAppMessage(res) {}
   onReachBottom() {
     switch (this.state.current) {
       case 0: this.ScrollList0.load()

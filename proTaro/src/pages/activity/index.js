@@ -29,6 +29,8 @@ class Index extends Component {
     navigationBarTitleText: '活动策划'
   }
 
+  onShareAppMessage(res) {}
+
   componentWillMount() {
     this.fetchBanner()
     this.fetchData()

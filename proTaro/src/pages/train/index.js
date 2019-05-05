@@ -22,7 +22,7 @@ class Train extends Component {
     "enablePullDownRefresh": true,
     onReachBottomDistance: 50
   }
-
+  onShareAppMessage(res) {}
   componentDidMount() {
     this.fetchBanner()
   }

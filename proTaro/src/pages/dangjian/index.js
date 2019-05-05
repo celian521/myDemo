@@ -15,7 +15,7 @@ class Index extends Component {
   config = {
     navigationBarTitleText: '党建公益'
   }
-
+  onShareAppMessage(res) {}
   render() {
     return (
       <View className='wrap wrap-bottom'>

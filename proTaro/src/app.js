@@ -29,7 +29,8 @@ class App extends Component {
       'pages/dangjian/index'
     ],
     window: {
-      backgroundTextStyle: 'light',
+      backgroundColor: "#fff",
+      backgroundTextStyle: 'dark',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: '旗袍协会',
       navigationBarTextStyle: 'black'

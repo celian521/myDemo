@@ -34,7 +34,7 @@ class Index extends Component {
   config = {
     navigationBarTitleText: '...'
   }
-
+  onShareAppMessage(res) {}
   componentWillMount() {
     console.log(this.$router)
     const { id } = this.$router.params

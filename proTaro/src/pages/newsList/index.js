@@ -10,6 +10,7 @@ class List extends Component {
   config = {
     navigationBarTitleText: '旗袍文化'
   }
+  onShareAppMessage(res) {}
   onReachBottom() {
     this.ScrollList.load()
   }

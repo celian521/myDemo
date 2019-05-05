@@ -25,6 +25,7 @@ class Index extends Component {
   config = {
     navigationBarTitleText: '分支机构'
   }
+  onShareAppMessage(res) {}
   componentWillMount() {
     this.fetchBanner()
   }

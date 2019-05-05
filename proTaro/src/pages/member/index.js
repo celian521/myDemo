@@ -32,7 +32,7 @@ class Index extends Component {
   config = {
     navigationBarTitleText: '会员中心'
   }
-
+  onShareAppMessage(res) {}
   onReachBottom() {
     if (this.state.current === 3) this.ScrollList.load()
   }

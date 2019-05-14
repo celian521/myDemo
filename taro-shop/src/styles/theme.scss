@@ -1,0 +1,15 @@
+@import "./mixins.scss";
+$primary-color: #DC5A58;
+$text-color: #333333;
+$text-color-light: #666666;
+$text-color-lighter: #999999;
+$border-color: #dddddd;
+$price-color: #DC5A58;
+$border-radius: 4px;
+$page-bg:rgba(249, 249, 249, 1);
+
+
+// 图片地址
+$path: 'http://weixin.singworld.net/web_frontend/images/school';
+$pagebg-url: $path+'/pagebg.png';
+

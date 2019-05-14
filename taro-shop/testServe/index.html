@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网页向小程序传值</title>
+  <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+  <style>
+    .btn {
+      background: #22b5a8;
+      color: #fff;
+      cursor: pointer;
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 20px 0;
+      text-align: center;
+      width: 48%;
+      line-height: 1.5;
+    }
+
+    .btn:active {
+      background: #2b827a
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>DEMO</h1>
+  <h2>网页向小程序传值</h2>
+
+  <div id='navigateBack' class='btn'>
+    navigateBack 案例
+  </div>
+  <div id='navigateTo' class='btn'>
+    navigateTo 案例
+  </div>
+
+  <div id='postMessage' class='btn'>
+    postMessage 案例
+  </div>
+  <div id='getEnv' class='btn'>
+    getEnv 案例
+  </div>
+  <hr />
+  <H2>SSDK接口</H2>
+  <div id='scanQRCode' class='btn'>
+    scanQRCode 案例
+  </div>
+
+  <div id='getNetworkType' class='btn'>
+    getNetworkType 案例
+  </div>
+
+  <pre id='result'>result NULL</pre>
+</body>
+<script>
+  console.log('WX-JSSDK:', wx)
+
+  // navigateBack
+  document.getElementById("navigateBack").addEventListener('click', function () {
+    console.log('navigateBack')
+    wx.miniProgram.navigateBack()
+  });
+
+  // navigateTo
+  document.getElementById("navigateTo").addEventListener('click', function () {
+    console.log('navigateTo')
+    wx.miniProgram.navigateTo({
+      url: '/pages/login/index'
+    })
+  });
+
+  // 向小程序发送消息，会在特定时机（小程序后退、组件销毁、分享）触发组件的message事件
+  document.getElementById("postMessage").addEventListener('click', function () {
+    console.log('postMessage')
+    wx.miniProgram.postMessage({
+      data: 'foo'
+    })
+  });
+
+  // 获取当前环境
+  document.getElementById("getEnv").addEventListener('click', function () {
+    console.log('getEnv')
+    wx.miniProgram.getEnv(function (res) {
+      document.getElementById("result").innerHTML = JSON.stringify(res)
+      console.log(res.miniprogram)
+    })
+  });
+
+
+  // 微信扫一扫
+  document.getElementById("scanQRCode").addEventListener('click', function () {
+    wx.scanQRCode({
+      needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+      scanType: ["qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+      success: function (res) {
+        document.getElementById("result").innerHTML = JSON.stringify(res)
+        var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+      }
+    });
+  });
+
+  // 获取网络状态
+  document.getElementById("getNetworkType").addEventListener('click', function () {
+    wx.getNetworkType({
+      success: function (res) {
+        document.getElementById("result").innerHTML = JSON.stringify(res)
+        var networkType = res.networkType; // 返回网络类型2g，3g，4g，wifi
+      }
+    });
+  });
+
+</script>
+
+</html>

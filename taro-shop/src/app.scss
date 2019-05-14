@@ -1,0 +1,68 @@
+@import "@styles/theme.scss";
+@import "@styles/reset.scss";
+@import "@styles/icon.scss";
+// taro-ui 自定义主题
+$color-brand: $primary-color;
+$color-brand-light: lighten($color-brand, 2%);
+$color-brand-dark: darken($color-brand, 2%);
+$color-border-base: #E6E6E6;
+
+@import "~taro-ui/dist/style/index.scss"; // 引入taro UI组件样式，仅需引入一次即可
+// 重写taro样式
+.at-countdown__time {
+  font-family: Arial, Helvetica, sans-serif;
+}
+// 重写taro样式 END!
+
+page {
+  background:#fff
+}
+
+.wrap {
+  margin: 0 20px
+}
+
+.wrap-top {
+  padding-top: 20px;
+}
+
+.wrap-bottom {
+  padding-bottom: 80px;
+}
+
+.u-tit {
+  font-size: 36px;
+  line-height: 54px;
+  margin: 30px 8px;
+  color: #000;
+  &::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 8px;
+    margin-top: 8px;
+    border-radius: 24px;
+    background-color: $primary-color;
+  }
+  .more { float: right; font-size: 28px; color: #666;  }
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .1)
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .1)
+}

@@ -206,16 +206,16 @@
     component-type "^1.2.1"
     join-component "^1.1.0"
 
-"@tarojs/async-await@^1.2.26":
+"@tarojs/async-await@1.2.26":
   version "1.2.26"
   resolved "http://10.0.1.26:4873/@tarojs%2fasync-await/-/async-await-1.2.26.tgz#0cee65845b095eea535c4d88bfaed7e214260012"
   dependencies:
     promise-polyfill "^7.1.2"
     regenerator-runtime "^0.11.1"
 
-"@tarojs/components@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fcomponents/-/components-1.2.21.tgz#af892b1d5a32e04fce2bbf4a6725408382362489"
+"@tarojs/components@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fcomponents/-/components-1.2.26.tgz#434370c430ff68de4d98a5d8766efdb2e936fc2e"
   dependencies:
     better-scroll "^1.14.1"
     classnames "^2.2.5"
@@ -225,54 +225,55 @@
     swiper "^4.4.2"
     weui "^1.1.2"
 
-"@tarojs/mobx-common@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fmobx-common/-/mobx-common-1.2.21.tgz#cf697740203d12cb4330f393c0a943f45ab4c680"
+"@tarojs/mobx-common@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fmobx-common/-/mobx-common-1.2.26.tgz#d7ac127a1a9e8504839861a137a5d8229590390d"
 
-"@tarojs/mobx-h5@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fmobx-h5/-/mobx-h5-1.2.21.tgz#6c2b21b898b59bcac6c2d9953f39c8f15ed0e4a0"
+"@tarojs/mobx-h5@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fmobx-h5/-/mobx-h5-1.2.26.tgz#fd7700d58a2eb7147db88feb2abf2e7742c5bb52"
   dependencies:
-    "@tarojs/mobx-common" "1.2.21"
+    "@tarojs/mobx-common" "1.2.26"
 
-"@tarojs/mobx-rn@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fmobx-rn/-/mobx-rn-1.2.21.tgz#672b5d9ee62a2a632444bdaab886122c70fabe85"
+"@tarojs/mobx-rn@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fmobx-rn/-/mobx-rn-1.2.26.tgz#0ab95758dc7645bfa92ea4c4e47792fc1ce1a858"
   dependencies:
-    "@tarojs/mobx-common" "1.2.21"
+    "@tarojs/mobx-common" "1.2.26"
     "@tarojs/taro-rn" "1.1.7"
 
-"@tarojs/mobx@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fmobx/-/mobx-1.2.21.tgz#72a8c79cadae0f4d4a75f29170610bd5c9b95c3b"
+"@tarojs/mobx@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fmobx/-/mobx-1.2.26.tgz#fbcb4704bfb1962316880b4663d472fe15709655"
 
-"@tarojs/plugin-babel@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fplugin-babel/-/plugin-babel-1.2.21.tgz#38d7747d3f62d9dda309ece4afee9014da0a51ac"
+"@tarojs/plugin-babel@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fplugin-babel/-/plugin-babel-1.2.26.tgz#e287b56c1cc531426ac28e1fd918c50b34567ed6"
   dependencies:
     babel-core "^6.26.0"
 
-"@tarojs/plugin-csso@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fplugin-csso/-/plugin-csso-1.2.21.tgz#11ff2be21ab781714cbb06461a8d37ec0da3b0c9"
+"@tarojs/plugin-csso@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fplugin-csso/-/plugin-csso-1.2.26.tgz#21f6e5251ed5f4997ef61604d073c2639edef216"
   dependencies:
     csso "^3.5.0"
 
-"@tarojs/plugin-sass@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fplugin-sass/-/plugin-sass-1.2.21.tgz#2fbf3555b2f77eb2d3719ef07e99c655e3b554a4"
+"@tarojs/plugin-sass@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fplugin-sass/-/plugin-sass-1.2.26.tgz#c112ef328f4896096cd3aab3f78f634e472c2b77"
   dependencies:
-    node-sass "^4.11.0"
+    dart-sass "^1.17.4"
+    scss-bundle "^2.5.1"
 
-"@tarojs/plugin-uglifyjs@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fplugin-uglifyjs/-/plugin-uglifyjs-1.2.21.tgz#c24d408dd5f3310993db94e89ccf58774b6d5f30"
+"@tarojs/plugin-uglifyjs@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fplugin-uglifyjs/-/plugin-uglifyjs-1.2.26.tgz#224e2e23c24140bb9e260bad95f646a1fcac6705"
   dependencies:
     uglify-js "^3.3.24"
 
-"@tarojs/rn-runner@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2frn-runner/-/rn-runner-1.2.21.tgz#b059ce063a8cde628ae79eaa74c65f862946154c"
+"@tarojs/rn-runner@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2frn-runner/-/rn-runner-1.2.26.tgz#83096d6456b8a39e01b20f2e2868f0e408af3bb6"
   dependencies:
     "@expo/bunyan" "1.8.10"
     babel-runtime "^6.9.2"
@@ -290,9 +291,9 @@
     rimraf "^2.6.1"
     xdl "48.1.4"
 
-"@tarojs/router@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2frouter/-/router-1.2.21.tgz#127f9445db537a27db43842563954937ab9fea0e"
+"@tarojs/router@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2frouter/-/router-1.2.26.tgz#14fcfea1037ceb258f0048e54cdf8c5964649d19"
   dependencies:
     invariant "2.2.4"
     lodash "4.17.11"
@@ -301,18 +302,18 @@
     value-equal "0.4.0"
     warning "4.0.2"
 
-"@tarojs/taro-alipay@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-alipay/-/taro-alipay-1.2.21.tgz#8ea1027bf86003aa46321b6ebda073766d1e1a92"
+"@tarojs/taro-alipay@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-alipay/-/taro-alipay-1.2.26.tgz#137e45211805b583a750d8c392feef9aa3718afb"
   dependencies:
-    "@tarojs/taro" "1.2.21"
-    "@tarojs/utils" "1.2.21"
+    "@tarojs/taro" "1.2.26"
+    "@tarojs/utils" "1.2.26"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro-h5@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-h5/-/taro-h5-1.2.21.tgz#4aecfc44b740bb27d21f654e9cc3bca6fc44c037"
+"@tarojs/taro-h5@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-h5/-/taro-h5-1.2.26.tgz#8ef211630c25b40ba4cb6cdc55554e691765ce4f"
   dependencies:
     base64-js "^1.3.0"
     jsonp-retry "^1.0.3"
@@ -330,30 +331,30 @@
     react-native-root-toast "^3.0.1"
     react-native-stylekit "^1.0.0"
 
-"@tarojs/taro-swan@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-swan/-/taro-swan-1.2.21.tgz#41ea57e6a4b645746dc5a339bb2899c31f90ce9f"
+"@tarojs/taro-swan@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-swan/-/taro-swan-1.2.26.tgz#e532a755be6cacd7d132839c2e40e99e442599c4"
   dependencies:
-    "@tarojs/taro" "1.2.21"
-    "@tarojs/utils" "1.2.21"
+    "@tarojs/taro" "1.2.26"
+    "@tarojs/utils" "1.2.26"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro-tt@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-tt/-/taro-tt-1.2.21.tgz#a7e62b9e78fb833ab543ce16d93ad4168dc14b23"
+"@tarojs/taro-tt@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-tt/-/taro-tt-1.2.26.tgz#83720fb53ed1aec055a1fd5721e7ac4a07bad082"
   dependencies:
-    "@tarojs/taro" "1.2.21"
-    "@tarojs/utils" "1.2.21"
+    "@tarojs/taro" "1.2.26"
+    "@tarojs/utils" "1.2.26"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
-"@tarojs/taro-weapp@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-weapp/-/taro-weapp-1.2.21.tgz#3bd71a5e0f7fce4bec7242810554e9695b460070"
+"@tarojs/taro-weapp@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2ftaro-weapp/-/taro-weapp-1.2.26.tgz#fdeff0bc257f210dcfeb8c9fd3c13eb9f56acf2e"
   dependencies:
-    "@tarojs/taro" "1.2.21"
-    "@tarojs/utils" "1.2.21"
+    "@tarojs/taro" "1.2.26"
+    "@tarojs/utils" "1.2.26"
     lodash "^4.17.10"
     prop-types "^15.6.1"
 
@@ -361,29 +362,30 @@
   version "1.1.7"
   resolved "http://10.0.1.26:4873/@tarojs%2ftaro/-/taro-1.1.7.tgz#2377d1d9fbd5e8e6ade59c4d1c744d46dd120912"
 
-"@tarojs/taro@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2ftaro/-/taro-1.2.21.tgz#87eda010381802bd71ab690e6e4ce02080b485d7"
+"@tarojs/taro@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2ftaro/-/taro-1.2.26.tgz#486c9acce62751e2e3110421a06c0e1bb7174034"
 
-"@tarojs/utils@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2futils/-/utils-1.2.21.tgz#678547cb8233302a02223ec68e2e2da0eafb5db4"
+"@tarojs/utils@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2futils/-/utils-1.2.26.tgz#de60d2e3cbc941259ca0672009c993628188975b"
 
-"@tarojs/webpack-runner@1.2.21":
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/@tarojs%2fwebpack-runner/-/webpack-runner-1.2.21.tgz#85c961afffd8a962da541cda76de809686cde8cb"
+"@tarojs/webpack-runner@1.2.26":
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/@tarojs%2fwebpack-runner/-/webpack-runner-1.2.26.tgz#3f733f58a17cbb8f4de136334b42b866d8c5aafb"
   dependencies:
-    "@tarojs/taro-h5" "1.2.21"
+    "@tarojs/taro-h5" "1.2.26"
     autoprefixer "8.6.4"
     babel-core "6.26.0"
     babel-loader "7.1.4"
     babel-plugin-syntax-dynamic-import "6.18.0"
     babel-plugin-transform-react-jsx "6.24.1"
-    babel-plugin-transform-taroapi "1.2.21"
-    babel-types "^6.26.0"
+    babel-plugin-transform-taroapi "1.2.26"
+    babel-types "6.26.0"
     chalk "2.4.2"
     css-loader "1.0.0"
     csso-webpack-plugin "1.0.0-beta.12"
+    dart-sass "1.17.3"
     file-loader "3.0.1"
     html-webpack-include-assets-plugin "1.0.5"
     html-webpack-plugin "3.1.0"
@@ -391,12 +393,11 @@
     less-loader "4.1.0"
     lodash "4.17.11"
     mini-css-extract-plugin "0.4.1"
-    node-sass "4.11.0"
     opn "5.3.0"
     ora "2.1.0"
     postcss-loader "2.1.6"
-    postcss-plugin-constparse "1.2.21"
-    postcss-pxtransform "1.2.21"
+    postcss-plugin-constparse "1.2.26"
+    postcss-pxtransform "1.2.26"
     resolve "1.8.1"
     resolve-url-loader "2.3.0"
     sass-loader "7.1.0"
@@ -404,11 +405,18 @@
     stylus "0.54.5"
     stylus-loader "3.0.2"
     uglifyjs-webpack-plugin "1.2.4"
-    url-loader "1.0.1"
-    webpack "4.14.0"
+    url-loader "1.1.2"
+    webpack "4.28.4"
     webpack-chain "4.9.0"
     webpack-dev-server "3.1.14"
     webpack-format-messages "2.0.3"
+
+"@types/chokidar@^1.7.5":
+  version "1.7.5"
+  resolved "http://10.0.1.26:4873/@types%2fchokidar/-/chokidar-1.7.5.tgz#1fa78c8803e035bed6d98e6949e514b133b0c9b6"
+  dependencies:
+    "@types/events" "*"
+    "@types/node" "*"
 
 "@types/events@*":
   version "3.0.0"
@@ -421,6 +429,16 @@
     "@types/events" "*"
     "@types/minimatch" "*"
     "@types/node" "*"
+
+"@types/lodash.debounce@^4.0.4":
+  version "4.0.6"
+  resolved "http://10.0.1.26:4873/@types%2flodash.debounce/-/lodash.debounce-4.0.6.tgz#c5a2326cd3efc46566c47e4c0aa248dc0ee57d60"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.129"
+  resolved "http://10.0.1.26:4873/@types%2flodash/-/lodash-4.14.129.tgz#9aaca391db126802482655c48dd79a814488202f"
 
 "@types/minimatch@*":
   version "3.0.3"
@@ -455,141 +473,130 @@
   version "1.13.9"
   resolved "http://10.0.1.26:4873/@types%2fwebpack-env/-/webpack-env-1.13.9.tgz#a67287861c928ebf4159a908d1fb1a2a34d4097a"
 
-"@webassemblyjs/ast@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fast/-/ast-1.5.12.tgz#a9acbcb3f25333c4edfa1fdf3186b1ccf64e6664"
+"@webassemblyjs/ast@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"
   dependencies:
-    "@webassemblyjs/helper-module-context" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/wast-parser" "1.5.12"
-    debug "^3.1.0"
-    mamacro "^0.0.3"
+    "@webassemblyjs/helper-module-context" "1.7.11"
+    "@webassemblyjs/helper-wasm-bytecode" "1.7.11"
+    "@webassemblyjs/wast-parser" "1.7.11"
 
-"@webassemblyjs/floating-point-hex-parser@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2ffloating-point-hex-parser/-/floating-point-hex-parser-1.5.12.tgz#0f36044ffe9652468ce7ae5a08716a4eeff9cd9c"
+"@webassemblyjs/floating-point-hex-parser@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2ffloating-point-hex-parser/-/floating-point-hex-parser-1.7.11.tgz#a69f0af6502eb9a3c045555b1a6129d3d3f2e313"
 
-"@webassemblyjs/helper-api-error@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-api-error/-/helper-api-error-1.5.12.tgz#05466833ff2f9d8953a1a327746e1d112ea62aaf"
+"@webassemblyjs/helper-api-error@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-api-error/-/helper-api-error-1.7.11.tgz#c7b6bb8105f84039511a2b39ce494f193818a32a"
 
-"@webassemblyjs/helper-buffer@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-buffer/-/helper-buffer-1.5.12.tgz#1f0de5aaabefef89aec314f7f970009cd159c73d"
+"@webassemblyjs/helper-buffer@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-buffer/-/helper-buffer-1.7.11.tgz#3122d48dcc6c9456ed982debe16c8f37101df39b"
+
+"@webassemblyjs/helper-code-frame@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-code-frame/-/helper-code-frame-1.7.11.tgz#cf8f106e746662a0da29bdef635fcd3d1248364b"
   dependencies:
-    debug "^3.1.0"
+    "@webassemblyjs/wast-printer" "1.7.11"
 
-"@webassemblyjs/helper-code-frame@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-code-frame/-/helper-code-frame-1.5.12.tgz#3cdc1953093760d1c0f0caf745ccd62bdb6627c7"
+"@webassemblyjs/helper-fsm@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-fsm/-/helper-fsm-1.7.11.tgz#df38882a624080d03f7503f93e3f17ac5ac01181"
+
+"@webassemblyjs/helper-module-context@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-module-context/-/helper-module-context-1.7.11.tgz#d874d722e51e62ac202476935d649c802fa0e209"
+
+"@webassemblyjs/helper-wasm-bytecode@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-wasm-bytecode/-/helper-wasm-bytecode-1.7.11.tgz#dd9a1e817f1c2eb105b4cf1013093cb9f3c9cb06"
+
+"@webassemblyjs/helper-wasm-section@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-wasm-section/-/helper-wasm-section-1.7.11.tgz#9c9ac41ecf9fbcfffc96f6d2675e2de33811e68a"
   dependencies:
-    "@webassemblyjs/wast-printer" "1.5.12"
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/helper-buffer" "1.7.11"
+    "@webassemblyjs/helper-wasm-bytecode" "1.7.11"
+    "@webassemblyjs/wasm-gen" "1.7.11"
 
-"@webassemblyjs/helper-fsm@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-fsm/-/helper-fsm-1.5.12.tgz#6bc1442b037f8e30f2e57b987cee5c806dd15027"
-
-"@webassemblyjs/helper-module-context@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-module-context/-/helper-module-context-1.5.12.tgz#b5588ca78b33b8a0da75f9ab8c769a3707baa861"
+"@webassemblyjs/ieee754@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fieee754/-/ieee754-1.7.11.tgz#c95839eb63757a31880aaec7b6512d4191ac640b"
   dependencies:
-    debug "^3.1.0"
-    mamacro "^0.0.3"
+    "@xtuc/ieee754" "^1.2.0"
 
-"@webassemblyjs/helper-wasm-bytecode@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-wasm-bytecode/-/helper-wasm-bytecode-1.5.12.tgz#d12a3859db882a448891a866a05d0be63785b616"
-
-"@webassemblyjs/helper-wasm-section@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fhelper-wasm-section/-/helper-wasm-section-1.5.12.tgz#ff9fe1507d368ad437e7969d25e8c1693dac1884"
+"@webassemblyjs/leb128@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fleb128/-/leb128-1.7.11.tgz#d7267a1ee9c4594fd3f7e37298818ec65687db63"
   dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-buffer" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/wasm-gen" "1.5.12"
-    debug "^3.1.0"
+    "@xtuc/long" "4.2.1"
 
-"@webassemblyjs/ieee754@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fieee754/-/ieee754-1.5.12.tgz#ee9574bc558888f13097ce3e7900dff234ea19a4"
+"@webassemblyjs/utf8@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2futf8/-/utf8-1.7.11.tgz#06d7218ea9fdc94a6793aa92208160db3d26ee82"
+
+"@webassemblyjs/wasm-edit@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwasm-edit/-/wasm-edit-1.7.11.tgz#8c74ca474d4f951d01dbae9bd70814ee22a82005"
   dependencies:
-    ieee754 "^1.1.11"
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/helper-buffer" "1.7.11"
+    "@webassemblyjs/helper-wasm-bytecode" "1.7.11"
+    "@webassemblyjs/helper-wasm-section" "1.7.11"
+    "@webassemblyjs/wasm-gen" "1.7.11"
+    "@webassemblyjs/wasm-opt" "1.7.11"
+    "@webassemblyjs/wasm-parser" "1.7.11"
+    "@webassemblyjs/wast-printer" "1.7.11"
 
-"@webassemblyjs/leb128@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fleb128/-/leb128-1.5.12.tgz#0308eec652765ee567d8a5fa108b4f0b25b458e1"
+"@webassemblyjs/wasm-gen@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwasm-gen/-/wasm-gen-1.7.11.tgz#9bbba942f22375686a6fb759afcd7ac9c45da1a8"
   dependencies:
-    leb "^0.3.0"
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/helper-wasm-bytecode" "1.7.11"
+    "@webassemblyjs/ieee754" "1.7.11"
+    "@webassemblyjs/leb128" "1.7.11"
+    "@webassemblyjs/utf8" "1.7.11"
 
-"@webassemblyjs/utf8@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2futf8/-/utf8-1.5.12.tgz#d5916222ef314bf60d6806ed5ac045989bfd92ce"
-
-"@webassemblyjs/wasm-edit@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwasm-edit/-/wasm-edit-1.5.12.tgz#821c9358e644a166f2c910e5af1b46ce795a17aa"
+"@webassemblyjs/wasm-opt@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwasm-opt/-/wasm-opt-1.7.11.tgz#b331e8e7cef8f8e2f007d42c3a36a0580a7d6ca7"
   dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-buffer" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/helper-wasm-section" "1.5.12"
-    "@webassemblyjs/wasm-gen" "1.5.12"
-    "@webassemblyjs/wasm-opt" "1.5.12"
-    "@webassemblyjs/wasm-parser" "1.5.12"
-    "@webassemblyjs/wast-printer" "1.5.12"
-    debug "^3.1.0"
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/helper-buffer" "1.7.11"
+    "@webassemblyjs/wasm-gen" "1.7.11"
+    "@webassemblyjs/wasm-parser" "1.7.11"
 
-"@webassemblyjs/wasm-gen@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwasm-gen/-/wasm-gen-1.5.12.tgz#0b7ccfdb93dab902cc0251014e2e18bae3139bcb"
+"@webassemblyjs/wasm-parser@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwasm-parser/-/wasm-parser-1.7.11.tgz#6e3d20fa6a3519f6b084ef9391ad58211efb0a1a"
   dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/ieee754" "1.5.12"
-    "@webassemblyjs/leb128" "1.5.12"
-    "@webassemblyjs/utf8" "1.5.12"
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/helper-api-error" "1.7.11"
+    "@webassemblyjs/helper-wasm-bytecode" "1.7.11"
+    "@webassemblyjs/ieee754" "1.7.11"
+    "@webassemblyjs/leb128" "1.7.11"
+    "@webassemblyjs/utf8" "1.7.11"
 
-"@webassemblyjs/wasm-opt@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwasm-opt/-/wasm-opt-1.5.12.tgz#bd758a8bc670f585ff1ae85f84095a9e0229cbc9"
+"@webassemblyjs/wast-parser@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwast-parser/-/wast-parser-1.7.11.tgz#25bd117562ca8c002720ff8116ef9072d9ca869c"
   dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-buffer" "1.5.12"
-    "@webassemblyjs/wasm-gen" "1.5.12"
-    "@webassemblyjs/wasm-parser" "1.5.12"
-    debug "^3.1.0"
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/floating-point-hex-parser" "1.7.11"
+    "@webassemblyjs/helper-api-error" "1.7.11"
+    "@webassemblyjs/helper-code-frame" "1.7.11"
+    "@webassemblyjs/helper-fsm" "1.7.11"
+    "@xtuc/long" "4.2.1"
 
-"@webassemblyjs/wasm-parser@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwasm-parser/-/wasm-parser-1.5.12.tgz#7b10b4388ecf98bd7a22e702aa62ec2f46d0c75e"
+"@webassemblyjs/wast-printer@1.7.11":
+  version "1.7.11"
+  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwast-printer/-/wast-printer-1.7.11.tgz#c4245b6de242cb50a2cc950174fdbf65c78d7813"
   dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-api-error" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/ieee754" "1.5.12"
-    "@webassemblyjs/leb128" "1.5.12"
-    "@webassemblyjs/utf8" "1.5.12"
-
-"@webassemblyjs/wast-parser@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwast-parser/-/wast-parser-1.5.12.tgz#9cf5ae600ecae0640437b5d4de5dd6b6088d0d8b"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/floating-point-hex-parser" "1.5.12"
-    "@webassemblyjs/helper-api-error" "1.5.12"
-    "@webassemblyjs/helper-code-frame" "1.5.12"
-    "@webassemblyjs/helper-fsm" "1.5.12"
-    long "^3.2.0"
-    mamacro "^0.0.3"
-
-"@webassemblyjs/wast-printer@1.5.12":
-  version "1.5.12"
-  resolved "http://10.0.1.26:4873/@webassemblyjs%2fwast-printer/-/wast-printer-1.5.12.tgz#563ca4d01b22d21640b2463dc5e3d7f7d9dac520"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/wast-parser" "1.5.12"
-    long "^3.2.0"
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/wast-parser" "1.7.11"
+    "@xtuc/long" "4.2.1"
 
 "@webpack-contrib/schema-utils@^1.0.0-beta.0":
   version "1.0.0-beta.0"
@@ -601,6 +608,14 @@
     strip-ansi "^4.0.0"
     text-table "^0.2.0"
     webpack-log "^1.1.2"
+
+"@xtuc/ieee754@^1.2.0":
+  version "1.2.0"
+  resolved "http://10.0.1.26:4873/@xtuc%2fieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
+
+"@xtuc/long@4.2.1":
+  version "4.2.1"
+  resolved "http://10.0.1.26:4873/@xtuc%2flong/-/long-4.2.1.tgz#5c85d662f76fa1d34575766c5dcd6615abcd30d8"
 
 abbrev@1:
   version "1.1.1"
@@ -719,11 +734,15 @@ ansi-regex@^3.0.0:
   version "3.0.0"
   resolved "http://10.0.1.26:4873/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
 
+ansi-regex@^4.1.0:
+  version "4.1.0"
+  resolved "http://10.0.1.26:4873/ansi-regex/-/ansi-regex-4.1.0.tgz#8b9f8f08cf1acb843756a839ca8c7e3168c51997"
+
 ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "http://10.0.1.26:4873/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-ansi-styles@^3.2.1:
+ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "http://10.0.1.26:4873/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
   dependencies:
@@ -743,6 +762,10 @@ anymatch@^2.0.0:
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
   resolved "http://10.0.1.26:4873/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
+
+archy@^1.0.0:
+  version "1.0.0"
+  resolved "http://10.0.1.26:4873/archy/-/archy-1.0.0.tgz#f9c8c13757cc1dd7bc379ac77b2c62a5c2868c40"
 
 are-we-there-yet@~1.1.2:
   version "1.1.5"
@@ -802,7 +825,7 @@ array-unique@^0.3.2:
   version "0.3.2"
   resolved "http://10.0.1.26:4873/array-unique/-/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
 
-asap@~2.0.3:
+asap@~2.0.3, asap@~2.0.6:
   version "2.0.6"
   resolved "http://10.0.1.26:4873/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
 
@@ -1403,9 +1426,9 @@ babel-plugin-transform-strict-mode@^6.24.1:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
-babel-plugin-transform-taroapi@1.2.21:
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/babel-plugin-transform-taroapi/-/babel-plugin-transform-taroapi-1.2.21.tgz#371c0e1ce9d4cbc482c2f73c636fdf300590b0d2"
+babel-plugin-transform-taroapi@1.2.26:
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/babel-plugin-transform-taroapi/-/babel-plugin-transform-taroapi-1.2.26.tgz#6d78ed5eb7a624cef79616bd8a1bd1a183a35214"
 
 babel-polyfill@^6.23.0:
   version "6.26.0"
@@ -1499,7 +1522,7 @@ babel-traverse@^6.24.1, babel-traverse@^6.26.0:
     invariant "^2.2.2"
     lodash "^4.17.4"
 
-babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
+babel-types@6.26.0, babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
   version "6.26.0"
   resolved "http://10.0.1.26:4873/babel-types/-/babel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
   dependencies:
@@ -1582,7 +1605,7 @@ bluebird@^2.10.2:
   version "2.11.0"
   resolved "http://10.0.1.26:4873/bluebird/-/bluebird-2.11.0.tgz#534b9033c022c9579c56ba3b3e5a5caafbb650e1"
 
-bluebird@^3.5.1:
+bluebird@^3.5.1, bluebird@^3.5.3:
   version "3.5.4"
   resolved "http://10.0.1.26:4873/bluebird/-/bluebird-3.5.4.tgz#d6cc661595de30d5b3af5fcedd3c0b3ef6ec5714"
 
@@ -1775,6 +1798,25 @@ cacache@^10.0.4:
     unique-filename "^1.1.0"
     y18n "^4.0.0"
 
+cacache@^11.0.2:
+  version "11.3.2"
+  resolved "http://10.0.1.26:4873/cacache/-/cacache-11.3.2.tgz#2d81e308e3d258ca38125b676b98b2ac9ce69bfa"
+  dependencies:
+    bluebird "^3.5.3"
+    chownr "^1.1.1"
+    figgy-pudding "^3.5.1"
+    glob "^7.1.3"
+    graceful-fs "^4.1.15"
+    lru-cache "^5.1.1"
+    mississippi "^3.0.0"
+    mkdirp "^0.5.1"
+    move-concurrently "^1.0.1"
+    promise-inflight "^1.0.1"
+    rimraf "^2.6.2"
+    ssri "^6.0.1"
+    unique-filename "^1.1.1"
+    y18n "^4.0.0"
+
 cache-base@^1.0.1:
   version "1.0.1"
   resolved "http://10.0.1.26:4873/cache-base/-/cache-base-1.0.1.tgz#0a7f46416831c8b662ee36fe4e7c59d76f666ab2"
@@ -1840,6 +1882,10 @@ camelcase@^4.1.0:
   version "4.1.0"
   resolved "http://10.0.1.26:4873/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
+camelcase@^5.0.0:
+  version "5.3.1"
+  resolved "http://10.0.1.26:4873/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
+
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000859:
   version "1.0.30000963"
   resolved "http://10.0.1.26:4873/caniuse-lite/-/caniuse-lite-1.0.30000963.tgz#5be481d5292f22aff5ee0db4a6c049b65b5798b1"
@@ -1899,7 +1945,7 @@ charenc@~0.0.1:
   version "0.0.2"
   resolved "http://10.0.1.26:4873/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
 
-chokidar@^2.0.0, chokidar@^2.0.2:
+chokidar@^2.0.0, chokidar@^2.0.2, chokidar@^2.0.4:
   version "2.1.5"
   resolved "http://10.0.1.26:4873/chokidar/-/chokidar-2.1.5.tgz#0ae8434d962281a5f56c72869e79cb6d9d86ad4d"
   dependencies:
@@ -1987,6 +2033,14 @@ cliui@^4.0.0:
     strip-ansi "^4.0.0"
     wrap-ansi "^2.0.0"
 
+cliui@^5.0.0:
+  version "5.0.0"
+  resolved "http://10.0.1.26:4873/cliui/-/cliui-5.0.0.tgz#deefcfdb2e800784aa34f46fa08e06851c7bbbc5"
+  dependencies:
+    string-width "^3.1.0"
+    strip-ansi "^5.2.0"
+    wrap-ansi "^5.1.0"
+
 clone-deep@^2.0.1:
   version "2.0.2"
   resolved "http://10.0.1.26:4873/clone-deep/-/clone-deep-2.0.2.tgz#00db3a1e173656730d1188c3d6aced6d7ea97713"
@@ -2039,7 +2093,7 @@ commander@2.17.x:
   version "2.17.1"
   resolved "http://10.0.1.26:4873/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
 
-commander@^2.9.0, commander@~2.20.0:
+commander@^2.19.0, commander@^2.9.0, commander@~2.20.0:
   version "2.20.0"
   resolved "http://10.0.1.26:4873/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
 
@@ -2369,6 +2423,18 @@ d@1:
   dependencies:
     es5-ext "^0.10.9"
 
+dart-sass@1.17.3:
+  version "1.17.3"
+  resolved "http://10.0.1.26:4873/dart-sass/-/dart-sass-1.17.3.tgz#47b04d4aaad64e027afa86ca3f5b0e8ed7af659a"
+  dependencies:
+    chokidar "^2.0.0"
+
+dart-sass@^1.17.4:
+  version "1.20.1"
+  resolved "http://10.0.1.26:4873/dart-sass/-/dart-sass-1.20.1.tgz#c1b5c881815503fb1a83c79b304d69155fbbc2c2"
+  dependencies:
+    chokidar "^2.0.0"
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "http://10.0.1.26:4873/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -2419,7 +2485,7 @@ decache@^4.1.0:
   dependencies:
     callsite "^1.0.0"
 
-decamelize@^1.1.1, decamelize@^1.1.2:
+decamelize@^1.1.1, decamelize@^1.1.2, decamelize@^1.2.0:
   version "1.2.0"
   resolved "http://10.0.1.26:4873/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
@@ -2692,6 +2758,10 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+emoji-regex@^7.0.1:
+  version "7.0.3"
+  resolved "http://10.0.1.26:4873/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
+
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "http://10.0.1.26:4873/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
@@ -2805,11 +2875,11 @@ escodegen@1.x.x:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-taro@1.2.21:
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/eslint-config-taro/-/eslint-config-taro-1.2.21.tgz#cdf5b6a895bd43895def06cb6b89d86b7d7688eb"
+eslint-config-taro@1.2.26:
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/eslint-config-taro/-/eslint-config-taro-1.2.26.tgz#b75100c656d2ee9d5c38c3c5a9e0d54f9c8b3cfb"
   dependencies:
-    eslint-plugin-taro "1.2.21"
+    eslint-plugin-taro "1.2.26"
 
 eslint-import-resolver-node@^0.3.2:
   version "0.3.2"
@@ -2853,9 +2923,9 @@ eslint-plugin-react@^7.8.2:
     prop-types "^15.6.2"
     resolve "^1.9.0"
 
-eslint-plugin-taro@1.2.21:
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/eslint-plugin-taro/-/eslint-plugin-taro-1.2.21.tgz#68c7f5b431829c64cd503c6e0680c717c4a94585"
+eslint-plugin-taro@1.2.26:
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/eslint-plugin-taro/-/eslint-plugin-taro-1.2.26.tgz#19bcbe9838ee744dc33925d4d9b9690c8606c0d5"
   dependencies:
     has "^1.0.1"
 
@@ -2869,6 +2939,13 @@ eslint-scope@3.7.1:
 eslint-scope@^3.7.1:
   version "3.7.3"
   resolved "http://10.0.1.26:4873/eslint-scope/-/eslint-scope-3.7.3.tgz#bb507200d3d17f60247636160b4826284b108535"
+  dependencies:
+    esrecurse "^4.1.0"
+    estraverse "^4.1.1"
+
+eslint-scope@^4.0.0:
+  version "4.0.3"
+  resolved "http://10.0.1.26:4873/eslint-scope/-/eslint-scope-4.0.3.tgz#ca03833310f6889a3264781aa82e63eb9cfe7848"
   dependencies:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
@@ -3137,6 +3214,10 @@ faye-websocket@~0.11.1:
   dependencies:
     websocket-driver ">=0.5.1"
 
+figgy-pudding@^3.5.1:
+  version "3.5.1"
+  resolved "http://10.0.1.26:4873/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
+
 figures@^2.0.0:
   version "2.0.0"
   resolved "http://10.0.1.26:4873/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
@@ -3197,6 +3278,14 @@ find-cache-dir@^1.0.0:
     commondir "^1.0.1"
     make-dir "^1.0.0"
     pkg-dir "^2.0.0"
+
+find-cache-dir@^2.0.0:
+  version "2.1.0"
+  resolved "http://10.0.1.26:4873/find-cache-dir/-/find-cache-dir-2.1.0.tgz#8d0f94cd13fe43c6c7c261a0d86115ca918c05f7"
+  dependencies:
+    commondir "^1.0.1"
+    make-dir "^2.0.0"
+    pkg-dir "^3.0.0"
 
 find-up@^1.0.0:
   version "1.1.2"
@@ -3310,6 +3399,14 @@ fs-extra@^4.0.2:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^5.0.0:
+  version "5.0.0"
+  resolved "http://10.0.1.26:4873/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.5"
   resolved "http://10.0.1.26:4873/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
@@ -3382,6 +3479,10 @@ gaze@^1.0.0:
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "http://10.0.1.26:4873/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
+
+get-caller-file@^2.0.1:
+  version "2.0.5"
+  resolved "http://10.0.1.26:4873/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
 
 get-stdin@^4.0.1:
   version "4.0.1"
@@ -3467,6 +3568,17 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3, glob@~7.1.1:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
+glob@^7.1.1:
+  version "7.1.4"
+  resolved "http://10.0.1.26:4873/glob/-/glob-7.1.4.tgz#aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.4"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
 globals@^11.0.1, globals@^11.1.0:
   version "11.11.0"
   resolved "http://10.0.1.26:4873/globals/-/globals-11.11.0.tgz#dcf93757fa2de5486fbeed7118538adf789e9c2e"
@@ -3484,6 +3596,12 @@ globby@^6.1.0:
     object-assign "^4.0.1"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
+
+globs@^0.1.3:
+  version "0.1.4"
+  resolved "http://10.0.1.26:4873/globs/-/globs-0.1.4.tgz#1d13639f6174e4ae73a7f936da7d9a079f657c1c"
+  dependencies:
+    glob "^7.1.1"
 
 globule@^1.0.0:
   version "1.2.1"
@@ -3509,7 +3627,7 @@ got@^6.7.1:
     unzip-response "^2.0.1"
     url-parse-lax "^1.0.0"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
+graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.15"
   resolved "http://10.0.1.26:4873/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
 
@@ -3806,7 +3924,7 @@ idx@^2.1.0:
   version "2.5.5"
   resolved "http://10.0.1.26:4873/idx/-/idx-2.5.5.tgz#609a011b7c9e092380f30908389d64ecd1102f70"
 
-ieee754@^1.1.11, ieee754@^1.1.4:
+ieee754@^1.1.4:
   version "1.1.13"
   resolved "http://10.0.1.26:4873/ieee754/-/ieee754-1.1.13.tgz#ec168558e95aa181fd87d37f55c32bbcb6708b84"
 
@@ -4222,7 +4340,7 @@ join-component@^1.1.0:
   version "1.1.0"
   resolved "http://10.0.1.26:4873/join-component/-/join-component-1.1.0.tgz#b8417b750661a392bee2c2537c68b2a9d4977cd5"
 
-js-base64@^2.1.8, js-base64@^2.1.9, js-base64@^2.5.1:
+js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.5.1"
   resolved "http://10.0.1.26:4873/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
 
@@ -4403,10 +4521,6 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
-leb@^0.3.0:
-  version "0.3.0"
-  resolved "http://10.0.1.26:4873/leb/-/leb-0.3.0.tgz#32bee9fad168328d6aea8522d833f4180eed1da3"
-
 less-loader@4.1.0:
   version "4.1.0"
   resolved "http://10.0.1.26:4873/less-loader/-/less-loader-4.1.0.tgz#2c1352c5b09a4f84101490274fd51674de41363e"
@@ -4536,7 +4650,7 @@ lodash.assign@^3.0.0:
     lodash._createassigner "^3.0.0"
     lodash.keys "^3.0.0"
 
-lodash.assign@^4.0.1, lodash.assign@^4.2.0:
+lodash.assign@^4.0.1:
   version "4.2.0"
   resolved "http://10.0.1.26:4873/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
 
@@ -4544,9 +4658,13 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "http://10.0.1.26:4873/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
-lodash.clonedeep@^4.3.2, lodash.clonedeep@^4.5.0:
+lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "http://10.0.1.26:4873/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "http://10.0.1.26:4873/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
 lodash.defaults@^3.1.2:
   version "3.1.2"
@@ -4578,10 +4696,6 @@ lodash.keys@^3.0.0:
     lodash._getnative "^3.0.0"
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
-
-lodash.mergewith@^4.6.0:
-  version "4.6.1"
-  resolved "http://10.0.1.26:4873/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
 
 lodash.once@^4.0.0:
   version "4.1.1"
@@ -4624,10 +4738,6 @@ loglevelnext@^1.0.1:
     es6-symbol "^3.1.1"
     object.assign "^4.1.0"
 
-long@^3.2.0:
-  version "3.2.0"
-  resolved "http://10.0.1.26:4873/long/-/long-3.2.0.tgz#d821b7138ca1cb581c172990ef14db200b5c474b"
-
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "http://10.0.1.26:4873/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -4662,6 +4772,12 @@ lru-cache@^4.0.1, lru-cache@^4.1.1, lru-cache@^4.1.2:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
+lru-cache@^5.1.1:
+  version "5.1.1"
+  resolved "http://10.0.1.26:4873/lru-cache/-/lru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
+  dependencies:
+    yallist "^3.0.2"
+
 lru-cache@~4.0.0:
   version "4.0.2"
   resolved "http://10.0.1.26:4873/lru-cache/-/lru-cache-4.0.2.tgz#1d17679c069cda5d040991a09dbc2c0db377e55e"
@@ -4684,9 +4800,12 @@ make-dir@^1.0.0:
   dependencies:
     pify "^3.0.0"
 
-mamacro@^0.0.3:
-  version "0.0.3"
-  resolved "http://10.0.1.26:4873/mamacro/-/mamacro-0.0.3.tgz#ad2c9576197c9f1abf308d0787865bd975a3f3e4"
+make-dir@^2.0.0:
+  version "2.1.0"
+  resolved "http://10.0.1.26:4873/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
+  dependencies:
+    pify "^4.0.1"
+    semver "^5.6.0"
 
 map-age-cleaner@^0.1.1:
   version "0.1.3"
@@ -4893,6 +5012,21 @@ mississippi@^2.0.0:
     stream-each "^1.1.0"
     through2 "^2.0.0"
 
+mississippi@^3.0.0:
+  version "3.0.0"
+  resolved "http://10.0.1.26:4873/mississippi/-/mississippi-3.0.0.tgz#ea0a3291f97e0b5e8776b363d5f0a12d94c67022"
+  dependencies:
+    concat-stream "^1.5.0"
+    duplexify "^3.4.2"
+    end-of-stream "^1.1.0"
+    flush-write-stream "^1.0.0"
+    from2 "^2.1.0"
+    parallel-transform "^1.1.0"
+    pump "^3.0.0"
+    pumpify "^1.3.3"
+    stream-each "^1.1.0"
+    through2 "^2.0.0"
+
 mixin-deep@^1.2.0:
   version "1.3.1"
   resolved "http://10.0.1.26:4873/mixin-deep/-/mixin-deep-1.3.1.tgz#a49e7268dce1a0d9698e45326c5626df3543d0fe"
@@ -4981,7 +5115,7 @@ mz@^2.6.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
-nan@^2.10.0, nan@^2.12.1:
+nan@^2.12.1, nan@^2.13.2:
   version "2.13.2"
   resolved "http://10.0.1.26:4873/nan/-/nan-2.13.2.tgz#f51dc7ae66ba7d5d55e1e6d4d8092e802c9aefe7"
 
@@ -5130,9 +5264,9 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-node-sass@4.11.0, node-sass@^4.11.0:
-  version "4.11.0"
-  resolved "http://10.0.1.26:4873/node-sass/-/node-sass-4.11.0.tgz#183faec398e9cbe93ba43362e2768ca988a6369a"
+node-sass@^4.10.0:
+  version "4.12.0"
+  resolved "http://10.0.1.26:4873/node-sass/-/node-sass-4.12.0.tgz#0914f531932380114a30cc5fa4fa63233a25f017"
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -5141,12 +5275,10 @@ node-sass@4.11.0, node-sass@^4.11.0:
     get-stdin "^4.0.1"
     glob "^7.0.3"
     in-publish "^2.0.0"
-    lodash.assign "^4.2.0"
-    lodash.clonedeep "^4.3.2"
-    lodash.mergewith "^4.6.0"
+    lodash "^4.17.11"
     meow "^3.7.0"
     mkdirp "^0.5.1"
-    nan "^2.10.0"
+    nan "^2.13.2"
     node-gyp "^3.8.0"
     npmlog "^4.0.0"
     request "^2.88.0"
@@ -5384,7 +5516,7 @@ os-locale@^1.4.0:
   dependencies:
     lcid "^1.0.0"
 
-os-locale@^3.0.0:
+os-locale@^3.0.0, os-locale@^3.1.0:
   version "3.1.0"
   resolved "http://10.0.1.26:4873/os-locale/-/os-locale-3.1.0.tgz#a802a6ee17f24c10483ab9935719cef4ed16bf1a"
   dependencies:
@@ -5617,6 +5749,10 @@ pify@^3.0.0:
   version "3.0.0"
   resolved "http://10.0.1.26:4873/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
 
+pify@^4.0.1:
+  version "4.0.1"
+  resolved "http://10.0.1.26:4873/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
+
 pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "http://10.0.1.26:4873/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
@@ -5706,9 +5842,9 @@ postcss-modules-values@^1.3.0:
     icss-replace-symbols "^1.1.0"
     postcss "^6.0.1"
 
-postcss-plugin-constparse@1.2.21:
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/postcss-plugin-constparse/-/postcss-plugin-constparse-1.2.21.tgz#58909b79f9f30d7ed4b0839d3de893c40d0e4649"
+postcss-plugin-constparse@1.2.26:
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/postcss-plugin-constparse/-/postcss-plugin-constparse-1.2.26.tgz#9a27fc93274dc0171931a60e5a13c2727313494a"
   dependencies:
     postcss "^6.0.22"
 
@@ -5719,9 +5855,9 @@ postcss-pxtorem@^4.0.1:
     object-assign "^4.1.0"
     postcss "^5.2.10"
 
-postcss-pxtransform@1.2.21:
-  version "1.2.21"
-  resolved "http://10.0.1.26:4873/postcss-pxtransform/-/postcss-pxtransform-1.2.21.tgz#d91725ce1ef96c2fd442fb436d9a5ee767006a0e"
+postcss-pxtransform@1.2.26:
+  version "1.2.26"
+  resolved "http://10.0.1.26:4873/postcss-pxtransform/-/postcss-pxtransform-1.2.26.tgz#90568c2ec16e2947d77cf7a01229811920ed2355"
   dependencies:
     postcss "^6.0.16"
     postcss-pxtorem "^4.0.1"
@@ -5754,6 +5890,10 @@ prelude-ls@~1.1.2:
 prepend-http@^1.0.1:
   version "1.0.4"
   resolved "http://10.0.1.26:4873/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
+
+pretty-bytes@^4.0.2:
+  version "4.0.2"
+  resolved "http://10.0.1.26:4873/pretty-bytes/-/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
 
 pretty-error@^2.0.2:
   version "2.1.1"
@@ -5802,6 +5942,12 @@ promise@^7.1.1:
   resolved "http://10.0.1.26:4873/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
   dependencies:
     asap "~2.0.3"
+
+promise@^8.0.1:
+  version "8.0.3"
+  resolved "http://10.0.1.26:4873/promise/-/promise-8.0.3.tgz#f592e099c6cddc000d538ee7283bb190452b0bf6"
+  dependencies:
+    asap "~2.0.6"
 
 prop-types@^15.5.10, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.7.2"
@@ -6289,6 +6435,10 @@ require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "http://10.0.1.26:4873/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
 
+require-main-filename@^2.0.0:
+  version "2.0.0"
+  resolved "http://10.0.1.26:4873/require-main-filename/-/require-main-filename-2.0.0.tgz#d0b329ecc7cc0f61649f62215be69af54aa8989b"
+
 require-uncached@^1.0.3:
   version "1.0.3"
   resolved "http://10.0.1.26:4873/require-uncached/-/require-uncached-1.0.3.tgz#4e0d56d6c9662fd31e43011c4b95aa49955421d3"
@@ -6494,7 +6644,7 @@ scheduler@^0.13.6:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-schema-utils@^0.4.0, schema-utils@^0.4.3, schema-utils@^0.4.4, schema-utils@^0.4.5:
+schema-utils@^0.4.0, schema-utils@^0.4.4, schema-utils@^0.4.5:
   version "0.4.7"
   resolved "http://10.0.1.26:4873/schema-utils/-/schema-utils-0.4.7.tgz#ba74f597d2be2ea880131746ee17d0a093c68187"
   dependencies:
@@ -6508,6 +6658,22 @@ schema-utils@^1.0.0:
     ajv "^6.1.0"
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
+
+scss-bundle@^2.5.1:
+  version "2.5.1"
+  resolved "http://10.0.1.26:4873/scss-bundle/-/scss-bundle-2.5.1.tgz#def470dcac93484c7e40a6d4f657498ee5400934"
+  dependencies:
+    "@types/chokidar" "^1.7.5"
+    "@types/lodash.debounce" "^4.0.4"
+    archy "^1.0.0"
+    chokidar "^2.0.4"
+    fs-extra "^5.0.0"
+    globs "^0.1.3"
+    lodash.debounce "^4.0.8"
+    node-sass "^4.10.0"
+    pretty-bytes "^4.0.2"
+    promise "^8.0.1"
+    yargs "^13.1.0"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
@@ -6759,6 +6925,13 @@ source-map-support@^0.4.15, source-map-support@^0.4.2:
   dependencies:
     source-map "^0.5.6"
 
+source-map-support@~0.5.10:
+  version "0.5.12"
+  resolved "http://10.0.1.26:4873/source-map-support/-/source-map-support-0.5.12.tgz#b4f3b10d51857a5af0138d3ce8003b201613d599"
+  dependencies:
+    buffer-from "^1.0.0"
+    source-map "^0.6.0"
+
 source-map-url@^0.4.0:
   version "0.4.0"
   resolved "http://10.0.1.26:4873/source-map-url/-/source-map-url-0.4.0.tgz#3e935d7ddd73631b97659956d55128e87b5084a3"
@@ -6779,7 +6952,7 @@ source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7:
   version "0.5.7"
   resolved "http://10.0.1.26:4873/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
-source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
+source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "http://10.0.1.26:4873/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
@@ -6872,6 +7045,12 @@ ssri@^5.2.4:
   dependencies:
     safe-buffer "^5.1.1"
 
+ssri@^6.0.1:
+  version "6.0.1"
+  resolved "http://10.0.1.26:4873/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
+  dependencies:
+    figgy-pudding "^3.5.1"
+
 stack-trace@0.0.10:
   version "0.0.10"
   resolved "http://10.0.1.26:4873/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
@@ -6954,6 +7133,14 @@ string-width@^1.0.1, string-width@^1.0.2:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^4.0.0"
 
+string-width@^3.0.0, string-width@^3.1.0:
+  version "3.1.0"
+  resolved "http://10.0.1.26:4873/string-width/-/string-width-3.1.0.tgz#22767be21b62af1081574306f69ac51b62203961"
+  dependencies:
+    emoji-regex "^7.0.1"
+    is-fullwidth-code-point "^2.0.0"
+    strip-ansi "^5.1.0"
+
 string_decoder@^1.0.0, string_decoder@^1.1.1:
   version "1.2.0"
   resolved "http://10.0.1.26:4873/string_decoder/-/string_decoder-1.2.0.tgz#fe86e738b19544afe70469243b2a1ee9240eae8d"
@@ -6981,6 +7168,12 @@ strip-ansi@^4.0.0:
   resolved "http://10.0.1.26:4873/strip-ansi/-/strip-ansi-4.0.0.tgz#a8479022eb1ac368a871389b635262c505ee368f"
   dependencies:
     ansi-regex "^3.0.0"
+
+strip-ansi@^5.0.0, strip-ansi@^5.1.0, strip-ansi@^5.2.0:
+  version "5.2.0"
+  resolved "http://10.0.1.26:4873/strip-ansi/-/strip-ansi-5.2.0.tgz#8c9a536feb6afc962bdfa5b104a5091c1ad9c0ae"
+  dependencies:
+    ansi-regex "^4.1.0"
 
 strip-bom@^2.0.0:
   version "2.0.0"
@@ -7107,7 +7300,7 @@ table@4.0.2:
     slice-ansi "1.0.0"
     string-width "^2.1.1"
 
-tapable@^1.0.0:
+tapable@^1.0.0, tapable@^1.1.0:
   version "1.1.3"
   resolved "http://10.0.1.26:4873/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
 
@@ -7141,6 +7334,27 @@ taro-ui@^2.1.0:
     dayjs "^1.7.7"
     lodash "^4.17.10"
     prop-types "^15.6.2"
+
+terser-webpack-plugin@^1.1.0:
+  version "1.2.3"
+  resolved "http://10.0.1.26:4873/terser-webpack-plugin/-/terser-webpack-plugin-1.2.3.tgz#3f98bc902fac3e5d0de730869f50668561262ec8"
+  dependencies:
+    cacache "^11.0.2"
+    find-cache-dir "^2.0.0"
+    schema-utils "^1.0.0"
+    serialize-javascript "^1.4.0"
+    source-map "^0.6.1"
+    terser "^3.16.1"
+    webpack-sources "^1.1.0"
+    worker-farm "^1.5.2"
+
+terser@^3.16.1:
+  version "3.17.0"
+  resolved "http://10.0.1.26:4873/terser/-/terser-3.17.0.tgz#f88ffbeda0deb5637f9d24b0da66f4e15ab10cb2"
+  dependencies:
+    commander "^2.19.0"
+    source-map "~0.6.1"
+    source-map-support "~0.5.10"
 
 text-table@^0.2.0, text-table@~0.2.0:
   version "0.2.0"
@@ -7359,19 +7573,6 @@ uglifyjs-webpack-plugin@1.2.4:
     webpack-sources "^1.1.0"
     worker-farm "^1.5.2"
 
-uglifyjs-webpack-plugin@^1.2.4:
-  version "1.3.0"
-  resolved "http://10.0.1.26:4873/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.3.0.tgz#75f548160858163a08643e086d5fefe18a5d67de"
-  dependencies:
-    cacache "^10.0.4"
-    find-cache-dir "^1.0.0"
-    schema-utils "^0.4.5"
-    serialize-javascript "^1.4.0"
-    source-map "^0.6.1"
-    uglify-es "^3.3.4"
-    webpack-sources "^1.1.0"
-    worker-farm "^1.5.2"
-
 union-value@^1.0.0:
   version "1.0.0"
   resolved "http://10.0.1.26:4873/union-value/-/union-value-1.0.0.tgz#5c71c34cb5bad5dcebe3ea0cd08207ba5aa1aea4"
@@ -7381,7 +7582,7 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^0.4.3"
 
-unique-filename@^1.1.0:
+unique-filename@^1.1.0, unique-filename@^1.1.1:
   version "1.1.1"
   resolved "http://10.0.1.26:4873/unique-filename/-/unique-filename-1.1.1.tgz#1d69769369ada0583103a1e6ae87681b56573230"
   dependencies:
@@ -7440,13 +7641,13 @@ url-join@^1.1.0:
   version "1.1.0"
   resolved "http://10.0.1.26:4873/url-join/-/url-join-1.1.0.tgz#741c6c2f4596c4830d6718460920d0c92202dc78"
 
-url-loader@1.0.1:
-  version "1.0.1"
-  resolved "http://10.0.1.26:4873/url-loader/-/url-loader-1.0.1.tgz#61bc53f1f184d7343da2728a1289ef8722ea45ee"
+url-loader@1.1.2:
+  version "1.1.2"
+  resolved "http://10.0.1.26:4873/url-loader/-/url-loader-1.1.2.tgz#b971d191b83af693c5e3fea4064be9e1f2d7f8d8"
   dependencies:
     loader-utils "^1.1.0"
     mime "^2.0.3"
-    schema-utils "^0.4.3"
+    schema-utils "^1.0.0"
 
 url-parse-lax@^1.0.0:
   version "1.0.0"
@@ -7643,29 +7844,28 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-sources@^1.0.1, webpack-sources@^1.1.0:
+webpack-sources@^1.0.1, webpack-sources@^1.1.0, webpack-sources@^1.3.0:
   version "1.3.0"
   resolved "http://10.0.1.26:4873/webpack-sources/-/webpack-sources-1.3.0.tgz#2a28dcb9f1f45fe960d8f1493252b5ee6530fa85"
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@4.14.0:
-  version "4.14.0"
-  resolved "http://10.0.1.26:4873/webpack/-/webpack-4.14.0.tgz#bbcc40dbf9a34129491b431574189d3802972243"
+webpack@4.28.4:
+  version "4.28.4"
+  resolved "http://10.0.1.26:4873/webpack/-/webpack-4.28.4.tgz#1ddae6c89887d7efb752adf0c3cd32b9b07eacd0"
   dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-module-context" "1.5.12"
-    "@webassemblyjs/wasm-edit" "1.5.12"
-    "@webassemblyjs/wasm-opt" "1.5.12"
-    "@webassemblyjs/wasm-parser" "1.5.12"
+    "@webassemblyjs/ast" "1.7.11"
+    "@webassemblyjs/helper-module-context" "1.7.11"
+    "@webassemblyjs/wasm-edit" "1.7.11"
+    "@webassemblyjs/wasm-parser" "1.7.11"
     acorn "^5.6.2"
     acorn-dynamic-import "^3.0.0"
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
     chrome-trace-event "^1.0.0"
     enhanced-resolve "^4.1.0"
-    eslint-scope "^3.7.1"
+    eslint-scope "^4.0.0"
     json-parse-better-errors "^1.0.2"
     loader-runner "^2.3.0"
     loader-utils "^1.1.0"
@@ -7675,10 +7875,10 @@ webpack@4.14.0:
     neo-async "^2.5.0"
     node-libs-browser "^2.0.0"
     schema-utils "^0.4.4"
-    tapable "^1.0.0"
-    uglifyjs-webpack-plugin "^1.2.4"
+    tapable "^1.1.0"
+    terser-webpack-plugin "^1.1.0"
     watchpack "^1.5.0"
-    webpack-sources "^1.0.1"
+    webpack-sources "^1.3.0"
 
 websocket-driver@>=0.5.1:
   version "0.7.0"
@@ -7743,6 +7943,14 @@ wrap-ansi@^2.0.0:
   dependencies:
     string-width "^1.0.1"
     strip-ansi "^3.0.1"
+
+wrap-ansi@^5.1.0:
+  version "5.1.0"
+  resolved "http://10.0.1.26:4873/wrap-ansi/-/wrap-ansi-5.1.0.tgz#1fd1f67235d5b6d0fee781056001bfb694c03b09"
+  dependencies:
+    ansi-styles "^3.2.0"
+    string-width "^3.0.0"
+    strip-ansi "^5.0.0"
 
 wrappy@1:
   version "1.0.2"
@@ -7872,6 +8080,13 @@ yargs-parser@^10.1.0:
   dependencies:
     camelcase "^4.1.0"
 
+yargs-parser@^13.1.0:
+  version "13.1.0"
+  resolved "http://10.0.1.26:4873/yargs-parser/-/yargs-parser-13.1.0.tgz#7016b6dd03e28e1418a510e258be4bff5a31138f"
+  dependencies:
+    camelcase "^5.0.0"
+    decamelize "^1.2.0"
+
 yargs-parser@^5.0.0:
   version "5.0.0"
   resolved "http://10.0.1.26:4873/yargs-parser/-/yargs-parser-5.0.0.tgz#275ecf0d7ffe05c77e64e7c86e4cd94bf0e1228a"
@@ -7894,6 +8109,22 @@ yargs@12.0.2:
     which-module "^2.0.0"
     y18n "^3.2.1 || ^4.0.0"
     yargs-parser "^10.1.0"
+
+yargs@^13.1.0:
+  version "13.2.4"
+  resolved "http://10.0.1.26:4873/yargs/-/yargs-13.2.4.tgz#0b562b794016eb9651b98bd37acf364aa5d6dc83"
+  dependencies:
+    cliui "^5.0.0"
+    find-up "^3.0.0"
+    get-caller-file "^2.0.1"
+    os-locale "^3.1.0"
+    require-directory "^2.1.1"
+    require-main-filename "^2.0.0"
+    set-blocking "^2.0.0"
+    string-width "^3.0.0"
+    which-module "^2.0.0"
+    y18n "^4.0.0"
+    yargs-parser "^13.1.0"
 
 yargs@^7.0.0:
   version "7.1.0"

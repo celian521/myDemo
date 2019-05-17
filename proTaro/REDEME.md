@@ -17,6 +17,10 @@ user
 plan
 club
 
+svn://120.79.150.172:3190/koubeiyingxiao/xiaochengxu   这个是 svn 地址
+SVN账号管理
+wushaolian
+2BPUAblJT6Hd
 
 接口地址的账号信息
 http://doc.usetool.cc/

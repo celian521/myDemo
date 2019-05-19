@@ -1,3 +1,3 @@
-export { default as PkgList } from './PkgList' //选择套餐
-export { default as PkgCard } from './PkgCard'  // 套餐卡
+export { default as proSwiper } from './proSwiper'  //professional
 
+export { default as PkgList } from './PkgList' //选择套餐

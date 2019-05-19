@@ -1,11 +1,11 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "taro-index",
+  "projectname": "taro-shop",
   "description": "商圈小程序",
   "appid": "wx8e896ee5f731f407",
   "setting": {
 		"urlCheck": false,
-		"es6": true,
+		"es6": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,

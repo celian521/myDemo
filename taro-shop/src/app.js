@@ -42,17 +42,17 @@ class App extends Component {
         iconPath: "./assets/images/tab-bar/home.png",
         selectedIconPath: "./assets/images/tab-bar/home-active.png"
       },
-      // {
-      //   pagePath: "pages/demo/index",
-      //   text: "DEMO",
-      //   iconPath: "./assets/images/tab-bar/cate.png",
-      //   selectedIconPath: "./assets/images/tab-bar/cate-active.png"
-      // },{
-      //   pagePath: "pages/login/index",
-      //   text: "购物车",
-      //   iconPath: "./assets/images/tab-bar/cart.png",
-      //   selectedIconPath: "./assets/images/tab-bar/cart-active.png"
-      // },
+      {
+        pagePath: "pages/demo/index",
+        text: "DEMO",
+        iconPath: "./assets/images/tab-bar/cate.png",
+        selectedIconPath: "./assets/images/tab-bar/cate-active.png"
+      },{
+        pagePath: "pages/login/index",
+        text: "购物车",
+        iconPath: "./assets/images/tab-bar/cart.png",
+        selectedIconPath: "./assets/images/tab-bar/cart-active.png"
+      },
       {
         pagePath: "pages/member/index",
         text: "我的",

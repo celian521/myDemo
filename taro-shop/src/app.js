@@ -16,12 +16,14 @@ class App extends Component {
 
   config = {
     pages: [
+      'pages/index/index',
+      'pages/member/index',
+
       'pages/demo/index',
       'pages/demo/pay',
       'pages/demo/list',
       'pages/demo/search',
-      'pages/index/index',
-      'pages/member/index',
+      'pages/demo/map',
       'pages/login/index',
       'pages/login/loginPhone',
       'pages/webview/index',
@@ -39,19 +41,21 @@ class App extends Component {
         text: "首页",
         iconPath: "./assets/images/tab-bar/home.png",
         selectedIconPath: "./assets/images/tab-bar/home-active.png"
-      },{
-        pagePath: "pages/demo/index",
-        text: "DEMO",
-        iconPath: "./assets/images/tab-bar/cate.png",
-        selectedIconPath: "./assets/images/tab-bar/cate-active.png"
-      },{
-        pagePath: "pages/login/index",
-        text: "购物车",
-        iconPath: "./assets/images/tab-bar/cart.png",
-        selectedIconPath: "./assets/images/tab-bar/cart-active.png"
-      },{
+      },
+      // {
+      //   pagePath: "pages/demo/index",
+      //   text: "DEMO",
+      //   iconPath: "./assets/images/tab-bar/cate.png",
+      //   selectedIconPath: "./assets/images/tab-bar/cate-active.png"
+      // },{
+      //   pagePath: "pages/login/index",
+      //   text: "购物车",
+      //   iconPath: "./assets/images/tab-bar/cart.png",
+      //   selectedIconPath: "./assets/images/tab-bar/cart-active.png"
+      // },
+      {
         pagePath: "pages/member/index",
-        text: "会员",
+        text: "我的",
         iconPath: "./assets/images/tab-bar/user.png",
         selectedIconPath: "./assets/images/tab-bar/user-active.png"
       }],

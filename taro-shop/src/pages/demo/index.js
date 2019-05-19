@@ -68,6 +68,7 @@ class Index extends Component {
           <AtListItem title='DEMO search' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/search' }) }} />
           <AtListItem title='DEMO pay' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/pay' }) }} />
           <AtListItem title='DEMO list' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/list' }) }} />
+          <AtListItem title='DEMO map' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/map' }) }} />
         </AtList>
 
         <View className='wrap'>

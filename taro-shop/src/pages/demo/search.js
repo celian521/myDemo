@@ -5,7 +5,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 
 import { View, Text } from '@tarojs/components'
-import { AtButton,  } from 'taro-ui'
+import { AtButton, AtSearchBar } from 'taro-ui'
 // import { PkgCard } from '@components'
 // import apis from '@apis'
 // import linkTo from '@utils/linkTo.js'
@@ -20,7 +20,7 @@ class Search extends Component {
   constructor() {
     super(...arguments);
     this.state = {
-
+      value: null
     }
   }
 
@@ -28,13 +28,24 @@ class Search extends Component {
     navigationBarTitleText: '搜索'
   }
 
-
+  onChange(value) {
+    this.setState({
+      value: value
+    })
+  }
+  onActionClick () {
+    console.log('开始搜索')
+  }
   render() {
     const { } = this.state
 
     return (
       <View>
-搜索 PAGE
+        <AtSearchBar
+          value={this.state.value}
+          onChange={this.onChange.bind(this)}
+          onActionClick={this.onActionClick.bind(this)}
+        />
       </View>
     )
   }

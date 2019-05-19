@@ -3,7 +3,7 @@ import { observer, inject } from '@tarojs/mobx'
 
 import { View } from '@tarojs/components'
 import { AtDivider, AtButton, AtIcon, AtList, AtListItem } from 'taro-ui'
-// import { } from '@components'
+import ImagePicker from '@components/imagePicker'
 
 import linkTo from '@utils/linkTo.js'
 
@@ -29,9 +29,8 @@ class Index extends Component {
   render() {
     return (
       <View>
+        <ImagePicker />
         index
-        <AtIcon prefixClass='icon' value='clock' size='80'></AtIcon>
-        <View className='icon icon-clock'></View>
       </View>
     )
   }

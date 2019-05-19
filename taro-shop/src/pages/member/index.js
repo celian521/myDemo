@@ -31,7 +31,8 @@ class Member extends Component {
   }
 
   componentWillMount() {
-
+    const { globalStore } = this.props
+    globalStore.getUserInfo()
   }
 
   render() {
@@ -39,32 +40,40 @@ class Member extends Component {
     const { nickName, avatarUrl } = globalStore.userInfo
     return (
       <View>
-        <View className='myCard'>
-          <View className='at-row at-row__align--center' style={{ color: '#5F471A;' }} onClick={this.handleLoginOut} >
-            <View className='at-col at-col-2'><AtAvatar circle image={avatarUrl} /></View>
-            <View className='at-col at-col-8'>
-              <View className='mc-nikcName'>{ nickName }</View>
-              <View className='mc-info'>2019-10-02到期</View>
-            </View>
+        <View className='wrap at-row at-row__align--center' >
+          <View className='at-col at-col-2'>
+            <AtAvatar circle image={avatarUrl} />
           </View>
-          <View className='mc-bottom'>
-            <View className='mc-title'>咪哒音乐卡 </View>
-            <View className='mc-info'>今日剩余:
-            {/* 时长 */ }
-              <AtCountdown
-                minutes={100000}
-              />
-            </View>
+          <View className='at-col at-col-8'>
+            <View>{ nickName }</View>
           </View>
         </View>
-        <AtList hasBorder={false}>
-          <AtListItem
-            title='我的作品'
-            arrow='right'
-            onClick={() => { linkTo({ url: 'http://10.0.3.127:9001/#/pages/index/index?project=5c529055b403b9a8a690d12d&id=5c76633240bfbbd260d403f1', title: '我的作品' }) }}
-          />
+
+        <View className='at-row at-row__align--center' style={{textAlign:'center'}}>
+          <View className='at-col'>
+            <View className='icon icon-share'></View>
+            <View>标题</View>
+          </View>
+          <View className='at-col'>
+            <View className='icon icon-share'></View>
+            <View>标题</View>
+          </View>
+          <View className='at-col'>
+            <View className='icon icon-share'></View>
+            <View>标题</View>
+          </View>
+          <View className='at-col'>
+            <View className='icon icon-share'></View>
+            <View>标题</View>
+          </View>
+        </View>
+
+        <AtList>
+          <AtListItem title='标题文字' arrow='right' />
+          <AtListItem title='标题文字' extraText='详细信息' arrow='right' />
+          <AtListItem title='禁用状态' disabled extraText='详细信息' arrow='right' />
+          <AtListItem title='DEMO' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/index' }) }} />
         </AtList>
-        <AtButton open-type='share'>邀请好友</AtButton>
 
       </View>
     )

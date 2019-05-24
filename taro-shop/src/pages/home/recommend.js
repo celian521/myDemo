@@ -23,7 +23,7 @@ export default class Recommend extends Component {
       title: '000'
     }, {
       id: 4,
-      img_path: 'https://dummyimage.com/750x360/eee/999',
+      img_path: 'https://dummyimage.com/750x420/eee/999',
       title: '000'
     }]
     return (

@@ -4,8 +4,6 @@ import { View, Button } from '@tarojs/components'
 import { AtAvatar, AtButton, AtCountdown, AtList, AtListItem, AtModal, AtModalContent, AtModalAction } from 'taro-ui'
 import apis from '@/apis'
 import linkTo from '@/utils/linkTo.js'
-import picWork from '@/assets/images/work.svg'
-import picShare from '@/assets/images/share.svg'
 
 import './index.scss'
 
@@ -40,7 +38,7 @@ class Member extends Component {
     const { nickName, avatarUrl } = globalStore.userInfo
     return (
       <View>
-        <View className='wrap at-row at-row__align--center' >
+        <View className='at-row at-row__align--center' >
           <View className='at-col at-col-2'>
             <AtAvatar circle image={avatarUrl} />
           </View>

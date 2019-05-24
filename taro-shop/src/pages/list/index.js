@@ -65,9 +65,9 @@ class List extends Component {
         preState.data = [...this.state.data, ...temp]
       }, () => {
         const preData = this.state.data
-        if (preData.length > 25 || preData.length === 0) this.setState({ status: 'noMore' })
+        if (preData.length > 250 || preData.length === 0) this.setState({ status: 'noMore' })
       })
-    }, 1000);
+    }, 100);
 
   }
 

@@ -13,7 +13,7 @@ import './index.scss'
 @observer
 class List extends Component {
   config = {
-    navigationBarTitleText: '记录列表',
+    navigationBarTitleText: '列表',
     enablePullDownRefresh: true,
     onReachBottomDistance: 50
   }
@@ -73,7 +73,7 @@ class List extends Component {
   render() {
     const { data, status } = this.state
     const len = data.length
-    const noMoreText = len > 0 ? '没有更多记录' : '暂无充值记录'
+    const noMoreText = len > 0 ? '没有更多数据' : '暂无数据'
     return (
       <View>
         <AtList>

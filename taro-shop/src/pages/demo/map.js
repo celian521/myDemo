@@ -6,9 +6,9 @@ import { observer, inject } from '@tarojs/mobx'
 
 import { View, Text, Map } from '@tarojs/components'
 import { AtButton, } from 'taro-ui'
-// import { PkgCard } from '@components'
-// import apis from '@apis'
-// import linkTo from '@utils/linkTo.js'
+// import { PkgCard } from '@/components'
+// import apis from '@/apis'
+// import linkTo from '@/utils/linkTo.js'
 
 
 import './index.scss'

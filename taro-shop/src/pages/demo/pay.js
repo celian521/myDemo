@@ -6,10 +6,10 @@ import { observer, inject } from '@tarojs/mobx'
 
 import { View, Text, Radio, Image, RadioGroup, Label } from '@tarojs/components'
 import { AtButton, AtDivider, AtModal, AtNoticebar } from 'taro-ui'
-// import {  } from '@components'
-// import apis from '@apis'
+// import {  } from '@/components'
+// import apis from '@/apis'
 
-// import linkTo from '@utils/linkTo.js'
+// import linkTo from '@/utils/linkTo.js'
 
 
 import './index.scss'

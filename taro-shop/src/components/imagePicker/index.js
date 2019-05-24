@@ -1,60 +1,93 @@
-import Taro, { Component } from '@tarojs/taro'
-import { View } from '@tarojs/components';
-import { AtImagePicker, AtProgress } from 'taro-ui'
-import { observer } from '@tarojs/mobx';
-
-import utilUpload from './utilUpload';
+import Taro, { Component } from './node_modules/@tarojs/taro'
+import { View } from './node_modules/@tarojs/components';
+import { AtImagePicker, AtProgress } from './node_modules/taro-ui'
+import PropTypes from './node_modules/prop-types';
+import { observer } from './node_modules/@tarojs/mobx';
 
 @observer
 class AmImagePicker extends Component {
+  static propTypes = {
+    banner: PropTypes.array,
+    length: PropTypes.number,
+    count: PropTypes.number
+  };
+  static defaultProps = {
+    banner: [],
+    length: 0,
+    count: 0
+  };
   constructor() {
     super(...arguments)
     this.state = {
-      falg: true,
       progressPercent: 0,
       files: [],
     }
   }
   /**
+   * 获取 七牛云token
+   */
+  async getToken() {
+    const res = await Taro.request({
+      header: { 'content-type': 'application/json' },
+      method: 'put',
+      url: 'http://10.0.1.26:20292/qiniu/getSimpleToken',
+      data: { data: {} },
+    });
+    return res.data.status === 0 ? res.data.data.uploadToken : ''
+  },
+  /**
    * 上传文件
    */
   async doUpload(files) {
-    const file = files[files.length - 1].file
-    console.log('file:::', file);
-    const token = await utilUpload.getToken()
-    const params = {
-      url: 'https://upload-z2.qiniup.com',
-      name: 'file',
-      filePath: file.path,
-      header: {
-        "Content-Type": "multipart/form-data"
-      },
-      formData: {
-        token: token
+    const len = files.length
+    const token = await this.getToken()
+    let i = 0
+    const toUpload = () => {
+      if(i>=len) return false;
+      const file = files[i].file
+      i++
+      if(!file){
+        toUpload();
+        return false
       }
-    }
-
-    const uploadTask = Taro.uploadFile(params).progress((res) => {
-      // 上传进度
-      this.setState({
-        progressPercent: res.progress
-      })
-    }).then(res => {
-      if (res.statusCode === 200) {
-        // 上传成功
-        const data = JSON.parse(res.data)
-        const url = `http://weiapp.singworld.cn/${data.key}`;
-        this.setState(preState => {
-          preState.files = [...this.state.files, { url }]
-          preState.progressPercent = 100
+      console.log(i,'/',len, file)
+      const params = {
+        url: 'https://upload-z2.qiniup.com',
+        name: 'file',
+        filePath: file.path,
+        header: {
+          "Content-Type": "multipart/form-data"
+        },
+        formData: {
+          token: token
+        }
+      }
+      Taro.uploadFile(params).progress((res) => {
+        // 上传进度
+        this.setState({
+          progressPercent: res.progress
         })
-      }else{
-        console.warn(res)
-      }
-    }).catch(err => {
-      // 上传失败
-      console.warn('uploadFileERROR', err)
-    })
+      }).then(res => {
+        if (res.statusCode === 200) {
+          // 上传成功
+          const data = JSON.parse(res.data)
+          const url = `http://weiapp.singworld.cn/${data.key}`;
+          console.log('url:', url)
+          this.setState(preState => {
+            preState.files = [...this.state.files, { url }]
+            preState.progressPercent = 100
+          })
+        }else{
+          console.warn(res)
+        }
+        toUpload();
+      }).catch(err => {
+        // 上传失败
+        console.warn('uploadFileERROR', err)
+        toUpload();
+      })
+    }
+    toUpload();
   }
   /**
    * 删除文件
@@ -75,18 +108,8 @@ class AmImagePicker extends Component {
    * @param {number} index  如果是移除操作，index为移除图片时返回的图片下标
    */
   onChange(files, operationType, index) {
-    console.log('==>', files)
     // 添加文件操作
     if (operationType === 'add') {
-      // if (!this.state.falg) return false;
-      // this.setState({
-      //   falg: false
-      // })
-      // setTimeout(() => {
-      //   this.setState({
-      //     falg: true
-      //   })
-      // }, 10);
       this.doUpload(files) // 执行上传文件
     }
     // 删除文件操作
@@ -111,22 +134,22 @@ class AmImagePicker extends Component {
   }
   render() {
     const { progressPercent, files } = this.state
+    const len = files.length
     return (
       <View >
         <AtImagePicker
           files={files}
           mode='aspectFit'
           multiple
-          showAddBtn
+          showAddBtn={len < 3}
           length={3}
           count={5}
           onChange={this.onChange.bind(this)}
           onImageClick={this.onImageClick.bind(this)}
           onFail={this.onFail.bind(this)}
         />
-        {/* 上传进度条  sizeType={['compressed']}
-          sourceType={['camera']}*/ }
         {
+          /* 上传进度条*/
           progressPercent > 0 && progressPercent < 100 &&
           <AtProgress percent={progressPercent} isHidePercent status='progress' />
         }

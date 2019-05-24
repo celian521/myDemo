@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import '@tarojs/async-await'
 import { Provider } from '@tarojs/mobx'
-import Index from './pages/index'
+import Index from './pages/home/index'
 import store from './store'
 
 import './app.scss'
@@ -16,17 +16,22 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index',
+      'pages/home/index',
       'pages/member/index',
+      'pages/shoppingCard/index',
+      'pages/list/index',
+      'pages/details/index',
+      'pages/search/index',
+      'pages/login/index',
+      'pages/login/loginPhone',
+      'pages/webview/index',
 
       'pages/demo/index',
       'pages/demo/pay',
       'pages/demo/list',
       'pages/demo/search',
       'pages/demo/map',
-      'pages/login/index',
-      'pages/login/loginPhone',
-      'pages/webview/index',
+
     ],
     window: {
       backgroundColor: "#fff",
@@ -37,22 +42,22 @@ class App extends Component {
     },
     tabBar: {
       list: [{
-        pagePath: "pages/index/index",
+        pagePath: "pages/home/index",
         text: "首页",
         iconPath: "./assets/images/tab-bar/home.png",
         selectedIconPath: "./assets/images/tab-bar/home-active.png"
       },
-      {
-        pagePath: "pages/demo/index",
-        text: "DEMO",
-        iconPath: "./assets/images/tab-bar/cate.png",
-        selectedIconPath: "./assets/images/tab-bar/cate-active.png"
-      },{
-        pagePath: "pages/login/index",
-        text: "购物车",
-        iconPath: "./assets/images/tab-bar/cart.png",
-        selectedIconPath: "./assets/images/tab-bar/cart-active.png"
-      },
+      // {
+      //   pagePath: "pages/demo/index",
+      //   text: "DEMO",
+      //   iconPath: "./assets/images/tab-bar/cate.png",
+      //   selectedIconPath: "./assets/images/tab-bar/cate-active.png"
+      // },{
+      //   pagePath: "pages/login/index",
+      //   text: "购物车",
+      //   iconPath: "./assets/images/tab-bar/cart.png",
+      //   selectedIconPath: "./assets/images/tab-bar/cart-active.png"
+      // },
       {
         pagePath: "pages/member/index",
         text: "我的",

@@ -1,0 +1,32 @@
+.myAtTabs {
+  .at-tabs__item {
+    font-size: 36px;
+    color: #666;
+    padding: 32px;
+  }
+  .at-tabs__item--active {
+    font-size: 48px;
+    color: #000;
+    .at-tabs__item-underline {
+      height: 28px;
+      width: 100px;
+      left: 50%;
+      bottom: 30px;
+      transform: translate(-50%, 0);
+      background-color: rgba(235, 79, 71, .3);
+      border-radius: 4px;
+    }
+  }
+}
+
+.searchBar {
+  background-color: #E5E5E5;
+  color:  #999;
+  border-radius: 8px;
+  font-size: 28px;
+  padding: 12px 20px;
+  .at-icon {
+    margin-right: 12px;
+    font-size: 32px;
+  }
+}

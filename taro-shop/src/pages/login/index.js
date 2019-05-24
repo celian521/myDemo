@@ -3,8 +3,8 @@ import { observer, inject } from '@tarojs/mobx'
 
 import { View, Image } from '@tarojs/components'
 import { AtButton } from 'taro-ui'
-import picLogin from '@assets/images/login.png'
-import linkTo from '@utils/linkTo.js'
+import picLogin from '@/assets/images/login.png'
+import linkTo from '@/utils/linkTo.js'
 import './index.scss'
 
 @inject('globalStore')

@@ -1,8 +1,8 @@
 import Taro from '@tarojs/taro'
 
 const tabBarPath = [
-  // '/pages/home/index',
-  // '/pages/member/index'
+  '/pages/home/index',
+  '/pages/member/index'
 ]
 
 const PAGE_WEBVIEW = '/pages/webview/index'

@@ -3,9 +3,9 @@ import { observer, inject } from '@tarojs/mobx'
 
 import { View } from '@tarojs/components'
 import { AtDivider, AtButton, AtIcon, AtList, AtListItem } from 'taro-ui'
-// import { } from '@components'
+// import { } from '@/components'
 
-import linkTo from '@utils/linkTo.js'
+import linkTo from '@/utils/linkTo.js'
 
 import './index.scss'
 

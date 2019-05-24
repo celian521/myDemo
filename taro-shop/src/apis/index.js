@@ -4,7 +4,7 @@ import PATH from './baseUrl.js'
 
 /**
  *    eg. 使用案例
- *    import apis from '@apis'
+ *    import apis from '@/apis'
  *
  *    apis.getCardList({uid:1024, mid:1,catrd_type:1}).then(({data})=>{
  *      console.log(data)

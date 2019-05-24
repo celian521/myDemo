@@ -4,7 +4,8 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
-import { AtList, AtListItem, AtLoadMore } from 'taro-ui'
+import { AtList, AtLoadMore } from 'taro-ui'
+import { ItemList } from '@/components'
 // import apis from '@/apis'
 
 import './index.scss'
@@ -76,16 +77,7 @@ class List extends Component {
     const noMoreText = len > 0 ? '没有更多数据' : '暂无数据'
     return (
       <View>
-        <AtList>
-          {
-            data.map( (item, index) => {
-              const price = '99'
-              const time = '0'
-              return (
-              <AtListItem key={index} title='购买成功' note={time} extraText={price} />
-            )})
-          }
-        </AtList>
+        <ItemList type='item' data={data} />
         <AtLoadMore status={status} noMoreText={noMoreText} />
       </View>
     )

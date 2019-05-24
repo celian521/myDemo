@@ -2,7 +2,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View, Text } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
-// import { ProSwiper } from '@/components'
+import { ItemList } from '@/components'
 
 import myRecommend from './recommend.js'
 
@@ -54,7 +54,7 @@ class Index extends Component {
           tabList={tabList}
           onClick={this.handleClick.bind(this)}
         > </AtTabs>
-        { current === 0 ? <myRecommend /> : <View style='padding: 100px 50px;text-align: center;'>{ current }</View> }
+        { current === 0 ? <myRecommend /> : <ItemList type='item' data={[1, 2, 3, 4, 5, 6, 7, 8, 15, 9]} /> }
       </View>
     )
   }

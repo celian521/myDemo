@@ -1,0 +1,69 @@
+// .news-block
+// thumb tag card content
+@import "@styles/theme.scss";
+
+
+.list-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 30px;
+  margin: 0 -10px;
+  background-color: #fff;
+  .item-card {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+  .item-thumb {
+    height: 330px;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    image,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .item-content {
+    background: #fff;
+    padding: 20px 4px;
+    height: 182px;
+  }
+  .item-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    @include lamp-clamp(1);
+  }
+  .item-info {
+    font-size: 24px;
+    color: #999;
+    line-height: 1.5;
+    height: 70px;
+    @include lamp-clamp(2);
+  }
+  .item-tool {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+  }
+  .price {
+    color: red;
+  }
+  .label {
+    color: red;
+    border: 1PX solid red;
+    font-size: 22px;
+    padding: 4px 8px;
+    display: inline-block;
+  }
+}

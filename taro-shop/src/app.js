@@ -20,7 +20,7 @@ class App extends Component {
       'pages/member/index',
       'pages/shoppingCard/index',
       'pages/list/index',
-      'pages/details/index',
+      'pages/goods/index',
       'pages/search/index',
       'pages/login/index',
       'pages/login/loginPhone',

@@ -1,5 +1,5 @@
-import amCard from './amCard'
-import amPKG from './amPKG'
+// import amCard from './amCard'
+import newsList from './newsList'
 
 
-export default { amCard, amPKG }
+export default { newsList }

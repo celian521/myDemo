@@ -3,7 +3,7 @@ import { View } from '@tarojs/components';
 // import { AtIcon } from 'taro-ui'
 // import linkTo from '@/utils/linkTo'
 // import PropTypes from 'prop-types';
-import { ProSwiper } from '@/components'
+import { ProSwiper, ItemList } from '@/components'
 import myTitle from './title.js'
 // import './index.scss';
 
@@ -29,9 +29,10 @@ export default class Recommend extends Component {
     return (
       <View>
         <ProSwiper banner={data} />
-        <myTitle title='逛过的店' />
+        <myTitle title='逛过的店' url='/pages/goods/index'  />
         <myTitle title='精选活动' url='/pages/list/index' />
         <myTitle title='热门商品' />
+        <ItemList type='goods' data='' />
       </View>
     )
   }

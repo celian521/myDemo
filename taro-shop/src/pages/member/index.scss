@@ -1,6 +1,68 @@
 @import "@styles/theme.scss";
 page {
-  // background: $page-bg url($pagebg-url) no-repeat;
-  // background-size: 100% auto;
-  padding-top: 30px;
+  background-color: #f7f7f7;
+}
+
+.user {
+  background: url($memberbg-url) 0 0 no-repeat;
+  background-size: 100% auto;
+  padding: 0 30px;
+  height: 350px;
+  color: #fff;
+  .myUser {
+    padding: 20px 0;
+    // .nickName {  }
+  }
+  .myVip {
+    padding: 30px;
+    font-size: 28px;
+    .at-icon { font-size: 60px; }
+  }
+}
+
+.myCount {
+  text-align: center;
+  color: #999;
+  font-size: 24px;
+  .num {
+    color: #333;
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+
+.order {
+  padding: 30px;
+  font-size: 24px;
+  color: #666;
+  .at-row {
+    background-color: #fff;
+    padding: 24px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  }
+  .at-col {
+    padding: 20px 0 14px;
+    text-align: center;
+  }
+  .at-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  .myOrder {
+    border-left: 1px solid #f0f0f0;
+    .at-icon {
+      color: red;
+    }
+  }
+}
+
+.toolLIST {
+  padding: 0 30px 30px;
+  .atList {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  }
 }

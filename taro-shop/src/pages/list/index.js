@@ -49,25 +49,19 @@ class List extends Component {
   load() {
     if (this.state.status !== 'loading') return false
 
-    // apis.getPayHistoryList({'uid': 646608, mid:2301, card_type:1}).then(({data})=>{
-    //   // console.log(data)
-    //   this.setState(preState => {
-    //     preState.data = [...this.state.data, ...data]
-    //   }, () => {
-    //     const preData = this.state.data
-    //     if (preData.length > 1 || preData.length === 0) this.setState({ status: 'noMore' })
-    //   })
-    // })
-
     setTimeout(() => {
-      const temp = Array.from(new Array(10))
+      const temp = Array.from(new Array(9)).map((_val, i) => ({
+          url: 'https://dummyimage.com/300x300/eee/999',
+          text: `name${i}`,
+      }));
+
       this.setState(preState => {
         preState.data = [...this.state.data, ...temp]
       }, () => {
         const preData = this.state.data
         if (preData.length > 250 || preData.length === 0) this.setState({ status: 'noMore' })
       })
-    }, 100);
+    }, 2000);
 
   }
 

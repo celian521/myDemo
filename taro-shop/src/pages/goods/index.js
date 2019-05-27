@@ -33,7 +33,7 @@ class Search extends Component {
 
     return (
       <View>
-        <ItemList type='goods' data='' />
+        <ItemList type='goods' />
       </View>
     )
   }

@@ -1,11 +1,9 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
-// import { AtIcon } from 'taro-ui'
-// import linkTo from '@/utils/linkTo'
-// import PropTypes from 'prop-types';
 import { ProSwiper, ItemList } from '@/components'
-import myTitle from './title.js'
-// import './index.scss';
+import MyTitle from './title.js'
+import MyBrank from './brank.js'
+import MyAdPicture from './adPicture.js'
 
 export default class Recommend extends Component {
   render() {
@@ -29,10 +27,12 @@ export default class Recommend extends Component {
     return (
       <View>
         <ProSwiper banner={data} />
-        <myTitle title='逛过的店' url='/pages/goods/index'  />
-        <myTitle title='精选活动' url='/pages/list/index' />
-        <myTitle title='热门商品' />
-        <ItemList type='goods' data='' />
+        <MyTitle title='逛过的店' />
+        <MyBrank />
+        <MyAdPicture />
+        <MyTitle title='精选活动' url='/pages/list/index' />
+        <MyTitle title='热门商品' />
+        <ItemList type='goods' data={data} />
       </View>
     )
   }

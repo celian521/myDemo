@@ -4,7 +4,7 @@ import { View, Text } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
 import { ItemList } from '@/components'
 
-import myRecommend from './recommend.js'
+import MyRecommend from './recommend.js'
 
 import linkTo from '@/utils/linkTo.js'
 
@@ -54,7 +54,7 @@ class Index extends Component {
           tabList={tabList}
           onClick={this.handleClick.bind(this)}
         > </AtTabs>
-        { current === 0 ? <myRecommend /> : <ItemList type='item' data={[1, 2, 3, 4, 5, 6, 7, 8, 15, 9]} /> }
+        { current === 0 ? <MyRecommend /> : <ItemList type='item' data={[1, 2, 3, 4, 5, 6, 7, 8, 15, 9]} /> }
       </View>
     )
   }

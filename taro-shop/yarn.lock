@@ -206,9 +206,9 @@
     component-type "^1.2.1"
     join-component "^1.1.0"
 
-"@tarojs/async-await@1.2.26":
-  version "1.2.26"
-  resolved "http://10.0.1.26:4873/@tarojs%2fasync-await/-/async-await-1.2.26.tgz#0cee65845b095eea535c4d88bfaed7e214260012"
+"@tarojs/async-await@^1.2.26":
+  version "1.3.0"
+  resolved "http://10.0.1.26:4873/@tarojs%2fasync-await/-/async-await-1.3.0.tgz#7d6fe019f24c1481b14d9c3eba37df1e4d08663c"
   dependencies:
     promise-polyfill "^7.1.2"
     regenerator-runtime "^0.11.1"
@@ -2089,13 +2089,13 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
+commander@*, commander@^2.19.0, commander@^2.9.0, commander@~2.20.0:
+  version "2.20.0"
+  resolved "http://10.0.1.26:4873/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
+
 commander@2.17.x:
   version "2.17.1"
   resolved "http://10.0.1.26:4873/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
-
-commander@^2.19.0, commander@^2.9.0, commander@~2.20.0:
-  version "2.20.0"
-  resolved "http://10.0.1.26:4873/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
 
 commander@~2.13.0:
   version "2.13.0"
@@ -5061,6 +5061,12 @@ mobx@4.8.0:
   version "4.8.0"
   resolved "http://10.0.1.26:4873/mobx/-/mobx-4.8.0.tgz#6059feb9e0d3440acca5ae192daad63198b1180f"
 
+mockjs@^1.0.1-beta3:
+  version "1.0.1-beta3"
+  resolved "http://10.0.1.26:4873/mockjs/-/mockjs-1.0.1-beta3.tgz#d234f3c27256397564f2c955142e891909537209"
+  dependencies:
+    commander "*"
+
 moment@2.x.x, moment@^2.10.6:
   version "2.24.0"
   resolved "http://10.0.1.26:4873/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
@@ -7324,6 +7330,21 @@ tar@^4, tar@^4.0.2:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
+taro-code@^1.3.1:
+  version "1.3.1"
+  resolved "http://10.0.1.26:4873/taro-code/-/taro-code-1.3.1.tgz#be3f9b628c0de3ba18f6ebd4b98541f0778e6e98"
+  dependencies:
+    "@tarojs/components" "1.2.26"
+    "@tarojs/router" "1.2.26"
+    "@tarojs/taro" "1.2.26"
+    "@tarojs/taro-alipay" "1.2.26"
+    "@tarojs/taro-h5" "1.2.26"
+    "@tarojs/taro-swan" "1.2.26"
+    "@tarojs/taro-tt" "1.2.26"
+    "@tarojs/taro-weapp" "1.2.26"
+    nerv-devtools "^1.3.9"
+    nervjs "^1.3.9"
+
 taro-ui@^2.1.0:
   version "2.1.0"
   resolved "http://10.0.1.26:4873/taro-ui/-/taro-ui-2.1.0.tgz#fb2774d6261db75311ac6ce7be243c412c65a322"
@@ -7703,6 +7724,10 @@ utila@^0.4.0, utila@~0.4:
 utils-merge@1.0.1:
   version "1.0.1"
   resolved "http://10.0.1.26:4873/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
+
+utilscore@^0.0.40:
+  version "0.0.40"
+  resolved "http://10.0.1.26:4873/utilscore/-/utilscore-0.0.40.tgz#a2bd4621813b128bf12255bf5aaa03ae847621f5"
 
 uuid@3.3.2, uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.3.2:
   version "3.3.2"

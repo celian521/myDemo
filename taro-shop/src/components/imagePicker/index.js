@@ -1,20 +1,18 @@
-import Taro, { Component } from './node_modules/@tarojs/taro'
-import { View } from './node_modules/@tarojs/components';
-import { AtImagePicker, AtProgress } from './node_modules/taro-ui'
-import PropTypes from './node_modules/prop-types';
-import { observer } from './node_modules/@tarojs/mobx';
+import Taro, { Component } from '@tarojs/taro'
+import { View } from '@tarojs/components';
+import { AtImagePicker, AtProgress } from 'taro-ui'
+// import PropTypes from 'prop-types';
+import { observer } from '@tarojs/mobx';
+
+import './index.scss';
 
 @observer
 class AmImagePicker extends Component {
   static propTypes = {
-    banner: PropTypes.array,
-    length: PropTypes.number,
-    count: PropTypes.number
+
   };
   static defaultProps = {
-    banner: [],
-    length: 0,
-    count: 0
+
   };
   constructor() {
     super(...arguments)
@@ -34,7 +32,7 @@ class AmImagePicker extends Component {
       data: { data: {} },
     });
     return res.data.status === 0 ? res.data.data.uploadToken : ''
-  },
+  }
   /**
    * 上传文件
    */
@@ -139,7 +137,7 @@ class AmImagePicker extends Component {
       <View >
         <AtImagePicker
           files={files}
-          mode='aspectFit'
+          mode='aspectFill'
           multiple
           showAddBtn={len < 3}
           length={3}

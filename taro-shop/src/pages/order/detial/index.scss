@@ -1,0 +1,79 @@
+@import '@styles/theme.scss';
+
+.content-bg {
+    background: #FFFFFF;
+}
+
+page {
+    background-color: #F6F6F6;
+}
+
+
+.return-center {
+    padding: 30px;
+
+    .btn {
+        @extend .content-bg;
+        font-size: 32px;
+    }
+}
+
+
+.operation {
+    @extend .content-bg;
+    padding: 24px 40px;
+
+    .btn {
+        border-radius: 52px;
+        padding: 14px 55px;
+        font-size: 32px;
+    }
+
+    .cancel-btn {
+        background: #E6E6E6;
+        color: $text-color-light;
+        margin-right: 30px;
+        @extend .btn;
+    }
+
+    .buy-btn {
+        background: $primary-color;
+        color: #FFFFFF;
+        @extend .btn;
+    }
+}
+
+.account-info {
+    font-size: 28px;
+    padding: 24px 30px;
+    color: $text-color;
+    @extend .content-bg;
+
+    >view {
+        margin-right: 60px;
+    }
+}
+
+.at-modal__header {
+    padding: 40px 0 30px 0;
+    font-size: 32px;
+}
+
+.at-modal__container {
+    width: 610px;
+}
+
+.cancel-item {
+    padding: 30px 0;
+    font-size: 28px;
+    border-bottom: 1px solid #E6E6E6;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: NONE;
+    }
+}

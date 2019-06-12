@@ -1,0 +1,86 @@
+@import "@styles/theme.scss";
+.vip-coupon {
+  padding: 0 0 40px;
+  .item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 154px;
+    background: url($vip-coupon-url) no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    position: relative;
+    .tag {
+      position: absolute;
+      left: 0;
+      top: 14px;
+      padding: 0 12px;
+      color: #fff;
+      font-size: 20px;
+      line-height: 28px;
+      background: linear-gradient(82deg,rgba(98,85,60,1) 0%,rgba(51,42,23,1) 100%);
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+      border-radius: 0px 100px 100px 0px;
+    }
+  }
+  .item-left {
+    color: #493A18;
+    min-width: 174px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 28px;
+    .normal {      
+      display: flex;
+      align-items: center;
+    }
+    .nuit {
+      font-size: 40px;
+    }
+    .price {
+      font-size: 90px;
+      line-height: 1;
+    }
+  }
+  .item-right {
+    min-width: 516px;
+    text-align: left;
+    padding: 34px 160px 0 20px;
+    box-sizing: border-box;
+    font-size: 22px;
+    color: #999;
+    .title {
+      font-size: 32px;
+      line-height: 1.5;
+      @include lamp-clamp(1);
+      font-weight: 700;
+      color: #333;
+    }
+    .info {
+      font-size: 24px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+  }  
+  .btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #d0bf9a;
+    background: linear-gradient(82deg,rgba(98,85,60,1) 0%,rgba(51,42,23,1) 100%);
+    border-radius: 50px;
+    font-size: 22px;
+    line-height: 44px;
+    width: 120px;
+    text-align: center;
+  }
+  // 已领取状态
+  .active {
+    .btn {
+      color: #999;
+      background: linear-gradient(270deg,rgba(226,226,226,1) 0%,rgba(216,216,216,1) 100%);
+    }
+  }
+}

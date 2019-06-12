@@ -3,7 +3,6 @@ import { observer, inject } from '@tarojs/mobx'
 
 import { View, Image } from '@tarojs/components'
 import { AtButton } from 'taro-ui'
-import picLogin from '@/assets/images/login.png'
 import linkTo from '@/utils/linkTo.js'
 import './index.scss'
 
@@ -28,7 +27,8 @@ class Index extends Component {
     return (
       <View className='wrap'>
         <View className='welcome' onClick={this.login}>
-          <Image className='we-logo' src={picLogin} />
+          <View className='logo'></View>
+
         </View>
         <View className='login-btn'>
           <AtButton type='secondary' onClick={() => { linkTo({ url: '/pages/login/loginPhone' }) }}>手机号登录 / 注册</AtButton>

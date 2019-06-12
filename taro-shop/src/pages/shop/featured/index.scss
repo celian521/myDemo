@@ -1,0 +1,85 @@
+@import '@styles/theme.scss';
+
+.featured {
+    .tabs {
+        font-size: 32px;
+        color: $text-color-light;
+        padding: 30px 30px 38px;
+        border-bottom: 1px solid #F6F6F6;
+
+        .mg-right {
+            margin-right: 30px;
+        }
+
+        .filter {
+            width: 500px;
+        }
+
+        .item {
+            margin-right: 72px;
+        }
+
+        .active {
+            position: relative;
+            color: $text-color;
+            font-weight: 500;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: #DC5A58;
+                border-radius: 2px;
+                display: block;
+                z-index: 1;
+                top: auto;
+                right: 8px;
+                bottom: -10px;
+                left: 8px;
+                height: 8px;
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+
+    .filter-sort {
+        width: 18px;
+        display: inline-block;
+        height: 32px;
+        vertical-align: middle;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top:0;
+            z-index: 1;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-bottom: 12px solid $text-color-lighter;
+            // transform-origin: 50% 50%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 5px;
+            z-index: 1;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-top: 12px solid $text-color-lighter;
+            // transform-origin: 50% 50%;
+        }
+    }
+    .filter-sort-asc{
+        &::before {
+            border-bottom: 12px solid #DC5A58;
+        }
+    }
+    .filter-sort-desc{
+        &::after {
+            border-bottom: 12px solid #DC5A58;
+        }
+    }
+}

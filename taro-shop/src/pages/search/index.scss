@@ -1,2 +1,17 @@
 @import "@styles/theme.scss";
-page { }
+// page {}
+
+.myTitle {
+  font-size: 36px;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  padding: 30px;
+}
+
+.at-tag {
+  margin: 10px 0 12px 30px;
+}

@@ -1,0 +1,145 @@
+@import '@styles/theme.scss';
+
+.shop-main {
+
+    // common
+
+    .block-text {
+        font-size: 36px;
+        color: $text-color;
+    }
+
+    .t-r {
+        text-align: right;
+    }
+
+    image {
+        background-color: #e0dfdf;
+    }
+
+    .info {
+        height: 184px;
+        padding: 20px 30px;
+
+        .img {
+            height: 144px;
+            width: 144px;
+            background-color: #999999;
+            border-radius: 6px;
+        }
+
+        .shop-name {
+            padding: 20px 0 0 20px;
+            font-size: 32px;
+            color: $text-color;
+            font-weight: 500;
+        }
+
+        .shop-type {
+            font-size: 28px;
+            color: $text-color-lighter;
+            margin-top: 16px;
+        }
+
+        .opt-icon {
+            width: 114px;
+        }
+
+        .mg-right {
+            margin-right: 30px;
+        }
+    }
+
+    .address {
+        padding: 20px 30px;
+        border-top: 1px solid #F6F6F6;
+        border-bottom: 20px solid #F6F6F6;
+        color: $text-color;
+        font-size: 20px;
+
+        .detial {
+            font-size: 28px;
+            line-height: 2.5;
+        }
+
+        .nav {
+            margin-right: 20px;
+        }
+
+        .phone {
+
+            margin-left: 20px;
+        }
+
+        .split {
+            border-right: 1px solid #F6F6F6;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        .nav,
+        .phone {
+            text-align: center;
+
+            .icon {
+                font-size: 40px;
+            }
+        }
+
+        .t {
+            color: $text-color-light;
+        }
+    }
+
+    .tabs {
+        font-size: 32px;
+        color: $text-color-light;
+        padding: 30px 30px 38px;
+        border-bottom: 1px solid #F6F6F6;
+
+        .item {
+            margin-right: 72px;
+        }
+
+        .active {
+            position: relative;
+            color: $text-color;
+            font-weight: 500;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: #DC5A58;
+                border-radius: 2px;
+                display: block;
+                z-index: 1;
+                top: auto;
+                right: 8px;
+                bottom: -10px;
+                left: 8px;
+                height: 8px;
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+
+    .icon-arrows-right {
+        font-size: 26px;
+    }
+
+    // 精选商品
+    .choiceness {
+        padding: 30px 30px 0;
+    }
+
+    // 优惠券
+    .coupon {
+        border-top: 30px solid #F6F6F6;
+        padding: 30px 30px 0;
+    }
+
+    .activity {
+        padding: 40px 30px 20px;
+        background-color: #F6F6F6;
+    }
+}

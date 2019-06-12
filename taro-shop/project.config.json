@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "taro-shop",
+  "projectname": "taro-index",
   "description": "商圈小程序",
   "appid": "wx8e896ee5f731f407",
   "setting": {
@@ -10,7 +10,7 @@
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-		"uglifyFileName": true,
+		"uglifyFileName": false,
 		"nodeModules": true
   },
   "compileType": "miniprogram"

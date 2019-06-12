@@ -1,3 +1,4 @@
+@import "@styles/theme.scss";
 .myAtTabs {
   border-bottom: 1PX solid #eee;
   .at-tabs__item {
@@ -21,11 +22,12 @@
 }
 
 .searchBar {
-  background-color: #E5E5E5;
-  color:  #999;
+  background-color: #F7F7F7;
+  color: #999;
   border-radius: 8px;
   font-size: 28px;
   padding: 12px 20px;
+  margin: 0 30px;
   .at-icon {
     margin-right: 12px;
     font-size: 32px;

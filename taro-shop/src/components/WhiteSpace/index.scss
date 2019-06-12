@@ -1,0 +1,25 @@
+.whitespace {
+    .bg {
+        background-color: #F6F6F6;
+    }
+
+    &-sm {
+        height: 20px;
+        @extend .bg;
+    }
+
+    &-md {
+        height: 25px;
+        @extend .bg;
+    }
+
+    &-lg {
+        height: 30px;
+        @extend .bg;
+    }
+
+    &-xl {
+        height: 35px;
+        @extend .bg;
+    }
+}

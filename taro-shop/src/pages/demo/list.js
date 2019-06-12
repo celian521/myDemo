@@ -82,7 +82,7 @@ class List extends Component {
               const price = '99'
               const time = '0'
               return (
-              <AtListItem key={index} title='购买成功' note={time} extraText={price} />
+              <AtListItem key='' title='购买成功' note={time} extraText={price} />
             )})
           }
         </AtList>

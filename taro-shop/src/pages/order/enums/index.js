@@ -1,0 +1,6 @@
+export const ORDER_STATUS_ENUM = {
+    UNPAY: 0,
+    DEAL_CLOSE: 1,
+    REFUND_SUCCESS: 2,
+    DEAL_SUCCESS: 3
+}

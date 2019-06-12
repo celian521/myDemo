@@ -1,0 +1,34 @@
+@import '@styles/theme.scss';
+
+.order-shop {
+    background: #FFFFFF;
+
+    .shop-name {
+        color: $text-color;
+        font-size: 28px;
+        padding: 24px 30px;
+        border-bottom: 1px solid #E6E6E6;
+
+        .at-icon-chevron-right {
+            color: #E6E6E6;
+        }
+    }
+
+    .total {
+        padding: 0 30px;
+
+        .total-item {
+            padding: 24px 0;
+            font-size: 28px;
+            border-top: 1px solid rgb(240, 239, 239);
+
+            .price1 {
+                color: $text-color-light;
+            }
+
+            .price2 {
+                color: $primary-color;
+            }
+        }
+    }
+}

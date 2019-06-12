@@ -9,43 +9,80 @@ $color-border-base: #E6E6E6;
 
 @import "~taro-ui/dist/style/index.scss"; // 引入taro UI组件样式，仅需引入一次即可
 // 重写taro样式
-.at-countdown__time {
-  font-family: Arial, Helvetica, sans-serif;
+// .at-countdown__time {
+//   font-family: Arial, Helvetica, sans-serif;
+// }
+
+.at-search-bar__input-cnt {
+  // background-color: #e0e0e0;
+  border-radius: 5PX;
 }
+.at-search-bar__action {
+  background: none;
+  color: #333;
+}
+
+.at-search-bar__input {
+  padding: 0 36PX;
+  height: 30px;
+  color: #999;
+}
+
+.at-tabs__item {
+  font-size: 32px;
+  color: #666;
+}
+
+.at-tabs__item--active {
+  color: #333;
+  .at-tabs__item-underline {
+    height: 8px;
+    width: 75px;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0);
+    border-radius: 4px;
+  }
+}
+
+.at-image-picker__choose-btn {
+  background-color: #fff;
+}
+
 // 重写taro样式 END!
 
 page {
   background:#fff
 }
 
-.wrap {
-  margin: 0 30px
-}
+// .wrap {
+//   margin: 0 30px
+// }
 
-.wrap-top {
-  padding-top: 30px;
-}
+// .wrap-top {
+//   padding-top: 30px;
+// }
 
-.wrap-bottom {
-  padding-bottom: 80px;
-}
+// .wrap-bottom {
+//   padding-bottom: 80px;
+// }
 
-.u-tit {
-  font-size: 36px;
-  line-height: 54px;
-  margin: 30px 8px;
-  color: #000;
-  &::after {
-    content: '';
-    display: block;
-    width: 90px;
-    height: 8px;
-    margin-top: 8px;
-    border-radius: 24px;
-    background-color: $primary-color;
-  }
-  .more { float: right; font-size: 28px; color: #666;  }
-}
+// .u-tit {
+//   font-size: 36px;
+//   line-height: 54px;
+//   margin: 30px 8px;
+//   color: #000;
+//   &::after {
+//     content: '';
+//     display: block;
+//     width: 90px;
+//     height: 8px;
+//     margin-top: 8px;
+//     border-radius: 24px;
+//     background-color: $primary-color;
+//   }
+//   .more { float: right; font-size: 28px; color: #666;  }
+// }
 
 .fixed-top {
   position: fixed;
@@ -54,7 +91,7 @@ page {
   right: 0;
   z-index: 10;
   background-color: #fff;
-  box-shadow: 0 0 3px rgba(0, 0, 0, .1)
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .1)
 }
 
 .fixed-bottom {
@@ -64,5 +101,10 @@ page {
   right: 0;
   z-index: 10;
   background-color: #fff;
-  box-shadow: 0 0 3px rgba(0, 0, 0, .1)
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, .1)
+}
+
+// 空间占位
+.space {
+  height: 80px;
 }

@@ -1,0 +1,15 @@
+@import "@styles/theme.scss";
+page {
+  background-color: #f7f7f7;
+}
+
+.avatar {
+  .item-extra__image {
+    width: 132px;
+    height: 132px;
+  }
+}
+
+.submit {
+  padding: 180px;
+}

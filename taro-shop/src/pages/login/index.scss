@@ -4,26 +4,29 @@
   font-size: 40px;
   line-height: 2;
   padding: 200px 0;
-  .we-logo {
+
+  .logo {
     width: 300px;
     height: 300px;
     display: inline-block;
     border-radius: 50%;
     overflow: hidden;
+    background: gray;
   }
 }
 
 .login-btn {
+  margin: 0 30px;
   .at-button {
     margin-bottom: 20px;
-    // border-color: #00cc66
+    border-color: #00cc66
   }
-  // .at-button--primary {
-  //   background-color: #00cc66;
-  // }
-  // .at-button--secondary {
-  //   color: #00cc66;
-  // }
+  .at-button--primary {
+    background-color: #00cc66;
+  }
+  .at-button--secondary {
+    color: #00cc66;
+  }
 }
 
 

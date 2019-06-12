@@ -1,24 +1,96 @@
 @font-face {
-  font-family: 'IconFont';
-  src: url('./assets/fonts/iconfont.eot?v=4.7.0');
-  src: url('./assets/fonts/iconfont.woff2?v=4.7.0') format('woff2'), url('./assets/fonts/iconfont.woff?v=4.7.0') format('woff'), url('./assets/fonts/iconfont.ttf?v=4.7.0') format('truetype');
+  font-family: 'Iconfont';
+  /* 自行安装第三方字体图标库 */
+  src: url('./assets/fonts/iconfont.eot?v=1.0.0');
+  src: url('./assets/fonts/iconfont.woff2?v=1.0.0') format('woff2'), url('./assets/fonts/iconfont.woff?v=1.0.0') format('woff'), url('./assets/fonts/iconfont.ttf?v=1.0.0') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
+
 /* 根据第三方字体图标库编写 */
+
+
 /* 举例：icon 就是 prefixClass 的值，下面的的图标 css class 命名都要用 icon- 开头  */
+
 .icon {
   display: inline-block;
-  font: normal normal normal 14px/1 IconFont;
+  font: normal normal normal 14px/1 Iconfont;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-share:before {
-  content: "\e611";
+
+.icon-order01:before {
+  content: "\e63b";
 }
 
-.icon-test:before {
-  content: "\e611";
+.icon-order02:before {
+  content: "\e63c";
 }
+
+.icon-qrcode:before {
+  content: "\e63e";
+}
+
+.icon-order:before {
+  content: "\e640";
+}
+
+.icon-collect:before {
+  content: "\e644";
+}
+
+.icon-share2:before {
+  content: "\e645";
+}
+
+.icon-users:before {
+  content: "\e647";
+}
+
+.icon-cart:before {
+  content: "\e64e";
+}
+
+.icon-store:before {
+  content: "\e64f";
+}
+
+.icon-mobile:before {
+  content: "\e652";
+}
+
+.icon-navigate:before {
+  content: "\e653";
+}
+
+.icon-delete:before {
+  content: "\e658";
+}
+
+.icon-share:before {
+  content: "\e65b";
+}
+
+.icon-collect-active:before {
+  content: "\e65c";
+}
+
+.icon-time:before {
+  content: "\e65d";
+}
+
+.icon-gps:before {
+  content: "\e65e";
+}
+
+.icon-order03:before {
+  content: "\e65f";
+}
+
+.icon-write:before {
+  content: "\e660";
+}
+

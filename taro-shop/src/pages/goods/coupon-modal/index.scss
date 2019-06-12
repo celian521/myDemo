@@ -1,0 +1,25 @@
+.coupon-modal {
+
+    .confirm-btn {
+        padding: 26px 55px 30px;
+        border-top: 1px solid #E6E6E6;
+    }
+
+    .title {
+        padding: 28px 0px 30px;
+        border-bottom: 1px solid #E6E6E6;
+        text-align: center;
+        position: relative;
+        font-size: 32px;
+
+        .at-icon-close {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            font-size: 34px;
+            color: $text-color-lighter;
+            transform: translateY(-50%);
+            width: 48px;
+        }
+    }
+}

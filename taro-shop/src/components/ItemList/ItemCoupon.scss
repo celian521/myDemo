@@ -1,0 +1,108 @@
+@import "@styles/theme.scss";
+.conpon-block {
+  padding: 30px 30px 0;
+  .item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 216px;
+    background: url($coupon-type01-url) no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 28px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+  }
+  .item-left {
+    color: #fff;
+    min-width: 250px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 28px;
+    .nuit {
+      font-size: 36px;
+    }
+    .price {
+      font-size: 120px;
+      line-height: 1;
+    }
+  }
+  .item-right {
+    min-width: 440px;
+    text-align: left;
+    padding: 0 18px;
+    box-sizing: border-box;
+    font-size: 22px;
+    color: #999;
+    .title {
+      font-size: 32px;
+      line-height: 1.5;
+      @include lamp-clamp(1);
+      color: #333;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      height: 90px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      color: #fff;
+      background-color: #DAAF70;
+      border-radius: 50px;
+      font-size: 24px;
+      line-height: 1;
+      padding: 8px 20px;
+    }
+    .bottom {
+      border-top: 1PX dashed #EEE;
+      padding-top: 4px;
+      line-height: 1.5;
+    }
+  }
+  // 已领取状态
+  .active {
+    background: url($coupon-type02-url) no-repeat;
+    background-size: 100% auto;
+    .btn {
+      color: #EB4F47;
+      border: 1PX solid #EB4F47;
+      background-color: transparent;
+    }
+  }
+  // 禁用状态
+  .disable {
+    background: url($coupon-type03-url) no-repeat;
+    background-size: 100% auto;
+    .btn {
+      display: none;
+    }
+    .item-right {
+      position: relative;
+    }
+    .watermark {
+      position: absolute;
+      right: 40px;
+      top: 33px;
+      width: 114px;
+      height: 114px;
+      &-type01 {
+        background: url($watermark-type01-url) no-repeat;
+        background-size: 100% 100%;
+      }
+      &-type02 {
+        background: url($watermark-type02-url) no-repeat;
+        background-size: 100% 100%;
+      }
+      &-type03 {
+        background: url($watermark-type03-url) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

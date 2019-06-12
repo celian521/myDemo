@@ -1,7 +1,9 @@
 import globalStore from './global'
+import cartStore from './cart'
 
 const store = {
-  globalStore
+  globalStore,
+  cartStore
 }
 
 export default store

@@ -1,0 +1,36 @@
+
+@import "@styles/theme.scss";
+.space { height: 86px; }
+.nav {
+  display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+  // flex-direction: row;
+  text-align: center;
+  border-bottom: 1PX solid #e6e6e6;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  .nav-item {
+    flex: 1;
+    padding: 24px 0;
+    position: relative;
+    font-size: 32px;
+    font-weight: 400;
+    color: #666;
+    &::after {
+      position: absolute;
+      left: -1PX;
+      top: 50%;
+      transform: translate(0, -50%);
+      content: '';
+      display: block;
+      width: 1PX;
+      height: 30px;
+      background-color: #e6e6e6;
+    }
+    &.active { color: $primary-color }
+  }
+}

@@ -1,0 +1,12 @@
+@import '@styles/theme.scss';
+
+.basic-info {
+    padding: 30px 0 0;
+    font-size: 28px;
+    color: $text-color;
+    background-color: #FFF;
+
+    >view {
+        padding: 0 30px 30px;
+    }
+}

@@ -1,0 +1,38 @@
+@import "@styles/theme.scss";
+
+.good-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+  .thumb {
+    width: 184px;
+    height: 184px;
+    min-width: 184px;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .info {
+    padding: 40px 35px 40px 32px;
+  }
+  .name, .discount, .price {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .name {
+    color: #2D2C2A;
+    margin-bottom: 16px;
+    @include lamp-clamp(1);
+  }
+  .discount {
+    margin-right: 24px;
+    color: $price-color;    
+  }
+  .price {
+    color: #999;
+    text-decoration: line-through;
+  }
+}

@@ -1,2 +1,80 @@
 @import "@styles/theme.scss";
-page { }
+page {
+  background-color: #f7f7f7;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  top: -120px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 24px 30px;
+  box-sizing: border-box;
+  font-size: 28px;
+  color: #666;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+  transition: all .5s;
+  &.on {
+    top: 0;
+  }
+  .icon {
+    margin-right: 10px;
+    color: #333;
+    font-size: 32px;
+  }
+  .btn {
+    font-size: 32px;
+    color: #333;
+    &.active {
+      color: #DC5A58
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  bottom: -120px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  font-size: 32px;
+  color: #666;
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, .1);
+  transition: all .5s;
+  &.on {
+    bottom: 0;
+  }
+  .radio {
+    padding-left: 30px;
+  }
+  .totel {
+    flex: 1;
+    text-align: left;
+    padding-left: 30px;
+    .price {
+      color: $price-color;
+    }
+  }
+  .toPay {
+    background-color: #DC5A58;
+    color: #fff;
+    padding: 40px 80px;
+    line-height: 1;
+  }
+  .delete {
+    padding: 10px 30px;
+    min-width: 300px;
+  }
+}

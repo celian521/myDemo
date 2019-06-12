@@ -1,0 +1,81 @@
+@import "@styles/theme.scss";
+.cart-block {
+  padding: 120px 0;
+  .item-card {
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    background-color: #fff;
+    font-size: 28px;
+    color: #333333;
+  }
+}
+
+// header 头部
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1PX SOLID #EEE;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  .radio {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
+// body 正文主体部分
+.card-body {
+  .item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 30px 20px 0;
+    box-sizing: border-box;
+    .item-radio {
+      padding: 74px 10px 0 0;
+    }
+    .item-thumb {
+      height: 184px;
+      width: 184px;
+      border-radius: 6px;
+      background-color: #f7f7f7;
+      overflow: hidden;
+      image,
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .item-content {
+      flex: 1;
+      padding-left: 20px;
+      .title {
+        margin-bottom: 4px;
+        min-height: 80px;
+      }
+      .sku {
+        display: inline-block;
+        background-color: #F9F9F9;
+        color: #999;
+        padding: 6px 20px;
+        line-height: 1.5;
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+      .price {
+        color: $price-color;
+      }
+      .item-bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

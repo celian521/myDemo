@@ -9,7 +9,30 @@ $border-radius: 4px;
 $page-bg:rgba(249, 249, 249, 1);
 
 
-// 图片地址
+// 图片根地址
 $path: 'http://10.0.3.5:5000';
-$memberbg-url: $path+'/memberbg.png';
+// $path: 'http://10.0.3.130:8080';
 
+// 会员中心
+$memberbg-url: $path+'/memberbg.png';
+$memberbg2-url: $path+'/memberbg2.png';
+$vip-memberbg-url: $path+'/vip-memberbg.png';
+
+// 空状态 图片
+$empty-url: $path+'/empty.png';
+$empty-info-url: $path+'/empty-info.png';
+$empty-search-url: $path+'/empty-srh.png';
+
+// 优惠券 图片
+$coupon-type01-url: $path+'/coupon.png';
+$coupon-type02-url: $path+'/coupon2.png';
+$coupon-type03-url: $path+'/coupon3.png';
+$watermark-type01-url: $path+'/watermark01.png';
+$watermark-type02-url: $path+'/watermark02.png';
+$watermark-type03-url: $path+'/watermark03.png';
+$vip-coupon-url: $path+'/vip-coupon.png';
+
+$myActivityListBg-url: $path+'/myActivityBg.png';
+$myActivityLabel01-url: $path+'/myActivityLabel01.svg';
+$myActivityLabel02-url: $path+'/myActivityLabel02.svg';
+$myActivityLabel03-url: $path+'/myActivityLabel03.svg';

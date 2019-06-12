@@ -1,0 +1,17 @@
+@import "@styles/theme.scss";
+.empty {
+  padding: 370px 0 30px;
+  text-align: center;
+  color: #999;
+  font-size: 32px;
+  background: url($empty-url) no-repeat 50% 50%;
+  background-size: 444px auto;
+  &-info {
+    background: url($empty-info-url) no-repeat 50% 50%;
+    background-size: 444px auto;
+  }
+  &-search {
+    background: url($empty-search-url) no-repeat 50% 50%;
+    background-size: 444px auto;
+  }
+}

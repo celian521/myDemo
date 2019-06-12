@@ -1,0 +1,49 @@
+@import "@styles/theme.scss";
+// page {
+//   background-color: #f7f7f7;
+// }
+
+.integral-total {
+  padding: 60px 0;
+  background: linear-gradient(#F09391, #DC5A58);
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.5;
+  .total {
+    font-size: 32px;
+    .num {
+      font-size: 80px;
+      font-weight: 700;
+    }
+  }
+}
+.list-item {
+  .item-extra__info {
+    color: $price-color;
+    font-size: 36px;
+  }
+}
+.space { height: 372px; }
+
+.myAtTabs {
+  border-bottom: 1PX solid #eee;
+  .at-tabs__item {
+    font-size: 32px;
+    color: #666;
+    padding: 32px;
+  }
+  .at-tabs__item--active {
+    color: #000;
+    font-weight: 700;
+    .at-tabs__item-underline {
+      height: 14px;
+      width: 128px;
+      left: 50%;
+      bottom: 30px;
+      transform: translate(-50%, 0);
+      background-color: rgba(235, 79, 71, .5);
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,1 +1,313 @@
-page {}
+@import "@styles/theme.scss";
+@import "./specification-modal/index.scss";
+@import "./coupon-modal/index.scss";
+
+
+.goods-detial {
+    padding-bottom: 140px;
+
+    .swiper-images {
+        position: relative;
+
+        Swiper {
+            width: 100%;
+            height: 560px;
+
+            Image {
+                width: 100%;
+                height: 100%;
+                background: red;
+            }
+        }
+
+        .share {
+            width: 72px;
+            height: 72px;
+            line-height: 72px;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0.5;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 46px;
+            color: #ffffff;
+        }
+    }
+
+    .sale-tips {
+        font-size: 25px;
+        padding: 8px 0 8px 40px;
+        background: #FCF0DF;
+        color: #C88526;
+    }
+
+    .operation-tabBar {
+        box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.05);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background: #ffffff;
+        z-index: 2;
+
+        .shop {
+            width: 222px;
+            font-size: 20px;
+
+            >view {
+                display: inline-block;
+                margin: 26px 0 26px 34px;
+                text-align: center;
+            }
+
+            .at-icon,
+            .icon {
+                font-size: 44px;
+            }
+
+            .t {
+                color: $text-color-light;
+            }
+        }
+
+        .joinCart {
+            color: $primary-color;
+            width: 264px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 32px;
+            position: relative;
+
+            &::before {
+                content: ' ';
+                position: absolute;
+                height: 48px;
+                border-left: 2px solid #E6E6E6;
+                top: 50%;
+                left: 0;
+                bottom: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        .buyBtn {
+            background: $primary-color;
+            color: #ffffff;
+            width: 268px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 32px;
+        }
+    }
+
+    // 商品信息
+    .goods-info {
+        padding: 20px 30px 30px;
+        border-bottom: 20px solid #F6F6F6;
+
+        .price {
+            font-size: 48px;
+            color: $primary-color;
+            font-weight: 500;
+        }
+
+        .out {
+            color: $text-color-lighter;
+            font-size: 24px;
+        }
+
+        .open-vip {
+            margin: 15px 0 20px 0;
+            padding: 20px 20px 16px;
+            font-size: 24px;
+            background: #F9F5EE;
+
+            .vip-svg {
+                width: 32px;
+                height: 32px;
+                vertical-align: middle;
+                display: inline-block;
+                margin-right: 21px;
+            }
+
+            .vip-price {
+                font-size: 28px;
+                color: $text-color-light;
+
+                .out-t {
+                    color: $text-color;
+                    font-weight: 600;
+                }
+            }
+
+            .vip-des {
+                color: #A58F60;
+                margin-top: 5px;
+            }
+
+            .open-btn {
+                width: 140px;
+                background: #C7B58D;
+                color: #FFFFFF;
+                height: 48px;
+                line-height: 48px;
+                text-align: center;
+            }
+        }
+
+        .info {
+            width: 600px;
+            font-size: 24px;
+
+            .status {
+                font-size: 22px;
+                padding: 0 8px;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+                border-radius: 6px;
+                font-weight: normal;
+                margin: 5px 10px 0 0;
+                float: left;
+            }
+
+            .title {
+                font-size: 32px;
+                color: $text-color;
+                font-weight: 600;
+                line-height: 1.5;
+            }
+
+            .digest {
+                color: $text-color-light;
+                margin: 10px 0;
+            }
+
+            .predict {
+                color: $primary-color;
+            }
+
+        }
+
+        .collect {
+            text-align: center;
+
+            .icon-collect {
+                font-size: 56px;
+            }
+
+            .t {
+                font-size: 20px;
+                color: $text-color-lighter;
+            }
+        }
+    }
+
+    // 商品配置
+    .goods-config {
+        padding: 12px 30px;
+        border-bottom: 20px solid #F6F6F6;
+
+        .at-icon-chevron-right {
+            color: #979797;
+        }
+
+        .item {
+            padding: 32px 0;
+            font-size: 28px;
+            color: $text-color;
+            border-bottom: 1px solid #E6E6E6;
+
+            &:last-child {
+                border: none;
+            }
+
+            .min-coupon {
+                background: url($path+'/icon/full-minus-coupon.svg') no-repeat;
+                background-size: 100% 100%;
+                width: 246px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 24px;
+                color: $primary-color;
+
+                .minus-pirce {
+                    color: #FFFFFF;
+                    width: 72px;
+                    text-align: center;
+                }
+
+                .full-text {
+                    text-align: center;
+                    width: 174px;
+                }
+            }
+
+            .logistics-text {
+                margin-left: 38px;
+                color: $text-color-lighter;
+            }
+        }
+    }
+
+    // 商品详情
+    .shop-info {
+        padding: 30px;
+        border-bottom: 1px solid #E6E6E6;
+        font-size: 28px;
+        color: $text-color;
+
+        Image {
+            width: 72px;
+            height: 72px;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+
+        .enter {
+            color: $text-color-light;
+        }
+    }
+
+    .introduce {
+        .title {
+            font-size: 36px;
+            color: $text-color;
+            font-weight: 600;
+            padding: 30px 0 71px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: #DC5A58;
+                border-radius: 2px;
+                display: block;
+                z-index: 1;
+                bottom: 55px;
+                height: 8px;
+                width: 110px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+
+
+.coupon-modal,
+.specification-modal {
+    .at-modal__container {
+        width: 100%;
+        border-radius: 0;
+        top: auto;
+        left: auto;
+        transform: none;
+        bottom: 0;
+    }
+}

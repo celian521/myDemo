@@ -1,0 +1,47 @@
+@import "@styles/theme.scss";
+.activityBox {
+  margin-bottom: 30px;
+}
+
+.activity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  text-align: left;
+  .item-activity {
+    min-width: 670px;
+    margin-left: 30px;
+    font-size: 24px;
+  }
+  .item-thumb {
+    height: 384px;
+    width: 670px;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    image,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .item-title {
+    font-size: 32px;
+    margin: 20px 0 16px;
+    @include lamp-clamp(1);
+  }
+  .item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    font-size: 28px;
+    color: #999;
+  }
+  .price {
+    color: #DC5A58;
+    font-weight: 700;
+  }
+}

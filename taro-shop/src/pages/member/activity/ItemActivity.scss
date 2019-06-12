@@ -1,0 +1,99 @@
+@import "@styles/theme.scss";
+page {
+  background-color: #f7f7f7;
+}
+
+.activity-block {
+  padding: 30px;
+  .item {
+    position: relative;
+    height: 320px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+    background: url($myActivityListBg-url) no-repeat;
+    background-size: 100% auto;
+  }
+  .item-label {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 100px;
+    width: 60px;
+    font-size: 24px;
+    line-height: 1.2;
+    padding-top: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    &.label01 {
+      background: url($myActivityLabel01-url) no-repeat;
+      background-size: 100% auto;
+    }
+    &.label02 {
+      background: url($myActivityLabel02-url) no-repeat;
+      background-size: 100% auto;
+    }
+    &.label03 {
+      background: url($myActivityLabel03-url) no-repeat;
+      background-size: 100% auto;
+    }
+  }
+  .item-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+    border-top: 1PX dashed #eee;
+    height: 90px;
+    text-align: right;
+    padding-top: 14px;
+    box-sizing: border-box;
+    .defaultBtn {
+      padding-top: 8px;
+      text-align: center;
+      color: #999;
+      font-size: 28px;
+    }
+  }
+  .item-body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    padding: 24px;
+    .item-thumb {
+      height: 160px;
+      width: 264px;
+      min-width: 264px;
+      border-radius: 6px;
+      background-color: #f0f0f0;
+      overflow: hidden;
+      image,
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .item-content {
+      padding-left: 30px;
+      padding-right: 50px;
+    }
+    .item-title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 8px;
+      line-height: 1.5;
+      @include lamp-clamp(2);
+    }
+    .item-info {
+      font-size: 24px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .price {
+      color: $price-color;
+      font-size: 24px;
+    }
+  }
+}

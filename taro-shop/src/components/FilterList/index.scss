@@ -1,0 +1,110 @@
+@import "@styles/theme.scss";
+.filterBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+}
+
+.space {
+  height: 160px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  font-size: 32px;
+  .li {
+    flex: 1;
+    min-width: 150px;
+    position: relative;
+    padding: 20px 0;
+    color: #666;
+    @include text-ellipsis();
+    &::before {
+      position: absolute;
+      right: -1PX;
+      top: 50%;
+      transform: translate(0, -50%);
+      content: '';
+      height: 36px;
+      width: 1PX;
+      display: block;
+      background-color: #E6E6E6;
+    }
+    .triangle {
+      margin-left: 20px;
+      margin-bottom: -4px;
+      height: 0;
+      width: 0;
+      display: inline-block;
+      border: 8px solid transparent;
+      border-top-color: #999;
+    }
+    &.cur {
+      color: $primary-color;
+      .triangle {
+        border-top-color: $primary-color;
+      }
+    }
+    &.on {
+      color: $primary-color;
+      .triangle {
+        margin-bottom: 4px;
+        border-top-color: transparent;
+        border-bottom-color: $primary-color;
+      }
+    }
+  }
+}
+
+.dropdownBox {
+  max-height: 75vh;
+  overflow-y: scroll;
+}
+// 黑色蒙层
+.mybg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, .6)
+}
+
+.myRadio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  border-top: 1PX solid #E6E6E6;
+  padding: 40px;
+  box-sizing: border-box;
+  .desc {
+    color: #666;
+    font-size: 24px;
+    padding-left: 12px;
+  }
+  .radio {
+    display: none;
+  }
+  &.on {
+    .title,
+    .desc {
+      color: $primary-color;
+    }
+    .radio {
+      display: block;
+    }
+  }
+}

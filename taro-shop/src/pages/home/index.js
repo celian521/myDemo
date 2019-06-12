@@ -4,7 +4,7 @@ import { View, Text } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
 import { ItemList } from '@/components'
 
-import MyRecommend from './recommend.js'
+import MyHome from './home.js' // 首页推荐
 
 import linkTo from '@/utils/linkTo.js'
 
@@ -42,7 +42,7 @@ class Index extends Component {
     const tabList = [{ title: '推荐' }, { title: '美食' }, { title: '娱乐' }, { title: '时尚' }, { title: '教育' }, { title: '标签' }, { title: '标签' }, { title: '标签' }, { title: '标签' }]
     return (
       <View>
-        <View className='searchBar wrap' onClick={() => { linkTo({ url: '/pages/search/index' }) }}>
+        <View className='searchBar' onClick={() => { linkTo({ url: '/pages/search/index' }) }}>
           <Text className='at-icon at-icon-search'></Text>
           <Text>请输入关键词搜索</Text>
         </View>
@@ -54,7 +54,7 @@ class Index extends Component {
           tabList={tabList}
           onClick={this.handleClick.bind(this)}
         > </AtTabs>
-        { current === 0 ? <MyRecommend /> : <ItemList type='item' data={[1, 2, 3, 4, 5, 6, 7, 8, 15, 9]} /> }
+        { current === 0 ? <MyHome /> : <ItemList type='store' data={[1, 2, 3, 4, 5, 6, 7, 8, 15, 9]} /> }
       </View>
     )
   }

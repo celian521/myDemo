@@ -1,9 +1,5 @@
-// .news-block
-// thumb tag card content
 @import "@styles/theme.scss";
-
-
-.list-card {
+.goods-block {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -12,7 +8,7 @@
   text-align: left;
   padding: 30px 20px;
   background-color: #fff;
-  .item-card {
+  .item-goods {
     width: 50%;
     padding: 10px;
     margin-bottom: 30px;
@@ -37,7 +33,6 @@
   }
   .item-title {
     font-size: 28px;
-    margin-bottom: 12px;
     line-height: 1.5;
     @include lamp-clamp(1);
   }
@@ -47,6 +42,7 @@
     line-height: 1.5;
     height: 70px;
     @include lamp-clamp(2);
+    margin-bottom: 12px;
   }
   .item-tool {
     display: flex;
@@ -56,13 +52,32 @@
     text-align: center;
   }
   .price {
-    color: red;
+    color: $price-color;
+    font-size: 32px;
   }
   .label {
-    color: red;
-    border: 1PX solid red;
+    color: #DC5A58;
+    border: 1PX solid;
+    border-radius: 4px;
     font-size: 22px;
-    padding: 4px 8px;
+    line-height: 1;
+    padding: 4px 6px;
     display: inline-block;
+    margin-left: 8px;
+    &-default {
+      background-color: #fff;
+      border-color: #DC5A58;
+      color: #DC5A58;
+    }
+    &-primary {
+      background-color: #DC5A58;
+      border-color: #DC5A58;
+      color: #fff;
+    }
+    &-vip {
+      background-color: #DAAF70;
+      border-color: #DAAF70;
+      color: #fff;
+    }
   }
 }

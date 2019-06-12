@@ -1,0 +1,33 @@
+@import '@styles/theme.scss';
+
+.goods {
+    background: #FFFFFF;
+    padding: 30px;
+
+    Image {
+        width: 176px;
+        height: 176px;
+    }
+
+    .info {
+        margin: 0 34px 0 20px;
+        width: 434px;
+    }
+
+    .t {
+        color: $text-color;
+        font-size: 28px;
+    }
+
+    .style {
+        color: $text-color-lighter;
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .price {
+        color: $text-color-light;
+        font-size: 28px;
+        margin-top: 13px;
+    }
+}

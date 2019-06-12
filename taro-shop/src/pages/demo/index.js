@@ -43,9 +43,10 @@ class Index extends Component {
   }
 
   onShareAppMessage(res) {
+    console.log('share')
     if (res.from === 'button') {
       // 来自页面内转发按钮
-      console.log(res.target)
+      console.log('share btn',res.target)
     }
     return {
       title: '自定义转发标题',
@@ -63,12 +64,13 @@ class Index extends Component {
           <AtListItem title='webview' arrow='right' onClick={() => { linkTo({ url: 'http://10.0.3.5:5000/', title:'webtitle' }) }} />
           <AtListItem title='jssdk' arrow='right' onClick={() => { linkTo({ url: 'https://www.weixinsxy.com/jssdk/', title:'jssdk' }) }} />
           <AtListItem title='登录' arrow='right' onClick={() => { linkTo({ url: '/pages/login/index' }) }} />
-          <AtListItem title='首页' arrow='right' onClick={() => { linkTo({ url: '/pages/index/index' }) }} />
-          <AtListItem title='会员中心' arrow='right' onClick={() => { linkTo({ url: '/pages/member/index' }) }} />
-          <AtListItem title='DEMO search' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/search' }) }} />
+          {/* <AtListItem title='首页' arrow='right' onClick={() => { linkTo({ url: '/pages/index/index' }) }} /> */}
+          {/* <AtListItem title='会员中心' arrow='right' onClick={() => { linkTo({ url: '/pages/member/index' }) }} /> */}
+          <AtListItem title='评论回复' arrow='right' onClick={() => { linkTo({ url: '/pages/comment/index' }) }} />
+          {/* <AtListItem title='DEMO search' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/search' }) }} /> */}
           <AtListItem title='DEMO pay' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/pay' }) }} />
-          <AtListItem title='DEMO list' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/list' }) }} />
-          <AtListItem title='DEMO map' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/map' }) }} />
+          <AtListItem title='VIP会员权益' arrow='right' onClick={() => { linkTo({ url: '/pages/member/equity/index' }) }} />
+          {/* <AtListItem title='DEMO map' arrow='right' onClick={() => { linkTo({ url: '/pages/demo/map' }) }} /> */}
         </AtList>
 
         <View className='wrap'>

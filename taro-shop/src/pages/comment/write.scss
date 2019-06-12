@@ -1,0 +1,22 @@
+@import "@styles/theme.scss";
+page{
+  background-color: #f7f7f7;
+}
+
+.write {
+  .at-textarea {
+    // border: none;
+    // border-bottom: 1PX solid #eee;
+    margin-bottom: 30px;
+  }
+}
+
+.fixedBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 30px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+}

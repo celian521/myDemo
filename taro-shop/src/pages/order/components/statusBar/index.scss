@@ -1,0 +1,32 @@
+@import '@styles/theme.scss';
+
+@mixin status-bg($url) {
+    background: url($path+$url) no-repeat;
+    background-size: 100% 100%;
+}
+
+.statusBar {
+    padding: 40px 30px;
+    color: #FFFFFF;
+
+    .title {
+        font-size: 36px;
+    }
+
+    .des {
+        font-size: 24px;
+        margin-top: 6px;
+    }
+
+    &.un-pay {
+        @include status-bg('/myOrder.png');
+    }
+
+    &.deal-close {
+        @include status-bg('/myOrderError.png');
+    }
+
+    &.success {
+        @include status-bg('/myOrderSuccess.png');
+    }
+}

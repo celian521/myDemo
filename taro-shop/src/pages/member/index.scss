@@ -10,13 +10,90 @@ page {
   height: 350px;
   color: #fff;
   .myUser {
-    padding: 20px 0;
+    padding: 10px 0 30px;
     // .nickName {  }
   }
   .myVip {
-    padding: 30px;
+    padding: 0 30px;
     font-size: 28px;
-    .at-icon { font-size: 60px; }
+    .icon {
+      font-size: 50px;
+      color: #333;
+      margin: 50px 0;
+    }
+    .vip-title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 12px;
+      font-weight: 700;
+      img,
+      image {
+        height: 34px;
+        width: 34px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+    .vip-info {
+      color: #856F44
+    }
+    .btn {
+      margin: 50px 0;
+      font-size: 24px;
+      background-color: #706E6E;
+      display: inline-block;
+      padding: 12px 30px;
+      line-height: 1;
+      border-radius: 6px;
+    }
+  }
+}
+
+.qrcodeModal {
+  .at-modal__header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(#DAC090, #B99E6D);
+    color: #fff;
+    font-size: 36px;
+    text-align: left;
+  }
+  .at-modal__container {
+    width: 610px;
+    height: 800px;
+    text-align: center;
+  }
+  .at-modal__content {
+    text-align: center;
+    .barcodeBox {
+      padding: 20px 0 30px;
+      border-bottom: 1PX solid #eee;
+       text {
+         color: #999; padding-top: 30px; display: block;
+       }
+    }
+    .qrcodeBox {
+      padding: 40px;
+      padding-left: 120px;
+    }
+  }
+}
+
+.dot {
+  position: relative;
+  &::after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #DC5A58;
+    display: block;
+    position: absolute;
+    top: -6px;
+    right: -6px;
   }
 }
 
@@ -28,6 +105,10 @@ page {
     color: #333;
     font-size: 40px;
     font-weight: 700;
+  }
+  .dot::after {
+    right: -20px;
+    top: 0;
   }
 }
 
@@ -45,15 +126,15 @@ page {
     padding: 20px 0 14px;
     text-align: center;
   }
-  .at-icon {
+  .icon {
     font-size: 60px;
     margin-bottom: 10px;
     color: #000;
   }
   .myOrder {
     border-left: 1px solid #f0f0f0;
-    .at-icon {
-      color: red;
+    .icon {
+      color: #DC5A58;
     }
   }
 }
@@ -64,5 +145,20 @@ page {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  }
+}
+
+.myCart {
+  .item-extra__info {
+    color: #fff;
+    background-color: #DC5A58;
+    padding: 0;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin-right: 40px;
   }
 }

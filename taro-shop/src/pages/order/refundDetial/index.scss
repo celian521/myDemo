@@ -1,0 +1,58 @@
+@import '@styles/theme.scss';
+
+.content-bg {
+    background: #FFFFFF;
+}
+
+page {
+    background-color: #F6F6F6;
+    font-size: 28px;
+}
+
+
+.refund-detial {
+    .refund-info {
+        padding: 28px 30px;
+        border-top: 1px solid #E6E6E6;
+        @extend .content-bg;
+    }
+
+    .price {
+        color: $primary-color;
+    }
+
+    .block-title {
+        padding: 28px 30px;
+        border-bottom: 1px solid #E6E6E6;
+        @extend .content-bg;
+    }
+
+    .t-c {
+        color: $text-color-light;
+    }
+
+    .samll-f {
+        font-size: 24px;
+    }
+
+    .return-center {
+        padding: 90px 30px 30px;
+
+        .btn {
+            @extend .content-bg;
+            font-size: 32px;
+        }
+    }
+
+    .refund-info-item {
+        border-top: 1px solid #E6E6E6;
+        padding: 30px 0 0 30px;
+        @extend .t-c;
+        @extend .content-bg;
+
+        >view {
+            padding-bottom: 30px;
+        }
+
+    }
+}

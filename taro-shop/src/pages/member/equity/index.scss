@@ -1,0 +1,155 @@
+@import "@styles/theme.scss";
+
+page {
+  background-color: #F6F6F6;
+}
+
+.user {
+  background: url($vip-memberbg-url) 0 -0 no-repeat;
+  background-size: 100% auto;
+  padding: 0 30px;
+  height: 245px;
+  color: #fff;
+  .myVip {
+    padding: 60px 30px 0;
+    font-size: 28px;
+    .icon {
+      font-size: 50px;
+      color: #333;
+      margin: 50px 0;
+    }
+    .vip-title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 12px;
+      font-weight: 700;
+      img,
+      image {
+        height: 34px;
+        width: 34px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+    .vip-info {
+      color: #856F44
+    }
+    .btn {
+      margin: 50px 0;
+      font-size: 24px;
+      background-color: #706E6E;
+      display: inline-block;
+      padding: 12px 30px;
+      line-height: 1;
+      border-radius: 6px;
+    }
+  }
+}
+
+.qrcodeModal {
+  .at-modal__header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(#DAC090, #B99E6D);
+    color: #fff;
+    font-size: 36px;
+    text-align: left;
+  }
+  .at-modal__container {
+    width: 610px;
+    height: 600px;
+    text-align: center;
+  }
+}
+
+.equity {
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 30px;
+  .equity-title {
+    display: inline-block;
+    padding: 30px 0;
+    position: relative;
+    font-size: 42px;
+    color: #2D2C2A;
+    font-weight: 700;
+    &::after, &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 8px;
+      width: 96px;
+    }
+    &::after {
+      right: -136px;
+      background: linear-gradient(90deg,rgba(185,158,109,1) 0%,rgba(224,208,169,0) 100%);
+    }
+    &::before {
+      left: -136px;
+      background: linear-gradient(90deg,rgba(224,208,169,0) 0%,rgba(185,158,109,1) 100%);
+    }
+  }
+  .equity-item {
+    image {
+      width: 96px;
+      height: 96px;
+    }
+    .name, .desc {
+      display: block;
+    }
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2D2C2A;
+      line-height: 40px;
+      margin-bottom: 4px;
+    }
+    .desc {
+      font-size: 22px;
+      color: #999;
+      line-height: 30px;
+    }
+  }
+  .equity-btn {
+    margin: 50px 30px 60px;
+    line-height: 96px;
+    color: #493A18;
+    font-weight: 700;
+    background: linear-gradient(136deg,rgba(238,228,199,1) 0%,rgba(217,198,152,1) 100%);
+    border-radius: 6px;
+  }
+}
+
+.equity-list {
+  padding: 37px 30px 0;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 30px;
+  .equity-list-title {
+    display: inline-block;
+    margin-bottom: 34px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+    color: #2D2C2A;
+    position: relative;
+    z-index: 3;
+    &::before {
+      content: "";
+      display: block;
+      height: 16px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      z-index: 0;
+      background: linear-gradient(90deg,rgba(185,158,109,1) 0%,rgba(224,208,169,0) 100%);
+    }
+  }
+}

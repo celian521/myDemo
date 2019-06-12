@@ -1,0 +1,44 @@
+@import "@styles/theme.scss";
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  text-align: left;
+  padding: 30px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  .item-thumb {
+    height: 182px;
+    width: 300px;
+    min-width: 300px;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    image,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .item-content {
+    padding-left: 30px;
+  }
+  .item-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    @include lamp-clamp(2);
+  }
+  .item-info {
+    font-size: 24px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .price {
+    color: $price-color;
+  }
+}

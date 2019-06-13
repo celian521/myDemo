@@ -27,7 +27,7 @@ const Ajax = (method, url, params) => {
         // console.log('request:=>',res)
         if (res.statusCode === 200) {
           const { data } = res
-          if (data.rescode === successCode) {
+          if (data.state === successCode) {
             resolve(data)
           } else {
             Toast('数据错误')

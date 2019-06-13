@@ -10,6 +10,12 @@ var allBooks = Mock.Random.shuffle([
   ...recommendBooks
 ]);
 
+var obj = {
+  state:0,
+  msg:'==='
+}
+
+
 /**
  * json-server不支持嵌套访问，如'books/new'
  * 需要在routes.js中设置rewriter
@@ -17,8 +23,8 @@ var allBooks = Mock.Random.shuffle([
  * 服务启动后db中的数据将不会改变
  */
 module.exports = {
-  books: allBooks,
-  "books-new": newBooks,
-  "books-hot": hotBooks,
-  "books-recommend": recommendBooks
+  "books": {...obj, data:allBooks},
+  "books-new": {...obj, data:newBooks} ,
+  "books-hot": {...obj, data:hotBooks},
+  "books-recommend": {...obj, data:recommendBooks}
 };

@@ -1,11 +1,11 @@
 import Taro, { Component } from '@tarojs/taro'
 import { observer, inject } from '@tarojs/mobx'
 import { View, Text } from '@tarojs/components'
-import { AtTabs, AtTabsPane } from 'taro-ui'
+import { AtTabs } from 'taro-ui'
 import { ItemList } from '@/components'
 
 import MyHome from './home.js' // 首页推荐
-
+import apis from '@/apis'
 import linkTo from '@/utils/linkTo.js'
 
 import './index.scss'
@@ -30,7 +30,10 @@ class Index extends Component {
   }
 
   componentWillMount() {
-
+    console.log('home')
+    apis.getList({}).then((({ data }) => {
+      console.log('getlist', data)
+    }))
   }
   handleClick(value) {
     this.setState({

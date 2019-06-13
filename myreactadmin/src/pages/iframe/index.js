@@ -54,7 +54,7 @@ class Navbar extends Component {
                 activeKey={this.props.activeKey}
                 type="editable-card"
                 onEdit={this.onEdit}
-                tabPosition='bottom'
+                tabPosition='TOP'
               >
                 {
                   this.props.panes.map(pane => {

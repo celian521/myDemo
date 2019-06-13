@@ -37,10 +37,7 @@ class Navbar extends Component {
                 return (
                   app.collect &&
                   <Menu.Item key={app.id} title={app.title}>
-                    {app.iconType === 'image' ?
-                      <Avatar src={app.icon} /> :
-                      <Avatar icon={app.icon} style={{ backgroundColor: app.iconBg || '#666' }} />
-                    }
+                    <Icon type="appstore" />
                     <span className="nav-text">{app.title}</span>
                   </Menu.Item>
                 )

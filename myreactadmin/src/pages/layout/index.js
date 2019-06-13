@@ -49,15 +49,12 @@ class LayoutPage extends Component {
               <Link to='/'>
                 <div id="logo">
                   <img src={require('../../assets/images/aimei_logo.png')} />
-                  <h1>medaOS</h1>
+                  <h1>ADMINOS</h1>
                 </div>
               </Link>
               <Scrollbars autoHide>
                 <NavMenu />
               </Scrollbars>
-              <div className="showHide">
-                <Icon type="double-right" onClick={this.props.toggleSider} />
-              </div>
             </Sider>
             <Layout style={{ marginLeft: this.props.hasCloseSider ? 80 : 200, height: '100vh',  overflow: 'auto', transition: 'margin-left .2s' }}>
               <Content>

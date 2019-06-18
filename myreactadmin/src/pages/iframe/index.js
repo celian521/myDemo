@@ -37,7 +37,7 @@ class Navbar extends Component {
       this[action](targetKey);
     }
     add = () => {
-      // this.props.clearAPP()
+      this.props.clearAPP()
     }
     remove = targetKey => {
       this.props.closeAPP(targetKey)
@@ -54,7 +54,6 @@ class Navbar extends Component {
                 activeKey={this.props.activeKey}
                 type="editable-card"
                 onEdit={this.onEdit}
-                tabPosition='TOP'
               >
                 {
                   this.props.panes.map(pane => {

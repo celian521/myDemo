@@ -2,7 +2,7 @@
     {
         "id": "1d",
         "title": "公众号管理系统",
-        "url": "http://127.0.0.1:8083",
+        "url": "https://react.docschina.org",
         "icon": "link",
         "iconBg": "#f56a00",
         "collect": true
@@ -18,7 +18,7 @@
     {
         "id": "b3",
         "title": "微应用案例",
-        "url": "http://localhost:11000/",
+        "url": "https://m.gmw.cn/baijia/2019-06/18/1300450208.html",
         "icon": "area-chart",
         "iconBg": "#ffbf00",
         "collect": true
@@ -26,7 +26,7 @@
     {
         "id": "b4",
         "title": "案例12000",
-        "url": "http://localhost:12000/index.html",
+        "url": "https://ant.design",
         "icon": "area-chart",
         "iconBg": "#f56a00",
         "collect": true
@@ -34,7 +34,7 @@
     {
         "id": "b5",
         "title": "开发者中心",
-        "url": "http://localhost:8085",
+        "url": "http://www.ruanyifeng.com/blog/2015/07/flex-examples.html",
         "iconType": "image",
         "icon": "https://gw.alipayobjects.com/zos/rmsportal/siCrBXXhmvTQGWPNLBow.png",
         "collect": true

@@ -38,16 +38,16 @@ class User extends Component {
                             <Menu theme="link" mode="inline" style={{minHeight: '500px'}}>
 
                                 <Menu.Item key="0">
-                                    <Link to='/home/user/edit'>基本设置</Link>
+                                    <Link to='/user/edit'>基本设置</Link>
                                 </Menu.Item>
                                 <Menu.Item key="1">
-                                    <Link to='/home/user/list'>用户列表</Link>
+                                    <Link to='/user/list'>用户列表</Link>
                                 </Menu.Item>
                                 <Menu.Item key="2">
-                                    <Link to='/home/user/add'>增加用户</Link>
+                                    <Link to='/user/add'>增加用户</Link>
                                 </Menu.Item>
                                 <Menu.Item key="3">
-                                    <Link to='/home/user/edit'>编辑用户</Link>
+                                    <Link to='/user/edit'>编辑用户</Link>
                                 </Menu.Item>
                             </Menu>
                         </Col>

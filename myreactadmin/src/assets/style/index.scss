@@ -116,22 +116,6 @@
   }
 }
 
-.layout-menu .ant-menu-item {
-  height: 43px !important;
-  border-left: 2px solid #001529;
-  padding-left: 23px !important;
-  .anticon{
-    margin-right: auto !important;
-    line-height: auto !important;
-  }
-  .ant-avatar{
-    margin-right: 10px;
-  }
-  &.ant-menu-item-selected{
-    background-color: #093054 !important;
-    border-left: 2px solid #1890ff;
-  }
-}
 
 .showHide{
   position: absolute !important;

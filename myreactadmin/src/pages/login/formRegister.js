@@ -19,7 +19,7 @@ class FormRegister extends Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
-                <h3>注册</h3>
+                <h3>新用户注册</h3>
                 <Form.Item>
                     {getFieldDecorator('email', {
                         rules: [{ required: true, message: '请输入你的邮箱!' }],

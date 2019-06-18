@@ -5,10 +5,10 @@
   *  @Time    2019
   */
 import React, { Component } from 'react';
-import { Spin } from 'antd';
 import { inject, observer } from 'mobx-react';
 import Msg from '../../utils/msg'
-
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 
 @inject(({globalStore})=>({
   account: globalStore.account,
@@ -23,7 +23,6 @@ class Navbar extends Component {
           id:this.props.id
         }
         this.state = {
-            loading:true,
             Msg:new Msg(obj)
         };
     }
@@ -32,11 +31,15 @@ class Navbar extends Component {
           a.href = this.props.url
       this.state.Msg.listenMsg(a.host, this.serviceApi)
     }
+    componentDidMount (){
+      NProgress.start();
+    }
     componentWillUnmount () {
       this.state.Msg.clearMsg()
     }
+
     load = (e) => {
-      this.setState({loading:false})
+      NProgress.done();
     }
     /**
      * 发送消息给iframe  # 接口陆续完善
@@ -64,7 +67,6 @@ class Navbar extends Component {
     render() {
         return (
           <>
-            {this.state.loading && <Spin className='loading' size='large' delay='100' />}
             <iframe
               id={this.props.id}
               ref={this.props.id}

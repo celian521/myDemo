@@ -14,9 +14,9 @@ import { ItemList, Empty } from '@/components'
 
 import './index.scss'
 
-@inject()
+// @inject()
 
-@observer
+// @observer
 class Coupon extends Component {
   constructor() {
     super(...arguments);

@@ -11,9 +11,9 @@ import CouponModal from './coupon-modal';
 import SpecificationModal from './specification-modal';
 import './index.scss'
 
-@inject()
+// @inject()
 
-@observer
+// @observer
 class Goods extends Component {
     constructor() {
         super(...arguments);

@@ -9,8 +9,8 @@ import { AtList, AtListItem, AtLoadMore } from 'taro-ui'
 
 import './index.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class List extends Component {
   config = {
     navigationBarTitleText: '记录列表',

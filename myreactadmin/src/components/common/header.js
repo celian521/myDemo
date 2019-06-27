@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Tooltip, Popover, Row, Col } from 'antd';
+import { Icon, Tooltip, Popover, Row, Col, Avatar } from 'antd';
 import { Link } from "react-router-dom";
 import { inject, observer } from 'mobx-react';
 
@@ -47,7 +47,11 @@ class HeadBar extends Component {
               </span>
               <span>
                 <Popover content={ content }>
-                  <img src={ require('../../assets/images/default-user.png') } />
+                  <Avatar
+                    src=''
+                    size="small"
+                    style={ { backgroundColor: '#32afa2' } }
+                    icon='user' />
                   { this.props.account.userName }
                 </Popover>
               </span>

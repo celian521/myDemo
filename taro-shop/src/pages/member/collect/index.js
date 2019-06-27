@@ -14,9 +14,9 @@ import { ItemList, Empty } from '@/components'
 
 import './index.scss'
 
-@inject()
+// @inject()
 
-@observer
+// @observer
 class Collect extends Component {
   constructor() {
     super(...arguments);

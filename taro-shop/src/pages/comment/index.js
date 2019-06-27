@@ -10,8 +10,8 @@ import { ItemComment, Empty } from '@/components'
 import linkTo from '@/utils/linkTo.js'
 import './index.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class List extends Component {
   config = {
     navigationBarTitleText: '活动讨论',

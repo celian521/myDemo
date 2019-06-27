@@ -7,8 +7,8 @@ import { StatusBar, BasicInfo, Shop } from '../components'
 import { ORDER_STATUS_ENUM } from '../enums'
 import { WhiteSpace, CheckBox } from '@/components'
 import './index.scss'
-@inject()
-@observer
+// @inject()
+// @observer
 class OrderDetial extends Component {
     constructor() {
         super(...arguments);

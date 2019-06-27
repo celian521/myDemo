@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Icon, Avatar } from 'antd';
+import { Menu, Icon } from 'antd';
 import { Link, withRouter  } from "react-router-dom";
 import { inject, observer } from 'mobx-react';
 

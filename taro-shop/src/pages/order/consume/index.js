@@ -5,8 +5,8 @@ import { WhiteSpace } from '@/components'
 import { Goods } from '../components'
 import { AtButton } from 'taro-ui'
 import './index.scss'
-@inject()
-@observer
+// @inject()
+// @observer
 class Consume extends Component {
     constructor() {
         super(...arguments);

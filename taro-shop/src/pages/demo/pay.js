@@ -15,9 +15,9 @@ import { AtButton, AtDivider, AtModal, AtNoticebar } from 'taro-ui'
 import './index.scss'
 
 
-@inject()
+// @inject()
 
-@observer
+// @observer
 class Recharge extends Component {
   constructor() {
     super(...arguments);

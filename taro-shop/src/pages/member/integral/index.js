@@ -14,9 +14,9 @@ import { Empty } from '@/components'
 
 import './index.scss'
 
-@inject()
+// @inject()
 
-@observer
+// @observer
 class Integral extends Component {
   constructor() {
     super(...arguments);

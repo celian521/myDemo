@@ -6,8 +6,8 @@ import { AtIcon, AtTag } from 'taro-ui'
 import { ItemList } from '@/components'
 import './index.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class Activity extends Component {
     componentDidMount() {
         Taro.setNavigationBarTitle({ title: '门店优惠券' })

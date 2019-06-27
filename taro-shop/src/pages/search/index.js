@@ -13,9 +13,9 @@ import Result from './result.js'
 
 import './index.scss'
 
-@inject()
+// @inject()
 
-@observer
+// @observer
 class Search extends Component {
   constructor() {
     super(...arguments);

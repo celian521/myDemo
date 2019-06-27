@@ -9,8 +9,8 @@ import linkTo from '@/utils/linkTo.js'
 
 import './index.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class Index extends Component {
 
   config = {

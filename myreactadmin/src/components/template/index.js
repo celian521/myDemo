@@ -10,10 +10,10 @@ import Myself from '.';
 
 class Base extends Component {
   render() {
-     const Mycomponent = Tpl['DemoA']
+    const Mycomponent = Tpl['DemoA']
     return (
       <>
-          <Mycomponent />
+        <Mycomponent />
         {/* {
           this.props.nodeData.map((item, index) => {
             const Mycomponent = Tpl[item.component]
@@ -23,7 +23,7 @@ class Base extends Component {
           })
         } */}
       </>
-      );
+    );
   }
 }
 

@@ -5,8 +5,8 @@ import { Goods } from '../components'
 import { WhiteSpace, CheckBox } from '@/components'
 import './index.scss'
 import { AtButton } from 'taro-ui';
-@inject()
-@observer
+// @inject()
+// @observer
 class Refund extends Component {
     constructor() {
         super(...arguments);

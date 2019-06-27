@@ -6,8 +6,8 @@ import { AtButton } from 'taro-ui';
 import { StatusBar, Goods } from '../components'
 import { ORDER_STATUS_ENUM } from '../enums'
 import './index.scss'
-@inject()
-@observer
+// @inject()
+// @observer
 class RefundDetial extends Component {
     constructor() {
         super(...arguments);

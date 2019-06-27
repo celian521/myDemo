@@ -10,8 +10,8 @@ import { ItemList, Empty, FilterList } from '@/components'
 
 import './index.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class List extends Component {
   config = {
     navigationBarTitleText: '领券中心',

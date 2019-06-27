@@ -4,8 +4,8 @@ import { View, Text } from '@tarojs/components'
 import { AtForm, AtInput, AtButton } from 'taro-ui'
 import './index.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class Index extends Component {
   constructor() {
     super(...arguments);

@@ -13,9 +13,9 @@ import { AtButton, AtSearchBar } from 'taro-ui'
 
 import './index.scss'
 
-@inject()
+// @inject()
 
-@observer
+// @observer
 class Search extends Component {
   constructor() {
     super(...arguments);

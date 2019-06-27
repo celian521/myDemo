@@ -10,8 +10,8 @@ import { ItemComment } from '@/components'
 
 import './detail.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class Detail extends Component {
   config = {
     navigationBarTitleText: '评论详情',

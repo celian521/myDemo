@@ -81,7 +81,7 @@ class Member extends Component {
 
             <View className='at-row at-row__justify--between at-row__align--center'>
               <View className='at-col'>
-                <View className='vip-title'><Image src='http://10.0.3.5:5000/icon/vip.svg' />V+会员</View>
+                <View className='vip-title'><Image src='http://ptqv4ap4z.bkt.clouddn.com/icon/vip.svg' />V+会员</View>
                 <View className='vip-info'>2020.0909到期</View>
               </View>
               <View className='at-col' style={{ textAlign: 'right' }} onClick={this.openQRcode}>
@@ -148,32 +148,32 @@ class Member extends Component {
           <AtList className='atList' hasBorder={false}>
             <AtListItem
               className='myCart'
-              thumb='http://10.0.3.5:5000/icon/cart.svg'
+              thumb='http://ptqv4ap4z.bkt.clouddn.com/icon/cart.svg'
               title='购物车'
               extraText={!!total.num ? total.num.toString() : ''}
               arrow='right'
               onClick={() => linkTo({ url: '/pages/shoppingCart/index' })}
             />
             <AtListItem
-              thumb='http://10.0.3.5:5000/icon/gift.svg'
+              thumb='http://ptqv4ap4z.bkt.clouddn.com/icon/gift.svg'
               title='我的活动'
               arrow='right'
               onClick={() => linkTo({ url: '/pages/member/activity/index' })}
             />
             <AtListItem
-              thumb='http://10.0.3.5:5000/icon/collect.svg'
+              thumb='http://ptqv4ap4z.bkt.clouddn.com/icon/collect.svg'
               title='我的关注'
               arrow='right'
               onClick={() => linkTo({ url: '/pages/member/collect/index' })}
             />
             <AtListItem
-              thumb='http://10.0.3.5:5000/icon/writing.svg'
+              thumb='http://ptqv4ap4z.bkt.clouddn.com/icon/writing.svg'
               title='意见反馈'
               arrow='right'
               onClick={() => linkTo({ url: '/pages/member/feedback/index' })}
             />
             <AtListItem
-              thumb='http://10.0.3.5:5000/icon/writing.svg'
+              thumb='http://ptqv4ap4z.bkt.clouddn.com/icon/writing.svg'
               title='DEMO'
               arrow='right'
               onClick={() => linkTo({ url: '/pages/demo/index' })}

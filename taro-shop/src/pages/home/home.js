@@ -30,7 +30,7 @@ export default class Recommend extends Component {
         <ProSwiper banner={data} />
         <MyTitle title='逛过的店' />
         <MyBrank />
-        <MyAdPicture src='http://10.0.3.5:5000/ad.png' url='/pages/couponList/index' />
+        <MyAdPicture src='http://ptqv4ap4z.bkt.clouddn.com/ad.png' url='/pages/couponList/index' />
         <MyTitle title='精选活动' url='/pages/list/index' />
         <MyActivity />
         <MyTitle title='热门商品' />

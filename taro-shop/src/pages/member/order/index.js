@@ -14,9 +14,9 @@ import ItemOrder from './ItemOrder.js'
 
 import './index.scss'
 
-@inject()
+// @inject()
 
-@observer
+// @observer
 class Order extends Component {
   constructor() {
     super(...arguments);

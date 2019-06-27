@@ -10,8 +10,8 @@ import { ImagePicker } from '@/components'
 
 import './write.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class Write extends Component {
   config = {
     navigationBarTitleText: '写评论',

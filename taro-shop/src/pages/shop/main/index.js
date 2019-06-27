@@ -7,8 +7,8 @@ import linkTo from '@/utils/linkTo'
 import { ItemList } from '@/components'
 import './index.scss'
 
-@inject()
-@observer
+// @inject()
+// @observer
 class ShopMain extends Component {
     componentDidMount() {
         Taro.setNavigationBarTitle({ title: '门店入口' })

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <!-- @@include modules/_template_head.html -->
+</head>
+<body>
+    <div id="app" v-cloak>
+        <mt-button @click="openPicker">按钮</mt-button>
+        {{pickerValue}}
+        <mt-datetime-picker ref="picker" type="time" v-model="pickerValue">
+        </mt-datetime-picker>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                pickerValue: ''
+            }
+        },
+        methods: {
+            handleClick: function () {
+                this.$toast('Hello world!')
+            },
+            openPicker() {
+                this.$refs.picker.open();
+            }
+        }
+    })
+</script>
+</html>

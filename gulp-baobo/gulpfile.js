@@ -30,7 +30,7 @@ var paths = {
 		dist: base.assets + 'css/'
 	},
 	scripts: {
-		src: [base.src + 'js/vendors/*.js', base.src + 'js/components/*.js', base.src + 'js/*.js'],
+		src: [base.src + 'js/*.js'],
 		dist: base.assets + 'js/'
 	},
 	images: {

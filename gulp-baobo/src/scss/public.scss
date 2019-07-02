@@ -3,6 +3,13 @@
 }
 
 
-$bg-color: #3478c3;    //背景蓝
-$btn-color: #3376c7; //深蓝
+$primary-color: #3478c3;    //背景蓝
+// $btn-color: #3376c7; //深蓝
 $btn-default-color: #00a0ea; // 浅蓝
+
+.tit {
+    border-left: 4px solid red;
+    padding: 2px 20px;
+     font-size: 16px;
+     color: #333;
+}

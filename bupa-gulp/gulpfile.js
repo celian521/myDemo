@@ -74,7 +74,7 @@ var config = {
 		livereload: true,
 		directoryListing: false,
 		// open: true,
-		port: 8082
+		port: 8072
 	}
 };
 

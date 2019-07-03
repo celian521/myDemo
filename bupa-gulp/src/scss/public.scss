@@ -11,39 +11,70 @@
 }
 
 $primary-color: #3478c3; //背景蓝
-// $btn-color: #3376c7; //深蓝
-// $btn-default-color: #00a0ea; // 浅蓝
 $wrap-width: 24px;
 
 .wrap {
     margin: 0 $wrap-width;
 }
-.space { height: 40px;
+
+.space {
+    height: 40px;
     background-color: $primary-color;
 }
+
 .wrap-bg {
     background: $primary-color url(../images/logo.png) 100% 10px no-repeat;
-    background-size: 30% auto;
+    background-size: auto 30px;
     padding: 50px $wrap-width 0;
 
-    .mint-cell { 
+    .mint-cell {
         background: none;
         color: #fff;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        .mint-cell-value { color: #fff; }
-        .mint-cell-wrapper { background: none; }
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+
+        .mint-cell-value {
+            color: #fff;
+        }
+
+        .mint-cell-wrapper {
+            background: none;
+        }
     }
 
     .mint-field {
-        border: 1px solid rgba(255,255,255,.3);
+        border: 1px solid rgba(255, 255, 255, .3);
         border-radius: 4px;
         min-height: 2px;
         margin-bottom: 10px;
-        .mint-cell-wrapper { background: none; padding: 0; }
-        .mint-cell-title { background-color: #fff; color: #333; padding: 12px; box-sizing: border-box; }
-        input { background: none; padding-left: 12px;box-sizing: border-box; color: #fff; }
-        input::-webkit-input-placeholder { color: rgba(255,255,255,.3); }
-        &.required .mint-cell-text:after { content: '*'; color: red; } 
+
+        .mint-cell-wrapper {
+            background: none;
+            padding: 0;
+        }
+
+        .mint-cell-title {
+            background-color: #fff;
+            color: #333;
+            padding: 12px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        input {
+            background: none;
+            padding-left: 12px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        input::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, .3);
+        }
+
+        &.required .mint-cell-text:after {
+            content: '*';
+            color: red;
+        }
     }
 
 
@@ -52,6 +83,7 @@ $wrap-width: 24px;
 .user {
     text-align: center;
     padding-bottom: 24px;
+
     img {
         width: 25%;
         border-radius: 8px;
@@ -74,6 +106,7 @@ $wrap-width: 24px;
     color: #333;
     margin: 24px 0;
 }
+
 .myCoin {
     display: flex;
     align-items: center;
@@ -83,8 +116,12 @@ $wrap-width: 24px;
     padding: 12px 0;
     margin-bottom: 24px;
     color: #666;
-    .coin { color: #000}
+
+    .coin {
+        color: #000
+    }
 }
+
 .grid {
     display: flex;
     align-items: center;
@@ -106,7 +143,44 @@ $wrap-width: 24px;
 }
 
 
-.checkListGrid { 
+.checkListGrid {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
 
-    
+    .mint-checklist-title {
+        display: none;
+    }
+
+    .mint-cell {
+        width: 33.3%;
+    }
+
+    .mint-cell-wrapper {
+        background: none;
+        padding: 0;
+        font-size: 14px;
+    }
+    .mint-cell:last-child {
+        background-color: none;
+    }
+}
+
+.myTable {
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #ccc;
+        padding: 12px 0;
+        color: #666;
+    }
+
+    .tabel-head {
+        font-weight: 700;
+        color: #333;
+    }
+
 }

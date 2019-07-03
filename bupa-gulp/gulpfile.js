@@ -25,8 +25,8 @@ var paths = {
 		dist: base.dist
 	},
 	styles: {
-		src: base.src + 'scss/*.scss',
-		srcall: base.src + 'scss/**/*.scss',
+		src: base.src + 'scss/public.scss',
+		// srcall: base.src + 'scss/**/*.scss',
 		dist: base.assets + 'css/'
 	},
 	scripts: {

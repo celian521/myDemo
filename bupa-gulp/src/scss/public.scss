@@ -4,27 +4,33 @@
     display: none;
 }
 
+
+
+$px: 10rem/750;
+
+$primary-color: #3478c3; //背景蓝
+$wrap-width: 24*$px;
+
+@import './mint-ui.scss';
+
 .mint-header {
     background-color: #fff;
     color: #333;
     box-shadow: 0 0 2px rgba(0, 0, 0, .2)
 }
 
-$primary-color: #3478c3; //背景蓝
-$wrap-width: 24px;
-
 .wrap {
     margin: 0 $wrap-width;
 }
 
 .space {
-    height: 40px;
+    height: 40*$px;
     background-color: $primary-color;
 }
 
 .wrap-bg {
     background: $primary-color url(../images/logo.png) 100% 10px no-repeat;
-    background-size: auto 30px;
+    background-size: auto 30*$px;
     padding: 50px $wrap-width 0;
 
     .mint-cell {
@@ -43,9 +49,9 @@ $wrap-width: 24px;
 
     .mint-field {
         border: 1px solid rgba(255, 255, 255, .3);
-        border-radius: 4px;
-        min-height: 2px;
-        margin-bottom: 10px;
+        border-radius: 4*$px;
+        min-height: 2*$px;
+        margin-bottom: 10*$px;
 
         .mint-cell-wrapper {
             background: none;
@@ -55,14 +61,14 @@ $wrap-width: 24px;
         .mint-cell-title {
             background-color: #fff;
             color: #333;
-            padding: 12px;
+            padding: 12*$px;
             box-sizing: border-box;
             text-align: center;
         }
 
         input {
             background: none;
-            padding-left: 12px;
+            padding-left: 12*$px;
             box-sizing: border-box;
             color: #fff;
         }
@@ -82,27 +88,27 @@ $wrap-width: 24px;
 
 .user {
     text-align: center;
-    padding-bottom: 24px;
+    padding-bottom: 24*$px;
 
     img {
         width: 25%;
-        border-radius: 8px;
-        margin-bottom: 12px;
+        border-radius: 8*$px;
+        margin-bottom: 12*$px;
     }
 }
 
 .myCard {
     width: 100%;
     height: auto;
-    border-radius: 12px;
-    margin-bottom: 24px;
+    border-radius: 12*$px;
+    margin-bottom: 24*$px;
 }
 
 .tit {
     border-left: 3px solid#333;
-    padding: 0 8px;
+    padding: 0 8*$px;
     line-height: 1;
-    font-size: 16px;
+    font-size: 16*$px;
     color: #333;
     margin: 24px 0;
 }
@@ -114,7 +120,7 @@ $wrap-width: 24px;
     flex-wrap: wrap;
     border-bottom: 1px solid #ccc;
     padding: 12px 0;
-    margin-bottom: 24px;
+    margin-bottom: 24*$px;
     color: #666;
 
     .coin {
@@ -131,10 +137,10 @@ $wrap-width: 24px;
     >div {
         width: 25%;
         text-align: center;
-        padding: 4px 6px;
+        padding: 4px 6*$px;
         box-sizing: border-box;
         text-align: center;
-        font-size: 12px;
+        font-size: 12*$px;
 
         img {
             width: 100%;
@@ -160,8 +166,9 @@ $wrap-width: 24px;
     .mint-cell-wrapper {
         background: none;
         padding: 0;
-        font-size: 14px;
+        font-size: 14*$px;
     }
+
     .mint-cell:last-child {
         background-color: none;
     }
@@ -175,7 +182,7 @@ $wrap-width: 24px;
         flex-wrap: wrap;
         border-bottom: 1px solid #ccc;
         padding: 12px 0;
-        color: #666;
+        color: #666666;
     }
 
     .tabel-head {
@@ -184,3 +191,4 @@ $wrap-width: 24px;
     }
 
 }
+

@@ -115,7 +115,7 @@
 }
 .mint-button--default {
     color: #656b79;
-    background-color: #f6f8fa;
+    background-color: #fff;
     box-shadow: 0 0 1px #b8bbbf
 }
 .mint-button--default.is-plain {
@@ -126,13 +126,20 @@
 }
 .mint-button--primary {
     color: #fff;
-    background-color: #26a2ff
+    background-color: #3478c3
 }
 .mint-button--primary.is-plain {
-    border: 1px solid #26a2ff;
+    border: 1px solid #3478c3;
     background-color: transparent;
-    color: #26a2ff
+    color: #3478c3
 }
+
+.mint-button--info {
+    color: #fff;
+    background-color: #00a0ea
+}
+
+
 .mint-button--danger {
     color: #fff;
     background-color: #ef4f4f

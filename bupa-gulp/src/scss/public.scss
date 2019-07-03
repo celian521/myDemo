@@ -1,15 +1,112 @@
-[v-cloak]{
+@import './reset.scss';
+
+[v-cloak] {
     display: none;
 }
 
+.mint-header {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2)
+}
 
-$primary-color: #3478c3;    //背景蓝
+$primary-color: #3478c3; //背景蓝
 // $btn-color: #3376c7; //深蓝
-$btn-default-color: #00a0ea; // 浅蓝
+// $btn-default-color: #00a0ea; // 浅蓝
+$wrap-width: 24px;
+
+.wrap {
+    margin: 0 $wrap-width;
+}
+.space { height: 40px;
+    background-color: $primary-color;
+}
+.wrap-bg {
+    background: $primary-color url(../images/logo.png) 100% 10px no-repeat;
+    background-size: 30% auto;
+    padding: 50px $wrap-width 0;
+
+    .mint-cell { 
+        background: none;
+        color: #fff;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        .mint-cell-value { color: #fff; }
+        .mint-cell-wrapper { background: none; }
+    }
+
+    .mint-field {
+        border: 1px solid rgba(255,255,255,.3);
+        border-radius: 4px;
+        min-height: 2px;
+        margin-bottom: 10px;
+        .mint-cell-wrapper { background: none; padding: 0; }
+        .mint-cell-title { background-color: #fff; color: #333; padding: 12px; box-sizing: border-box; }
+        input { background: none; padding-left: 12px;box-sizing: border-box; color: #fff; }
+        input::-webkit-input-placeholder { color: rgba(255,255,255,.3); }
+        &.required .mint-cell-text:after { content: '*'; color: red; } 
+    }
+
+
+}
+
+.user {
+    text-align: center;
+    padding-bottom: 24px;
+    img {
+        width: 25%;
+        border-radius: 8px;
+        margin-bottom: 12px;
+    }
+}
+
+.myCard {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
 
 .tit {
-    border-left: 4px solid red;
-    padding: 2px 20px;
-     font-size: 16px;
-     color: #333;
+    border-left: 3px solid#333;
+    padding: 0 8px;
+    line-height: 1;
+    font-size: 16px;
+    color: #333;
+    margin: 24px 0;
+}
+.myCoin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ccc;
+    padding: 12px 0;
+    margin-bottom: 24px;
+    color: #666;
+    .coin { color: #000}
+}
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+
+    >div {
+        width: 25%;
+        text-align: center;
+        padding: 4px 6px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 12px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+.checkListGrid { 
+
+    
 }

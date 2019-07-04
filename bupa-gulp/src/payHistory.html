@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <!-- @@include modules/_template_head.html -->
+</head>
+
+<body>
+    <div id="app" v-cloak>
+
+        <mt-header fixed title="消费记录">
+            <div to="/" slot="left">
+                <mt-button icon="more"></mt-button>
+            </div>
+        </mt-header>
+        <div class="space"></div>
+        <div class='topBar'></div>
+        <div class='wrap'>
+
+            <mt-cell title="标题" value='-4566.00'></mt-cell>
+            <mt-cell title="标题" value='-4566.00'></mt-cell>
+            <mt-cell title="标题" value='-4566.00'></mt-cell>
+            <mt-cell title="充值" label='2019-01-02 12:22:00' value='+4566.00'></mt-cell>
+            <br />
+            <br />
+            <mt-button type="primary" plain size='large' >返回</mt-button>
+        </div>
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+       
+        }
+    })
+</script>
+
+</html>

@@ -1,22 +1,25 @@
 @import './reset.scss';
+@import './mint-ui.scss';
+
+$primary-color: #3478c3; //背景蓝
+$wrap-width: 24*$px;
+$px: 10rem/750;
 
 [v-cloak] {
     display: none;
 }
 
-
-
-$px: 10rem/750;
-
-$primary-color: #3478c3; //背景蓝
-$wrap-width: 24*$px;
-
-@import './mint-ui.scss';
+a,
+a:link,
+a:-webkit-any-link {
+    color: #333;
+    text-decoration: none;
+}
 
 .mint-header {
     background-color: #fff;
     color: #333;
-    box-shadow: 0 0 2px rgba(0, 0, 0, .2)
+    box-shadow: 0 0 2*$px rgba(0, 0, 0, .2)
 }
 
 .wrap {
@@ -24,15 +27,20 @@ $wrap-width: 24*$px;
 }
 
 .space {
-    height: 40*$px;
-    background-color: $primary-color;
+    height: 80*$px;
+}
+
+.topBar {
+    background: url(../images/logo.png) 100% 20*$px no-repeat;
+    background-size: auto 80*$px;
+    height: 100*$px;
 }
 
 .wrap-bg {
-    background: $primary-color url(../images/logo.png) 100% 10px no-repeat;
-    background-size: auto 30*$px;
-    padding: 50px $wrap-width 0;
-
+    background: $primary-color url(../images/logo-white.png) 100% 100*$px no-repeat;
+    background-size: auto 72*$px;
+    padding: 180*$px $wrap-width 30*$px;
+    box-sizing: border-box;
     .mint-cell {
         background: none;
         color: #fff;
@@ -48,10 +56,10 @@ $wrap-width: 24*$px;
     }
 
     .mint-field {
-        border: 1px solid rgba(255, 255, 255, .3);
-        border-radius: 4*$px;
+        border: 1px solid rgba(255, 255, 255, .5);
+        border-radius: 10*$px;
         min-height: 2*$px;
-        margin-bottom: 10*$px;
+        margin-bottom: 20*$px;
 
         .mint-cell-wrapper {
             background: none;
@@ -61,7 +69,7 @@ $wrap-width: 24*$px;
         .mint-cell-title {
             background-color: #fff;
             color: #333;
-            padding: 12*$px;
+            padding: 24*$px 0;
             box-sizing: border-box;
             text-align: center;
         }
@@ -88,29 +96,35 @@ $wrap-width: 24*$px;
 
 .user {
     text-align: center;
-    padding-bottom: 24*$px;
+    padding-bottom: 40*$px;
 
     img {
-        width: 25%;
+        width: 200*$px;
+        height: 200*$px;
         border-radius: 8*$px;
-        margin-bottom: 12*$px;
+        margin-bottom: 24*$px;
     }
 }
 
 .myCard {
-    width: 100%;
-    height: auto;
-    border-radius: 12*$px;
-    margin-bottom: 24*$px;
+    text-align: center;
+
+    img {
+        width: 590*$px;
+        height: 380*$px;
+        border-radius: 12*$px;
+        background-color: #f7f7f7;
+    }
 }
 
 .tit {
-    border-left: 3px solid#333;
-    padding: 0 8*$px;
+    border-left: 8*$px solid#333;
+    padding: 0 20*$px;
     line-height: 1;
-    font-size: 16*$px;
+    font-size: 32*$px;
+    font-weight: 700;
     color: #333;
-    margin: 24px 0;
+    margin: 24*$px 0;
 }
 
 .myCoin {
@@ -118,10 +132,11 @@ $wrap-width: 24*$px;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-bottom: 1px solid #ccc;
-    padding: 12px 0;
-    margin-bottom: 24*$px;
+    border-bottom: 1px solid #999;
+    padding: 12*$px 0;
+    margin-bottom: 32*$px;
     color: #666;
+    font-size: 28*$px;
 
     .coin {
         color: #000
@@ -133,27 +148,42 @@ $wrap-width: 24*$px;
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
+    margin: 0 -20*$px;
 
-    >div {
+    >a {
         width: 25%;
         text-align: center;
-        padding: 4px 6*$px;
+        padding: 4*$px 6*$px;
         box-sizing: border-box;
         text-align: center;
-        font-size: 12*$px;
+
+        margin-bottom: 12*$px;
+
+        p {
+            font-size: 24*$px;
+            color: #666;
+        }
 
         img {
-            width: 100%;
+            width: 80*$px;
+            height: 80*$px;
         }
     }
 }
 
+.checkListTitle {
+    font-size: 32*$px;
+    border-bottom: 1px solid #333;
+    padding: 12*$px 0;
+    margin-bottom: 8*$px;
+}
 
 .checkListGrid {
     display: flex;
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
+    margin-bottom: 20*$px;
 
     .mint-checklist-title {
         display: none;
@@ -166,29 +196,29 @@ $wrap-width: 24*$px;
     .mint-cell-wrapper {
         background: none;
         padding: 0;
-        font-size: 14*$px;
+        font-size: 24*$px;
     }
 
     .mint-cell:last-child {
         background-color: none;
     }
-}
-
-.myTable {
-    li {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        border-bottom: 1px solid #ccc;
-        padding: 12px 0;
-        color: #666666;
-    }
-
-    .tabel-head {
-        font-weight: 700;
-        color: #333;
-    }
 
 }
 
+// .myTable {
+//     li {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         flex-wrap: wrap;
+//         border-bottom: 1px solid #ccc;
+//         padding: 12*$px 0;
+//         color: #666666;
+//     }
+
+//     .tabel-head {
+//         font-weight: 700;
+//         color: #333;
+//     }
+
+// }

@@ -7,13 +7,55 @@
 
 <body>
     <div id="app" v-cloak>
-
         <mt-header fixed title="个人中心">
-            <div to="/" slot="left">
-                <mt-button icon="more"></mt-button>
-            </div>
+            <a href="index.html" slot="left">
+                <img src='./assets/images/menu.svg' />
+            </a>
         </mt-header>
+        <div class="wrap-bg">
+            <div class="myCard">
+                <img src='./assets/images/card.jpg' />
+            </div>
+            <!-- <div class="user">
+                <p><img src='./assets/images/user.png' /></p>
+                <mt-button type="default">立即注册</mt-button>
+            </div> -->
+        </div>
 
+        <div class="wrap">
+            <div class="tit">我的账户</div>
+            <div class="myCoin">
+                <div>账户余额(元)</div>
+                <div class='coin'>3433.00</div>
+                <div>
+                    <mt-button type="primary" size='small'>充值</mt-button>
+                </div>
+            </div>
+            <div class="tit">其它</div>
+            <div class="grid">
+                <a href='editInfo.html'>
+                    <img src='./assets/images/1.png' />
+                    <p>卡管理</p>
+                </a>
+                <a href='bindCard.html'>
+                    <img src='./assets/images/2.png' />
+                    <p>绑定卡</p>
+                </a>
+                <a href='payHistory.html'>
+                    <img src='./assets/images/3.png' />
+                    <p>消费记录</p>
+                </a>
+                <a href='help.html'>
+                    <img src='./assets/images/4.png' />
+                    <p>会员权益</p>
+                </a>
+                <a href='#'>
+                    <img src='./assets/images/5.png' />
+                    <p>活动日历</p>
+                </a>
+            </div>
+
+        </div>
     </div>
 </body>
 <script>
@@ -23,6 +65,20 @@
             return {
 
             }
+        },
+        mounted() {
+            console.log('aaaa')
+            axios.post('userInfo.html', {
+                firstName: 'Fred',
+                lastName: 'Flintstone'
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
         },
         methods: {
 

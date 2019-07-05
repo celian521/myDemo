@@ -2,7 +2,7 @@
 @import './mint-ui.scss';
 
 $primary-color: #3478c3; //背景蓝
-$wrap-width: 24*$px;
+$wrap-width: 28*$px;
 $px: 10rem/750;
 
 [v-cloak] {
@@ -19,7 +19,13 @@ a:-webkit-any-link {
 .mint-header {
     background-color: #fff;
     color: #333;
-    box-shadow: 0 0 2*$px rgba(0, 0, 0, .2)
+    box-shadow: 0 0 2*$px rgba(0, 0, 0, .2);
+
+    img {
+        width: 42*$px;
+        height: 42*$px;
+    }
+
 }
 
 .wrap {
@@ -32,15 +38,16 @@ a:-webkit-any-link {
 
 .topBar {
     background: url(../images/logo.png) 100% 20*$px no-repeat;
-    background-size: auto 80*$px;
-    height: 100*$px;
+    background-size: auto 72*$px;
+    height: 120*$px;
 }
 
 .wrap-bg {
     background: $primary-color url(../images/logo-white.png) 100% 100*$px no-repeat;
     background-size: auto 72*$px;
-    padding: 180*$px $wrap-width 30*$px;
+    padding: 200*$px $wrap-width 30*$px;
     box-sizing: border-box;
+
     .mint-cell {
         background: none;
         color: #fff;
@@ -110,21 +117,22 @@ a:-webkit-any-link {
     text-align: center;
 
     img {
-        width: 590*$px;
-        height: 380*$px;
+        width: 600*$px;
+        min-height: 380*$px;
+        height: auto;
         border-radius: 12*$px;
         background-color: #f7f7f7;
     }
 }
 
 .tit {
-    border-left: 8*$px solid#333;
+    border-left: 6*$px solid#666;
     padding: 0 20*$px;
     line-height: 1;
-    font-size: 32*$px;
+    font-size: 36*$px;
     font-weight: 700;
     color: #333;
-    margin: 24*$px 0;
+    margin: 60*$px 0 32*$px;
 }
 
 .myCoin {
@@ -149,6 +157,7 @@ a:-webkit-any-link {
     justify-content: left;
     flex-wrap: wrap;
     margin: 0 -20*$px;
+    margin-bottom: 60*$px;
 
     >a {
         width: 25%;
@@ -174,7 +183,7 @@ a:-webkit-any-link {
 .checkListTitle {
     font-size: 32*$px;
     border-bottom: 1px solid #333;
-    padding: 12*$px 0;
+    padding: 20*$px;
     margin-bottom: 8*$px;
 }
 
@@ -183,7 +192,7 @@ a:-webkit-any-link {
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
-    margin-bottom: 20*$px;
+    margin-bottom: 60*$px;
 
     .mint-checklist-title {
         display: none;
@@ -196,11 +205,11 @@ a:-webkit-any-link {
     .mint-cell-wrapper {
         background: none;
         padding: 0;
-        font-size: 24*$px;
+        font-size: 28*$px;
     }
 
     .mint-cell:last-child {
-        background-color: none;
+        background: none;
     }
 
 }

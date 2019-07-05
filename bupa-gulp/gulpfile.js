@@ -26,7 +26,7 @@ var paths = {
 	},
 	styles: {
 		src: base.src + 'scss/public.scss',
-		// srcall: base.src + 'scss/**/*.scss',
+		srcall: base.src + 'scss/**/*.scss',
 		dist: base.assets + 'css/'
 	},
 	scripts: {
@@ -34,7 +34,7 @@ var paths = {
 		dist: base.assets + 'js/'
 	},
 	images: {
-		src: base.src + 'images/**/*.{jpg,jpeg,png,gif}',
+		src: base.src + 'images/**/*.{jpg,jpeg,png,gif,svg}',
 		dist: base.assets + 'images/'
 	},
 	assets: {

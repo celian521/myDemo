@@ -115,9 +115,9 @@ a:-webkit-any-link {
 
 .myCard {
     text-align: center;
-
+    padding-bottom: 32*$px;
     img {
-        width: 600*$px;
+        width: 620*$px;
         min-height: 380*$px;
         height: auto;
         border-radius: 12*$px;

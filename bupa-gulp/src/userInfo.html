@@ -18,19 +18,42 @@
                 <img src='./assets/images/card.jpg' />
             </div>
             <br />
-            <mt-field class='required' label="用户名" placeholder="请输入用户名" v-model="value"></mt-field>
-            <mt-field class='required' label="captcha" placeholder="请输入" v-model="captcha">
-                <mt-button type="info" size='small' disabled>重新获取(30)</mt-button>
+            <mt-field class='required' label="姓名" placeholder="请输入姓名" v-model="value"></mt-field>
+            <div @click="sheetVisible = true" >
+                <mt-field class='required' label="性别" placeholder="请选择" disabled :value="sex|sexMap"></mt-field>
+            </div>
+            
+            <mt-field class='required' label="生日" placeholder="yy-mm-dd" v-model="value"></mt-field>
+            <mt-field class='required' label="联系方式" placeholder="请输入联系方式" v-model="value"></mt-field>
+            <mt-field class='required' label="验证码" placeholder="请输入" v-model="captcha">
+                <mt-button type="info" size='small' disabled>获取验证码</mt-button>
                 <!--获取验证码 重新获取(30) -->
             </mt-field>
-            <mt-field class='required' label="用户名" placeholder="请输入用户名" v-model="value"></mt-field>
-            <mt-field class='required' label="用户名" placeholder="请输入用户名" v-model="value"></mt-field>
-            <mt-field class='required' label="用户名" placeholder="请输入用户名" v-model="value"></mt-field>
-            <mt-field class='required' label="用户名" placeholder="请输入用户名" v-model="value"></mt-field>
-            <mt-field class='required' label="用户名" placeholder="请输入用户名" v-model="value"></mt-field>
+            <mt-field class='required' label="身份证号" placeholder="请输入身份证号" v-model="value"></mt-field>
+            <mt-field class='required' label="实体卡号" placeholder="请输入实体卡号" v-model="value"></mt-field>
+
+            <mt-field class='required' label="保险号" placeholder="请输入保险号" v-model="value"></mt-field>
+            <div @click='openPicker()'>
+                <mt-field class='required' label="保险日期" disabled placeholder="YYYY-MM-DD"
+                    :value='pickerVisible|moment("YYYY-MM-DD")'>
+                </mt-field>
+            </div>
+
             <br />
-            <mt-button type="default" size='large'>default</mt-button>
+            <mt-button type="default" size='large'>立即注册</mt-button>
             <br />
+
+            <mt-datetime-picker ref="picker" v-model="pickerVisible" type="date" year-format="{value} 年"
+                month-format="{value} 月" date-format="{value} 日">
+            </mt-datetime-picker>
+
+            <!-- <mt-picker :slots="slots" @change="onValuesChange"></mt-picker>
+
+            <mt-radio title="单选框列表" v-model="sex" :options="['男', '女']">
+            </mt-radio> -->
+
+            <mt-actionsheet :actions="actions" v-model="sheetVisible"></mt-actionsheet>
+
         </div>
     </div>
 
@@ -41,12 +64,41 @@
         el: '#app',
         data() {
             return {
+
+                sheetVisible: false,
+                actions: [{
+                    name: '男',
+                    method: ()=>{this.sex=1}
+                }, {
+                    name: '女',
+                    method: ()=>{this.sex=2}
+                }],
+
+                slots: [{
+                    defaultIndex: 1,
+                    values: ['男', '女'],
+                    className: 'slot1'
+                }],
                 value: '',
-                captcha: ''
+                captcha: '',
+                sex: 0,
+                pickerVisible: ''
             }
         },
         methods: {
-
+            onValuesChange() { },
+            openPicker() {
+                this.$refs.picker.open();
+            },
+            // takePhoto() {
+            //     console.log('taking photo');
+            // },
+            // openAlbum() {
+            //     console.log('opening album');
+            // },
+            // goBack() {
+            //     history.go(-1);
+            // }
         }
     })
 </script>

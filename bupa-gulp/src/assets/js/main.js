@@ -1,11 +1,12 @@
+
 // Global JS
 Vue.filter('moment', function (value, format) {
     return  value ? moment(value).format(format || 'YYYY/MM/DD') : ''
 })
 
 Vue.filter('sexMap', function (value) {
-    let a = ['未知','男','女']
-    return  a[value || 0] 
+    var a = ['未知','男','女']
+    return  a[value || 0]
 })
 
 Vue.component('button-counter', {

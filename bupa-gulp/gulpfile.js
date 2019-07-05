@@ -73,8 +73,8 @@ var config = {
 		host: '0.0.0.0',
 		livereload: true,
 		directoryListing: false,
-		// open: true,
-		port: 8072
+		open: true,
+		port: 8088
 	}
 };
 

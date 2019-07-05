@@ -2,5 +2,5 @@
 
 
 http://mint-ui.github.io/#!/zh-cn
-http://mint-ui.github.io/docs/#/zh-cn2
+https://mint-ui.github.io/docs/#/zh-cn2
 

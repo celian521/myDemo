@@ -7,7 +7,6 @@
 
 <body>
     <div id="app" v-cloak>
-
         <mt-header fixed title="完善资料">
             <a href="index.html" slot="left">
                 <img src='./assets/images/menu.svg' />
@@ -17,12 +16,15 @@
         <div class='topBar'></div>
         <div class='wrap'>
             <div class='checkListTitle'>与卡主关系</div>
-            <mt-checklist class="checkListGrid" v-model="value1" :options="options1"> </mt-checklist>
-            <div class='checkListTitle'>与卡主关系</div>
+            <mt-radio class="checkListGrid" v-model="value1" :options="options1"></mt-radio>
+            <div class='checkListTitle'>兴趣爱好（可多选）</div>
             <mt-checklist class="checkListGrid" v-model="value2" :options="options2"> </mt-checklist>
-            <div class='checkListTitle'>与卡主关系</div>
-            <mt-checklist class="checkListGrid" v-model="value3" :options="options3"> </mt-checklist>
+            <div class='checkListTitle'>职业</div>
+            <mt-radio class="checkListGrid" v-model="value3" :options="options3"></mt-radio>
             <mt-button type="primary" size='large' @click='handleSubmit'>提交</mt-button>
+            <br />
+            <br />
+            <br />
         </div>
     </div>
 </body>
@@ -31,51 +33,73 @@
         el: '#app',
         data() {
             return {
-                value1: [], 
-                value2: [], 
-                value3: [],
+                value1: '',
+                value2: [],
+                value3: '',
                 options1: [
                     {
-                        label: 'disa',
-                        value: 'valueF'
+                        label: '父母',
+                        value: 'a1',
+                        disabled: false
                     },
                     {
-                        label: 'chec',
-                        value: 'valueE'
+                        label: '配偶',
+                        value: 'a2'
                     },
                     {
-                        label: 'opti',
-                        value: 'valueA'
+                        label: '父母',
+                        value: 'a3'
+                    }, {
+                        label: '朋友',
+                        value: 'a4'
+                    },
+                    {
+                        label: '其他',
+                        value: 'a5'
                     }
                 ],
 
                 options2: [
                     {
-                        label: 'disa',
-                        value: 'valueFf'
+                        label: '运动',
+                        value: ' b1'
                     },
                     {
-                        label: 'chec',
-                        value: 'valueEe'
+                        label: '阅读',
+                        value: 'b2'
                     },
                     {
-                        label: 'opti',
-                        value: 'valueAa'
+                        label: '音乐',
+                        value: 'b3'
+                    }, {
+                        label: '烹饪',
+                        value: 'b4'
+                    },
+                    {
+                        label: '其他',
+                        value: 'b5'
                     }
                 ],
 
                 options3: [
                     {
-                        label: 'disa',
-                        value: 'valueF'
+                        label: '销售',
+                        value: 'c1'
                     },
                     {
-                        label: 'chec',
-                        value: 'valueE'
+                        label: 'IT人员',
+                        value: 'c2'
                     },
                     {
-                        label: 'opti',
-                        value: 'valueA'
+                        label: '会计',
+                        value: 'c3'
+                    }, {
+                        label: '律师',
+                        value: 'c4'
+                    },
+                    {
+                        label: '其他',
+                        value: 'c5'
                     }
                 ]
             }

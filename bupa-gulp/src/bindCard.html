@@ -20,13 +20,18 @@
             </div>
         </div>
         <div class='wrap'>
-                <br />
-                <mt-field  placeholder="请输入用户名" v-model="value"></mt-field>
-                <mt-field placeholder="请输入用户名" v-model="value"></mt-field>
-                <br />
-                <mt-button type="info" size='large'>绑定</mt-button>
-                <br />
-                <mt-button type="primary" size='large'>返回</mt-button>
+            <br />
+            <div class='bindCard'>
+                <mt-field placeholder="请输入卡号"  type="number" v-model="value"></mt-field>
+                <mt-field placeholder="请输入身份证后4位" v-model="value"  :attr="{ maxlength: 4 }"></mt-field>
+            </div>
+            <br />
+            <mt-button type="info" size='large'>绑定</mt-button>
+            <br />
+            <mt-button type="primary" size='large' @click='history.go(-1)'>返回</mt-button>
+            <br />
+            <br />
+            <br />
         </div>
 
     </div>
@@ -36,7 +41,7 @@
         el: '#app',
         data() {
             return {
-value:''
+                value: ''
             }
         },
         methods: {

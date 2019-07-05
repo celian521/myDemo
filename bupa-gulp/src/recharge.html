@@ -13,6 +13,25 @@
                 <img src='./assets/images/menu.svg' />
             </a>
         </mt-header>
+        <div class="wrap-bg">
+            <div class="myCard">
+                <img src='./assets/images/card.jpg' />
+            </div>
+            <br />
+            <mt-field label="姓名" placeholder="请输入姓名" v-model="value"></mt-field>
+            <mt-field label="卡号" placeholder="请输入卡号" v-model="value"></mt-field>
+            <mt-field label="余额"  v-model="value"></mt-field>
+            <div class='tit'>充值金额：</div>
+            <div class="gridRecharge">
+                <div v-for='i of 6'><span>5000</span></div>
+            </div>
+            <mt-button type="default" size='large'>去充值</mt-button>
+            <br />
+            <mt-button type="info" size='large' @click='history.go(-1)'>返回</mt-button>
+            <br />
+            <br />
+            <br />
+        </div>
 
     </div>
 </body>
@@ -21,7 +40,7 @@
         el: '#app',
         data() {
             return {
-
+                value: ''
             }
         },
         methods: {

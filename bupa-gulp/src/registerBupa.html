@@ -17,21 +17,24 @@
         <div class='topBar'></div>
 
         <div class="wrap">
-
-            <mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
-            <mt-field label="生日" placeholder="请输入生日" type="date" v-model="birthday"></mt-field>
-            <mt-field label="手机" placeholder="请输入手机号" type="tel" v-model="phone"></mt-field>
-            <mt-field label="身份证" placeholder="请输入数字" type="number" v-model="identity"></mt-field>
-            <mt-field label="保柏保险卡号" placeholder="请输入数字" type="number" v-model="card"></mt-field>
-            <mt-field label="有效期" placeholder="请输入数字" type="number" v-model="validity"></mt-field>
-
-
-
+            <mt-field label="姓名" placeholder="请输入姓名" v-model="formData.name"></mt-field>
+            <div @click='$refs.pickerBirthday.open()'>
+                <mt-field label="生日" placeholder="请输入生日" type="date" :value='formData.birthday|moment("YYYY-MM-DD")'></mt-field>
+            </div>
+            <mt-field label="手机" placeholder="请输入手机号" type="tel" v-model="formData.phone"></mt-field>
+            <mt-field label="身份证" placeholder="请输入数字" type="number" v-model="formData.identity"></mt-field>
+            <mt-field label="保柏保险卡号" placeholder="请输入数字" type="number" v-model="formData.card"></mt-field>
+            <mt-field label="有效期" placeholder="请输入数字" type="number" v-model="formData.validity"></mt-field>
             <br />
             <br />
             <mt-button type="primary" size='large' @click='handleSubmit'>立即注册</mt-button>
+            <br />
+            <br />
         </div>
-
+        <!-- 生日 -->
+        <mt-datetime-picker ref="pickerBirthday" v-model="formData.birthday" type="date" year-format="{value} 年"
+            month-format="{value} 月" date-format="{value} 日">
+        </mt-datetime-picker>
     </div>
 </body>
 <script>
@@ -39,16 +42,20 @@
         el: '#app',
         data() {
             return {
-                birthday: '',
-                username: '',
-                phone:'',
-                identity:'',
-                validity:'',
-                card:''
+                formData: {
+                    birthday: '',
+                    username: '',
+                    phone: '',
+                    identity: '',
+                    validity: '',
+                    card: ''
+                },
             }
         },
         methods: {
-            handleSubmit() {}
+            handleSubmit() {
+                console.log(this.formData)
+            }
         }
     })
 </script>

@@ -48,6 +48,11 @@ a:-webkit-any-link {
     padding: 200*$px $wrap-width 30*$px;
     box-sizing: border-box;
 
+    .tit {
+        color: #fff;
+        border: none;
+    }
+
     .mint-cell {
         background: none;
         color: #fff;
@@ -116,6 +121,7 @@ a:-webkit-any-link {
 .myCard {
     text-align: center;
     padding-bottom: 32*$px;
+
     img {
         width: 620*$px;
         min-height: 380*$px;
@@ -180,6 +186,25 @@ a:-webkit-any-link {
     }
 }
 
+.bindCard {
+    .mint-cell-wrapper {
+        background: none;
+        padding: 0;
+
+    }
+
+    .mint-cell:last-child {
+        background: none;
+    }
+
+    input {
+        border: 1px solid #eee;
+        padding: 12*$px;
+        box-sizing: border-box;
+        border-radius: 8*$px;
+    }
+}
+
 .checkListTitle {
     font-size: 32*$px;
     border-bottom: 1px solid #333;
@@ -194,7 +219,8 @@ a:-webkit-any-link {
     flex-wrap: wrap;
     margin-bottom: 60*$px;
 
-    .mint-checklist-title {
+    .mint-checklist-title,
+    .mint-radiolist-title {
         display: none;
     }
 
@@ -211,23 +237,34 @@ a:-webkit-any-link {
     .mint-cell:last-child {
         background: none;
     }
-
 }
 
-// .myTable {
-//     li {
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         flex-wrap: wrap;
-//         border-bottom: 1px solid #ccc;
-//         padding: 12*$px 0;
-//         color: #666666;
-//     }
+.gridRecharge {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin: 0 -10*$px 60*$px;
 
-//     .tabel-head {
-//         font-weight: 700;
-//         color: #333;
-//     }
+    >div {
+        width: 33.3%;
+        text-align: center;
 
-// }
+        span {
+            color: #333;
+            background: #fff;
+            padding: 30*$px 0;
+            width: 90%;
+            border-radius: 8*$px;
+            font-size: 32*$px;
+            display: inline-block;
+            margin-bottom: 20*$px;
+
+            &.active {
+                color: #fff;
+                background: darken($primary-color, 10%);
+            }
+        }
+    }
+}
+

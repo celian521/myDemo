@@ -16,34 +16,67 @@
         <div class="space"></div>
         <div class='topBar'></div>
 
+        <mt-field placeholder="手机号" type="tel" v-model="formData.phone"  :attr="{ maxlength: 11 }"></mt-field>
+        <mt-field placeholder="验证码" type='number' v-model="formData.captcha">
+            <mt-button type="default" size='small' :disabled='second > 0' @click='getCaptcha'>
+                {{second < 1 ? '获取验证码' : `重新获取(${second})`}}
+            </mt-button>
+        </mt-field>
+        <mt-checklist v-model="formData.agree" :options="['同意用户注册']"></mt-checklist>
+        <br />
+        <br />
         <div class="wrap">
-            <mt-field placeholder="手机号" v-model="phone"></mt-field>
-            <mt-field placeholder="验证码" v-model="captcha">
-                <mt-button type="default" size='small'>获取验证码</mt-button>
-                <!--获取验证码 重新获取(30) -->
-            </mt-field>
-
-            <mt-checklist v-model="value" :options="['同意用户注册']">
-            </mt-checklist>
-
-            <br />
-            <br />
-            <mt-button type="primary" size='large' @click='handleSubmit'>立即注册</mt-button>
+            <mt-button type="primary" size='large' :disabled='!hasHandleSubmit' @click='handleSubmit'>立即注册</mt-button>
         </div>
     </div>
 </body>
 <script>
+
     new Vue({
         el: '#app',
         data() {
             return {
-                phone: '',
-                captcha: '',
-                value:''
+                formData: {
+                    phone: '',
+                    captcha: '',
+                    agree: false
+                },
+                second: 0
+            }
+        },
+        computed: {
+            // 计算是否能提交
+            hasHandleSubmit: function () {
+                const {phone, captcha, agree} = this.formData
+                return !!phone&&!!captcha&&agree
             }
         },
         methods: {
-            handleSubmit() { }
+            // 获取验证码
+            getCaptcha() {
+                // 验证手机号码
+                const hasPhone = value => {
+                    const regex_phone = /^1[3|4|5|8][0-9]\d{8}$/
+                    return regex_phone.test(value)
+                }
+                if (hasPhone(this.formData.phone)) {
+                    // 这里添加发送验证码操作
+                    this.countdown(5)
+                } else {
+                    this.$toast('手机号码有误');
+                }
+            },
+            //  60S 倒计时
+            countdown(s) {
+                this.second = s
+                const T = setInterval(() => {
+                    this.second = this.second - 1
+                    if (this.second < 1) clearInterval(T)
+                }, 1000);
+            },
+            handleSubmit() {
+                console.log(this.formData)
+            }
         }
     })
 </script>

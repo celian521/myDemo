@@ -15,15 +15,12 @@
         </mt-header>
         <div class="space"></div>
         <div class='topBar'></div>
-        <div class='wrap'>
 
-            <mt-cell title="标题" value='-4566.00'></mt-cell>
-            <mt-cell title="标题" value='-4566.00'></mt-cell>
-            <mt-cell title="标题" value='-4566.00'></mt-cell>
-            <mt-cell title="充值" label='2019-01-02 12:22:00' value='+4566.00'></mt-cell>
-            <br />
-            <br />
-            <mt-button type="primary" plain size='large' >返回</mt-button>
+        <div class='wrap'>
+            <template v-for='item of list'>
+                <mt-cell :title="item.name" :label='item.timestamp|moment("YYYY-MM-DD hh:mm:ss")' :value='item.value'>
+                </mt-cell>
+            </template>
         </div>
 
     </div>
@@ -33,11 +30,32 @@
         el: '#app',
         data() {
             return {
+                list: [{
+                    name: '充值',
+                    timestamp: 1562313899000,
+                    value: '+4566.00'
+                }, {
+                    name: '充值',
+                    timestamp: 1562313668000,
+                    value: '+4566.00'
+                }, {
+                    name: '充值',
+                    timestamp: 1562313668000,
+                    value: '+4566.00'
+                }, {
+                    name: '充值',
+                    timestamp: 1562313668000,
+                    value: '+4566.00'
+                }, {
+                    name: '充值',
+                    timestamp: 1562313668000,
+                    value: '+4566.00'
+                }]
 
             }
         },
         methods: {
-       
+
         }
     })
 </script>

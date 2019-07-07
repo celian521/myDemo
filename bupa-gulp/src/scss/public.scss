@@ -203,6 +203,10 @@ a:-webkit-any-link {
         box-sizing: border-box;
         border-radius: 8*$px;
     }
+    .description {
+        font-size: 24*$px;
+        color: #999;
+    }
 }
 
 .checkListTitle {
@@ -251,7 +255,7 @@ a:-webkit-any-link {
         text-align: center;
 
         span {
-            color: #333;
+            color: $primary-color;
             background: #fff;
             padding: 30*$px 0;
             width: 90%;
@@ -259,7 +263,7 @@ a:-webkit-any-link {
             font-size: 32*$px;
             display: inline-block;
             margin-bottom: 20*$px;
-
+            border:1px solid $primary-color;
             &.active {
                 color: #fff;
                 background: darken($primary-color, 10%);
@@ -273,14 +277,71 @@ a:-webkit-any-link {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-size: 28*$px;
-    margin-bottom: 20*$px;
+    font-size: 24*$px;
+    margin-bottom: 30*$px;
 
-    >div {
-        flex: 1;
+    .thumb {
+        min-width: 30%;
+
+        img {
+            width: 160*$px;
+            min-height: 80*$px;
+            border-radius: 6*$px;
+            box-shadow: 0 0 5*$px rgba(0, 0, 0, .2);
+        }
     }
 
-    img {
-        width: 120*$px;
+    .details {
+        min-width: 70%;
+        text-align: left;
+        background: url(../images/right.svg) no-repeat 100% 50%;
+        background-size: 80*$px 80*$px;
+
+        .name {
+            font-size: 32*$px;
+        }
+
+        >div {
+
+            width: 72%;
+            padding: 20*$px 0;
+            margin-top: 20*$px;
+            border-top: 1px solid #666;
+        }
+    }
+
+
+
+}
+
+.tab-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    span {
+        height: 60*$px;
+        line-height:60*$px;
+        border:1px solid #999;
+        display: inline-block;
+        font-size: 28*$px;
+        padding: 0 30*$px;
+        min-width: 150*$px;
+        text-align: center;
+        margin-bottom: 20*$px;
+        color: $primary-color;
+        &.active {
+            background: $primary-color;
+            color: #fff;
+        }
+        &:first-child {
+            border-top-left-radius: 8*$px;
+            border-bottom-left-radius: 8*$px;
+
+        }
+        &:last-child {
+            border-top-right-radius: 8*$px;
+            border-bottom-right-radius: 8*$px;
+        }
     }
 }

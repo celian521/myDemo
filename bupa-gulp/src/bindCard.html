@@ -22,8 +22,8 @@
         <div class='wrap'>
             <br />
             <div class='bindCard'>
-                <mt-field placeholder="请输入卡号"  type="number" v-model="value"></mt-field>
-                <mt-field placeholder="请输入身份证后4位" v-model="value"  :attr="{ maxlength: 4 }"></mt-field>
+                <mt-field placeholder="请输入卡号"  type="number" v-model="card"></mt-field>
+                <mt-field placeholder="请输入身份证后4位" v-model="number" :attr="{ maxlength: 4 }"></mt-field>
             </div>
             <br />
             <mt-button type="info" size='large'>绑定</mt-button>
@@ -41,7 +41,8 @@
         el: '#app',
         data() {
             return {
-                value: ''
+                card: '',
+                number:''
             }
         },
         methods: {

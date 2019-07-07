@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <!-- @@include modules/_template_head.html -->
+</head>
+
+<body>
+    <div id="app" v-cloak>
+
+        <mt-header fixed title="充值中心">
+            <a href="index.html" slot="left">
+                <img src='./assets/images/menu.svg' />
+            </a>
+        </mt-header>
+        <div class="space"></div>
+        <div class='topBar'></div>
+        <div class="wrap">
+            <div class='bindCard'>
+                <mt-field placeholder="请输入会员卡号" type="number" v-model="value"></mt-field>
+                <p class="description">
+                    * 请仔细核对会员卡号
+                </p>
+            </div>
+            <br />
+            <br />
+
+            <div class="gridRecharge">
+                <div v-for='item of list'>
+                    <span :class='item.id===active?"active":""' v-text='item.value' @click='active = item.id'>
+                    </span>
+                </div>
+            </div>
+
+            <mt-cell title="实际到账" value='1000'></mt-cell>
+            <mt-cell title="支付金额" value='1000'></mt-cell>
+
+            <br />
+            <br />
+        </div>
+
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                value: '',
+                active: '2',
+                list: [{
+                    id: '1',
+                    value: 1000,
+                }, {
+                    id: '2',
+                    value: 1500
+                }, {
+                    id: '3',
+                    value: 2000
+                }, {
+                    id: '4',
+                    value: 3000
+                }, {
+                    id: '5',
+                    value: 4000
+                }, {
+                    id: '6',
+                    value: 5000
+                }],
+
+            }
+        },
+        methods: {
+            handleRecharge() {
+                console.log('去充值~~~~~')
+            }
+        }
+    })
+</script>
+
+</html>

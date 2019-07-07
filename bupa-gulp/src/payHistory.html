@@ -17,8 +17,12 @@
         <div class='topBar'></div>
 
         <div class='wrap'>
+            <div class="tab-title">
+                <span>支出：-2122.00</span>
+                <span class="active">收入：+22.00</span>
+            </div>
             <template v-for='item of list'>
-                <mt-cell :title="item.name" :label='item.timestamp|moment("YYYY-MM-DD hh:mm:ss")' :value='item.value'>
+                <mt-cell :title="item.name" :value='item.value'>
                 </mt-cell>
             </template>
         </div>
@@ -31,25 +35,20 @@
         data() {
             return {
                 list: [{
-                    name: '充值',
-                    timestamp: 1562313899000,
-                    value: '+4566.00'
+                    name: 'ABC套餐',
+                    value: '-14566.00'
                 }, {
-                    name: '充值',
-                    timestamp: 1562313668000,
-                    value: '+4566.00'
+                    name: 'ABC套餐',
+                    value: '+14566.00'
                 }, {
-                    name: '充值',
-                    timestamp: 1562313668000,
-                    value: '+4566.00'
+                    name: 'ABC套餐',
+                    value: '-14566.00'
                 }, {
-                    name: '充值',
-                    timestamp: 1562313668000,
-                    value: '+4566.00'
+                    name: 'ABC套餐',
+                    value: '-14566.00'
                 }, {
-                    name: '充值',
-                    timestamp: 1562313668000,
-                    value: '+4566.00'
+                    name: 'ABC套餐',
+                    value: '-14566.00'
                 }]
 
             }

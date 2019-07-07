@@ -17,9 +17,14 @@
         <div class='topBar'></div>
 
         <div class="wrap">
+            <mt-button type="default" @click='handleSubmit'>会员</mt-button>
+            <mt-button type="primary" @click='handleSubmit'>PUPA保险卡会员</mt-button>
+            <br />
+            <br />
             <mt-field label="姓名" placeholder="请输入姓名" v-model="formData.name"></mt-field>
             <div @click='$refs.pickerBirthday.open()'>
-                <mt-field label="生日" placeholder="请输入生日" type="date" :value='formData.birthday|moment("YYYY-MM-DD")'></mt-field>
+                <mt-field label="生日" placeholder="请输入生日" :value='formData.birthday|moment("YYYY-MM-DD")'>
+                </mt-field>
             </div>
             <mt-field label="手机" placeholder="请输入手机号" type="tel" v-model="formData.phone"></mt-field>
             <mt-field label="身份证" placeholder="请输入数字" type="number" v-model="formData.identity"></mt-field>
@@ -35,6 +40,7 @@
         <mt-datetime-picker ref="pickerBirthday" v-model="formData.birthday" type="date" year-format="{value} 年"
             month-format="{value} 月" date-format="{value} 日">
         </mt-datetime-picker>
+
     </div>
 </body>
 <script>

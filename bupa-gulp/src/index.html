@@ -26,10 +26,10 @@
             <div class="tit">我的账户</div>
             <div class="myCoin">
                 <div>账户余额(元)</div>
-                <div class='coin'>3433.00</div>
-                <div>
+                <div class='coin' v-text='coin'></div>
+                <a href='recharge.html'>
                     <mt-button type="primary" size='small'>充值</mt-button>
-                </div>
+                </a>
             </div>
             <div class="tit">其它</div>
             <div class="grid">
@@ -63,21 +63,21 @@
         el: '#app',
         data() {
             return {
-
+                coin: '34.50'
             }
         },
         mounted() {
-            console.log('aaaa')
-            axios.post('userInfo.html', {
-                firstName: 'Fred',
-                lastName: 'Flintstone'
-            })
-                .then(function (response) {
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            // console.log('aaaa')
+            // axios.post('userInfo.html', {
+            //     firstName: 'Fred',
+            //     lastName: 'Flintstone'
+            // })
+            //     .then(function (response) {
+            //         console.log(response);
+            //     })
+            //     .catch(function (error) {
+            //         console.log(error);
+            //     });
 
         },
         methods: {

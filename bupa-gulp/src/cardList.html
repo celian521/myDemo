@@ -13,6 +13,30 @@
                 <img src='./assets/images/menu.svg' />
             </a>
         </mt-header>
+        <div class="space"></div>
+        <div class='topBar'></div>
+        <div class="wrap">
+            <div class="cardList" v-for='item of list'>
+                <div>
+                    <img src="./assets/images/card.jpg" alt="">
+                </div>
+                <div>
+                    <span>{{item.name}}</span>
+                    <mt-badge size="large">{{item.type}}</mt-badge>
+                    <span>卡号：{{item.number}}</span>
+                </div>
+                <div>
+                    <i class="mintui mintui-more "></i>
+                </div>
+            </div>
+
+            <mt-button type="info" size='large' @click=''>绑定会员卡</mt-button>
+            <br />
+            <mt-button type="primary" size='large' @click=''>新建会员卡</mt-button>
+            <br />
+            <br />
+            <br />
+        </div>
 
     </div>
 </body>
@@ -21,7 +45,18 @@
         el: '#app',
         data() {
             return {
-
+                list: [{
+                    id: 123,
+                    name: '张三',
+                    type: '医疗卡',
+                    number: 'BG0000012000'
+                },
+                {
+                    id: 123,
+                    name: '张三',
+                    type: '医疗卡',
+                    number: 'BG0000012000'
+                }]
             }
         },
         methods: {

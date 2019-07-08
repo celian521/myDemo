@@ -18,37 +18,54 @@
                 <img src='./assets/images/card.jpg' />
             </div>
             <br />
-            <mt-field class='required' label="姓名" placeholder="请输入姓名" v-model="value"></mt-field>
-
+            <mt-field class='required' label="姓名" placeholder="请输入姓名" v-model="formData.name"></mt-field>
             <div @click="sheetVisible = true">
-                <mt-field class='required' label="性别" placeholder="请选择" disabled :value="formData.sex|sexMap"></mt-field>
+                <mt-field class='required' label="性别" placeholder="请选择" disabled :value="formData.sex|sexMap">
+                </mt-field>
             </div>
 
-            <mt-field class='required' label="生日" placeholder="yy-mm-dd" v-model="value"></mt-field>
-            <mt-field class='required' label="联系方式" placeholder="请输入联系方式" v-model="value"></mt-field>
-            <mt-field class='required' label="验证码" placeholder="请输入" v-model="captcha">
-                <mt-button type="info" size='small' disabled>获取验证码</mt-button>
-                <!--获取验证码 重新获取(30) -->
-            </mt-field>
-            <mt-field class='required' label="身份证号" placeholder="请输入身份证号" v-model="value"></mt-field>
-            <mt-field class='required' label="实体卡号" placeholder="请输入实体卡号" v-model="value"></mt-field>
+            <div @click='$refs.pickerBirthday.open()'>
+                <mt-field class='required' label="生日" placeholder="请输入生日"
+                    :value='formData.birthday|moment("YYYY-MM-DD")'>
+                </mt-field>
+            </div>
 
-            <mt-field class='required' label="保险号" placeholder="请输入保险号" v-model="value"></mt-field>
+            <mt-field class='required' label="联系方式" type='tel' :attr="{ maxlength: 11 }" placeholder="请输入联系方式"
+                v-model="formData.phone"></mt-field>
+
+            <mt-field class='required' label="验证码" placeholder="验证码" type='number' v-model="formData.captcha">
+                <mt-button type="info" size='small' :disabled='second > 0' @click='getCaptcha'>
+                    {{captchaText}}
+                </mt-button>
+            </mt-field>
+
+            <mt-field class='required' label="身份证号" placeholder="请输入身份证号" v-model="formData.identity"></mt-field>
+
+            <mt-field label="实体卡号" placeholder="请输入实体卡号" v-model="formData.card"></mt-field>
+
+            <mt-field label="保险号" placeholder="请输入保险号" v-model="formData.number"></mt-field>
+
             <div @click='$refs.picker.open()'>
-                <mt-field class='required' label="保险日期" disabled placeholder="YYYY-MM-DD"
-                    :value='pickerVisible|moment("YYYY-MM-DD")'>
+                <mt-field label="保险日期" disabled placeholder="YYYY-MM-DD"
+                    :value='formData.validity|moment("YYYY-MM-DD")'>
                 </mt-field>
             </div>
 
             <br />
-            <mt-button type="default" size='large'>立即注册</mt-button>
+            <mt-button type="default" size='large' :disabled='!hasHandleSubmit' @click='handleSubmit'>立即注册</mt-button>
             <br />
             <br />
             <br />
 
-            <mt-datetime-picker ref="picker" v-model="pickerVisible" type="date" year-format="{value} 年"
+            <!-- 生日 -->
+            <mt-datetime-picker ref="pickerBirthday" v-model="formData.birthday" type="date" year-format="{value} 年"
                 month-format="{value} 月" date-format="{value} 日">
             </mt-datetime-picker>
+            <!-- 保险日期 -->
+            <mt-datetime-picker ref="picker" v-model="formData.validity" type="date" year-format="{value} 年"
+                month-format="{value} 月" date-format="{value} 日">
+            </mt-datetime-picker>
+            <!-- 性别 -->
             <mt-actionsheet :actions="actionsSex" v-model="sheetVisible"></mt-actionsheet>
 
         </div>
@@ -70,16 +87,59 @@
                     name: '女',
                     method: () => { this.formData.sex = 2 }
                 }],
+                second: 0,
                 formData: {
+                    name: '',
                     sex: 0,
+                    birthday: '',
+                    phone: '',
+                    captcha: '',
+                    identity: '',
+
+                    card: '',
+                    number: '',
+                    validity: ''
                 },
-                value: '',
-                captcha: '',
-               
-                
+
+            }
+        },
+        computed: {
+            // 计算是否能提交
+            hasHandleSubmit: function () {
+                const { name, sex, birthday, phone, captcha, identity } = this.formData
+                return !!name && sex != 0 && !!birthday && !!phone && !!captcha && identity
+            },
+
+            captchaText: function () {
+                return this.second < 1 ? '获取验证码' : `重新获取(${this.second})`
             }
         },
         methods: {
+            // 获取验证码
+            getCaptcha() {
+                // 验证手机号码
+                const hasPhone = value => {
+                    const regex_phone = /^1[3|4|5|8][0-9]\d{8}$/
+                    return regex_phone.test(value)
+                }
+                if (hasPhone(this.formData.phone)) {
+                    // 这里添加发送验证码操作
+                    this.countdown(60)
+                } else {
+                    this.$toast('手机号码有误');
+                }
+            },
+            //  60S 倒计时
+            countdown(s) {
+                this.second = s
+                const T = setInterval(() => {
+                    this.second = this.second - 1
+                    if (this.second < 1) clearInterval(T)
+                }, 1000);
+            },
+            handleSubmit() {
+                console.log(this.formData)
+            }
         }
     })
 </script>

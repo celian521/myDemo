@@ -4,15 +4,6 @@ Vue.filter('moment', function (value, format) {
 })
 
 Vue.filter('sexMap', function (value) {
-  var a = ['未知', '男', '女']
+  var a = ['请选择', '男', '女']
   return a[value || 0]
 })
-
-// Vue.component('button-counter', {
-//   data: function () {
-//     return {
-//       count: 0
-//     }
-//   },
-//   template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
-// })

@@ -18,9 +18,9 @@
                 <img src='./assets/images/card.jpg' />
             </div>
             <br />
-            <mt-field label="姓名" placeholder="请输入姓名" v-model="value"></mt-field>
-            <mt-field label="卡号" placeholder="请输入卡号" v-model="value"></mt-field>
-            <mt-field label="余额" v-model="value"></mt-field>
+            <mt-field label="姓名" placeholder="请输入姓名" :value="name"></mt-field>
+            <mt-field label="卡号" placeholder="请输入卡号" :value="card"></mt-field>
+            <mt-field label="余额" :value="coin"></mt-field>
             <div class='tit'>充值金额：</div>
             <div class="gridRecharge">
                 <div v-for='item of list'>
@@ -47,7 +47,9 @@
         el: '#app',
         data() {
             return {
-                value: '',
+                name: 'xiaomin',
+                card: '123456',
+                coin: '58.12',
                 active: '2',
                 list: [{
                     id: '1',

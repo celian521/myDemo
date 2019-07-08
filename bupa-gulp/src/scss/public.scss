@@ -11,6 +11,10 @@ $px: 10rem/750;
 
 a,
 a:link,
+a:active,
+a:hover,
+a:focus,
+a:visited,
 a:-webkit-any-link {
     color: #333;
     text-decoration: none;

@@ -1,0 +1,20 @@
+@import '_base.scss';
+
+.centered {
+    text-align: center;
+}
+
+.errorContainer {
+    width: 100%;
+}
+
+.emoji {
+    font-size: 9em;
+    user-select: none;
+}
+
+.title {
+    color: grey;
+    font-size: 3em;
+    text-align: center;
+}

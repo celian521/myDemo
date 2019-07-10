@@ -1,0 +1,51 @@
+.targetCrowd {
+    box-sizing: border-box;
+
+    .before-Line {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        bottom: 0;
+        width: 50px;
+        border-top: 1px solid #d9d9d9;
+        border-left: 1px solid #d9d9d9;
+        transform: scaleY(-50%);
+    }
+
+    .group {
+        display: flex;
+        position: relative;
+
+        &::before {
+            @extend .before-Line;
+        }
+
+        &+.group {
+            margin-top: 10px;
+        }
+    }
+
+    .attrLine {
+        padding: 20px 30px;
+        margin: 0 50px;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        flex: 1;
+    }
+
+    .attrItem {
+        display: flex;
+        flex: 1;
+        position: relative;
+        padding-left: 50px;
+
+        &::before {
+            @extend .before-Line;
+        }
+
+        &+.attrItem {
+            margin-top: 10px;
+        }
+    }
+}

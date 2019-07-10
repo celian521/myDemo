@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .steps {
+        width: 800px;
+        margin: 30px 5px;
+
+        :global {
+            .ant-steps-item-title {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .basicInfoForm {
+        padding: 10px 30px;
+    }
+}

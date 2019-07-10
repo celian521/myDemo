@@ -1,0 +1,52 @@
+.list {
+    display: block;
+    width: 100%;
+}
+
+.searchForm {
+    padding: 20px 40px;
+    margin: 30px 0;
+    border: 1px solid #d9d9d9;
+    background: #fbfbfb;
+    border-radius: 6px;
+
+    :global {
+        .ant-form-item {
+            display: flex;
+        }
+
+        .ant-form-item-control-wrapper {
+            flex: 1;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tableBox {
+    flex: 1;
+    overflow-y: hidden;
+}
+
+.operates {
+    position: relative;
+
+    .menuItem {
+        width: 100%;
+    }
+
+    .btnItem {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-left: 10px;
+    }
+}
+
+.searchBar {
+    margin-top: 50px;
+}

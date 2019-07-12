@@ -2,7 +2,7 @@
  * 上按刷新， 下接加载 列表 DEMO
  */
 import Taro, { Component } from '@tarojs/taro'
-import { observer, inject } from '@tarojs/mobx'
+// import { observer, inject } from '@tarojs/mobx'
 import { View } from '@tarojs/components'
 import { AtLoadMore, } from 'taro-ui'
 import { ItemList, Empty, FilterList } from '@/components'

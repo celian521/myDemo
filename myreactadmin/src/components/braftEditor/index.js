@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
+import * as qiniu from 'qiniu-js'
+import axios from 'axios'
 import BraftEditor from 'braft-editor'
 import 'braft-editor/dist/index.css'
-
-import { Upload, Icon, message, Button } from 'antd';
 
 class Index extends Component {
 
@@ -32,20 +31,58 @@ class Index extends Component {
     handleEditorChange = (editorState) => {
         this.setState({ editorState })
     }
+    /**
+     * 获取 七牛云token
+     */
+     getToken = async () => {
+        const res = await axios({
+        header: { 'content-type': 'application/json' },
+        method: 'put',
+        url: 'http://10.0.1.26:20292/qiniu/getSimpleToken',
+        data: { data: {} },
+        });
+        return res.data.status === 0 ? res.data.data.uploadToken : ''
+    }
+
+    uploadFn = async (param) => {
+        const token = await this.getToken()
+        const putExtra = {
+        }
+        const config = {
+        }
+        const observer = {
+            next(res) {
+                param.progress(res.total.percent)
+            },
+            error(err) {
+                param.error({
+                    msg: err.message
+                })
+            },
+            complete(res) {
+                param.success({
+                    url: 'http://weiapp.singworld.cn/' + res.key
+                })
+            }
+        }
+        qiniu.upload(param.file, param.name, token, putExtra, config).subscribe(observer)
+    }
 
     render() {
 
         const { editorState } = this.state
+
         return (
-            <div className="my-component">
-                {/* <pre>{editorState.toHTML()}</pre> */}
-                <BraftEditor
-                    value={editorState}
-                    onChange={this.handleEditorChange}
-                    onSave={this.submitContent}
-                />
-            </div>
+            <BraftEditor
+                value={editorState}
+                onChange={this.handleEditorChange}
+                onSave={this.submitContent}
+                stripPastedStyles
+                media={{ uploadFn: this.uploadFn }}
+            />
+            // <pre>{editorState.toHTML()}</pre>
         )
+
 
     }
 }

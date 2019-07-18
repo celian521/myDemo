@@ -2,7 +2,16 @@
 import Loadable from 'react-loadable'; // 实现按需加载
 import DelayLoading from '@/components/common/delayLoading'
 
-const Layout = Loadable({ loader: () => import('@/pages/layout'), loading: DelayLoading, delay:3000 });
+const loadComponent = (loader) => Loadable({
+  loader,
+  loading: DelayLoading,
+  delay:3000
+})
+
+
+const Layout = loadComponent(() => import('@/pages/layout'));
+
+// const Layout = Loadable({ loader: () => import('@/pages/layout'), loading: DelayLoading, delay:3000 });
 const Home = Loadable({ loader: () => import('@/pages/home'), loading: DelayLoading, delay:3000 });
 const Iframe = Loadable({ loader: () => import('@/pages/iframe'), loading: DelayLoading, delay:3000 });
 const User = Loadable({ loader: () => import('@/pages/user'), loading: DelayLoading, delay:3000 });

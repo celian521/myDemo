@@ -7090,9 +7090,9 @@ tar@^4, tar@^4.0.2:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-taro-ui@^1.5.2:
-  version "1.5.3"
-  resolved "http://10.0.1.26:4873/taro-ui/-/taro-ui-1.5.3.tgz#ca253954bf5aff09a6389aaa353327a07f8da579"
+taro-ui@^1.5.3:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/taro-ui/-/taro-ui-1.5.4.tgz#9dae81fdabe86fe27381def19cbc9eca337078b6"
   dependencies:
     "@types/react" "^16.7.3"
     bind-decorator "^1.0.11"
@@ -7249,8 +7249,8 @@ tough-cookie@~2.4.3:
     punycode "^1.4.1"
 
 tree-kill@^1.1.0:
-  version "1.2.1"
-  resolved "http://10.0.1.26:4873/tree-kill/-/tree-kill-1.2.1.tgz#5398f374e2f292b9dcc7b2e71e30a5c3bb6c743a"
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
 
 trim-newlines@^1.0.0:
   version "1.0.0"

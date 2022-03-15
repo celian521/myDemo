@@ -4447,8 +4447,8 @@ lock@^0.1.2, lock@~0.1.2:
   resolved "http://10.0.1.26:4873/lock/-/lock-0.1.4.tgz#fec7deaef17e7c3a0a55e1da042803e25d91745d"
 
 lodash-es@^4.2.1:
-  version "4.17.11"
-  resolved "http://10.0.1.26:4873/lodash-es/-/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
 
 lodash._baseassign@^3.0.0:
   version "3.2.0"
@@ -7090,9 +7090,9 @@ tar@^4, tar@^4.0.2:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-taro-ui@^1.5.2:
-  version "1.5.3"
-  resolved "http://10.0.1.26:4873/taro-ui/-/taro-ui-1.5.3.tgz#ca253954bf5aff09a6389aaa353327a07f8da579"
+taro-ui@^1.5.3:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/taro-ui/-/taro-ui-1.5.4.tgz#9dae81fdabe86fe27381def19cbc9eca337078b6"
   dependencies:
     "@types/react" "^16.7.3"
     bind-decorator "^1.0.11"

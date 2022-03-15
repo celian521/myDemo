@@ -4230,11 +4230,7 @@ join-component@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/join-component/download/join-component-1.1.0.tgz#b8417b750661a392bee2c2537c68b2a9d4977cd5"
 
-js-base64@^2.1.8, js-base64@^2.1.9:
-  version "2.5.1"
-  resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
-
-js-base64@^2.5.1:
+js-base64@^2.1.8, js-base64@^2.1.9, js-base64@^2.5.1:
   version "2.5.1"
   resolved "http://10.0.1.26:4873/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
 
@@ -4502,8 +4498,8 @@ lock@^0.1.2, lock@~0.1.2:
   resolved "http://registry.npm.taobao.org/lock/download/lock-0.1.4.tgz#fec7deaef17e7c3a0a55e1da042803e25d91745d"
 
 lodash-es@^4.2.1:
-  version "4.17.11"
-  resolved "http://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
 
 lodash._baseassign@^3.0.0:
   version "3.2.0"

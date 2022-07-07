@@ -4230,11 +4230,7 @@ join-component@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/join-component/download/join-component-1.1.0.tgz#b8417b750661a392bee2c2537c68b2a9d4977cd5"
 
-js-base64@^2.1.8, js-base64@^2.1.9:
-  version "2.5.1"
-  resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
-
-js-base64@^2.5.1:
+js-base64@^2.1.8, js-base64@^2.1.9, js-base64@^2.5.1:
   version "2.5.1"
   resolved "http://10.0.1.26:4873/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
 
@@ -4952,8 +4948,8 @@ mobx@4.8.0:
   resolved "http://registry.npm.taobao.org/mobx/download/mobx-4.8.0.tgz#6059feb9e0d3440acca5ae192daad63198b1180f"
 
 moment@2.x.x, moment@^2.10.6:
-  version "2.24.0"
-  resolved "http://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fmoment%2Fdownload%2Fmoment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
 
 move-concurrently@^1.0.1:
   version "1.0.1"

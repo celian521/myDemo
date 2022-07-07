@@ -4881,8 +4881,8 @@ mobx@^5.5.2:
   resolved "http://10.0.1.26:4873/mobx/-/mobx-5.8.0.tgz#cf59eae4baa2fde4387ffb6462b7ccf3b497b03c"
 
 moment@2.x.x, moment@^2.10.6:
-  version "2.23.0"
-  resolved "http://10.0.1.26:4873/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -7090,9 +7090,9 @@ tar@^4, tar@^4.0.2:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-taro-ui@^1.5.2:
-  version "1.5.3"
-  resolved "http://10.0.1.26:4873/taro-ui/-/taro-ui-1.5.3.tgz#ca253954bf5aff09a6389aaa353327a07f8da579"
+taro-ui@^1.5.3:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/taro-ui/-/taro-ui-1.5.4.tgz#9dae81fdabe86fe27381def19cbc9eca337078b6"
   dependencies:
     "@types/react" "^16.7.3"
     bind-decorator "^1.0.11"
